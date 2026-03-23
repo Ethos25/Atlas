@@ -1,0 +1,596 @@
+{
+  "ir": {
+    "d": "Salaam!"
+  },
+  "ng": {
+    "d": "Bawo ni!"
+  },
+  "gb": {
+    "d": "Hiya!"
+  },
+  "us": {
+    "d": "Howdy!"
+  },
+  "jp": {
+    "d": "Konnichiwa!"
+  },
+  "eg": {
+    "d": "Ahlan!"
+  },
+  "br": {
+    "d": "Olá!"
+  },
+  "mx": {
+    "d": "¡Hola!"
+  },
+  "au": {
+    "d": "G'day!"
+  },
+  "it": {
+    "d": "Ciao!"
+  },
+  "ke": {
+    "d": "Jambo!"
+  },
+  "fr": {
+    "d": "Bonjour!"
+  },
+  "in": {
+    "d": "Namaste!"
+  },
+  "is": {
+    "d": "Halló!"
+  },
+  "cn": {
+    "d": "Nǐ hǎo!"
+  },
+  "ru": {
+    "d": "Privet!"
+  },
+  "ca": {
+    "d": "Hey there, eh!"
+  },
+  "de": {
+    "d": "Hallo!"
+  },
+  "es": {
+    "d": "¡Hola!"
+  },
+  "kr": {
+    "d": "Annyeonghaseyo!"
+  },
+  "th": {
+    "d": "Sawasdee!"
+  },
+  "tr": {
+    "d": "Merhaba!"
+  },
+  "za": {
+    "d": "Howzit!"
+  },
+  "ar": {
+    "d": "¡Hola!"
+  },
+  "pe": {
+    "d": "¡Hola!"
+  },
+  "no": {
+    "d": "Hei!"
+  },
+  "gr": {
+    "d": "Yia sou!"
+  },
+  "nz": {
+    "d": "Kia ora!"
+  },
+  "id": {
+    "d": "Halo!"
+  },
+  "co": {
+    "d": "¡Hola!"
+  },
+  "ie": {
+    "d": "Dia duit!"
+  },
+  "am": {
+    "d": "Barev!"
+  },
+  "az": {
+    "d": "Salam!"
+  },
+  "by": {
+    "d": "Pryvitannie!"
+  },
+  "ba": {
+    "d": "Zdravo!"
+  },
+  "bi": {
+    "d": "Amahoro!"
+  },
+  "lv": {
+    "d": "Sveiki!"
+  },
+  "md": {
+    "d": "Bună!"
+  },
+  "mk": {
+    "d": "Zdravo!"
+  },
+  "me": {
+    "d": "Zdravo!"
+  },
+  "ad": {
+    "d": "Hola!"
+  },
+  "va": {
+    "d": "Ciao!"
+  },
+  "mc": {
+    "d": "Bonjour!"
+  },
+  "sm": {
+    "d": "Ciao!"
+  },
+  "li": {
+    "d": "Hallo!"
+  },
+  "mt": {
+    "d": "Merħba!"
+  },
+  "bs": {
+    "d": "Hey!"
+  },
+  "bb": {
+    "d": "Hey!"
+  },
+  "bz": {
+    "d": "Weh di go aan!"
+  },
+  "fj": {
+    "d": "Bula!"
+  },
+  "mv": {
+    "d": "Assalaamu alaikum!"
+  },
+  "bn": {
+    "d": "Selamat!"
+  },
+  "bt": {
+    "d": "Kuzu zangpo!"
+  },
+  "kg": {
+    "d": "Salam!"
+  },
+  "tl": {
+    "d": "Bondia!"
+  },
+  "sc": {
+    "d": "Bonzour!"
+  },
+  "mu": {
+    "d": "Bonzour!"
+  },
+  "km": {
+    "d": "Bariza!"
+  },
+  "st": {
+    "d": "Olá!"
+  },
+  "cv": {
+    "d": "Morabeza!"
+  },
+  "kn": {
+    "d": "Wah gwaan!"
+  },
+  "lc": {
+    "d": "Bonjou!"
+  },
+  "vc": {
+    "d": "Wah gwaan!"
+  },
+  "dm": {
+    "d": "Bonjou!"
+  },
+  "gd": {
+    "d": "How yuh doin!"
+  },
+  "ag": {
+    "d": "Wah gwaan!"
+  },
+  "ws": {
+    "d": "Talofa!"
+  },
+  "sb": {
+    "d": "Halo!"
+  },
+  "vu": {
+    "d": "Halo!"
+  },
+  "to": {
+    "d": "Mālō!"
+  },
+  "pw": {
+    "d": "Alii!"
+  },
+  "mh": {
+    "d": "Iakwe!"
+  },
+  "fm": {
+    "d": "Kaselehlia!"
+  },
+  "nr": {
+    "d": "Ekamowir omo!"
+  },
+  "ki": {
+    "d": "Mauri!"
+  },
+  "tv": {
+    "d": "Talofa!"
+  },
+  "xk": {
+    "d": "Mirëdita!"
+  },
+  "aq": {
+    "d": "Brrr!"
+  },
+  "dz": {
+    "d": "Marhaba!"
+  },
+  "ao": {
+    "d": "Olá!"
+  },
+  "cm": {
+    "d": "Bonjour!"
+  },
+  "cd": {
+    "d": "Mbote!"
+  },
+  "gh": {
+    "d": "Akwaaba!"
+  },
+  "sd": {
+    "d": "Marhaba!"
+  },
+  "sn": {
+    "d": "Nanga def!"
+  },
+  "so": {
+    "d": "Iska warran!"
+  },
+  "mz": {
+    "d": "Olá!"
+  },
+  "mg": {
+    "d": "Manao ahoana!"
+  },
+  "ug": {
+    "d": "Oli otya!"
+  },
+  "zm": {
+    "d": "Muli bwanji!"
+  },
+  "zw": {
+    "d": "Makadii!"
+  },
+  "ne": {
+    "d": "Salama!"
+  },
+  "ml": {
+    "d": "I ni ce!"
+  },
+  "td": {
+    "d": "Lale!"
+  },
+  "iq": {
+    "d": "Marhaba!"
+  },
+  "il": {
+    "d": "Shalom!"
+  },
+  "jo": {
+    "d": "Marhaba!"
+  },
+  "sy": {
+    "d": "Marhaba!"
+  },
+  "ye": {
+    "d": "Marhaba!"
+  },
+  "om": {
+    "d": "Marhaba!"
+  },
+  "ae": {
+    "d": "Marhaba!"
+  },
+  "qa": {
+    "d": "Marhaba!"
+  },
+  "kw": {
+    "d": "Marhaba!"
+  },
+  "lb": {
+    "d": "Ahla!"
+  },
+  "af": {
+    "d": "Salaam!"
+  },
+  "mm": {
+    "d": "Mingalaba!"
+  },
+  "np": {
+    "d": "Namaste!"
+  },
+  "lk": {
+    "d": "Ayubowan!"
+  },
+  "my": {
+    "d": "Apa khabar!"
+  },
+  "mn": {
+    "d": "Sain baina uu!"
+  },
+  "kh": {
+    "d": "Suostei!"
+  },
+  "la": {
+    "d": "Sabaidee!"
+  },
+  "uz": {
+    "d": "Assalomu alaykum!"
+  },
+  "tj": {
+    "d": "Salom!"
+  },
+  "tm": {
+    "d": "Salam!"
+  },
+  "sg": {
+    "d": "Lah!"
+  },
+  "tw": {
+    "d": "Nǐ hǎo!"
+  },
+  "kp": {
+    "d": "Annyeonghaseyo!"
+  },
+  "pt": {
+    "d": "Olá!"
+  },
+  "at": {
+    "d": "Grüß Gott!"
+  },
+  "ch": {
+    "d": "Grüezi!"
+  },
+  "be": {
+    "d": "Dag!"
+  },
+  "dk": {
+    "d": "Hej!"
+  },
+  "fi": {
+    "d": "Moi!"
+  },
+  "cz": {
+    "d": "Ahoj!"
+  },
+  "hu": {
+    "d": "Szia!"
+  },
+  "ro": {
+    "d": "Bună!"
+  },
+  "rs": {
+    "d": "Zdravo!"
+  },
+  "hr": {
+    "d": "Bok!"
+  },
+  "bg": {
+    "d": "Zdravei!"
+  },
+  "sk": {
+    "d": "Ahoj!"
+  },
+  "si": {
+    "d": "Živjo!"
+  },
+  "ee": {
+    "d": "Tere!"
+  },
+  "lt": {
+    "d": "Labas!"
+  },
+  "lu": {
+    "d": "Moien!"
+  },
+  "cy": {
+    "d": "Yia sou!"
+  },
+  "al": {
+    "d": "Tungjatjeta!"
+  },
+  "ge": {
+    "d": "Gamarjoba!"
+  },
+  "ve": {
+    "d": "¡Hola!"
+  },
+  "ec": {
+    "d": "¡Hola!"
+  },
+  "bo": {
+    "d": "¡Hola!"
+  },
+  "py": {
+    "d": "¡Mba'éichapa!"
+  },
+  "uy": {
+    "d": "¡Hola!"
+  },
+  "gy": {
+    "d": "Wah gwaan!"
+  },
+  "sr": {
+    "d": "Fa waka!"
+  },
+  "gt": {
+    "d": "¡Hola!"
+  },
+  "hn": {
+    "d": "¡Hola!"
+  },
+  "ni": {
+    "d": "¡Hola!"
+  },
+  "sv": {
+    "d": "¡Hola!"
+  },
+  "cr": {
+    "d": "¡Pura vida!"
+  },
+  "pa": {
+    "d": "¡Hola!"
+  },
+  "jm": {
+    "d": "Wah gwaan!"
+  },
+  "do": {
+    "d": "¡Hola!"
+  },
+  "ht": {
+    "d": "Bonjou!"
+  },
+  "tt": {
+    "d": "Wais!"
+  },
+  "pg": {
+    "d": "Oi!"
+  },
+  "dj": {
+    "d": "Marhaba!"
+  },
+  "er": {
+    "d": "Selam!"
+  },
+  "ga": {
+    "d": "Bonjour!"
+  },
+  "cg": {
+    "d": "Mbote!"
+  },
+  "cf": {
+    "d": "Bala mo!"
+  },
+  "ss": {
+    "d": "Hello!"
+  },
+  "rw": {
+    "d": "Muraho!"
+  },
+  "mw": {
+    "d": "Moni!"
+  },
+  "sl": {
+    "d": "Kusheh!"
+  },
+  "lr": {
+    "d": "Hey!"
+  },
+  "gn": {
+    "d": "I ni ce!"
+  },
+  "tg": {
+    "d": "Bonjour!"
+  },
+  "bj": {
+    "d": "Bonjour!"
+  },
+  "gq": {
+    "d": "¡Hola!"
+  },
+  "na": {
+    "d": "Hello!"
+  },
+  "bw": {
+    "d": "Dumela!"
+  },
+  "sz": {
+    "d": "Sawubona!"
+  },
+  "ls": {
+    "d": "Lumela!"
+  },
+  "mr": {
+    "d": "Marhaba!"
+  },
+  "gm": {
+    "d": "Nanga def!"
+  },
+  "gw": {
+    "d": "Kuma di bai!"
+  },
+  "tn": {
+    "d": "Marhaba!"
+  },
+  "ly": {
+    "d": "Marhaba!"
+  },
+  "nc": {
+    "d": "Bonjour!"
+  },
+  "pr": {
+    "d": "¡Hola!"
+  },
+  "bf": {
+    "d": "Ne y soma!"
+  },
+  "ci": {
+    "d": "Bonjour!"
+  },
+  "se": {
+    "d": "Hej!"
+  },
+  "nl": {
+    "d": "Hoi!"
+  },
+  "ph": {
+    "d": "Kumusta!"
+  },
+  "bd": {
+    "d": "Assalamu alaikum!"
+  },
+  "tz": {
+    "d": "Habari!"
+  },
+  "kz": {
+    "d": "Salam!"
+  },
+  "sa": {
+    "d": "Marhaba!"
+  },
+  "et": {
+    "d": "Selam!"
+  },
+  "ma": {
+    "d": "Marhaba!"
+  },
+  "vn": {
+    "d": "Xin chào!"
+  },
+  "pl": {
+    "d": "Cześć!"
+  },
+  "ua": {
+    "d": "Pryvit!"
+  },
+  "cu": {
+    "d": "¡Hola!"
+  },
+  "cl": {
+    "d": "¡Hola!"
+  },
+  "pk": {
+    "d": "Assalaam-o-alaikum!"
+  }
+}

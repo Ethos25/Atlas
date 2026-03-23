@@ -1,0 +1,152 @@
+{
+  "pacific": {
+    "n": "Pacific Ocean",
+    "emoji": "🌊",
+    "stripe": "#0A4C7A",
+    "hero": [
+      "🌊",
+      "🐋",
+      "🌴"
+    ],
+    "letter": "The Pacific Ocean is the BIGGEST thing on Earth. It covers more area than ALL the land on every continent put together. If you flew across it, it would take over 12 hours. The name means 'peaceful' but it has the most powerful storms, the deepest trenches, and more volcanoes than anywhere. The Mariana Trench goes down almost 7 miles. That is deeper than Mount Everest is tall.",
+    "facts": [
+      {
+        "i": "🌍",
+        "t": "Covers 30% of Earth's surface"
+      },
+      {
+        "i": "🏔️",
+        "t": "Mariana Trench: deepest point on Earth"
+      },
+      {
+        "i": "🌋",
+        "t": "Ring of Fire: 75% of world's volcanoes"
+      },
+      {
+        "i": "🏝️",
+        "t": "Over 25,000 islands"
+      }
+    ],
+    "secret": "There is a patch of floating garbage in the Pacific Ocean TWICE the size of Texas. It is called the Great Pacific Garbage Patch. Most of it is tiny plastic pieces you cannot even see from a boat. Fish eat the plastic thinking it is food. It is one of the biggest environmental problems on Earth and nobody has figured out how to clean it up yet."
+  },
+  "atlantic": {
+    "n": "Atlantic Ocean",
+    "emoji": "⚓",
+    "stripe": "#0D5E8C",
+    "hero": [
+      "⚓",
+      "🚢",
+      "🧊"
+    ],
+    "letter": "The Atlantic Ocean is the second biggest ocean and the busiest. More ships cross the Atlantic than any other ocean. The Titanic sank here. Christopher Columbus crossed it. The slave trade's most horrific journeys were across these waters (called the Middle Passage). Icebergs drift down from the Arctic into the North Atlantic. The Gulf Stream carries warm water from the Caribbean all the way to Europe, which is why London is warmer than it should be.",
+    "facts": [
+      {
+        "i": "🚢",
+        "t": "Busiest ocean for shipping"
+      },
+      {
+        "i": "🧊",
+        "t": "Iceberg Alley in the north"
+      },
+      {
+        "i": "🌡️",
+        "t": "Gulf Stream warms Europe"
+      },
+      {
+        "i": "📏",
+        "t": "Gets 1 inch wider every year"
+      }
+    ],
+    "secret": "The Atlantic Ocean is getting WIDER. North America and Europe are slowly drifting apart at about 1 inch per year (about the speed your fingernails grow). In the middle of the ocean, there is an underwater mountain range where new ocean floor is being created by volcanic activity. It is called the Mid-Atlantic Ridge and it is the longest mountain range on Earth, over 10,000 miles long. You just cannot see it because it is underwater."
+  },
+  "indian": {
+    "n": "Indian Ocean",
+    "emoji": "🐚",
+    "stripe": "#0B6B5E",
+    "hero": [
+      "🐚",
+      "🌀",
+      "🐢"
+    ],
+    "letter": "The Indian Ocean is the warmest ocean on Earth. It sits between Africa, Asia, and Australia. Monsoon winds reverse direction every six months, which ancient sailors used to travel back and forth for trade. The 2004 tsunami started here and was one of the deadliest natural disasters in history. Dugongs, sea turtles, and whale sharks swim in these waters. The Maldives, Seychelles, and Mauritius are some of the most beautiful islands on the planet.",
+    "facts": [
+      {
+        "i": "🌡️",
+        "t": "Warmest ocean on Earth"
+      },
+      {
+        "i": "🌀",
+        "t": "Monsoon winds reverse twice a year"
+      },
+      {
+        "i": "🐢",
+        "t": "Critical sea turtle habitat"
+      },
+      {
+        "i": "💎",
+        "t": "Ancient spice trade routes"
+      }
+    ],
+    "secret": "The Indian Ocean has a place where the water GLOWS. Sailors have reported seeing the entire ocean surface light up with a milky blue glow that stretches to the horizon. Scientists think it is caused by bioluminescent bacteria, but the 'milky seas' are so rare and so enormous that nobody has been able to study one up close. Satellite photos have confirmed they are real and can be bigger than the state of Connecticut."
+  },
+  "southern": {
+    "n": "Southern Ocean",
+    "emoji": "🧊",
+    "stripe": "#2A5F7A",
+    "hero": [
+      "🧊",
+      "🐧",
+      "🐋"
+    ],
+    "letter": "The Southern Ocean is the newest official ocean, recognized in the year 2000. It is the ring of water that surrounds Antarctica. The water here is FREEZING and the waves are some of the most dangerous on Earth. Sailors call the latitudes down here the 'Roaring Forties' and the 'Screaming Sixties' because the wind never stops. But the cold water is incredibly rich with nutrients, making it one of the best places on Earth for wildlife. Penguins, seals, and whales thrive here.",
+    "facts": [
+      {
+        "i": "🧊",
+        "t": "Surrounds Antarctica"
+      },
+      {
+        "i": "🐧",
+        "t": "Home to Emperor penguins"
+      },
+      {
+        "i": "🌊",
+        "t": "Most dangerous waves on Earth"
+      },
+      {
+        "i": "🆕",
+        "t": "Officially recognized in 2000"
+      }
+    ],
+    "secret": "The Southern Ocean has something called the Antarctic Circumpolar Current, and it is the most powerful ocean current on Earth. It flows all the way around Antarctica without hitting any land, carrying 100 times more water than ALL the rivers on Earth combined. This current acts like a wall, keeping the cold Antarctic water separate from the warmer oceans above it. Without it, Antarctica's ice would melt much faster."
+  },
+  "arctic": {
+    "n": "Arctic Ocean",
+    "emoji": "❄️",
+    "stripe": "#3A6E8C",
+    "hero": [
+      "❄️",
+      "🐻‍❄️",
+      "🦭"
+    ],
+    "letter": "The Arctic Ocean is the smallest and shallowest ocean, and it sits on top of the world. For most of history, it was covered in ice year-round. Polar bears hunt on the sea ice. Narwhals (the unicorns of the sea) swim underneath it. Indigenous peoples like the Inuit have lived along its shores for thousands of years. But the Arctic is warming TWICE as fast as the rest of the planet. The sea ice is shrinking every decade, and scientists are watching closely.",
+    "facts": [
+      {
+        "i": "❄️",
+        "t": "Smallest and shallowest ocean"
+      },
+      {
+        "i": "🐻‍❄️",
+        "t": "Polar bears hunt on the sea ice"
+      },
+      {
+        "i": "🦄",
+        "t": "Narwhals: the 'unicorns of the sea'"
+      },
+      {
+        "i": "🌡️",
+        "t": "Warming twice as fast as the rest of Earth"
+      }
+    ],
+    "secret": "There is a seed vault buried in a mountain on an island in the Arctic Ocean (Svalbard, Norway). It holds over 1 million seed samples from almost every country on Earth, backup copies in case crops are wiped out by disease, war, or climate change. It is called the 'Doomsday Vault.' The Arctic ice around it was supposed to keep it naturally frozen forever, but the entrance flooded in 2017 because of warming temperatures. They had to rebuild it."
+  }
+}

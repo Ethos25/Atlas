@@ -1,0 +1,185 @@
+[
+  {
+    "emoji": "💛",
+    "name": "Your Family's Story",
+    "desc": "The places that made you",
+    "countries": [
+      "IRN",
+      "NGA",
+      "GBR",
+      "IRL",
+      "USA"
+    ],
+    "intro": "Follow your roots across the world."
+  },
+  {
+    "emoji": "🌋",
+    "name": "Ring of Fire",
+    "desc": "Countries with volcanoes and earthquakes",
+    "countries": [
+      "ISL",
+      "ITA",
+      "JPN",
+      "IDN",
+      "PHL",
+      "NZL",
+      "MEX",
+      "CHL",
+      "ECU"
+    ],
+    "intro": "A fiery path around the world."
+  },
+  {
+    "emoji": "🗣️",
+    "name": "The Spanish Trail",
+    "desc": "Every country that speaks Spanish",
+    "countries": [
+      "ESP",
+      "MEX",
+      "COL",
+      "ARG",
+      "PER",
+      "CHL",
+      "CUB",
+      "ECU",
+      "VEN",
+      "BOL",
+      "GTM",
+      "HND",
+      "NIC",
+      "SLV",
+      "CRI",
+      "PAN",
+      "DOM",
+      "URY",
+      "PRY"
+    ],
+    "intro": "One language, 20 countries."
+  },
+  {
+    "emoji": "👑",
+    "name": "Kingdoms of the World",
+    "desc": "Countries still ruled by royalty",
+    "countries": [
+      "GBR",
+      "ESP",
+      "NOR",
+      "SWE",
+      "DNK",
+      "NLD",
+      "BEL",
+      "JPN",
+      "THA",
+      "SAU",
+      "JOR",
+      "MAR"
+    ],
+    "intro": "Where kings and queens still sit on thrones."
+  },
+  {
+    "emoji": "🏝️",
+    "name": "Island Hopper",
+    "desc": "Countries surrounded by water",
+    "countries": [
+      "JPN",
+      "IDN",
+      "PHL",
+      "AUS",
+      "NZL",
+      "GBR",
+      "IRL",
+      "ISL",
+      "CUB",
+      "JAM",
+      "MDG",
+      "LKA",
+      "FJI"
+    ],
+    "intro": "Hop from island to island across every ocean."
+  },
+  {
+    "emoji": "🏔️",
+    "name": "Top of the World",
+    "desc": "The tallest mountains on each continent",
+    "countries": [
+      "NPL",
+      "TZA",
+      "ARG",
+      "USA",
+      "RUS",
+      "FRA",
+      "IDN"
+    ],
+    "intro": "Climb the highest peaks on every continent."
+  },
+  {
+    "emoji": "☕",
+    "name": "Coffee Trail",
+    "desc": "Where the world gets its coffee",
+    "countries": [
+      "ETH",
+      "COL",
+      "BRA",
+      "VNM",
+      "IDN",
+      "KEN",
+      "GTM",
+      "PER",
+      "CRI"
+    ],
+    "intro": "Follow the bean around the globe."
+  },
+  {
+    "emoji": "⚽",
+    "name": "World Cup Champions",
+    "desc": "Every country that has won the FIFA World Cup",
+    "countries": [
+      "BRA",
+      "DEU",
+      "ITA",
+      "ARG",
+      "URY",
+      "FRA",
+      "ESP",
+      "GBR"
+    ],
+    "intro": "The greatest soccer nations on Earth."
+  },
+  {
+    "emoji": "🏛️",
+    "name": "Ancient Civilizations",
+    "desc": "Where human history began",
+    "countries": [
+      "IRQ",
+      "EGY",
+      "IND",
+      "CHN",
+      "GRC",
+      "IRN",
+      "MEX",
+      "PER",
+      "ETH"
+    ],
+    "intro": "Walk where the first humans built cities."
+  },
+  {
+    "emoji": "🍜",
+    "name": "World Food Tour",
+    "desc": "The best food on every continent",
+    "countries": [
+      "ITA",
+      "THA",
+      "MEX",
+      "JPN",
+      "IND",
+      "FRA",
+      "TUR",
+      "PER",
+      "ETH",
+      "KOR",
+      "VNM",
+      "LBN"
+    ],
+    "intro": "Eat your way around the planet."
+  }
+]
