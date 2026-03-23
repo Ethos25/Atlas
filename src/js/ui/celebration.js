@@ -217,7 +217,7 @@ function _showFullScreen(tier, setDef) {
     // continent tier
     const badge = document.createElement('div');
     badge.className   = 'cel-ov-badge';
-    badge.textContent = setDef.icon || '🌍';
+    badge.innerHTML = setDef.icon || '<img src="/assets/ui-globe-md.png" alt="globe" style="width:64px;height:64px;vertical-align:middle">';
     scene.appendChild(badge);
 
     const title = document.createElement('div');

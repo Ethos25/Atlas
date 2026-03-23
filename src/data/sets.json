@@ -8,7 +8,7 @@
   "my_family": {
     "id": "my_family",
     "name": "My family's countries",
-    "icon": "💛",
+    "icon": "<img src='/assets/ui-heart-md.png' alt='heart' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 0,
     "min_age": 2,
     "category": "personal",
@@ -27,7 +27,7 @@
   "continent_africa": {
     "id": "continent_africa",
     "name": "Africa",
-    "icon": "🌍",
+    "icon": "<img src='/assets/ui-globe-md.png' alt='globe' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "continent",
@@ -36,27 +36,27 @@
     "sub_regions": {
       "west_africa": {
         "name": "West Africa",
-        "icon": "🥁",
+        "icon": "<img src='/assets/ui-drum-md.png' alt='drum' style='width:64px;height:64px;vertical-align:middle'>",
         "countries": ["NGA","GHA","SEN","CIV","MLI","BFA","NER","GIN","SLE","LBR","TGO","BEN","GMB","GNB","CPV","MRT"]
       },
       "east_africa": {
         "name": "East Africa",
-        "icon": "🦒",
+        "icon": "<img src='/assets/ui-giraffe-md.png' alt='giraffe' style='width:64px;height:64px;vertical-align:middle'>",
         "countries": ["KEN","TZA","UGA","RWA","BDI","ETH","ERI","DJI","SOM","SSD","SDN","MDG","MUS","SYC","COM","MOZ","MWI","ZWE"]
       },
       "north_africa": {
         "name": "North Africa",
-        "icon": "🏛️",
+        "icon": "<img src='/assets/ui-classical-building-md.png' alt='classical building' style='width:64px;height:64px;vertical-align:middle'>",
         "countries": ["EGY","LBY","TUN","DZA","MAR","MRT"]
       },
       "southern_africa": {
         "name": "Southern Africa",
-        "icon": "💎",
+        "icon": "<img src='/assets/ui-diamond-md.png' alt='diamond' style='width:64px;height:64px;vertical-align:middle'>",
         "countries": ["ZAF","BWA","NAM","LSO","SWZ"]
       },
       "central_africa": {
         "name": "Central Africa",
-        "icon": "🌿",
+        "icon": "<img src='/assets/ui-leaves-md.png' alt='leaves' style='width:64px;height:64px;vertical-align:middle'>",
         "countries": ["COD","COG","CMR","CAF","GAB","GNQ","TCD","AGO","STP"]
       }
     },
@@ -72,7 +72,7 @@
   "continent_asia": {
     "id": "continent_asia",
     "name": "Asia",
-    "icon": "🏯",
+    "icon": "<img src='/assets/ui-pagoda-md.png' alt='pagoda' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "continent",
@@ -90,7 +90,7 @@
   "continent_europe": {
     "id": "continent_europe",
     "name": "Europe",
-    "icon": "🏰",
+    "icon": "<img src='/assets/ui-castle-md.png' alt='castle' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "continent",
@@ -108,7 +108,7 @@
   "continent_north_america": {
     "id": "continent_north_america",
     "name": "North America",
-    "icon": "🗽",
+    "icon": "<img src='/assets/ui-statue-liberty-md.png' alt='statue of liberty' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "continent",
@@ -126,7 +126,7 @@
   "continent_south_america": {
     "id": "continent_south_america",
     "name": "South America",
-    "icon": "🦜",
+    "icon": "<img src='/assets/ui-parrot-md.png' alt='parrot' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "continent",
@@ -144,7 +144,7 @@
   "continent_oceania": {
     "id": "continent_oceania",
     "name": "Oceania",
-    "icon": "🏝️",
+    "icon": "<img src='/assets/ui-island-md.png' alt='island' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "continent",
@@ -162,7 +162,7 @@
   "continent_antarctica_partners": {
     "id": "continent_antarctica_partners",
     "name": "Antarctica partners",
-    "icon": "🧊",
+    "icon": "<img src='/assets/ui-ice-md.png' alt='ice' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "continent",
@@ -181,7 +181,7 @@
   "island_nations": {
     "id": "island_nations",
     "name": "Island nations",
-    "icon": "🏝️",
+    "icon": "<img src='/assets/ui-island-md.png' alt='island' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "geography",
@@ -199,7 +199,7 @@
   "tiny_countries": {
     "id": "tiny_countries",
     "name": "Tiny countries",
-    "icon": "🔍",
+    "icon": "<img src='/assets/ui-magnifying-glass-md.png' alt='magnifying glass' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "geography",
@@ -217,7 +217,7 @@
   "giant_countries": {
     "id": "giant_countries",
     "name": "Giant countries",
-    "icon": "🌍",
+    "icon": "<img src='/assets/ui-globe-md.png' alt='globe' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "geography",
@@ -235,7 +235,7 @@
   "equator_countries": {
     "id": "equator_countries",
     "name": "Countries on the equator",
-    "icon": "🌐",
+    "icon": "<img src='/assets/ui-globe-meridian-md.png' alt='globe' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "geography",
@@ -253,7 +253,7 @@
   "landlocked_proud": {
     "id": "landlocked_proud",
     "name": "Landlocked and proud",
-    "icon": "⛰️",
+    "icon": "<img src='/assets/ui-mountain-md.png' alt='mountain' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "geography",
@@ -271,7 +271,7 @@
   "african_safari": {
     "id": "african_safari",
     "name": "African safari animals",
-    "icon": "🦁",
+    "icon": "<img src='/assets/ui-lion-md.png' alt='lion' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "animal",
@@ -289,7 +289,7 @@
   "asian_jungle": {
     "id": "asian_jungle",
     "name": "Asian jungle animals",
-    "icon": "🐅",
+    "icon": "<img src='/assets/ui-tiger-md.png' alt='tiger' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "animal",
@@ -307,7 +307,7 @@
   "ocean_coast_animals": {
     "id": "ocean_coast_animals",
     "name": "Ocean and coast animals",
-    "icon": "🐋",
+    "icon": "<img src='/assets/ui-whale-md.png' alt='whale' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "animal",
@@ -325,7 +325,7 @@
   "arctic_animals": {
     "id": "arctic_animals",
     "name": "Arctic animals",
-    "icon": "🐻‍❄️",
+    "icon": "<img src='/assets/ui-polar-bear-md.png' alt='polar bear' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "animal",
@@ -343,7 +343,7 @@
   "unique_animals": {
     "id": "unique_animals",
     "name": "Unique animal countries",
-    "icon": "🦘",
+    "icon": "<img src='/assets/ui-kangaroo-md.png' alt='kangaroo' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 1,
     "min_age": 2,
     "category": "animal",
@@ -362,7 +362,7 @@
   "volcano_countries": {
     "id": "volcano_countries",
     "name": "Volcano countries",
-    "icon": "🌋",
+    "icon": "<img src='/assets/ui-volcano-md.png' alt='volcano' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 2,
     "min_age": 5,
     "category": "geography",
@@ -380,7 +380,7 @@
   "desert_countries": {
     "id": "desert_countries",
     "name": "Desert countries",
-    "icon": "🏜️",
+    "icon": "<img src='/assets/ui-desert-md.png' alt='desert' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 2,
     "min_age": 5,
     "category": "geography",
@@ -398,7 +398,7 @@
   "rainforest_countries": {
     "id": "rainforest_countries",
     "name": "Rainforest countries",
-    "icon": "🌳",
+    "icon": "<img src='/assets/ui-tree-md.png' alt='tree' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 2,
     "min_age": 5,
     "category": "geography",
@@ -416,7 +416,7 @@
   "arctic_antarctic_neighbors": {
     "id": "arctic_antarctic_neighbors",
     "name": "Arctic and Antarctic neighbors",
-    "icon": "❄️",
+    "icon": "<img src='/assets/ui-snowflake-md.png' alt='snowflake' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 2,
     "min_age": 5,
     "category": "geography",
@@ -434,7 +434,7 @@
   "ancient_trade_routes": {
     "id": "ancient_trade_routes",
     "name": "Ancient trade routes",
-    "icon": "🐪",
+    "icon": "<img src='/assets/ui-camel-md.png' alt='camel' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 2,
     "min_age": 5,
     "category": "culture",
@@ -488,7 +488,7 @@
   "arabic_speaking": {
     "id": "arabic_speaking",
     "name": "Marhaba! Arabic-speaking countries",
-    "icon": "🕌",
+    "icon": "<img src='/assets/ui-mosque-md.png' alt='mosque' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 2,
     "min_age": 5,
     "category": "culture",
@@ -506,7 +506,7 @@
   "olympic_hosts": {
     "id": "olympic_hosts",
     "name": "Olympic host countries",
-    "icon": "🏅",
+    "icon": "<img src='/assets/ui-medal-md.png' alt='medal' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 2,
     "min_age": 5,
     "category": "culture",
@@ -524,7 +524,7 @@
   "ancient_writing": {
     "id": "ancient_writing",
     "name": "Countries with ancient writing",
-    "icon": "📜",
+    "icon": "<img src='/assets/ui-scroll-md.png' alt='scroll' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 2,
     "min_age": 5,
     "category": "culture",
@@ -542,7 +542,7 @@
   "unique_instruments": {
     "id": "unique_instruments",
     "name": "Countries with unique instruments",
-    "icon": "🎵",
+    "icon": "<img src='/assets/ui-music-notes-md.png' alt='music notes' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 2,
     "min_age": 5,
     "category": "culture",
@@ -560,7 +560,7 @@
   "famous_festivals": {
     "id": "famous_festivals",
     "name": "Countries with famous festivals",
-    "icon": "🎉",
+    "icon": "<img src='/assets/ui-party-md.png' alt='party' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 2,
     "min_age": 5,
     "category": "culture",
@@ -578,7 +578,7 @@
   "soccer_famous": {
     "id": "soccer_famous",
     "name": "Countries famous for soccer",
-    "icon": "⚽",
+    "icon": "<img src='/assets/ui-soccer-md.png' alt='soccer' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 2,
     "min_age": 5,
     "category": "culture",
@@ -596,7 +596,7 @@
   "chocolate_famous": {
     "id": "chocolate_famous",
     "name": "Countries famous for chocolate",
-    "icon": "🍫",
+    "icon": "<img src='/assets/ui-chocolate-md.png' alt='chocolate' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 2,
     "min_age": 5,
     "category": "culture",
@@ -614,7 +614,7 @@
   "countries_with_castles": {
     "id": "countries_with_castles",
     "name": "Countries with castles",
-    "icon": "🏰",
+    "icon": "<img src='/assets/ui-castle-md.png' alt='castle' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 2,
     "min_age": 5,
     "category": "culture",
@@ -633,7 +633,7 @@
   "kings_queens_europe": {
     "id": "kings_queens_europe",
     "name": "Kings and queens of Europe",
-    "icon": "👑",
+    "icon": "<img src='/assets/ui-crown-md.png' alt='crown' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 3,
     "min_age": 8,
     "category": "challenge",
@@ -651,7 +651,7 @@
   "brand_new_countries": {
     "id": "brand_new_countries",
     "name": "Brand new countries",
-    "icon": "🌱",
+    "icon": "<img src='/assets/ui-seedling-md.png' alt='seedling' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 3,
     "min_age": 8,
     "category": "challenge",
@@ -669,7 +669,7 @@
   "chose_new_name": {
     "id": "chose_new_name",
     "name": "Countries that chose a new name",
-    "icon": "✍️",
+    "icon": "<img src='/assets/ui-writing-hand-md.png' alt='writing hand' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 3,
     "min_age": 8,
     "category": "challenge",
@@ -687,7 +687,7 @@
   "never_heard_of": {
     "id": "never_heard_of",
     "name": "Countries you've never heard of",
-    "icon": "🔮",
+    "icon": "<img src='/assets/ui-crystal-ball-md.png' alt='crystal ball' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 3,
     "min_age": 8,
     "category": "discovery",
@@ -705,7 +705,7 @@
   "shaped_like_something": {
     "id": "shaped_like_something",
     "name": "Countries shaped like something",
-    "icon": "👀",
+    "icon": "<img src='/assets/ui-eyes-md.png' alt='eyes' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 2,
     "min_age": 5,
     "category": "discovery",
@@ -723,7 +723,7 @@
   "ancient_civilizations": {
     "id": "ancient_civilizations",
     "name": "Countries with ancient civilizations",
-    "icon": "🏛️",
+    "icon": "<img src='/assets/ui-classical-building-md.png' alt='classical building' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 3,
     "min_age": 8,
     "category": "challenge",
@@ -741,7 +741,7 @@
   "countries_on_nile": {
     "id": "countries_on_nile",
     "name": "Countries on the Nile",
-    "icon": "🏞️",
+    "icon": "<img src='/assets/ui-landscape-md.png' alt='landscape' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 3,
     "min_age": 8,
     "category": "geography",
@@ -759,7 +759,7 @@
   "mediterranean": {
     "id": "mediterranean",
     "name": "Countries on the Mediterranean",
-    "icon": "🌊",
+    "icon": "<img src='/assets/ui-wave-md.png' alt='wave' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 3,
     "min_age": 8,
     "category": "geography",
@@ -777,7 +777,7 @@
   "space_programs": {
     "id": "space_programs",
     "name": "Countries with space programs",
-    "icon": "🚀",
+    "icon": "<img src='/assets/ui-rocket-md.png' alt='rocket' style='width:64px;height:64px;vertical-align:middle'>",
     "tier": 3,
     "min_age": 8,
     "category": "challenge",

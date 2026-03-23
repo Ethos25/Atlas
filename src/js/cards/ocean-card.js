@@ -51,7 +51,7 @@ export function showOceanCard(id) {
   // Status badge — ocean label
   var statusEl = document.getElementById('pcStatus');
   if (statusEl) {
-    statusEl.textContent  = '🌊 Ocean';
+    statusEl.innerHTML    = '<img src="/assets/ui-wave-xs.png" alt="wave" style="width:24px;height:24px;vertical-align:middle"> Ocean';
     statusEl.className    = 'pc-status territory';
     statusEl.style.display = 'inline-block';
   }

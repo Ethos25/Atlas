@@ -2,7 +2,7 @@
   {
     "q": "Which country has MORE pyramids than Egypt?",
     "a": "SDN",
-    "em": "🏛️",
+    "em": "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Sudan has over 200 pyramids built by the Kingdom of Kush. They're smaller and pointier than Egypt's, but there are WAY more of them!"
   },
   {
@@ -14,7 +14,7 @@
   {
     "q": "Which country invented the ALPHABET you're reading?",
     "a": "LBN",
-    "em": "📜",
+    "em": "<img src='/assets/ui-scroll-sm.png' alt='scroll' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "The Phoenicians of ancient Lebanon created an alphabet around 1050 BC. It evolved into Greek, then Latin, then the ABCs you use today!"
   },
   {
@@ -32,7 +32,7 @@
   {
     "q": "Where is the OLDEST desert on Earth?",
     "a": "NAM",
-    "em": "🏜️",
+    "em": "<img src='/assets/ui-desert-sm.png' alt='desert' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "The Namib Desert is 55 million years old. Its sand dunes glow orange at sunrise because the iron in the sand has rusted over millions of years."
   },
   {
@@ -44,7 +44,7 @@
   {
     "q": "Where can you RENT the entire country?",
     "a": "LIE",
-    "em": "🏰",
+    "em": "<img src='/assets/ui-castle-sm.png' alt='castle' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "For about $70,000 a night, you can rent Liechtenstein for your event. You get a custom street sign and the key to the country!"
   },
   {
@@ -80,7 +80,7 @@
   {
     "q": "Where is the TALLEST waterfall on Earth?",
     "a": "VEN",
-    "em": "🌊",
+    "em": "<img src='/assets/ui-wave-sm.png' alt='wave' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Angel Falls drops 3,212 feet, so high that the water turns to mist before it reaches the bottom!"
   },
   {
@@ -92,7 +92,7 @@
   {
     "q": "Where was the STEEL DRUM invented?",
     "a": "TTO",
-    "em": "🥁",
+    "em": "<img src='/assets/ui-drum-sm.png' alt='drum' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "The steel drum was made from oil barrels in the 1930s. Trinidad literally turned trash into the only acoustic instrument invented in the 20th century!"
   },
   {
@@ -116,7 +116,7 @@
   {
     "q": "Which country has a Door to Hell burning 50+ years?",
     "a": "TKM",
-    "em": "🔥",
+    "em": "<img src='/assets/ui-flame-sm.png' alt='flame' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "The Darvaza Gas Crater was lit by scientists in 1971, expecting it to burn out in weeks. It's STILL burning over 50 years later!"
   },
   {
@@ -140,7 +140,7 @@
   {
     "q": "Which country was founded by freed American slaves?",
     "a": "LBR",
-    "em": "🗽",
+    "em": "<img src='/assets/ui-statue-liberty-sm.png' alt='statue of liberty' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Liberia's capital Monrovia is named after US President James Monroe. The flag has one star instead of America's 50."
   },
   {
@@ -152,7 +152,7 @@
   {
     "q": "Which country hosted the FIRST World Cup?",
     "a": "URY",
-    "em": "⚽",
+    "em": "<img src='/assets/ui-soccer-sm.png' alt='soccer' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "The first World Cup was held in Uruguay in 1930. Uruguay won it, beating Argentina 4-2 in the final!"
   },
   {
@@ -164,7 +164,7 @@
   {
     "q": "Which country has the most CASTLES per person?",
     "a": "SVK",
-    "em": "🏰",
+    "em": "<img src='/assets/ui-castle-sm.png' alt='castle' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Slovakia has more castles per person than almost any country. Spiš Castle is one of the largest castle complexes in Central Europe!"
   },
   {
@@ -206,7 +206,7 @@
   {
     "q": "Where is the LARGEST religious building ever made?",
     "a": "KHM",
-    "em": "🏛️",
+    "em": "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Angkor Wat took about 30 years to build and is the largest religious monument ever constructed. It's on Cambodia's flag!"
   },
   {
@@ -218,7 +218,7 @@
   {
     "q": "Where are temples OLDER than the pyramids?",
     "a": "MLT",
-    "em": "🏛️",
+    "em": "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Malta's Ħaġar Qim temples date to 3600 BC, about 1,000 years older than the Great Pyramid of Giza!"
   },
   {
@@ -254,7 +254,7 @@
   {
     "q": "Where is the only country in ALL FOUR hemispheres?",
     "a": "KIR",
-    "em": "🌍",
+    "em": "<img src='/assets/ui-globe-sm.png' alt='globe' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Kiribati straddles the International Date Line AND the equator. It's the only country in all four hemispheres at once!"
   },
   {
@@ -266,13 +266,13 @@
   {
     "q": "Where was the World Wide Web invented?",
     "a": "CHE",
-    "em": "🌐",
+    "em": "<img src='/assets/ui-globe-meridian-sm.png' alt='globe' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Tim Berners-Lee invented the World Wide Web at CERN in Switzerland in 1989. He gave it away for free instead of patenting it!"
   },
   {
     "q": "Which country went from poorest to richest with diamonds?",
     "a": "BWA",
-    "em": "💎",
+    "em": "<img src='/assets/ui-diamond-sm.png' alt='diamond' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "In 1966, Botswana was one of the poorest countries on Earth. Then they found diamonds and invested wisely. Now it's one of Africa's richest!"
   },
   {
@@ -284,7 +284,7 @@
   {
     "q": "Which Pacific country was NEVER colonized?",
     "a": "TON",
-    "em": "👑",
+    "em": "<img src='/assets/ui-crown-sm.png' alt='crown' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Tonga resisted colonization for centuries. It signed treaties but never gave up sovereignty. The only Pacific kingdom that stayed independent!"
   },
   {
@@ -314,19 +314,19 @@
   {
     "q": "Where did the djembe drum come from?",
     "a": "GIN",
-    "em": "🥁",
+    "em": "<img src='/assets/ui-drum-sm.png' alt='drum' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "The djembe drum was originally used by griots (storytellers) to communicate across villages. Now every school music room has one!"
   },
   {
     "q": "Which country has TWO capital cities?",
     "a": "BOL",
-    "em": "🏛️",
+    "em": "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Bolivia has two capitals: Sucre is the constitutional capital and La Paz is the seat of government at the highest altitude in the world!"
   },
   {
     "q": "Where is the Pearl of Africa?",
     "a": "UGA",
-    "em": "💎",
+    "em": "<img src='/assets/ui-diamond-sm.png' alt='diamond' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Winston Churchill visited Uganda in 1907 and called it 'the Pearl of Africa' because of its lush green landscapes and perfect climate."
   },
   {
@@ -392,7 +392,7 @@
   {
     "q": "Which country has 9 sultans who take TURNS being king?",
     "a": "MYS",
-    "em": "👑",
+    "em": "<img src='/assets/ui-crown-sm.png' alt='crown' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Every 5 years, a different sultan becomes Malaysia's king. It's like a royal time-share. No other country does this!"
   },
   {
@@ -410,7 +410,7 @@
   {
     "q": "Where is the DEEPEST river on Earth?",
     "a": "COD",
-    "em": "🌊",
+    "em": "<img src='/assets/ui-wave-sm.png' alt='wave' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "The Congo River is up to 720 feet deep in places. It's so deep and fast that fish on opposite banks evolved into different species!"
   },
   {
@@ -446,7 +446,7 @@
   {
     "q": "Which country was the first Black republic?",
     "a": "HTI",
-    "em": "🗽",
+    "em": "<img src='/assets/ui-statue-liberty-sm.png' alt='statue of liberty' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "In 1804, enslaved Haitians defeated Napoleon's army to create the first free Black republic. It inspired freedom movements worldwide!"
   },
   {
@@ -458,7 +458,7 @@
   {
     "q": "Where is the Palace with 1,788 rooms?",
     "a": "BRN",
-    "em": "🏰",
+    "em": "<img src='/assets/ui-castle-sm.png' alt='castle' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "The Sultan's palace has 1,788 rooms, 257 bathrooms, a mosque that holds 1,500 people, and a garage for 7,000 cars!"
   },
   {
@@ -470,13 +470,13 @@
   {
     "q": "Where is the FLATTEST country on Earth?",
     "a": "MDV",
-    "em": "🏝️",
+    "em": "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "The Maldives' highest point is only 5 feet 8 inches above sea level. The entire country could disappear if oceans rise!"
   },
   {
     "q": "Which country has a waterfall 4x taller than Niagara?",
     "a": "GUY",
-    "em": "🌊",
+    "em": "<img src='/assets/ui-wave-sm.png' alt='wave' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Kaieteur Falls drops 741 feet in a single plunge, about 4 times taller than Niagara Falls, into an ancient jungle canyon!"
   },
   {
@@ -500,25 +500,25 @@
   {
     "q": "Where did chocolate DRINKS originate?",
     "a": "MEX",
-    "em": "🍫",
+    "em": "<img src='/assets/ui-chocolate-sm.png' alt='chocolate' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "The ancient Maya heated cacao beans, mixed them with chili and water, and created the first chocolate drinks over 3,000 years ago!"
   },
   {
     "q": "Which country is named after the EQUATOR?",
     "a": "ECU",
-    "em": "🌍",
+    "em": "<img src='/assets/ui-globe-sm.png' alt='globe' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Ecuador literally means 'Equator' in Spanish. The equator runs right through the country. You can stand in both hemispheres at once!"
   },
   {
     "q": "Where is the Lion Mountain?",
     "a": "SLE",
-    "em": "🦁",
+    "em": "<img src='/assets/ui-lion-sm.png' alt='lion' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Sierra Leone means 'Lion Mountain' in Portuguese. One of the largest diamonds ever found, 969 carats, came from here!"
   },
   {
     "q": "Which island has Rihanna and rum?",
     "a": "BRB",
-    "em": "🎵",
+    "em": "<img src='/assets/ui-music-notes-sm.png' alt='music notes' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Rihanna is Barbados's national hero, appointed in 2021 when the country became a republic. Her face is basically everywhere on the island!"
   },
   {
@@ -530,7 +530,7 @@
   {
     "q": "Which country has the Great Blue Hole?",
     "a": "BLZ",
-    "em": "🌊",
+    "em": "<img src='/assets/ui-wave-sm.png' alt='wave' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "The Great Blue Hole is 984 feet across and 410 feet deep. Jacques Cousteau called it one of the top dive sites in the world!"
   },
   {
@@ -542,13 +542,13 @@
   {
     "q": "Which country is Africa in miniature?",
     "a": "CMR",
-    "em": "🌍",
+    "em": "<img src='/assets/ui-globe-sm.png' alt='globe' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Cameroon has beaches, mountains, rainforest, savanna, and desert, which is why it's called 'Africa in miniature!'"
   },
   {
     "q": "Where do 30,000 people sing together?",
     "a": "LVA",
-    "em": "🎵",
+    "em": "<img src='/assets/ui-music-notes-sm.png' alt='music notes' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Latvia's Song Festival happens every 5 years. 30,000 singers perform together in a single choir. You can hear it from miles away!"
   },
   {
@@ -602,7 +602,7 @@
   {
     "q": "Where is the oldest city (11,000 years)?",
     "a": "SYR",
-    "em": "🏛️",
+    "em": "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Damascus has been continuously inhabited for over 11,000 years. People have lived there since before humans invented farming!"
   },
   {
@@ -614,7 +614,7 @@
   {
     "q": "Which country's CINNAMON flavors the world?",
     "a": "LKA",
-    "em": "🌿",
+    "em": "<img src='/assets/ui-leaves-sm.png' alt='leaves' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "Sri Lankan cinnamon (Ceylon cinnamon) is the 'true' cinnamon. What most Americans use is actually cassia, a cheaper substitute!"
   },
   {
@@ -674,7 +674,7 @@
   {
     "q": "Where does the Amazon River flow?",
     "a": "BRA",
-    "em": "🌳",
+    "em": "<img src='/assets/ui-tree-sm.png' alt='tree' style='width:32px;height:32px;vertical-align:middle'>",
     "ctx": "The Amazon River carries more water than the next 7 largest rivers COMBINED. It's so wide in places you can't see the other side!"
   }
 ]

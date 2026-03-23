@@ -1,7 +1,7 @@
 {
   "pacific": {
     "n": "Pacific Ocean",
-    "emoji": "🌊",
+    "emoji": "<img src='/assets/ui-wave-sm.png' alt='wave' style='width:32px;height:32px;vertical-align:middle'>",
     "stripe": "#0A4C7A",
     "hero": [
       "🌊",
@@ -11,7 +11,7 @@
     "letter": "The Pacific Ocean is the BIGGEST thing on Earth. It covers more area than ALL the land on every continent put together. If you flew across it, it would take over 12 hours. The name means 'peaceful' but it has the most powerful storms, the deepest trenches, and more volcanoes than anywhere. The Mariana Trench goes down almost 7 miles. That is deeper than Mount Everest is tall.",
     "facts": [
       {
-        "i": "🌍",
+        "i": "<img src='/assets/ui-globe-xs.png' alt='globe' style='width:24px;height:24px;vertical-align:middle'>",
         "t": "Covers 30% of Earth's surface"
       },
       {
@@ -19,11 +19,11 @@
         "t": "Mariana Trench: deepest point on Earth"
       },
       {
-        "i": "🌋",
+        "i": "<img src='/assets/ui-volcano-xs.png' alt='volcano' style='width:24px;height:24px;vertical-align:middle'>",
         "t": "Ring of Fire: 75% of world's volcanoes"
       },
       {
-        "i": "🏝️",
+        "i": "<img src='/assets/ui-island-xs.png' alt='island' style='width:24px;height:24px;vertical-align:middle'>",
         "t": "Over 25,000 islands"
       }
     ],
@@ -45,7 +45,7 @@
         "t": "Busiest ocean for shipping"
       },
       {
-        "i": "🧊",
+        "i": "<img src='/assets/ui-ice-xs.png' alt='ice' style='width:24px;height:24px;vertical-align:middle'>",
         "t": "Iceberg Alley in the north"
       },
       {
@@ -83,7 +83,7 @@
         "t": "Critical sea turtle habitat"
       },
       {
-        "i": "💎",
+        "i": "<img src='/assets/ui-diamond-xs.png' alt='diamond' style='width:24px;height:24px;vertical-align:middle'>",
         "t": "Ancient spice trade routes"
       }
     ],
@@ -91,7 +91,7 @@
   },
   "southern": {
     "n": "Southern Ocean",
-    "emoji": "🧊",
+    "emoji": "<img src='/assets/ui-ice-sm.png' alt='ice' style='width:32px;height:32px;vertical-align:middle'>",
     "stripe": "#2A5F7A",
     "hero": [
       "🧊",
@@ -101,7 +101,7 @@
     "letter": "The Southern Ocean is the newest official ocean, recognized in the year 2000. It is the ring of water that surrounds Antarctica. The water here is FREEZING and the waves are some of the most dangerous on Earth. Sailors call the latitudes down here the 'Roaring Forties' and the 'Screaming Sixties' because the wind never stops. But the cold water is incredibly rich with nutrients, making it one of the best places on Earth for wildlife. Penguins, seals, and whales thrive here.",
     "facts": [
       {
-        "i": "🧊",
+        "i": "<img src='/assets/ui-ice-xs.png' alt='ice' style='width:24px;height:24px;vertical-align:middle'>",
         "t": "Surrounds Antarctica"
       },
       {
@@ -109,7 +109,7 @@
         "t": "Home to Emperor penguins"
       },
       {
-        "i": "🌊",
+        "i": "<img src='/assets/ui-wave-xs.png' alt='wave' style='width:24px;height:24px;vertical-align:middle'>",
         "t": "Most dangerous waves on Earth"
       },
       {
@@ -121,7 +121,7 @@
   },
   "arctic": {
     "n": "Arctic Ocean",
-    "emoji": "❄️",
+    "emoji": "<img src='/assets/ui-snowflake-sm.png' alt='snowflake' style='width:32px;height:32px;vertical-align:middle'>",
     "stripe": "#3A6E8C",
     "hero": [
       "❄️",
@@ -131,11 +131,11 @@
     "letter": "The Arctic Ocean is the smallest and shallowest ocean, and it sits on top of the world. For most of history, it was covered in ice year-round. Polar bears hunt on the sea ice. Narwhals (the unicorns of the sea) swim underneath it. Indigenous peoples like the Inuit have lived along its shores for thousands of years. But the Arctic is warming TWICE as fast as the rest of the planet. The sea ice is shrinking every decade, and scientists are watching closely.",
     "facts": [
       {
-        "i": "❄️",
+        "i": "<img src='/assets/ui-snowflake-xs.png' alt='snowflake' style='width:24px;height:24px;vertical-align:middle'>",
         "t": "Smallest and shallowest ocean"
       },
       {
-        "i": "🐻‍❄️",
+        "i": "<img src='/assets/ui-polar-bear-xs.png' alt='polar bear' style='width:24px;height:24px;vertical-align:middle'>",
         "t": "Polar bears hunt on the sea ice"
       },
       {

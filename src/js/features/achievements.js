@@ -53,29 +53,29 @@ const CONT_NAMES_SHORT = {
 // ── Surprise achievements — check() functions can't live in JSON ─────────────
 function _buildSurpriseAchs() {
   return [
-    { id:'island3',   emoji:'🏝️', title:'Island Hopper!',        sub:'Discovered 3 island nations',
+    { id:'island3',   emoji:'<img src="/assets/ui-island-md.png" alt="island" style="width:64px;height:64px;vertical-align:middle">', title:'Island Hopper!',        sub:'Discovered 3 island nations',
       check() {
         const islands = ['JPN','PHL','IDN','GBR','IRL','ISL','CUB','JAM','MDG','NZL','FJI',
                          'LKA','SGP','BHR','MUS','CPV','TTO','HTI','DOM','PNG'];
         const v = _ctx.getVisited(); const F = _ctx.getFAM();
         return islands.filter(i => v.has(i) || F.includes(i)).length >= 3;
       }},
-    { id:'africa1',   emoji:'🌍', title:'Welcome to Africa!',     sub:'Your first African discovery',
+    { id:'africa1',   emoji:'<img src="/assets/ui-globe-md.png" alt="globe" style="width:64px;height:64px;vertical-align:middle">', title:'Welcome to Africa!',     sub:'Your first African discovery',
       check() {
         const v = _ctx.getVisited(); const D = _ctx.getD(); const CM = _ctx.getCONT_MAP();
         return Object.keys(D).filter(k => CM[k] === 'AF' && v.has(k)).length === 1;
       }},
-    { id:'asia1',     emoji:'🌏', title:'Konnichiwa, Asia!',       sub:'Your first Asian discovery',
+    { id:'asia1',     emoji:'<img src="/assets/ui-globe-asia-md.png" alt="globe" style="width:64px;height:64px;vertical-align:middle">', title:'Konnichiwa, Asia!',       sub:'Your first Asian discovery',
       check() {
         const v = _ctx.getVisited(); const D = _ctx.getD(); const CM = _ctx.getCONT_MAP();
         return Object.keys(D).filter(k => CM[k] === 'AS' && v.has(k)).length === 1;
       }},
-    { id:'sa1',       emoji:'🌎', title:'¡Hola, South America!',  sub:'Your first South American discovery',
+    { id:'sa1',       emoji:'<img src="/assets/ui-globe-americas-md.png" alt="globe" style="width:64px;height:64px;vertical-align:middle">', title:'¡Hola, South America!',  sub:'Your first South American discovery',
       check() {
         const v = _ctx.getVisited(); const D = _ctx.getD(); const CM = _ctx.getCONT_MAP();
         return Object.keys(D).filter(k => CM[k] === 'SA' && v.has(k)).length === 1;
       }},
-    { id:'eu1',       emoji:'🏰', title:'Bonjour, Europe!',        sub:'Your first European discovery',
+    { id:'eu1',       emoji:'<img src="/assets/ui-castle-md.png" alt="castle" style="width:64px;height:64px;vertical-align:middle">', title:'Bonjour, Europe!',        sub:'Your first European discovery',
       check() {
         const v = _ctx.getVisited(); const D = _ctx.getD(); const CM = _ctx.getCONT_MAP();
         return Object.keys(D).filter(k => CM[k] === 'EU' && v.has(k)).length === 1;

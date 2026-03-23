@@ -35,7 +35,7 @@ const LENSES = {
     countries: ['ESP','MEX','COL','ARG','PER','VEN','CHL','ECU','GTM','CUB','BOL','DOM','HND','PRY','SLV','NIC','CRI','PAN','URY','GNQ'],
   },
   monarchy: {
-    icon: '👑',
+    icon: '<img src="/assets/ui-crown-xs.png" alt="crown" style="width:24px;height:24px;vertical-align:middle">',
     title: 'Countries with a King or Queen',
     desc: 'These countries still have royalty! Some kings and queens have real power, some are just fancy.',
     countries: ['GBR','ESP','NOR','SWE','DNK','NLD','BEL','JPN','THA','SAU','JOR','MAR','KWT','QAT','ARE','OMN','BHR','MYS','KHM','LSO','SWZ','BWA','TTO'],
@@ -47,13 +47,13 @@ const LENSES = {
     countries: ['ECU','COL','BRA','GAB','COG','COD','UGA','KEN','SOM','IDN','GNQ'],
   },
   islands: {
-    icon: '🏝️',
+    icon: '<img src="/assets/ui-island-xs.png" alt="island" style="width:24px;height:24px;vertical-align:middle">',
     title: 'Island Countries',
     desc: 'These countries are COMPLETELY surrounded by water! Some are one island, some are thousands.',
     countries: ['JPN','IDN','PHL','AUS','NZL','GBR','IRL','ISL','CUB','JAM','MDG','LKA','SGP','TTO','PNG'],
   },
   oldest: {
-    icon: '📜',
+    icon: '<img src="/assets/ui-scroll-xs.png" alt="scroll" style="width:24px;height:24px;vertical-align:middle">',
     title: 'The Oldest Countries on Earth',
     desc: 'These places have been home to civilizations for THOUSANDS of years. History started here.',
     countries: ['IRN','EGY','CHN','GRC','IND','IRQ','ETH','JPN','MEX','PER'],
@@ -65,7 +65,7 @@ const LENSES = {
     countries: ['LUX','SGP','IRL','QAT','CHE','NOR','USA','DNK','AUS','ISL','NLD','AUT','SWE','DEU','CAN'],
   },
   growing: {
-    icon: '🌱',
+    icon: '<img src="/assets/ui-seedling-xs.png" alt="seedling" style="width:24px;height:24px;vertical-align:middle">',
     title: 'Countries Growing the FASTEST',
     desc: 'These countries are building their future faster than anyone. Watch out world!',
     countries: ['IND','BGD','VNM','ETH','PHL','IDN','TZA','RWA','KHM','UZB','MNG','KEN','GHA','SEN','NPL'],
@@ -160,7 +160,7 @@ export function toggleLens(lensId) {
   const titleEl = document.getElementById('lensTitle');
   const descEl  = document.getElementById('lensDesc');
   const infoEl  = document.getElementById('lensInfo');
-  if (titleEl) titleEl.textContent = lens.icon + ' ' + lens.title;
+  if (titleEl) titleEl.innerHTML = lens.icon + ' ' + lens.title;
   if (descEl)  descEl.textContent  = lens.desc;
   if (infoEl)  infoEl.classList.add('show');
 

@@ -37,31 +37,31 @@
   "SURPRISE_ACHS": [
     {
       "id": "island3",
-      "emoji": "🏝️",
+      "emoji": "<img src='/assets/ui-island-md.png' alt='island' style='width:64px;height:64px;vertical-align:middle'>",
       "title": "Island Hopper!",
       "sub": "Discovered 3 island nations"
     },
     {
       "id": "africa1",
-      "emoji": "🌍",
+      "emoji": "<img src='/assets/ui-globe-md.png' alt='globe' style='width:64px;height:64px;vertical-align:middle'>",
       "title": "Welcome to Africa!",
       "sub": "Your first African discovery"
     },
     {
       "id": "asia1",
-      "emoji": "🌏",
+      "emoji": "<img src='/assets/ui-globe-asia-md.png' alt='globe' style='width:64px;height:64px;vertical-align:middle'>",
       "title": "Konnichiwa, Asia!",
       "sub": "Your first Asian discovery"
     },
     {
       "id": "sa1",
-      "emoji": "🌎",
+      "emoji": "<img src='/assets/ui-globe-americas-md.png' alt='globe' style='width:64px;height:64px;vertical-align:middle'>",
       "title": "¡Hola, South America!",
       "sub": "Your first South American discovery"
     },
     {
       "id": "eu1",
-      "emoji": "🏰",
+      "emoji": "<img src='/assets/ui-castle-md.png' alt='castle' style='width:64px;height:64px;vertical-align:middle'>",
       "title": "Bonjour, Europe!",
       "sub": "Your first European discovery"
     },
