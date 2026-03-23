@@ -5,7 +5,7 @@
     "f": "🇮🇷",
     "c": "Asia",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "🌹",
       "🐱"
     ],
@@ -110,7 +110,7 @@
     "f": "🇺🇸",
     "c": "North America",
     "hero": [
-      "🗽",
+      "<img src='/assets/ui-statue-liberty-sm.png' alt='Statue of Liberty' style='width:32px;height:32px;vertical-align:middle'>",
       "🌙",
       "🦅"
     ],
@@ -180,7 +180,7 @@
     "f": "🇯🇵",
     "c": "Asia",
     "hero": [
-      "⛩️",
+      "<img src='/assets/ui-pagoda-sm.png' alt='pagoda' style='width:32px;height:32px;vertical-align:middle'>",
       "🌸",
       "🚄"
     ],
@@ -246,7 +246,7 @@
     "f": "🇧🇷",
     "c": "South America",
     "hero": [
-      "🌳",
+      "<img src='/assets/ui-tree-sm.png' alt='tree' style='width:32px;height:32px;vertical-align:middle'>",
       "🦜",
       "⚽"
     ],
@@ -312,7 +312,7 @@
     "f": "🇦🇺",
     "c": "Oceania",
     "hero": [
-      "🦘",
+      "<img src='/assets/ui-kangaroo-sm.png' alt='kangaroo' style='width:32px;height:32px;vertical-align:middle'>",
       "🐨",
       "🏖️"
     ],
@@ -378,7 +378,7 @@
     "f": "🇰🇪",
     "c": "Africa",
     "hero": [
-      "🦒",
+      "<img src='/assets/ui-giraffe-sm.png' alt='giraffe' style='width:32px;height:32px;vertical-align:middle'>",
       "🦁",
       "☕"
     ],
@@ -477,7 +477,7 @@
     "f": "🇮🇸",
     "c": "Europe",
     "hero": [
-      "🌋",
+      "<img src='/assets/ui-volcano-sm.png' alt='volcano' style='width:32px;height:32px;vertical-align:middle'>",
       "🧊",
       "🧝"
     ],
@@ -609,7 +609,7 @@
     "f": "🇩🇪",
     "c": "Europe",
     "hero": [
-      "🏰",
+      "<img src='/assets/ui-castle-sm.png' alt='castle' style='width:32px;height:32px;vertical-align:middle'>",
       "🥨",
       "🧸"
     ],
@@ -675,7 +675,7 @@
     "f": "🇰🇷",
     "c": "Asia",
     "hero": [
-      "🎵",
+      "<img src='/assets/ui-music-notes-sm.png' alt='music' style='width:32px;height:32px;vertical-align:middle'>",
       "🍜",
       "🤖"
     ],
@@ -807,7 +807,7 @@
     "f": "🇦🇷",
     "c": "South America",
     "hero": [
-      "⚽",
+      "<img src='/assets/ui-soccer-sm.png' alt='soccer' style='width:32px;height:32px;vertical-align:middle'>",
       "🥩",
       "💃"
     ],
@@ -906,7 +906,7 @@
     "f": "🇬🇷",
     "c": "Europe",
     "hero": [
-      "🏛️",
+      "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
       "🏅",
       "🧿"
     ],
@@ -1038,7 +1038,7 @@
     "f": "🇰🇿",
     "c": "Asia",
     "hero": [
-      "🚀",
+      "<img src='/assets/ui-rocket-sm.png' alt='rocket' style='width:32px;height:32px;vertical-align:middle'>",
       "🐎",
       "🏔️"
     ],
@@ -1070,7 +1070,7 @@
     "f": "🇸🇦",
     "c": "Asia",
     "hero": [
-      "🏜️",
+      "<img src='/assets/ui-desert-sm.png' alt='desert' style='width:32px;height:32px;vertical-align:middle'>",
       "🕌",
       "🛢️"
     ],
@@ -1134,7 +1134,7 @@
     "f": "🇲🇦",
     "c": "Africa",
     "hero": [
-      "🏜️",
+      "<img src='/assets/ui-desert-sm.png' alt='desert' style='width:32px;height:32px;vertical-align:middle'>",
       "🧿",
       "🍊"
     ],
@@ -1294,7 +1294,7 @@
     "f": "🇨🇱",
     "c": "South America",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "🌋",
       "🔭"
     ],
@@ -1326,7 +1326,7 @@
     "f": "🇵🇰",
     "c": "Asia",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "🦚",
       "🏏"
     ],
@@ -1422,7 +1422,7 @@
     "f": "🇵🇭",
     "c": "Asia",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🦎",
       "🎤"
     ],
@@ -1454,7 +1454,7 @@
     "f": "🇧🇩",
     "c": "Asia",
     "hero": [
-      "🐯",
+      "<img src='/assets/ui-tiger-sm.png' alt='tiger' style='width:32px;height:32px;vertical-align:middle'>",
       "🏏",
       "🧵"
     ],
@@ -1486,7 +1486,7 @@
     "f": "🇹🇿",
     "c": "Africa",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "🦁",
       "🌍"
     ],
@@ -1517,7 +1517,7 @@
     "n": "Algeria",
     "c": "Africa",
     "hero": [
-      "🏜️",
+      "<img src='/assets/ui-desert-sm.png' alt='desert' style='width:32px;height:32px;vertical-align:middle'>",
       "🕌",
       "🌿"
     ],
@@ -1548,7 +1548,7 @@
     "n": "Angola",
     "c": "Africa",
     "hero": [
-      "💎",
+      "<img src='/assets/ui-diamond-sm.png' alt='diamond' style='width:32px;height:32px;vertical-align:middle'>",
       "🥁",
       "🌊"
     ],
@@ -1579,7 +1579,7 @@
     "n": "Cameroon",
     "c": "Africa",
     "hero": [
-      "⚽",
+      "<img src='/assets/ui-soccer-sm.png' alt='soccer' style='width:32px;height:32px;vertical-align:middle'>",
       "🌿",
       "🦍"
     ],
@@ -1672,7 +1672,7 @@
     "n": "Sudan",
     "c": "Africa",
     "hero": [
-      "🏛️",
+      "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
       "🏜️",
       "🐪"
     ],
@@ -1734,7 +1734,7 @@
     "n": "Somalia",
     "c": "Africa",
     "hero": [
-      "🐪",
+      "<img src='/assets/ui-camel-sm.png' alt='camel' style='width:32px;height:32px;vertical-align:middle'>",
       "🏖️",
       "🌊"
     ],
@@ -1765,7 +1765,7 @@
     "n": "Mozambique",
     "c": "Africa",
     "hero": [
-      "🐋",
+      "<img src='/assets/ui-whale-sm.png' alt='whale' style='width:32px;height:32px;vertical-align:middle'>",
       "🏖️",
       "🎶"
     ],
@@ -1858,7 +1858,7 @@
     "n": "Zambia",
     "c": "Africa",
     "hero": [
-      "🌊",
+      "<img src='/assets/ui-wave-sm.png' alt='wave' style='width:32px;height:32px;vertical-align:middle'>",
       "🦛",
       "🌅"
     ],
@@ -1889,7 +1889,7 @@
     "n": "Zimbabwe",
     "c": "Africa",
     "hero": [
-      "🏛️",
+      "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
       "🌊",
       "🦏"
     ],
@@ -1920,7 +1920,7 @@
     "n": "Niger",
     "c": "Africa",
     "hero": [
-      "🐪",
+      "<img src='/assets/ui-camel-sm.png' alt='camel' style='width:32px;height:32px;vertical-align:middle'>",
       "🏜️",
       "🦕"
     ],
@@ -1982,7 +1982,7 @@
     "n": "Chad",
     "c": "Africa",
     "hero": [
-      "🏜️",
+      "<img src='/assets/ui-desert-sm.png' alt='desert' style='width:32px;height:32px;vertical-align:middle'>",
       "🌊",
       "🐘"
     ],
@@ -2044,7 +2044,7 @@
     "n": "Israel",
     "c": "Asia",
     "hero": [
-      "🕌",
+      "<img src='/assets/ui-mosque-sm.png' alt='mosque' style='width:32px;height:32px;vertical-align:middle'>",
       "📱",
       "🌿"
     ],
@@ -2075,7 +2075,7 @@
     "n": "Jordan",
     "c": "Asia",
     "hero": [
-      "🏛️",
+      "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
       "🏜️",
       "🌊"
     ],
@@ -2106,7 +2106,7 @@
     "n": "Syria",
     "c": "Asia",
     "hero": [
-      "🏛️",
+      "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
       "🧼",
       "🏜️"
     ],
@@ -2137,7 +2137,7 @@
     "n": "Yemen",
     "c": "Asia",
     "hero": [
-      "🏰",
+      "<img src='/assets/ui-castle-sm.png' alt='castle' style='width:32px;height:32px;vertical-align:middle'>",
       "☕",
       "🏝️"
     ],
@@ -2168,7 +2168,7 @@
     "n": "Oman",
     "c": "Asia",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "⛵",
       "🏜️"
     ],
@@ -2230,7 +2230,7 @@
     "n": "Qatar",
     "c": "Asia",
     "hero": [
-      "⚽",
+      "<img src='/assets/ui-soccer-sm.png' alt='soccer' style='width:32px;height:32px;vertical-align:middle'>",
       "🏗️",
       "💰"
     ],
@@ -2292,7 +2292,7 @@
     "n": "Lebanon",
     "c": "Asia",
     "hero": [
-      "🌲",
+      "<img src='/assets/ui-tree-sm.png' alt='tree' style='width:32px;height:32px;vertical-align:middle'>",
       "🍽️",
       "🏛️"
     ],
@@ -2323,7 +2323,7 @@
     "n": "Afghanistan",
     "c": "Asia",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "🥜",
       "📜"
     ],
@@ -2354,7 +2354,7 @@
     "n": "Myanmar",
     "c": "Asia",
     "hero": [
-      "🏛️",
+      "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
       "🎈",
       "💎"
     ],
@@ -2385,7 +2385,7 @@
     "n": "Nepal",
     "c": "Asia",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "🙏",
       "🐅"
     ],
@@ -2509,7 +2509,7 @@
     "n": "Cambodia",
     "c": "Asia",
     "hero": [
-      "🏛️",
+      "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
       "🌾",
       "😊"
     ],
@@ -2540,7 +2540,7 @@
     "n": "Laos",
     "c": "Asia",
     "hero": [
-      "🏛️",
+      "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
       "🌊",
       "🐘"
     ],
@@ -2571,7 +2571,7 @@
     "n": "Uzbekistan",
     "c": "Asia",
     "hero": [
-      "🕌",
+      "<img src='/assets/ui-mosque-sm.png' alt='mosque' style='width:32px;height:32px;vertical-align:middle'>",
       "🧵",
       "🏛️"
     ],
@@ -2602,7 +2602,7 @@
     "n": "Tajikistan",
     "c": "Asia",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "🧊",
       "🍵"
     ],
@@ -2633,7 +2633,7 @@
     "n": "Turkmenistan",
     "c": "Asia",
     "hero": [
-      "🔥",
+      "<img src='/assets/ui-flame-sm.png' alt='flame' style='width:32px;height:32px;vertical-align:middle'>",
       "🐎",
       "🏜️"
     ],
@@ -2726,7 +2726,7 @@
     "n": "North Korea",
     "c": "Asia",
     "hero": [
-      "🏛️",
+      "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
       "🎖️",
       "🏔️"
     ],
@@ -2788,7 +2788,7 @@
     "n": "Austria",
     "c": "Europe",
     "hero": [
-      "🎵",
+      "<img src='/assets/ui-music-notes-sm.png' alt='music' style='width:32px;height:32px;vertical-align:middle'>",
       "🏔️",
       "🍰"
     ],
@@ -2819,7 +2819,7 @@
     "n": "Switzerland",
     "c": "Europe",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "🍫",
       "⌚"
     ],
@@ -2850,7 +2850,7 @@
     "n": "Belgium",
     "c": "Europe",
     "hero": [
-      "🍫",
+      "<img src='/assets/ui-chocolate-sm.png' alt='chocolate' style='width:32px;height:32px;vertical-align:middle'>",
       "🧇",
       "🏰"
     ],
@@ -2943,7 +2943,7 @@
     "n": "Czechia",
     "c": "Europe",
     "hero": [
-      "🏰",
+      "<img src='/assets/ui-castle-sm.png' alt='castle' style='width:32px;height:32px;vertical-align:middle'>",
       "🍺",
       "🎵"
     ],
@@ -3005,7 +3005,7 @@
     "n": "Romania",
     "c": "Europe",
     "hero": [
-      "🏰",
+      "<img src='/assets/ui-castle-sm.png' alt='castle' style='width:32px;height:32px;vertical-align:middle'>",
       "🐻",
       "🌲"
     ],
@@ -3036,7 +3036,7 @@
     "n": "Serbia",
     "c": "Europe",
     "hero": [
-      "🎵",
+      "<img src='/assets/ui-music-notes-sm.png' alt='music' style='width:32px;height:32px;vertical-align:middle'>",
       "🎾",
       "🍽️"
     ],
@@ -3129,7 +3129,7 @@
     "n": "Slovakia",
     "c": "Europe",
     "hero": [
-      "🏰",
+      "<img src='/assets/ui-castle-sm.png' alt='castle' style='width:32px;height:32px;vertical-align:middle'>",
       "🏔️",
       "🐻"
     ],
@@ -3160,7 +3160,7 @@
     "n": "Slovenia",
     "c": "Europe",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "🌳",
       "🐉"
     ],
@@ -3253,7 +3253,7 @@
     "n": "Luxembourg",
     "c": "Europe",
     "hero": [
-      "🏰",
+      "<img src='/assets/ui-castle-sm.png' alt='castle' style='width:32px;height:32px;vertical-align:middle'>",
       "💰",
       "🌲"
     ],
@@ -3315,7 +3315,7 @@
     "n": "Albania",
     "c": "Europe",
     "hero": [
-      "🏰",
+      "<img src='/assets/ui-castle-sm.png' alt='castle' style='width:32px;height:32px;vertical-align:middle'>",
       "🏖️",
       "🦅"
     ],
@@ -3377,7 +3377,7 @@
     "n": "Venezuela",
     "c": "South America",
     "hero": [
-      "🌊",
+      "<img src='/assets/ui-wave-sm.png' alt='wave' style='width:32px;height:32px;vertical-align:middle'>",
       "⚡",
       "🏔️"
     ],
@@ -3408,7 +3408,7 @@
     "n": "Ecuador",
     "c": "South America",
     "hero": [
-      "🌋",
+      "<img src='/assets/ui-volcano-sm.png' alt='volcano' style='width:32px;height:32px;vertical-align:middle'>",
       "🐢",
       "🌍"
     ],
@@ -3439,7 +3439,7 @@
     "n": "Bolivia",
     "c": "South America",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "🌊",
       "🦙"
     ],
@@ -3470,7 +3470,7 @@
     "n": "Paraguay",
     "c": "South America",
     "hero": [
-      "⚽",
+      "<img src='/assets/ui-soccer-sm.png' alt='soccer' style='width:32px;height:32px;vertical-align:middle'>",
       "🌿",
       "🎸"
     ],
@@ -3501,7 +3501,7 @@
     "n": "Uruguay",
     "c": "South America",
     "hero": [
-      "⚽",
+      "<img src='/assets/ui-soccer-sm.png' alt='soccer' style='width:32px;height:32px;vertical-align:middle'>",
       "🏖️",
       "🐄"
     ],
@@ -3532,7 +3532,7 @@
     "n": "Guyana",
     "c": "South America",
     "hero": [
-      "🌳",
+      "<img src='/assets/ui-tree-sm.png' alt='tree' style='width:32px;height:32px;vertical-align:middle'>",
       "🌊",
       "🐆"
     ],
@@ -3563,7 +3563,7 @@
     "n": "Suriname",
     "c": "South America",
     "hero": [
-      "🌳",
+      "<img src='/assets/ui-tree-sm.png' alt='tree' style='width:32px;height:32px;vertical-align:middle'>",
       "🐒",
       "🍛"
     ],
@@ -3594,7 +3594,7 @@
     "n": "Guatemala",
     "c": "North America",
     "hero": [
-      "🏛️",
+      "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
       "🌋",
       "🌽"
     ],
@@ -3625,7 +3625,7 @@
     "n": "Honduras",
     "c": "North America",
     "hero": [
-      "🏛️",
+      "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
       "🤿",
       "🌴"
     ],
@@ -3656,7 +3656,7 @@
     "n": "Nicaragua",
     "c": "North America",
     "hero": [
-      "🌋",
+      "<img src='/assets/ui-volcano-sm.png' alt='volcano' style='width:32px;height:32px;vertical-align:middle'>",
       "🏖️",
       "🦜"
     ],
@@ -3687,7 +3687,7 @@
     "n": "El Salvador",
     "c": "North America",
     "hero": [
-      "🌋",
+      "<img src='/assets/ui-volcano-sm.png' alt='volcano' style='width:32px;height:32px;vertical-align:middle'>",
       "🏄",
       "🐶"
     ],
@@ -3780,7 +3780,7 @@
     "n": "Jamaica",
     "c": "North America",
     "hero": [
-      "🎵",
+      "<img src='/assets/ui-music-notes-sm.png' alt='music' style='width:32px;height:32px;vertical-align:middle'>",
       "🏃",
       "🏖️"
     ],
@@ -3842,7 +3842,7 @@
     "n": "Haiti",
     "c": "North America",
     "hero": [
-      "🏰",
+      "<img src='/assets/ui-castle-sm.png' alt='castle' style='width:32px;height:32px;vertical-align:middle'>",
       "🎨",
       "🥁"
     ],
@@ -3904,7 +3904,7 @@
     "n": "Papua New Guinea",
     "c": "Oceania",
     "hero": [
-      "🌋",
+      "<img src='/assets/ui-volcano-sm.png' alt='volcano' style='width:32px;height:32px;vertical-align:middle'>",
       "🦜",
       "🎭"
     ],
@@ -3935,7 +3935,7 @@
     "n": "Djibouti",
     "c": "Africa",
     "hero": [
-      "🌋",
+      "<img src='/assets/ui-volcano-sm.png' alt='volcano' style='width:32px;height:32px;vertical-align:middle'>",
       "🐋",
       "🏜️"
     ],
@@ -4028,7 +4028,7 @@
     "n": "Republic of Congo",
     "c": "Africa",
     "hero": [
-      "🌳",
+      "<img src='/assets/ui-tree-sm.png' alt='tree' style='width:32px;height:32px;vertical-align:middle'>",
       "🦍",
       "🚂"
     ],
@@ -4059,7 +4059,7 @@
     "n": "Central African Republic",
     "c": "Africa",
     "hero": [
-      "🌳",
+      "<img src='/assets/ui-tree-sm.png' alt='tree' style='width:32px;height:32px;vertical-align:middle'>",
       "🐘",
       "💎"
     ],
@@ -4152,7 +4152,7 @@
     "n": "Malawi",
     "c": "Africa",
     "hero": [
-      "🌊",
+      "<img src='/assets/ui-wave-sm.png' alt='wave' style='width:32px;height:32px;vertical-align:middle'>",
       "🐟",
       "😊"
     ],
@@ -4183,7 +4183,7 @@
     "n": "Sierra Leone",
     "c": "Africa",
     "hero": [
-      "💎",
+      "<img src='/assets/ui-diamond-sm.png' alt='diamond' style='width:32px;height:32px;vertical-align:middle'>",
       "🏖️",
       "🌳"
     ],
@@ -4214,7 +4214,7 @@
     "n": "Liberia",
     "c": "Africa",
     "hero": [
-      "🗽",
+      "<img src='/assets/ui-statue-liberty-sm.png' alt='Statue of Liberty' style='width:32px;height:32px;vertical-align:middle'>",
       "⛵",
       "🌳"
     ],
@@ -4245,7 +4245,7 @@
     "n": "Guinea",
     "c": "Africa",
     "hero": [
-      "🎵",
+      "<img src='/assets/ui-music-notes-sm.png' alt='music' style='width:32px;height:32px;vertical-align:middle'>",
       "⛏️",
       "🌿"
     ],
@@ -4369,7 +4369,7 @@
     "n": "Namibia",
     "c": "Africa",
     "hero": [
-      "🏜️",
+      "<img src='/assets/ui-desert-sm.png' alt='desert' style='width:32px;height:32px;vertical-align:middle'>",
       "🐘",
       "🌌"
     ],
@@ -4400,7 +4400,7 @@
     "n": "Botswana",
     "c": "Africa",
     "hero": [
-      "💎",
+      "<img src='/assets/ui-diamond-sm.png' alt='diamond' style='width:32px;height:32px;vertical-align:middle'>",
       "🐘",
       "🌿"
     ],
@@ -4431,7 +4431,7 @@
     "n": "Eswatini",
     "c": "Africa",
     "hero": [
-      "👑",
+      "<img src='/assets/ui-crown-sm.png' alt='crown' style='width:32px;height:32px;vertical-align:middle'>",
       "💃",
       "🌿"
     ],
@@ -4462,7 +4462,7 @@
     "n": "Lesotho",
     "c": "Africa",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "🐎",
       "🧣"
     ],
@@ -4493,7 +4493,7 @@
     "n": "Mauritania",
     "c": "Africa",
     "hero": [
-      "🏜️",
+      "<img src='/assets/ui-desert-sm.png' alt='desert' style='width:32px;height:32px;vertical-align:middle'>",
       "🐪",
       "🚂"
     ],
@@ -4555,7 +4555,7 @@
     "n": "Guinea-Bissau",
     "c": "Africa",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🐒",
       "🎵"
     ],
@@ -4586,7 +4586,7 @@
     "n": "Tunisia",
     "c": "Africa",
     "hero": [
-      "🏛️",
+      "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
       "🏜️",
       "🏖️"
     ],
@@ -4617,7 +4617,7 @@
     "n": "Libya",
     "c": "Africa",
     "hero": [
-      "🏛️",
+      "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
       "🏜️",
       "🛢️"
     ],
@@ -4648,7 +4648,7 @@
     "n": "New Caledonia",
     "c": "Oceania",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🐠",
       "🌴"
     ],
@@ -4741,7 +4741,7 @@
     "n": "Ivory Coast",
     "c": "Africa",
     "hero": [
-      "🍫",
+      "<img src='/assets/ui-chocolate-sm.png' alt='chocolate' style='width:32px;height:32px;vertical-align:middle'>",
       "⚽",
       "🏙️"
     ],
@@ -4772,7 +4772,7 @@
     "n": "Armenia",
     "c": "Asia",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "📜",
       "🍑"
     ],
@@ -4803,7 +4803,7 @@
     "n": "Azerbaijan",
     "c": "Asia",
     "hero": [
-      "🔥",
+      "<img src='/assets/ui-flame-sm.png' alt='flame' style='width:32px;height:32px;vertical-align:middle'>",
       "🏗️",
       "🛢️"
     ],
@@ -4834,7 +4834,7 @@
     "n": "Belarus",
     "c": "Europe",
     "hero": [
-      "🌲",
+      "<img src='/assets/ui-tree-sm.png' alt='tree' style='width:32px;height:32px;vertical-align:middle'>",
       "🦬",
       "🏰"
     ],
@@ -4896,7 +4896,7 @@
     "n": "Burundi",
     "c": "Africa",
     "hero": [
-      "🥁",
+      "<img src='/assets/ui-drum-sm.png' alt='drum' style='width:32px;height:32px;vertical-align:middle'>",
       "🌊",
       "☕"
     ],
@@ -4927,7 +4927,7 @@
     "n": "Latvia",
     "c": "Europe",
     "hero": [
-      "🏰",
+      "<img src='/assets/ui-castle-sm.png' alt='castle' style='width:32px;height:32px;vertical-align:middle'>",
       "🎵",
       "🌲"
     ],
@@ -4989,7 +4989,7 @@
     "n": "North Macedonia",
     "c": "Europe",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "🌊",
       "⛪"
     ],
@@ -5051,7 +5051,7 @@
     "n": "Andorra",
     "c": "Europe",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "🛍️",
       "⛷️"
     ],
@@ -5144,7 +5144,7 @@
     "n": "San Marino",
     "c": "Europe",
     "hero": [
-      "🏰",
+      "<img src='/assets/ui-castle-sm.png' alt='castle' style='width:32px;height:32px;vertical-align:middle'>",
       "🏔️",
       "📜"
     ],
@@ -5175,7 +5175,7 @@
     "n": "Liechtenstein",
     "c": "Europe",
     "hero": [
-      "🏰",
+      "<img src='/assets/ui-castle-sm.png' alt='castle' style='width:32px;height:32px;vertical-align:middle'>",
       "🏔️",
       "💰"
     ],
@@ -5206,7 +5206,7 @@
     "n": "Malta",
     "c": "Europe",
     "hero": [
-      "🏰",
+      "<img src='/assets/ui-castle-sm.png' alt='castle' style='width:32px;height:32px;vertical-align:middle'>",
       "🏖️",
       "⛪"
     ],
@@ -5299,7 +5299,7 @@
     "n": "Belize",
     "c": "North America",
     "hero": [
-      "🌊",
+      "<img src='/assets/ui-wave-sm.png' alt='wave' style='width:32px;height:32px;vertical-align:middle'>",
       "🏛️",
       "🌳"
     ],
@@ -5330,7 +5330,7 @@
     "n": "Fiji",
     "c": "Oceania",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🌊",
       "🏉"
     ],
@@ -5361,7 +5361,7 @@
     "n": "Maldives",
     "c": "Asia",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🐠",
       "🌅"
     ],
@@ -5392,7 +5392,7 @@
     "n": "Brunei",
     "c": "Asia",
     "hero": [
-      "🕌",
+      "<img src='/assets/ui-mosque-sm.png' alt='mosque' style='width:32px;height:32px;vertical-align:middle'>",
       "🛢️",
       "💰"
     ],
@@ -5423,7 +5423,7 @@
     "n": "Bhutan",
     "c": "Asia",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "😊",
       "🐉"
     ],
@@ -5454,7 +5454,7 @@
     "n": "Kyrgyzstan",
     "c": "Asia",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "🐎",
       "🏕️"
     ],
@@ -5485,7 +5485,7 @@
     "n": "Timor-Leste",
     "c": "Asia",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🐋",
       "☕"
     ],
@@ -5609,7 +5609,7 @@
     "n": "São Tomé & Príncipe",
     "c": "Africa",
     "hero": [
-      "🍫",
+      "<img src='/assets/ui-chocolate-sm.png' alt='chocolate' style='width:32px;height:32px;vertical-align:middle'>",
       "🏝️",
       "🌿"
     ],
@@ -5640,7 +5640,7 @@
     "n": "Cabo Verde",
     "c": "Africa",
     "hero": [
-      "🎵",
+      "<img src='/assets/ui-music-notes-sm.png' alt='music' style='width:32px;height:32px;vertical-align:middle'>",
       "🏖️",
       "🌋"
     ],
@@ -5702,7 +5702,7 @@
     "n": "Saint Lucia",
     "c": "North America",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "🏖️",
       "🍫"
     ],
@@ -5733,7 +5733,7 @@
     "n": "St. Vincent & Grenadines",
     "c": "North America",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🏖️",
       "⛵"
     ],
@@ -5764,7 +5764,7 @@
     "n": "Dominica",
     "c": "North America",
     "hero": [
-      "🌳",
+      "<img src='/assets/ui-tree-sm.png' alt='tree' style='width:32px;height:32px;vertical-align:middle'>",
       "♨️",
       "🦜"
     ],
@@ -5857,7 +5857,7 @@
     "n": "Samoa",
     "c": "Oceania",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🤸",
       "🌺"
     ],
@@ -5888,7 +5888,7 @@
     "n": "Solomon Islands",
     "c": "Oceania",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🌋",
       "🐚"
     ],
@@ -5919,7 +5919,7 @@
     "n": "Vanuatu",
     "c": "Oceania",
     "hero": [
-      "🌋",
+      "<img src='/assets/ui-volcano-sm.png' alt='volcano' style='width:32px;height:32px;vertical-align:middle'>",
       "🤸",
       "🏝️"
     ],
@@ -5950,7 +5950,7 @@
     "n": "Tonga",
     "c": "Oceania",
     "hero": [
-      "👑",
+      "<img src='/assets/ui-crown-sm.png' alt='crown' style='width:32px;height:32px;vertical-align:middle'>",
       "🐋",
       "🏝️"
     ],
@@ -5981,7 +5981,7 @@
     "n": "Palau",
     "c": "Oceania",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🐠",
       "🌊"
     ],
@@ -6012,7 +6012,7 @@
     "n": "Marshall Islands",
     "c": "Oceania",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🌊",
       "☢️"
     ],
@@ -6043,7 +6043,7 @@
     "n": "Micronesia",
     "c": "Oceania",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🌊",
       "🗿"
     ],
@@ -6074,7 +6074,7 @@
     "n": "Nauru",
     "c": "Oceania",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "⛏️",
       "🐦"
     ],
@@ -6105,7 +6105,7 @@
     "n": "Kiribati",
     "c": "Oceania",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🌅",
       "🌊"
     ],
@@ -6136,7 +6136,7 @@
     "n": "Tuvalu",
     "c": "Oceania",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🌊",
       "📺"
     ],
@@ -6167,7 +6167,7 @@
     "n": "Kosovo",
     "c": "Europe",
     "hero": [
-      "🏔️",
+      "<img src='/assets/ui-mountain-sm.png' alt='mountain' style='width:32px;height:32px;vertical-align:middle'>",
       "🆕",
       "☕"
     ],
@@ -6198,7 +6198,7 @@
     "n": "Bahrain",
     "c": "Asia",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🏎️",
       "💎"
     ],
@@ -6229,7 +6229,7 @@
     "n": "Greenland",
     "c": "North America",
     "hero": [
-      "🧊",
+      "<img src='/assets/ui-ice-sm.png' alt='ice' style='width:32px;height:32px;vertical-align:middle'>",
       "🐋",
       "🌌"
     ],
@@ -6322,7 +6322,7 @@
     "n": "Western Sahara",
     "c": "Africa",
     "hero": [
-      "🏜️",
+      "<img src='/assets/ui-desert-sm.png' alt='desert' style='width:32px;height:32px;vertical-align:middle'>",
       "🐪",
       "🌅"
     ],
@@ -6353,7 +6353,7 @@
     "n": "French Guiana",
     "c": "South America",
     "hero": [
-      "🚀",
+      "<img src='/assets/ui-rocket-sm.png' alt='rocket' style='width:32px;height:32px;vertical-align:middle'>",
       "🌳",
       "🇫🇷"
     ],
@@ -6477,7 +6477,7 @@
     "n": "Réunion",
     "c": "Africa",
     "hero": [
-      "🌋",
+      "<img src='/assets/ui-volcano-sm.png' alt='volcano' style='width:32px;height:32px;vertical-align:middle'>",
       "🏔️",
       "🇫🇷"
     ],
@@ -6508,7 +6508,7 @@
     "n": "French Polynesia",
     "c": "Oceania",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🤿",
       "🎨"
     ],
@@ -6756,7 +6756,7 @@
     "n": "Montserrat",
     "c": "North America",
     "hero": [
-      "🌋",
+      "<img src='/assets/ui-volcano-sm.png' alt='volcano' style='width:32px;height:32px;vertical-align:middle'>",
       "🇬🇧",
       "🎵"
     ],
@@ -6911,7 +6911,7 @@
     "n": "Svalbard",
     "c": "Europe",
     "hero": [
-      "🐻‍❄️",
+      "<img src='/assets/ui-polar-bear-sm.png' alt='polar bear' style='width:32px;height:32px;vertical-align:middle'>",
       "🧊",
       "🌌"
     ],
@@ -6942,7 +6942,7 @@
     "n": "Cook Islands",
     "c": "Oceania",
     "hero": [
-      "🏝️",
+      "<img src='/assets/ui-island-sm.png' alt='island' style='width:32px;height:32px;vertical-align:middle'>",
       "🐢",
       "🌺"
     ],
@@ -6973,7 +6973,7 @@
     "n": "Niue",
     "c": "Oceania",
     "hero": [
-      "🐋",
+      "<img src='/assets/ui-whale-sm.png' alt='whale' style='width:32px;height:32px;vertical-align:middle'>",
       "🌐",
       "🏝️"
     ],
@@ -7035,7 +7035,7 @@
     "n": "Wallis & Futuna",
     "c": "Oceania",
     "hero": [
-      "👑",
+      "<img src='/assets/ui-crown-sm.png' alt='crown' style='width:32px;height:32px;vertical-align:middle'>",
       "🏝️",
       "🇫🇷"
     ],
@@ -7066,7 +7066,7 @@
     "n": "Northern Cyprus",
     "c": "Asia",
     "hero": [
-      "🏛️",
+      "<img src='/assets/ui-classical-building-sm.png' alt='classical building' style='width:32px;height:32px;vertical-align:middle'>",
       "🏖️",
       "🕊️"
     ],

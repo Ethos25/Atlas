@@ -115,7 +115,9 @@ function _showToastCelebration(tier, setDef) {
 
   const iconEl = document.createElement('div');
   iconEl.className   = 'cel-toast-icon';
-  iconEl.innerHTML = setDef.icon || '<img src="/assets/ui-party-sm.png" alt="party" style="width:32px;height:32px;vertical-align:middle">';
+  iconEl.innerHTML = setDef.icon || '<img src="/assets/ui-party-sm.png" alt="party" style="width:28px;height:28px;vertical-align:middle">';
+  const toastImg = iconEl.querySelector('img');
+  if (toastImg) { toastImg.src = toastImg.src.replace(/-(?:xs|sm|md|lg)\.png$/, '-sm.png'); toastImg.style.width = '28px'; toastImg.style.height = '28px'; }
   toast.appendChild(iconEl);
 
   const body = document.createElement('div');
@@ -217,7 +219,9 @@ function _showFullScreen(tier, setDef) {
     // continent tier
     const badge = document.createElement('div');
     badge.className   = 'cel-ov-badge';
-    badge.innerHTML = setDef.icon || '<img src="/assets/ui-globe-md.png" alt="globe" style="width:64px;height:64px;vertical-align:middle">';
+    badge.innerHTML = setDef.icon || '<img src="/assets/ui-globe-lg.png" alt="globe" style="width:72px;height:72px;vertical-align:middle">';
+    const badgeImgEl = badge.querySelector('img');
+    if (badgeImgEl) { badgeImgEl.src = badgeImgEl.src.replace(/-(?:xs|sm|md|lg)\.png$/, '-lg.png'); badgeImgEl.style.width = '72px'; badgeImgEl.style.height = '72px'; }
     scene.appendChild(badge);
 
     const title = document.createElement('div');

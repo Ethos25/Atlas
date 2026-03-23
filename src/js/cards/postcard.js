@@ -229,7 +229,7 @@ export function _showCard(a) {
   const EASTER_EGGS = _ctx.getEASTER_EGGS();
   const sigEmoji    = document.getElementById('pcSigEmoji');
   if (sigEmoji && c.hero && c.hero.length) {
-    sigEmoji.textContent  = c.hero[0];
+    sigEmoji.innerHTML  = c.hero[0];
     sigEmoji.style.display = 'block';
     sigEmoji.style.cursor  = EASTER_EGGS[a] ? 'pointer' : 'default';
     sigEmoji.onclick = EASTER_EGGS[a] ? function() {

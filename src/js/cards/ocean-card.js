@@ -59,7 +59,7 @@ export function showOceanCard(id) {
   // Signature emoji
   var sigEmoji = document.getElementById('pcSigEmoji');
   if (sigEmoji && o.hero) {
-    sigEmoji.textContent     = o.hero[0];
+    sigEmoji.innerHTML     = o.hero[0];
     sigEmoji.style.display   = 'block';
     sigEmoji.style.cursor    = 'default';
   }

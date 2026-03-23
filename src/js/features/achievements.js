@@ -28,13 +28,13 @@ const MILESTONES = [
   {at:5,  emoji:'🧳', title:'{name} the World Traveler!',      sub:'5 countries explored!'},
   {at:10, emoji:'🌟', title:'{name} the Global Star!',          sub:'10 countries explored!'},
   {at:15, emoji:'🌟', title:'{name} is Halfway There!',         sub:'15 countries explored!'},
-  {at:25, emoji:'<img src="/assets/ui-flame-md.png" alt="flame" style="width:64px;height:64px;vertical-align:middle">',   title:'{name} the Globe Trotter!',        sub:'25 countries explored!'},
-  {at:30, emoji:'<img src="/assets/ui-flame-md.png" alt="flame" style="width:64px;height:64px;vertical-align:middle">',   title:'{name} the World Champion!',       sub:'30 countries explored!'},
+  {at:25, emoji:'<img src="/assets/ui-flame-md.png" alt="flame" style="width:40px;height:40px;vertical-align:middle">',   title:'{name} the Globe Trotter!',        sub:'25 countries explored!'},
+  {at:30, emoji:'<img src="/assets/ui-flame-md.png" alt="flame" style="width:40px;height:40px;vertical-align:middle">',   title:'{name} the World Champion!',       sub:'30 countries explored!'},
   {at:50, emoji:'🗺️', title:'{name} the Cartographer!',         sub:'50 countries explored!', confetti:true},
-  {at:75, emoji:'<img src="/assets/ui-compass-md.png" alt="compass" style="width:64px;height:64px;vertical-align:middle">',title:'{name} the Navigator!',            sub:'75 countries explored!', confetti:true},
-  {at:100,emoji:'<img src="/assets/ui-globe-md.png" alt="globe" style="width:64px;height:64px;vertical-align:middle">',   title:'{name} the Centurion!',            sub:'100 countries explored!',confetti:true},
-  {at:150,emoji:'<img src="/assets/ui-star-md.png" alt="star" style="width:64px;height:64px;vertical-align:middle">',     title:'{name} the Legend!',               sub:'150 countries explored!',confetti:true},
-  {at:197,emoji:'<img src="/assets/ui-trophy-md.png" alt="trophy" style="width:64px;height:64px;vertical-align:middle">', title:'{name} explored the WHOLE WORLD!', sub:'All 197 countries discovered!',confetti:true},
+  {at:75, emoji:'<img src="/assets/ui-compass-md.png" alt="compass" style="width:40px;height:40px;vertical-align:middle">',title:'{name} the Navigator!',            sub:'75 countries explored!', confetti:true},
+  {at:100,emoji:'<img src="/assets/ui-globe-md.png" alt="globe" style="width:40px;height:40px;vertical-align:middle">',   title:'{name} the Centurion!',            sub:'100 countries explored!',confetti:true},
+  {at:150,emoji:'<img src="/assets/ui-star-md.png" alt="star" style="width:40px;height:40px;vertical-align:middle">',     title:'{name} the Legend!',               sub:'150 countries explored!',confetti:true},
+  {at:197,emoji:'<img src="/assets/ui-trophy-md.png" alt="trophy" style="width:40px;height:40px;vertical-align:middle">', title:'{name} explored the WHOLE WORLD!', sub:'All 197 countries discovered!',confetti:true},
 ];
 
 // ── Continent completion ─────────────────────────────────────────────────────
@@ -53,29 +53,29 @@ const CONT_NAMES_SHORT = {
 // ── Surprise achievements — check() functions can't live in JSON ─────────────
 function _buildSurpriseAchs() {
   return [
-    { id:'island3',   emoji:'<img src="/assets/ui-island-md.png" alt="island" style="width:64px;height:64px;vertical-align:middle">', title:'Island Hopper!',        sub:'Discovered 3 island nations',
+    { id:'island3',   emoji:'<img src="/assets/ui-island-md.png" alt="island" style="width:40px;height:40px;vertical-align:middle">', title:'Island Hopper!',        sub:'Discovered 3 island nations',
       check() {
         const islands = ['JPN','PHL','IDN','GBR','IRL','ISL','CUB','JAM','MDG','NZL','FJI',
                          'LKA','SGP','BHR','MUS','CPV','TTO','HTI','DOM','PNG'];
         const v = _ctx.getVisited(); const F = _ctx.getFAM();
         return islands.filter(i => v.has(i) || F.includes(i)).length >= 3;
       }},
-    { id:'africa1',   emoji:'<img src="/assets/ui-globe-md.png" alt="globe" style="width:64px;height:64px;vertical-align:middle">', title:'Welcome to Africa!',     sub:'Your first African discovery',
+    { id:'africa1',   emoji:'<img src="/assets/ui-globe-md.png" alt="globe" style="width:40px;height:40px;vertical-align:middle">', title:'Welcome to Africa!',     sub:'Your first African discovery',
       check() {
         const v = _ctx.getVisited(); const D = _ctx.getD(); const CM = _ctx.getCONT_MAP();
         return Object.keys(D).filter(k => CM[k] === 'AF' && v.has(k)).length === 1;
       }},
-    { id:'asia1',     emoji:'<img src="/assets/ui-globe-asia-md.png" alt="globe" style="width:64px;height:64px;vertical-align:middle">', title:'Konnichiwa, Asia!',       sub:'Your first Asian discovery',
+    { id:'asia1',     emoji:'<img src="/assets/ui-globe-asia-md.png" alt="globe" style="width:40px;height:40px;vertical-align:middle">', title:'Konnichiwa, Asia!',       sub:'Your first Asian discovery',
       check() {
         const v = _ctx.getVisited(); const D = _ctx.getD(); const CM = _ctx.getCONT_MAP();
         return Object.keys(D).filter(k => CM[k] === 'AS' && v.has(k)).length === 1;
       }},
-    { id:'sa1',       emoji:'<img src="/assets/ui-globe-americas-md.png" alt="globe" style="width:64px;height:64px;vertical-align:middle">', title:'¡Hola, South America!',  sub:'Your first South American discovery',
+    { id:'sa1',       emoji:'<img src="/assets/ui-globe-americas-md.png" alt="globe" style="width:40px;height:40px;vertical-align:middle">', title:'¡Hola, South America!',  sub:'Your first South American discovery',
       check() {
         const v = _ctx.getVisited(); const D = _ctx.getD(); const CM = _ctx.getCONT_MAP();
         return Object.keys(D).filter(k => CM[k] === 'SA' && v.has(k)).length === 1;
       }},
-    { id:'eu1',       emoji:'<img src="/assets/ui-castle-md.png" alt="castle" style="width:64px;height:64px;vertical-align:middle">', title:'Bonjour, Europe!',        sub:'Your first European discovery',
+    { id:'eu1',       emoji:'<img src="/assets/ui-castle-md.png" alt="castle" style="width:40px;height:40px;vertical-align:middle">', title:'Bonjour, Europe!',        sub:'Your first European discovery',
       check() {
         const v = _ctx.getVisited(); const D = _ctx.getD(); const CM = _ctx.getCONT_MAP();
         return Object.keys(D).filter(k => CM[k] === 'EU' && v.has(k)).length === 1;
