@@ -1,0 +1,680 @@
+[
+  {
+    "q": "Which country has MORE pyramids than Egypt?",
+    "a": "SDN",
+    "em": "🏛️",
+    "ctx": "Sudan has over 200 pyramids built by the Kingdom of Kush. They're smaller and pointier than Egypt's, but there are WAY more of them!"
+  },
+  {
+    "q": "Where can you find SALTWATER hippos?",
+    "a": "GNB",
+    "em": "🦛",
+    "ctx": "In Guinea-Bissau's Bijagós Islands, hippos swim in the actual ocean. They're the only saltwater hippos in the world!"
+  },
+  {
+    "q": "Which country invented the ALPHABET you're reading?",
+    "a": "LBN",
+    "em": "📜",
+    "ctx": "The Phoenicians of ancient Lebanon created an alphabet around 1050 BC. It evolved into Greek, then Latin, then the ABCs you use today!"
+  },
+  {
+    "q": "Where was the Rubik's Cube invented?",
+    "a": "HUN",
+    "em": "🎲",
+    "ctx": "Ernő Rubik invented the cube in 1974 as a teaching tool. It took him a MONTH to solve his own puzzle the first time!"
+  },
+  {
+    "q": "Which country has MORE horses than people?",
+    "a": "MNG",
+    "em": "🐎",
+    "ctx": "Mongolia has 13 horses for every person. Kids learn to ride at age 3, and horse racing jockeys are usually 5 to 12 years old!"
+  },
+  {
+    "q": "Where is the OLDEST desert on Earth?",
+    "a": "NAM",
+    "em": "🏜️",
+    "ctx": "The Namib Desert is 55 million years old. Its sand dunes glow orange at sunrise because the iron in the sand has rusted over millions of years."
+  },
+  {
+    "q": "Which country measures HAPPINESS instead of money?",
+    "a": "BTN",
+    "em": "😊",
+    "ctx": "Bhutan's Gross National Happiness measures 9 things including health, education, and time spent in nature. GDP isn't even on the list!"
+  },
+  {
+    "q": "Where can you RENT the entire country?",
+    "a": "LIE",
+    "em": "🏰",
+    "ctx": "For about $70,000 a night, you can rent Liechtenstein for your event. You get a custom street sign and the key to the country!"
+  },
+  {
+    "q": "Which country's flag has an AK-47 on it?",
+    "a": "MOZ",
+    "em": "🔫",
+    "ctx": "The AK-47 on Mozambique's flag represents the country's fight for independence. It's the only national flag with a modern firearm."
+  },
+  {
+    "q": "Where do people nod for NO and shake for YES?",
+    "a": "BGR",
+    "em": "🙃",
+    "ctx": "Bulgarians shake their head for 'yes' and nod for 'no.' Visitors get confused every single time!"
+  },
+  {
+    "q": "Which country invented BUBBLE TEA?",
+    "a": "TWN",
+    "em": "🧋",
+    "ctx": "Bubble tea was invented in Taichung, Taiwan in the 1980s when someone dropped tapioca balls into iced tea. Now it's a global obsession!"
+  },
+  {
+    "q": "Where was COFFEE first traded to the world?",
+    "a": "YEM",
+    "em": "☕",
+    "ctx": "The port of Mocha in Yemen shipped so much coffee to Europe that 'mocha' became another word for coffee!"
+  },
+  {
+    "q": "Which country has 800+ languages?",
+    "a": "PNG",
+    "em": "🗣️",
+    "ctx": "With 840 living languages, Papua New Guinea has more linguistic diversity than any country. Some languages have fewer than 100 speakers."
+  },
+  {
+    "q": "Where is the TALLEST waterfall on Earth?",
+    "a": "VEN",
+    "em": "🌊",
+    "ctx": "Angel Falls drops 3,212 feet, so high that the water turns to mist before it reaches the bottom!"
+  },
+  {
+    "q": "Which country's flag is NOT a rectangle?",
+    "a": "NPL",
+    "em": "🚩",
+    "ctx": "Nepal's flag has two stacked triangles representing the Himalaya Mountains and the two main religions: Hinduism and Buddhism."
+  },
+  {
+    "q": "Where was the STEEL DRUM invented?",
+    "a": "TTO",
+    "em": "🥁",
+    "ctx": "The steel drum was made from oil barrels in the 1930s. Trinidad literally turned trash into the only acoustic instrument invented in the 20th century!"
+  },
+  {
+    "q": "Where do they eat ROLEX for breakfast (not the watch)?",
+    "a": "UGA",
+    "em": "🍳",
+    "ctx": "A Rolex in Uganda is a rolled chapati with an omelet inside. The name comes from 'rolled eggs.' It costs about 50 cents!"
+  },
+  {
+    "q": "Which tiny country makes money from .tv domain?",
+    "a": "TUV",
+    "em": "📺",
+    "ctx": "Tuvalu earns millions each year by licensing its .tv internet domain to television companies around the world!"
+  },
+  {
+    "q": "Where was the NECKTIE invented?",
+    "a": "HRV",
+    "em": "👔",
+    "ctx": "Croatian soldiers wore knotted scarves in the 1600s. The French loved the look, called it 'la cravate' (the Croatian), and the necktie was born!"
+  },
+  {
+    "q": "Which country has a Door to Hell burning 50+ years?",
+    "a": "TKM",
+    "em": "🔥",
+    "ctx": "The Darvaza Gas Crater was lit by scientists in 1971, expecting it to burn out in weeks. It's STILL burning over 50 years later!"
+  },
+  {
+    "q": "Where is Santa Claus's OFFICIAL home?",
+    "a": "FIN",
+    "em": "🎅",
+    "ctx": "Santa's official post office in Rovaniemi, Finland receives about 500,000 letters from children every year. They answer every single one!"
+  },
+  {
+    "q": "Which country has NO ARMY since 1948?",
+    "a": "CRI",
+    "em": "☮️",
+    "ctx": "Costa Rica abolished its army in 1948 and spent the money on schools and healthcare instead. Life expectancy is now higher than the US!"
+  },
+  {
+    "q": "Where can you find FANTASY-shaped coffins?",
+    "a": "GHA",
+    "em": "⚰️",
+    "ctx": "In Ghana, you can be buried in a coffin shaped like anything: a fish, a car, a shoe, even an airplane!"
+  },
+  {
+    "q": "Which country was founded by freed American slaves?",
+    "a": "LBR",
+    "em": "🗽",
+    "ctx": "Liberia's capital Monrovia is named after US President James Monroe. The flag has one star instead of America's 50."
+  },
+  {
+    "q": "Where is the world's LARGEST wine cellar?",
+    "a": "MDA",
+    "em": "🍷",
+    "ctx": "Mileștii Mici wine cellar has underground roads stretching 200 km. You drive through it. There are traffic signs. Underground!"
+  },
+  {
+    "q": "Which country hosted the FIRST World Cup?",
+    "a": "URY",
+    "em": "⚽",
+    "ctx": "The first World Cup was held in Uruguay in 1930. Uruguay won it, beating Argentina 4-2 in the final!"
+  },
+  {
+    "q": "Where is the LOWEST point on Earth?",
+    "a": "JOR",
+    "em": "⬇️",
+    "ctx": "The Dead Sea between Jordan and Israel is 1,412 feet below sea level. You float without trying because the water is 10x saltier than the ocean!"
+  },
+  {
+    "q": "Which country has the most CASTLES per person?",
+    "a": "SVK",
+    "em": "🏰",
+    "ctx": "Slovakia has more castles per person than almost any country. Spiš Castle is one of the largest castle complexes in Central Europe!"
+  },
+  {
+    "q": "Where is the CLEANEST country in Africa?",
+    "a": "RWA",
+    "em": "🧹",
+    "ctx": "Once a month, ALL Rwandans stop what they're doing and clean together. It's called Umuganda!"
+  },
+  {
+    "q": "Which country built SKYSCRAPERS from mud?",
+    "a": "YEM",
+    "em": "🏗️",
+    "ctx": "Shibam in Yemen has mud-brick buildings up to 11 stories tall, built in the 1500s. They're called 'the Manhattan of the desert!'"
+  },
+  {
+    "q": "Where was LEGO invented?",
+    "a": "DNK",
+    "em": "🧱",
+    "ctx": "Ole Kirk Christiansen named LEGO from 'leg godt,' Danish for 'play well.' LEGO makes more tires per year than any actual tire company!"
+  },
+  {
+    "q": "Which country is 93% mountains?",
+    "a": "TJK",
+    "em": "🏔️",
+    "ctx": "The Pamir Mountains in Tajikistan are called 'the Roof of the World.' Some villages can only be reached by a single dangerous road."
+  },
+  {
+    "q": "Where is WRESTLING the national sport?",
+    "a": "SEN",
+    "em": "🤼",
+    "ctx": "Senegalese wrestling (laamb) is bigger than soccer there. Wrestlers are national celebrities, and matches fill 30,000-seat stadiums!"
+  },
+  {
+    "q": "Which country has a PINK lake?",
+    "a": "SEN",
+    "em": "💗",
+    "ctx": "Lake Retba is pink because of algae that produce red pigments. The color is most vivid during the dry season!"
+  },
+  {
+    "q": "Where is the LARGEST religious building ever made?",
+    "a": "KHM",
+    "em": "🏛️",
+    "ctx": "Angkor Wat took about 30 years to build and is the largest religious monument ever constructed. It's on Cambodia's flag!"
+  },
+  {
+    "q": "Which country is a CITY and a COUNTRY?",
+    "a": "SGP",
+    "em": "🏙️",
+    "ctx": "Singapore is only 31 miles across but has the world's best airport, one of the busiest ports, and some of the best street food anywhere."
+  },
+  {
+    "q": "Where are temples OLDER than the pyramids?",
+    "a": "MLT",
+    "em": "🏛️",
+    "ctx": "Malta's Ħaġar Qim temples date to 3600 BC, about 1,000 years older than the Great Pyramid of Giza!"
+  },
+  {
+    "q": "Which country has MORE saunas than cars?",
+    "a": "FIN",
+    "em": "🧖",
+    "ctx": "Finland has 3.3 million saunas for 5.5 million people. That's one sauna for every two people. The parliament even has one!"
+  },
+  {
+    "q": "Where was SOAP invented?",
+    "a": "SYR",
+    "em": "🧼",
+    "ctx": "Aleppo soap is made from olive oil and laurel oil using a recipe that hasn't changed in 4,000 years. It's the ancestor of all bar soap!"
+  },
+  {
+    "q": "Which country invented the word ROBOT?",
+    "a": "CZE",
+    "em": "🤖",
+    "ctx": "The word 'robot' comes from Karel Čapek's 1920 play. In Czech, 'robota' means forced labor. The robots in the play rebel against their creators!"
+  },
+  {
+    "q": "Where is the SMALLEST country on Earth?",
+    "a": "VAT",
+    "em": "🤏",
+    "ctx": "Vatican City has about 800 residents, its own post office, radio station, and even a tiny railway station. It's smaller than most golf courses!"
+  },
+  {
+    "q": "Which country had an all-female warrior army?",
+    "a": "BEN",
+    "em": "⚔️",
+    "ctx": "The Dahomey Amazons fought from the 1600s to 1894. European soldiers called them the most feared warriors they ever faced!"
+  },
+  {
+    "q": "Where is the only country in ALL FOUR hemispheres?",
+    "a": "KIR",
+    "em": "🌍",
+    "ctx": "Kiribati straddles the International Date Line AND the equator. It's the only country in all four hemispheres at once!"
+  },
+  {
+    "q": "Which country has a Jellyfish Lake?",
+    "a": "PLW",
+    "em": "🪼",
+    "ctx": "Jellyfish Lake's golden jellyfish evolved without predators, so they lost their sting. You can swim through millions of them harmlessly!"
+  },
+  {
+    "q": "Where was the World Wide Web invented?",
+    "a": "CHE",
+    "em": "🌐",
+    "ctx": "Tim Berners-Lee invented the World Wide Web at CERN in Switzerland in 1989. He gave it away for free instead of patenting it!"
+  },
+  {
+    "q": "Which country went from poorest to richest with diamonds?",
+    "a": "BWA",
+    "em": "💎",
+    "ctx": "In 1966, Botswana was one of the poorest countries on Earth. Then they found diamonds and invested wisely. Now it's one of Africa's richest!"
+  },
+  {
+    "q": "Where is the Land of a Million Elephants?",
+    "a": "LAO",
+    "em": "🐘",
+    "ctx": "Laos was called Lan Xang, 'Land of a Million Elephants.' The elephant is still the national symbol, though far fewer remain today."
+  },
+  {
+    "q": "Which Pacific country was NEVER colonized?",
+    "a": "TON",
+    "em": "👑",
+    "ctx": "Tonga resisted colonization for centuries. It signed treaties but never gave up sovereignty. The only Pacific kingdom that stayed independent!"
+  },
+  {
+    "q": "Where is Africa's biggest film festival?",
+    "a": "BFA",
+    "em": "🎬",
+    "ctx": "FESPACO in Ouagadougou has been running since 1969. It's the Cannes Film Festival of Africa, celebrating African filmmakers!"
+  },
+  {
+    "q": "Which country invented FRENCH FRIES (not France!)?",
+    "a": "BEL",
+    "em": "🍟",
+    "ctx": "Belgium claims villagers invented fries by frying potatoes the same way they fried fish. French soldiers tried them and the wrong name stuck!"
+  },
+  {
+    "q": "Where is the most DIGITAL country on Earth?",
+    "a": "EST",
+    "em": "💻",
+    "ctx": "Estonia lets anyone in the world become a digital citizen through e-Residency. You can start a company in Estonia without ever visiting!"
+  },
+  {
+    "q": "Which bird is ON the money AND IS the money?",
+    "a": "GTM",
+    "em": "🐦",
+    "ctx": "The quetzal bird is so sacred in Guatemala that the currency is named after it. In ancient Maya times, its feathers were worth more than gold!"
+  },
+  {
+    "q": "Where did the djembe drum come from?",
+    "a": "GIN",
+    "em": "🥁",
+    "ctx": "The djembe drum was originally used by griots (storytellers) to communicate across villages. Now every school music room has one!"
+  },
+  {
+    "q": "Which country has TWO capital cities?",
+    "a": "BOL",
+    "em": "🏛️",
+    "ctx": "Bolivia has two capitals: Sucre is the constitutional capital and La Paz is the seat of government at the highest altitude in the world!"
+  },
+  {
+    "q": "Where is the Pearl of Africa?",
+    "a": "UGA",
+    "em": "💎",
+    "ctx": "Winston Churchill visited Uganda in 1907 and called it 'the Pearl of Africa' because of its lush green landscapes and perfect climate."
+  },
+  {
+    "q": "Which country invented VOODOO?",
+    "a": "BEN",
+    "em": "🐍",
+    "ctx": "Voodoo originated in Benin and spread to Haiti through the slave trade. In Benin, it's a recognized religion with its own national holiday!"
+  },
+  {
+    "q": "Where was the most BOMBED country per person?",
+    "a": "LAO",
+    "em": "💣",
+    "ctx": "Between 1964 and 1973, the US dropped more bombs on Laos than on all of Europe in WWII. About 30% still haven't exploded."
+  },
+  {
+    "q": "Which country makes most computer chips?",
+    "a": "TWN",
+    "em": "💻",
+    "ctx": "TSMC in Taiwan makes over 90% of the world's most advanced chips. Almost every phone, laptop, and car depends on them!"
+  },
+  {
+    "q": "Where is the TALLEST building on Earth?",
+    "a": "ARE",
+    "em": "🏗️",
+    "ctx": "The Burj Khalifa is 2,717 feet tall. People on the top floor see the sunset several minutes AFTER people on the ground!"
+  },
+  {
+    "q": "Which country has the LONGEST African coastline?",
+    "a": "SOM",
+    "em": "🏖️",
+    "ctx": "Somalia has the longest coastline in Africa at 1,880 miles. Ancient Somalis were master sailors who traded with China, India, and Rome!"
+  },
+  {
+    "q": "Where did Indiana Jones explore Petra?",
+    "a": "JOR",
+    "em": "🎬",
+    "ctx": "Petra was carved directly into pink sandstone cliffs 2,000 years ago. It was 'lost' to the Western world until an explorer found it in 1812!"
+  },
+  {
+    "q": "Which country produces the most MLB players outside US?",
+    "a": "DOM",
+    "em": "⚾",
+    "ctx": "The Dominican Republic has produced over 800 Major League Baseball players. That's more than any country outside the US!"
+  },
+  {
+    "q": "Where was Nikola Tesla born?",
+    "a": "SRB",
+    "em": "⚡",
+    "ctx": "Nikola Tesla invented AC electricity, the technology that powers your house right now. He was born in a village during a lightning storm!"
+  },
+  {
+    "q": "Which country invented BUNGEE JUMPING?",
+    "a": "VUT",
+    "em": "🤸",
+    "ctx": "Land diving inspired modern bungee jumping. Men jump from 100-foot towers with vines tied to their ankles as a coming-of-age ritual!"
+  },
+  {
+    "q": "Where is the 2nd biggest coral reef?",
+    "a": "HND",
+    "em": "🤿",
+    "ctx": "The Bay Islands reef is part of the Mesoamerican Barrier Reef, the second largest in the world after Australia's Great Barrier Reef."
+  },
+  {
+    "q": "Which country has 9 sultans who take TURNS being king?",
+    "a": "MYS",
+    "em": "👑",
+    "ctx": "Every 5 years, a different sultan becomes Malaysia's king. It's like a royal time-share. No other country does this!"
+  },
+  {
+    "q": "Where was Game of Thrones filmed in Europe?",
+    "a": "HRV",
+    "em": "🎬",
+    "ctx": "Dubrovnik's old city walls doubled as King's Landing in Game of Thrones. Tourism doubled after the show aired!"
+  },
+  {
+    "q": "Which country is the Warm Heart of Africa?",
+    "a": "MWI",
+    "em": "😊",
+    "ctx": "Lake Malawi has more fish species than any other lake, over 1,000, and scientists keep discovering new ones!"
+  },
+  {
+    "q": "Where is the DEEPEST river on Earth?",
+    "a": "COD",
+    "em": "🌊",
+    "ctx": "The Congo River is up to 720 feet deep in places. It's so deep and fast that fish on opposite banks evolved into different species!"
+  },
+  {
+    "q": "Where was Timbuktu's famous university?",
+    "a": "MLI",
+    "em": "📚",
+    "ctx": "Timbuktu had one of the world's first universities in the 1100s. Its libraries held hundreds of thousands of manuscripts!"
+  },
+  {
+    "q": "Which country has 365 beaches?",
+    "a": "ATG",
+    "em": "🏖️",
+    "ctx": "Antigua's 365 beaches mean you could visit a different beach every day for a year and never repeat!"
+  },
+  {
+    "q": "Where is the Spice Isle?",
+    "a": "GRD",
+    "em": "🌶️",
+    "ctx": "Grenada produces so much nutmeg that it's on the national flag. The island smells like nutmeg when you fly over it!"
+  },
+  {
+    "q": "Which country has the world's FASTEST human?",
+    "a": "JAM",
+    "em": "🏃",
+    "ctx": "Usain Bolt ran 100 meters in 9.58 seconds. That's about 27 mph. He was so fast he was SLOWING DOWN at the finish line!"
+  },
+  {
+    "q": "Where is the NEWEST country on Earth?",
+    "a": "SSD",
+    "em": "🆕",
+    "ctx": "South Sudan became independent on July 9, 2011, making it younger than you!"
+  },
+  {
+    "q": "Which country was the first Black republic?",
+    "a": "HTI",
+    "em": "🗽",
+    "ctx": "In 1804, enslaved Haitians defeated Napoleon's army to create the first free Black republic. It inspired freedom movements worldwide!"
+  },
+  {
+    "q": "Where are the famous BLUE people?",
+    "a": "NER",
+    "em": "💙",
+    "ctx": "The Tuareg people wear indigo-dyed cloth that stains their skin blue over time. That's why they're called the 'Blue People of the Sahara!'"
+  },
+  {
+    "q": "Where is the Palace with 1,788 rooms?",
+    "a": "BRN",
+    "em": "🏰",
+    "ctx": "The Sultan's palace has 1,788 rooms, 257 bathrooms, a mosque that holds 1,500 people, and a garage for 7,000 cars!"
+  },
+  {
+    "q": "Which country is BASKETBALL's national religion?",
+    "a": "LTU",
+    "em": "🏀",
+    "ctx": "Lithuania is so obsessed with basketball that it's been called a national religion. They've won Olympic bronze three times!"
+  },
+  {
+    "q": "Where is the FLATTEST country on Earth?",
+    "a": "MDV",
+    "em": "🏝️",
+    "ctx": "The Maldives' highest point is only 5 feet 8 inches above sea level. The entire country could disappear if oceans rise!"
+  },
+  {
+    "q": "Which country has a waterfall 4x taller than Niagara?",
+    "a": "GUY",
+    "em": "🌊",
+    "ctx": "Kaieteur Falls drops 741 feet in a single plunge, about 4 times taller than Niagara Falls, into an ancient jungle canyon!"
+  },
+  {
+    "q": "Where were Panama hats ACTUALLY invented?",
+    "a": "ECU",
+    "em": "🎩",
+    "ctx": "Panama hats are actually made in Ecuador! They got the wrong name because they were shipped through Panama."
+  },
+  {
+    "q": "Which country produces HALF the world's cork?",
+    "a": "PRT",
+    "em": "🍷",
+    "ctx": "Portugal produces about 100,000 tons of cork per year. Cork oak trees live for 200 years, and the bark regrows after harvesting!"
+  },
+  {
+    "q": "Where is the Land of Eagles?",
+    "a": "ALB",
+    "em": "🦅",
+    "ctx": "The eagle on Albania's flag represents freedom and bravery. 'Shqipëria' (Albania in Albanian) means 'Land of Eagles!'"
+  },
+  {
+    "q": "Where did chocolate DRINKS originate?",
+    "a": "MEX",
+    "em": "🍫",
+    "ctx": "The ancient Maya heated cacao beans, mixed them with chili and water, and created the first chocolate drinks over 3,000 years ago!"
+  },
+  {
+    "q": "Which country is named after the EQUATOR?",
+    "a": "ECU",
+    "em": "🌍",
+    "ctx": "Ecuador literally means 'Equator' in Spanish. The equator runs right through the country. You can stand in both hemispheres at once!"
+  },
+  {
+    "q": "Where is the Lion Mountain?",
+    "a": "SLE",
+    "em": "🦁",
+    "ctx": "Sierra Leone means 'Lion Mountain' in Portuguese. One of the largest diamonds ever found, 969 carats, came from here!"
+  },
+  {
+    "q": "Which island has Rihanna and rum?",
+    "a": "BRB",
+    "em": "🎵",
+    "ctx": "Rihanna is Barbados's national hero, appointed in 2021 when the country became a republic. Her face is basically everywhere on the island!"
+  },
+  {
+    "q": "Where was WINE invented 8,000 years ago?",
+    "a": "GEO",
+    "em": "🍷",
+    "ctx": "Archaeologists found 8,000-year-old clay pots in Georgia with grape residue, the oldest proof of winemaking anywhere on Earth!"
+  },
+  {
+    "q": "Which country has the Great Blue Hole?",
+    "a": "BLZ",
+    "em": "🌊",
+    "ctx": "The Great Blue Hole is 984 feet across and 410 feet deep. Jacques Cousteau called it one of the top dive sites in the world!"
+  },
+  {
+    "q": "Where is the only Dutch-speaking S. American country?",
+    "a": "SUR",
+    "em": "🗣️",
+    "ctx": "Suriname is so diverse that a typical neighborhood might celebrate Diwali, Eid, Christmas, and Chinese New Year on the same street!"
+  },
+  {
+    "q": "Which country is Africa in miniature?",
+    "a": "CMR",
+    "em": "🌍",
+    "ctx": "Cameroon has beaches, mountains, rainforest, savanna, and desert, which is why it's called 'Africa in miniature!'"
+  },
+  {
+    "q": "Where do 30,000 people sing together?",
+    "a": "LVA",
+    "em": "🎵",
+    "ctx": "Latvia's Song Festival happens every 5 years. 30,000 singers perform together in a single choir. You can hear it from miles away!"
+  },
+  {
+    "q": "Where do monks collect food EVERY morning?",
+    "a": "LAO",
+    "em": "🙏",
+    "ctx": "Every morning at dawn in Luang Prabang, hundreds of monks walk through town collecting food offerings. It's been happening for centuries!"
+  },
+  {
+    "q": "Which country has the Stari Most diving bridge?",
+    "a": "BIH",
+    "em": "🌉",
+    "ctx": "People dive off the Stari Most bridge (79 feet) into the river below. The annual competition has been happening since 1566!"
+  },
+  {
+    "q": "Where is Mother Teresa's birthplace?",
+    "a": "MKD",
+    "em": "⛪",
+    "ctx": "Mother Teresa was born in Skopje in 1910 to an Albanian family. She went on to win the Nobel Peace Prize for her work with the poor."
+  },
+  {
+    "q": "Which country is OBSESSED with kite fighting?",
+    "a": "AFG",
+    "em": "🪁",
+    "ctx": "Kite fighting is Afghanistan's national passion. Players coat their strings in ground glass to cut opponents' strings. Last kite flying wins!"
+  },
+  {
+    "q": "Where is the Bay of Kotor?",
+    "a": "MNE",
+    "em": "🏖️",
+    "ctx": "The Bay of Kotor looks like a fjord but is actually a submerged river canyon. It's one of the most sheltered natural harbors in Europe!"
+  },
+  {
+    "q": "Which country's elephants walk through temples?",
+    "a": "LKA",
+    "em": "🐘",
+    "ctx": "In Sri Lanka, elephants are part of religious processions, especially the Kandy Esala Perahera with beautifully decorated elephants!"
+  },
+  {
+    "q": "Where is Dracula's Castle?",
+    "a": "ROU",
+    "em": "🧛",
+    "ctx": "Bram Stoker never visited Romania. He based Dracula on stories about Vlad the Impaler, a real prince known for harsh punishments!"
+  },
+  {
+    "q": "Which country has the most LIGHTNING?",
+    "a": "VEN",
+    "em": "⚡",
+    "ctx": "Lake Maracaibo gets about 300 lightning storms per year. The 'Catatumbo Lightning' strikes up to 280 times per HOUR!"
+  },
+  {
+    "q": "Where is the oldest city (11,000 years)?",
+    "a": "SYR",
+    "em": "🏛️",
+    "ctx": "Damascus has been continuously inhabited for over 11,000 years. People have lived there since before humans invented farming!"
+  },
+  {
+    "q": "Where are the swimming PIGS?",
+    "a": "BHS",
+    "em": "🐖",
+    "ctx": "The swimming pigs of Big Major Cay paddle out to tourist boats for snacks. Nobody knows how they got to the island in the first place!"
+  },
+  {
+    "q": "Which country's CINNAMON flavors the world?",
+    "a": "LKA",
+    "em": "🌿",
+    "ctx": "Sri Lankan cinnamon (Ceylon cinnamon) is the 'true' cinnamon. What most Americans use is actually cassia, a cheaper substitute!"
+  },
+  {
+    "q": "Where is the world's biggest SALT FLAT?",
+    "a": "BOL",
+    "em": "🧂",
+    "ctx": "Salar de Uyuni is so flat and reflective that after rain it becomes the world's largest mirror. Satellites use it for calibration!"
+  },
+  {
+    "q": "Which country invented GOULASH (by cowboys)?",
+    "a": "HUN",
+    "em": "🍲",
+    "ctx": "Hungarian cowboys (csikós) invented goulash by cooking beef stew in kettles on the plains. Paprika spice is what makes it special!"
+  },
+  {
+    "q": "Where did the first country make Bitcoin legal?",
+    "a": "SLV",
+    "em": "₿",
+    "ctx": "In 2021, El Salvador became the first country to make Bitcoin legal currency. The president announced it at a Bitcoin conference in Miami!"
+  },
+  {
+    "q": "Which country gives you PUPUSAS for breakfast?",
+    "a": "SLV",
+    "em": "🫓",
+    "ctx": "Pupusas have been made in El Salvador for over 2,000 years. There's a National Pupusa Day every second Sunday in November!"
+  },
+  {
+    "q": "Which country looks like a BOOT on the map?",
+    "a": "ITA",
+    "em": "👢",
+    "ctx": "Italy's boot shape is one of the most recognizable outlines in the world. The 'ball' it's kicking is the island of Sicily!"
+  },
+  {
+    "q": "Where did people first surf on waves?",
+    "a": "AUS",
+    "em": "🏄",
+    "ctx": "Aboriginal Australians were surfing as early as the 1770s when Captain Cook's crew observed them riding waves on wooden boards!"
+  },
+  {
+    "q": "Which country's poop is cube-shaped (wombats)?",
+    "a": "AUS",
+    "em": "💩",
+    "ctx": "Scientists used CT scans to figure out wombat poop is cube-shaped because of how their intestines stretch differently. Science is wild!"
+  },
+  {
+    "q": "Where did emojis come from?",
+    "a": "JPN",
+    "em": "😊",
+    "ctx": "Japanese engineer Shigetaka Kurita created the first 176 emojis in 1999. Now there are over 3,600!"
+  },
+  {
+    "q": "Which country has the most PEOPLE on Earth?",
+    "a": "IND",
+    "em": "👥",
+    "ctx": "India has 1.4 billion people, more than the entire continent of Africa combined!"
+  },
+  {
+    "q": "Where does the Amazon River flow?",
+    "a": "BRA",
+    "em": "🌳",
+    "ctx": "The Amazon River carries more water than the next 7 largest rivers COMBINED. It's so wide in places you can't see the other side!"
+  }
+]

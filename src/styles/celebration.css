@@ -1,0 +1,318 @@
+/* ===== SET COMPLETION CELEBRATIONS ===== */
+
+/* ── Confetti wrapper — toast tier ────────────────────────────────────────── */
+/* Fixed, zero-size, centred at 55 % height so burst erupts mid-screen         */
+.cel-confetti-wrap {
+  position: fixed;
+  z-index: 325;
+  top: 55%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+/* Confetti wrapper inside full-screen overlay: sits above the overlay bg      */
+.cel-ov-confetti {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ── Confetti piece ─────────────────────────────────────────────────────────── */
+.cel-piece {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 0;
+  left: 0;
+  margin: -4px 0 0 -4px;
+  border-radius: 2px;
+  background: var(--cel-c, #FAC775);
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+
+.cel-piece--round {
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  margin: -3.5px 0 0 -3.5px;
+}
+
+/* GPU-friendly: only transform + opacity */
+@media (prefers-reduced-motion: no-preference) {
+  .cel-piece {
+    animation-name: celBurst;
+    animation-duration: var(--cel-dur, 1500ms);
+    animation-delay: var(--cel-delay, 0ms);
+    animation-timing-function: cubic-bezier(0.12, 0.78, 0.38, 1);
+    animation-fill-mode: both;
+  }
+
+  @keyframes celBurst {
+    0%  { transform: translate(0, 0) rotate(0deg) scale(1);    opacity: 1; }
+    70% {                                                       opacity: 0.8; }
+    100%{ transform: translate(var(--cel-tx, 0px), var(--cel-ty, 80px))
+                     rotate(var(--cel-rot, 180deg)) scale(0.12); opacity: 0; }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cel-piece { display: none; }
+}
+
+/* ── Toast celebration (starter / core / epic) ─────────────────────────────── */
+.cel-toast {
+  position: fixed;
+  bottom: 110px;
+  left: 50%;
+  transform: translateX(-50%) translateY(18px);
+  z-index: 320;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(10, 17, 30, 0.97);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 12px 22px 12px 16px;
+  min-width: 240px;
+  max-width: 340px;
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  transition: opacity 280ms ease,
+              transform 320ms cubic-bezier(0.34, 1.4, 0.64, 1);
+  white-space: nowrap;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.cel-toast--in {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+/* Core: faint gold border + outer glow */
+.cel-toast--core {
+  border-color: rgba(212, 176, 68, 0.22);
+  box-shadow:
+    0 10px 36px rgba(0, 0, 0, 0.55),
+    0 0 22px rgba(212, 176, 68, 0.10);
+}
+
+/* Epic: stronger gold, deeper glow */
+.cel-toast--epic {
+  border-color: rgba(250, 199, 117, 0.30);
+  box-shadow:
+    0 10px 36px rgba(0, 0, 0, 0.55),
+    0 0 30px rgba(250, 199, 117, 0.16);
+}
+
+.cel-toast-icon {
+  font-size: 28px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.cel-toast-body {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.cel-toast-title {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.93);
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Core + epic: title in gold */
+.cel-toast--core .cel-toast-title,
+.cel-toast--epic .cel-toast-title {
+  color: #FAC775;
+}
+
+.cel-toast-reward {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.40);
+  letter-spacing: 0.1px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cel-toast-journey {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: #78BFEF;
+  letter-spacing: 0.4px;
+  margin-top: 1px;
+}
+
+/* ── Full-screen overlay (continent / terminal) ─────────────────────────────── */
+.cel-ov {
+  position: fixed;
+  inset: 0;
+  z-index: 330;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(4, 8, 18, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 380ms ease;
+  cursor: pointer;
+  overflow: hidden;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.cel-ov--in {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Terminal: warmer near-black */
+.cel-ov--terminal {
+  background: rgba(14, 8, 4, 0.94);
+}
+
+/* ── Scene content ──────────────────────────────────────────────────────────── */
+.cel-ov-scene {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 0 36px;
+  text-align: center;
+}
+
+.cel-ov-badge {
+  font-size: 72px;
+  line-height: 1;
+  margin-bottom: 6px;
+  filter: drop-shadow(0 4px 24px rgba(0, 0, 0, 0.5));
+}
+
+.cel-ov-badge--terminal {
+  font-size: 80px;
+}
+
+.cel-ov-title {
+  font-family: DM Serif Display, Georgia, serif;
+  font-size: 44px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+/* Terminal: gold shimmer title */
+.cel-ov-title--gold {
+  color: #FAC775;
+  text-shadow:
+    0 0 40px rgba(250, 199, 117, 0.55),
+    0 0 80px rgba(250, 199, 117, 0.22);
+}
+
+.cel-ov-sub {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.48);
+  letter-spacing: 0.2px;
+}
+
+.cel-ov-reward {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #FAC775;
+  opacity: 0.75;
+  margin-top: 4px;
+}
+
+.cel-ov-hint {
+  position: absolute;
+  bottom: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.20);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* ── Entry animations (motion-safe) ─────────────────────────────────────────── */
+@media (prefers-reduced-motion: no-preference) {
+  .cel-ov-badge {
+    animation: celBadgePop 580ms 120ms cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+
+  .cel-ov-title {
+    animation: celFadeUp 480ms 280ms ease both;
+  }
+
+  .cel-ov-sub {
+    animation: celFadeUp 480ms 420ms ease both;
+  }
+
+  .cel-ov-reward {
+    animation: celFadeUp 480ms 540ms ease both;
+  }
+
+  .cel-ov-hint {
+    animation: celFadeUp 480ms 800ms ease both;
+  }
+
+  @keyframes celBadgePop {
+    0%   { transform: scale(0.35) rotate(-8deg); opacity: 0; }
+    65%  { transform: scale(1.10) rotate(2deg); }
+    100% { transform: scale(1)    rotate(0deg); opacity: 1; }
+  }
+
+  @keyframes celFadeUp {
+    0%   { transform: translateY(14px); opacity: 0; }
+    100% { transform: translateY(0);    opacity: 1; }
+  }
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+@media (max-height: 500px) {
+  .cel-ov-badge  { font-size: 48px; }
+  .cel-ov-title  { font-size: 30px; }
+  .cel-ov-sub    { font-size: 13px; }
+  .cel-ov-hint   { bottom: 24px; }
+  .cel-toast     { bottom: 70px; }
+}
+
+@media (min-width: 768px) {
+  .cel-toast         { min-width: 280px; }
+  .cel-ov-badge      { font-size: 88px; }
+  .cel-ov-title      { font-size: 54px; }
+}

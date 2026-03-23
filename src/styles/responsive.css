@@ -1,0 +1,98 @@
+/* ===== RESPONSIVE ===== */
+@media(max-width:500px){
+  .logo{font-size:15px}
+  .pill{font-size:10px;padding:4px 10px}.pill .n{font-size:12px}
+  .pc-name{font-size:20px}.pc-letter{font-family:'Inter',system-ui,sans-serif;font-size:12px;font-weight:500;color:rgba(255,255,255,0.7);line-height:1.55;padding:0 16px 8px}
+  .co-t{font-size:24px}
+  .pc-hero-flag{width:65px}.pc-hero-item{font-size:26px}.pc-hero-item:nth-child(2){font-size:32px}
+  /* stamp removed *//* stamp removed */
+  .pc-greeting-text{font-size:20px}
+  .ms-title{font-size:20px}.ms-emoji{font-size:48px}
+  
+  
+  
+  
+  
+  .lens-info{font-size:11px;padding:7px 12px}
+}
+
+/* ===== LANDSCAPE MOBILE — phones rotated sideways ===== */
+@media(max-height:500px){
+  /* Postcard: compact everything */
+  .postcard{max-height:95vh;border-radius:var(--r-md);width:96%;max-width:540px}
+  .pc-topbar{padding:3px 8px 0}
+  .pc-icon-btn{width:32px;height:32px;border-radius:var(--r-sm);font-size:12px}
+  .pc-header{padding:4px 12px 2px;gap:8px}
+  .pc-flag-wrap img{width:32px;max-height:24px}
+  .pc-greet{font-size:10px;display:none}
+  .pc-name{font-size:15px}
+  .pc-cont{font-size:7px;margin-bottom:2px;margin-top:0}
+  .pc-sig-emoji{font-size:20px}
+  .fam-bar{padding:2px 10px;font-size:8px}
+  .pc-tabs{padding:2px 12px 0}
+  .pc-tab{padding:6px 0;font-size:10px;min-height:32px;border-radius:var(--r-sm)}
+  .pc-letter{font-size:11px;line-height:1.45;padding:4px 12px 6px}
+  .pc-tab-content{padding:0}
+  .j-progress{padding:2px 12px 0;gap:4px}
+  .j-dot{width:6px;height:6px}
+  .pc-stripe{width:2px}
+  .pc-close{width:32px;height:32px;font-size:11px}
+  .pc-bottom{padding:4px 12px 6px}
+  /* Postcard inner sections */
+  .l2r{padding:3px 0}
+  .l2i{width:18px;height:18px;font-size:9px}
+  .l2l{font-size:7px}
+  .l2t{font-size:10px;line-height:1.4}
+  .l2p.op{padding:2px 12px 4px}
+  .fam-note{font-size:10px;padding:2px 12px 4px}
+  .pc-facts{padding:2px 10px 2px}
+  .pc-fact{font-size:9px;padding:2px 6px}
+  /* Connection cards */
+  .conn-card{padding:8px 10px;margin:4px 8px}
+  .conn-title{font-size:12px}
+  .conn-story{font-size:10px;line-height:1.4}
+  .conn-nav{padding:4px 12px 2px;gap:6px}
+  .conn-arrow{width:32px;height:32px;font-size:14px}
+  .conn-dot{width:6px;height:6px}
+  .conn-count{font-size:9px}
+  /* Swipe nav arrows */
+  .swipe-nav{width:32px;height:32px;font-size:14px}
+  /* Overlay */
+  .ov{align-items:center}
+  /* Map chrome */
+  .ftop{padding:6px 10px 0}
+  .logo{font-size:12px}
+  .pill{font-size:9px;padding:3px 8px}.pill .n{font-size:11px}
+  .prog-wrap{width:70px}
+  .sidebar{top:32px;left:4px}
+  .sb-btn{min-width:24px;min-height:24px;padding:3px;font-size:9px}
+  .sb-label{font-size:8px}
+  /* Milestone */
+  .ms-emoji{font-size:40px}
+  .ms-title{font-size:18px}
+  .ms-sub{font-size:12px}
+  .ms-btn{padding:8px 20px;font-size:12px}
+  /* Journey grid */
+  .jpanel{max-height:92vh;padding:10px 12px 12px;border-radius:var(--r-md)}
+  .jpanel-title{font-size:16px}
+  .jpanel-sub{font-size:9px}
+  .jgrid{gap:4px}
+  .jcard{padding:7px 6px;gap:2px}
+  .jcard-emoji{font-size:16px}
+  .jcard-name{font-size:9px}
+  .jcard-countries{font-size:7px}
+  .jcard-featured{padding:10px 12px;gap:8px}
+  .jcard-featured .jcard-emoji{font-size:24px}
+  .jcard-featured .jcard-name{font-size:13px}
+  /* Challenge */
+  .chal-q{font-size:16px;margin:8px 0}
+  .chal-opts{gap:4px;margin:8px 0}
+  .chal-opt{padding:7px 8px;font-size:11px}
+  .chal-result{padding:8px 12px;font-size:12px}
+  /* Cold open */
+  .co-g{font-size:48px}
+  .co-t{font-size:20px}
+  .co-name-btn{padding:8px 14px;font-size:13px}
+  .co-go{padding:10px 24px;font-size:13px}
+  .zoom-home{width:32px;height:32px;top:34px}
+}

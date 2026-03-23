@@ -1,0 +1,1620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Atlas</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+<link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body>
+
+<!-- Portrait orientation prompt -->
+<div class="orient-prompt" id="orientPrompt">
+  <div class="orient-globe"><img src="/assets/ui-globe-md.png" alt="globe" style="width:64px;height:64px;vertical-align:middle"></div>
+  <div class="orient-text">The world is wide.<br>Turn me sideways.</div>
+  <div class="orient-sub">This map works best in landscape</div>
+</div>
+
+<!-- FAMILY SETUP FLOW -->
+<div class="setup" id="familySetup" style="display:none">
+  <button class="fp-close" id="setupCloseBtn" style="display:none;position:absolute;top:12px;right:12px;z-index:2" onclick="document.getElementById('familySetup').style.display='none'">&times;</button>
+  <!-- STEP 1: Countries -->
+  <div class="setup-step active" id="setupStep1">
+    <div class="setup-globe"><img src="/assets/ui-globe-md.png" alt="globe" style="width:64px;height:64px;vertical-align:middle"></div>
+    <div class="setup-title">Where does your<br>family come <b>from</b>?</div>
+    <div class="setup-sub">Search for the countries that are part of your story</div>
+    <div class="setup-search">
+      <input type="text" id="setupCountryInput" placeholder="Search countries..." autocomplete="off">
+      <div class="setup-results" id="setupCountryResults"></div>
+    </div>
+    <div class="setup-chips" id="setupCountryChips"></div>
+    <button class="setup-next" id="setupNextBtn" disabled>Next →</button>
+  </div>
+  <!-- STEP 2: Names -->
+  <div class="setup-step" id="setupStep2">
+    <div class="setup-globe">👨‍👩‍👧‍👦</div>
+    <div class="setup-title">Who's <b>exploring</b>?</div>
+    <div class="setup-sub">Add each explorer's name</div>
+    <div class="setup-name-row">
+      <input type="text" id="setupNameInput" placeholder="Enter a name..." maxlength="20" autocomplete="off">
+      <button class="setup-add-btn" id="setupAddName">Add</button>
+    </div>
+    <div class="setup-names" id="setupNameChips"></div>
+    <button class="setup-go" id="setupGoBtn" disabled>Start Exploring ✨</button>
+    <button class="setup-back" id="setupBackBtn">← Change countries</button>
+  </div>
+</div>
+
+<div class="ldr" id="ldr"><div style="animation:flo 3s ease-in-out infinite;margin-bottom:12px"><img src="/assets/ui-globe-lg.png" alt="globe" style="width:120px;height:120px;vertical-align:middle"></div><div class="ldr-r"></div><div class="ldr-t">Loading the world...</div><div id="ldrFlags" style="display:flex;gap:6px;margin-top:16px;opacity:0;animation:su 0.8s ease forwards 0.5s"></div></div>
+
+<!-- #8: Cold open with name selection -->
+<div class="cold" id="cold">
+  <div class="co-g"><img src="/assets/ui-globe-lg.png" alt="globe" style="width:120px;height:120px;vertical-align:middle"></div>
+  <div class="co-t">These are the places<br>that made <b>you</b>.</div>
+  <div class="co-ps" id="coldCountries"></div>
+  <div class="co-names" id="nameSelect"></div>
+  <button class="co-go" id="goBtn">Start Exploring ✨</button>
+  <div class="co-footer">
+    <span class="co-footer-link" onclick="openEditFamily()">Edit Family</span>
+    <span class="co-footer-sep">·</span>
+    <span class="co-footer-link" onclick="openForParents()">For Parents</span>
+  </div>
+</div>
+
+<svg id="mapSvg"></svg>
+<div class="vignette"></div>
+
+<div class="ftop">
+  <div class="logo"><span id="logoName">Dean's</span> <span style="color:#D4884A">Atlas</span></div>
+  <div class="stats-area">
+    <div class="stats-row">
+      <div class="search-icon-btn" onclick="toggleSearch()" title="Find a country">🔍</div>
+      <div class="pill" id="counterPill" title="Tap to show undiscovered"><span class="n" id="dN">0</span>&nbsp;/ <span id="dTotal">0</span></div>
+    </div>
+    <div class="prog-wrap"><div class="prog-bar" id="progBar"></div></div>
+  </div>
+</div>
+<div class="fbot"><div class="hint" id="hint">Tap any glowing country to explore 🗺️</div></div>
+
+<!-- SIBLING COUNTER -->
+<div class="sibling-bar" id="sibBar"></div>
+
+<!-- STORY OF THE DAY PROMPT -->
+<div class="story-prompt" id="storyPrompt" onclick="openStoryPrompt()">
+  <div class="sp-emoji" id="spEmoji">⚡</div>
+  <div class="sp-text">
+    <div class="sp-hook" id="spHook"></div>
+    <div class="sp-cta">Tap to find out →</div>
+  </div>
+</div>
+
+<!-- SHAKE HINT -->
+<div class="shake-hint" id="shakeHint">📱 Shake to discover a random country</div>
+
+<!-- SURPRISE ACHIEVEMENT -->
+<div class="surprise-ach" id="surpriseAch" onclick="this.classList.remove('show')">
+  <div class="sa-emoji" id="saEmoji"></div>
+  <div class="sa-title" id="saTitle"></div>
+  <div class="sa-sub" id="saSub"></div>
+</div>
+
+<!-- POSTCARD -->
+<div class="ov" id="cOv" onclick="if(event.target===this)cl()">
+  <button class="swipe-nav swipe-prev hidden" id="swPrev" onclick="event.stopPropagation();swipeCard(-1)">‹</button>
+  <button class="swipe-nav swipe-next hidden" id="swNext" onclick="event.stopPropagation();swipeCard(1)">›</button>
+  <div class="postcard">
+    <div class="pc-stripe" id="pcStripe"></div>
+    <!-- TOP BAR -->
+    <div class="pc-topbar">
+      <button class="pc-icon-btn" id="cardBackBtn" onclick="goBack()" style="display:none;font-size:16px" title="Back">←</button>
+      <button class="pc-icon-btn" id="favBtn" onclick="toggleFav()">♡</button>
+      <div style="flex:1"></div>
+      <button class="pc-icon-btn" id="jNext" onclick="nextInJourney()" style="display:none;background:rgba(212,136,74,0.15);color:#D4884A;width:auto;padding:0 10px;border-radius:var(--r-sm);font-size:10px;font-weight:700">Next →</button>
+      <button class="pc-icon-btn" onclick="cl()">✕</button>
+    </div>
+    <!-- JOURNEY PROGRESS -->
+    <div class="j-progress" id="jProgress" style="display:none"></div>
+    <!-- HEADER: flag + name + learn more link -->
+    <div class="pc-header">
+      <div class="pc-flag-wrap" id="pcFlag"></div>
+      <div class="pc-title-block">
+        <div class="pc-greet" id="pcGreetTxt"></div>
+        <div class="pc-name" id="pcName"></div>
+        <div class="pc-cont" id="pcCont"></div>
+        <div class="pc-status" id="pcStatus"></div>
+      </div>
+      <div class="pc-sig-emoji" id="pcSigEmoji"></div>
+    </div>
+    <!-- FAMILY BAR -->
+    <div class="fam-bar" id="fBar">Part of Your Story</div>
+    <!-- TAB BAR -->
+    <div class="pc-tabs" id="pcTabs">
+      <button class="pc-tab active" id="tabStory" onclick="switchTab('story')">Passport</button>
+      <button class="pc-tab" id="tabFacts" onclick="switchTab('facts')">Secrets</button>
+      <button class="pc-tab" id="tabConn" onclick="switchTab('conn')" style="display:none">Friends &amp; Foes</button>
+    </div>
+    <!-- STORY TAB (Tier 1) -->
+    <div class="pc-tab-content" id="tabContentStory">
+      <!-- FACTS (vertical list, scan-hooks) -->
+      <div class="pc-facts" id="pcFacts"></div>
+      <!-- LETTER -->
+      <div class="pc-letter" id="pcLetter"></div>
+      <!-- CONNECTIONS -->
+      <div id="pcConnections" style="display:none"></div>
+    </div>
+    <!-- FACTS TAB (Tier 2) — now with Secret card at top -->
+    <div class="pc-tab-content pc-tab-hidden" id="tabContentFacts">
+      <div class="secret-card" id="secretCard" style="display:none">
+        <div class="secret-emoji">🤫</div>
+        <div class="secret-text" id="secretText"></div>
+      </div>
+      <div class="more-toggle" id="moreToggle" onclick="toggleMoreAbout()" style="display:none">
+        <span class="more-toggle-arrow">›</span> More about this country
+      </div>
+      <div class="l2p" id="l2P"></div>
+      <!-- FAMILY NOTE -->
+      <div class="fam-note" id="fNote"></div>
+    </div>
+    <!-- CONNECTIONS TAB (Tier 3) — paginated cards -->
+    <div class="pc-tab-content pc-tab-hidden" id="tabContentConn" style="overflow:hidden">
+      <div class="conn-stage" id="connStage"></div>
+      <div class="conn-nav" id="connNav" style="display:none">
+        <button class="conn-arrow" id="connPrev" onclick="connPage(-1)">‹</button>
+        <div class="conn-dots" id="connDots"></div>
+        <button class="conn-arrow" id="connNext" onclick="connPage(1)">›</button>
+      </div>
+    </div>
+    <!-- WHERE NEXT? -->
+    <div class="where-next" id="whereNext" style="display:none">
+      <div class="wn-label">Where Next?</div>
+      <div class="wn-options" id="wnOptions"></div>
+    </div>
+  </div>
+</div>
+
+<!-- #7: Milestone celebration -->
+<div class="milestone" id="msOv">
+  <div class="ms-emoji" id="msEmoji"></div>
+  <div class="ms-title" id="msTitle"></div>
+  <div class="ms-sub" id="msSub"></div>
+  <button class="ms-btn" onclick="closeMilestone()">Keep Exploring! <img src="/assets/ui-globe-xs.png" alt="globe" style="width:24px;height:24px;vertical-align:middle"></button>
+</div>
+
+<!-- RECALL QUIZ -->
+<div class="quiz-ov" id="quizOv" onclick="if(event.target===this)return">
+  <div class="quiz-panel" id="quizPanel">
+    <!-- Question view -->
+    <div id="quizQView">
+      <button class="quiz-exit-btn" onclick="closeQuiz()" aria-label="Close quiz">✕</button>
+      <div class="quiz-emoji" id="quizEmoji">🧠</div>
+      <div class="quiz-title" id="quizTitle">What do you remember?</div>
+      <div class="quiz-sub" id="quizSub"></div>
+      <div class="quiz-progress" id="quizDots"></div>
+      <div class="quiz-q" id="quizQ"></div>
+      <div class="quiz-answers" id="quizAnswers"></div>
+      <div class="quiz-feedback" id="quizFeedback">&nbsp;</div>
+      <button class="quiz-next" id="quizNextBtn" onclick="quizNext()">Next →</button>
+    </div>
+    <!-- Score view -->
+    <div class="quiz-score" id="quizScore">
+      <div class="quiz-score-emoji" id="quizScoreEmoji">🌟</div>
+      <div class="quiz-score-title" id="quizScoreTitle"></div>
+      <div class="quiz-score-sub" id="quizScoreSub"></div>
+      <div class="quiz-score-bar" id="quizStars"></div>
+      <button class="quiz-close" onclick="closeQuiz()">Keep Exploring <img src="/assets/ui-globe-xs.png" alt="globe" style="width:24px;height:24px;vertical-align:middle"></button>
+    </div>
+  </div>
+</div>
+
+
+<div class="first-disc" id="fdOv"><div class="fd-emoji" id="fdEmoji"><img src="/assets/ui-party-md.png" alt="party" style="width:64px;height:64px;vertical-align:middle"></div><div class="fd-title" id="fdTitle"></div><div class="fd-sub" id="fdSub"></div></div>
+<button class="reveal-btn" id="revealBtn" onclick="revealWorld()">Explore the World →</button>
+<button class="zoom-home" id="zoomHome" onclick="resetZoom()" title="Reset zoom">⌂</button>
+
+<div class="search-box" id="searchBox">
+  <img src="/assets/ui-globe-sm.png" alt="globe" style="width:32px;height:32px;vertical-align:middle;opacity:0.3">
+  <input type="text" id="searchInput" placeholder="Find a country..." oninput="doSearch(this.value)" autocomplete="off">
+  <span style="color:rgba(255,255,255,0.2);cursor:pointer" onclick="toggleSearch()">✕</span>
+</div>
+<div class="search-results" id="searchResults"></div>
+
+<!-- JOURNEY MODE -->
+
+<div class="jov" id="jOv" onclick="if(event.target===this)closeJourneys()">
+  <div class="jpanel">
+    <div class="jpanel-header">
+      <div>
+        <div class="jpanel-title">World Journeys</div>
+        <div class="jpanel-sub">Pick your adventure</div>
+      </div>
+      <button class="jclose" onclick="closeJourneys()">✕</button>
+    </div>
+    <div id="journeyList"></div>
+  </div>
+</div>
+
+<!-- welcome toast handled in JS -->
+<div class="ov" id="chalOv" onclick="if(event.target===this)closeChallenge()">
+  <div class="postcard" style="max-width:380px;text-align:center;padding:12px 18px;max-height:88vh;overflow-y:auto;position:relative">
+    <button onclick="closeChallenge()" style="position:absolute;top:8px;right:8px;width:36px;height:36px;border-radius:50%;background:var(--glass-2);border:1px solid var(--glass-2);color:rgba(255,255,255,0.35);font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:Inter,system-ui,sans-serif;font-weight:700;z-index:2">✕</button>
+    <div style="margin-bottom:2px" id="chalEmoji"><img src="/assets/ui-compass-sm.png" alt="compass" style="width:32px;height:32px;vertical-align:middle"></div>
+    <div class="chal-q" id="chalQ"></div>
+    <div class="chal-opts" id="chalOpts"></div>
+    <div class="chal-result" id="chalResult" style="display:none"></div>
+    <div class="chal-score" id="chalScore"></div>
+    <div style="display:flex;gap:8px;justify-content:center;margin-top:6px;padding-bottom:4px">
+      <button onclick="closeChallenge()" style="background:var(--glass-2);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r-md);padding:8px 18px;font-family:Inter,system-ui,sans-serif;font-size:12px;font-weight:600;cursor:pointer;color:rgba(255,255,255,0.4)">Back to Map</button>
+      <button onclick="nextChallenge()" id="chalNext" style="display:none;background:rgba(212,136,74,0.2);border:1px solid rgba(212,136,74,0.15);color:#D4884A;border-radius:var(--r-md);padding:8px 18px;font-family:Inter,system-ui,sans-serif;font-size:12px;font-weight:700;cursor:pointer">Next →</button>
+    </div>
+  </div>
+</div>
+
+<!-- UNIFIED SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <div class="sb-btn sb-play" onclick="openJourneys()" ><span class="sb-label">Journeys</span></div>
+  <div class="sb-btn sb-play" onclick="startChallenge()" ><span class="sb-label">Challenge</span></div>
+  <div class="sb-btn sb-play" onclick="openCollection()" id="collectionBtn" data-tip="My Postcards">
+    <svg viewBox="0 0 18 18" width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="14" height="10" rx="1.5"/><path d="M2 6h14"/><path d="M5 9.5h3M5 11.5h5" stroke-width="1.2" opacity="0.7"/></svg>
+    <span class="sb-label">Collection</span>
+  </div>
+  <div class="sb-btn sb-play" onclick="openSets()" id="setsBtn" data-tip="Sets">
+    <svg viewBox="0 0 18 18" width="11" height="11" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2h10v5a5 5 0 01-10 0V2z"/><path d="M4 5H2a2 2 0 002 2M14 5h2a2 2 0 01-2 2"/><path d="M9 12v3M6 15h6"/></svg>
+    <span class="sb-label">Sets</span>
+  </div>
+  <div class="sb-sep"></div>
+  <div class="sb-btn" onclick="toggleLensPanel()" data-tip="Filters" id="lensToggle"><span style="font-size:10px">☰</span></div>
+  <div class="sb-lens-group" id="sbLensGroup" style="display:none">
+    <div class="sb-btn sb-lens" onclick="toggleLens('biggest')" data-tip="Biggest" id="lens_biggest"><svg viewBox="0 0 18 18" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M2 14l5-9 3 5 2-3 4 7"/></svg></div>
+    <div class="sb-btn sb-lens" onclick="toggleLens('equator')" data-tip="Equator" id="lens_equator"><svg viewBox="0 0 18 18" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><circle cx="9" cy="9" r="6"/><path d="M3 9h12"/></svg></div>
+    <div class="sb-btn sb-lens" onclick="toggleLens('islands')" data-tip="Islands" id="lens_islands"><svg viewBox="0 0 18 18" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><path d="M2 12c2-2 3-3 5-3s4 1 5 3"/><path d="M2 14c2 0 3-.7 5-.7s3 .7 5 .7 3-.7 4-.7"/></svg></div>
+    <div class="sb-btn sb-lens" onclick="toggleLens('population')" data-tip="People" id="lens_population"><svg viewBox="0 0 18 18" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><circle cx="9" cy="5" r="2.5"/><path d="M4 15c0-3 2.2-5 5-5s5 2 5 5"/></svg></div>
+    <div class="sb-btn sb-lens" onclick="toggleLens('english')" data-tip="English" id="lens_english"><span style="font-size:9px;font-weight:800;letter-spacing:0.5px">EN</span></div>
+    <div class="sb-btn sb-lens" onclick="toggleLens('spanish')" data-tip="Spanish" id="lens_spanish"><span style="font-size:9px;font-weight:800;letter-spacing:0.5px">ES</span></div>
+    <div class="sb-btn sb-lens" onclick="toggleLens('monarchy')" data-tip="Royalty" id="lens_monarchy"><svg viewBox="0 0 18 18" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 13V8l2.5 2L9 6l2.5 4L14 8v5z"/></svg></div>
+    <div class="sb-btn sb-lens" onclick="toggleLens('oldest')" data-tip="Ancient" id="lens_oldest"><svg viewBox="0 0 18 18" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 14V5l3-2 3 2v9"/><path d="M8 8h2"/></svg></div>
+    <div class="sb-btn sb-lens" onclick="toggleLens('rising')" data-tip="Rising" id="lens_rising"><svg viewBox="0 0 18 18" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14l4-5 3 2 5-7"/><path d="M11 4h4v4"/></svg></div>
+    <div class="sb-btn sb-lens" onclick="toggleLens('favorites')" data-tip="Favorites" id="lens_favorites"><svg viewBox="0 0 18 18" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3C7 1 3 1 3 5.5S9 13 9 15c0-2 6-5.5 6-9.5S11 1 9 3z"/></svg></div>
+  </div>
+  <div class="sb-sep"></div>
+  <div class="sb-btn" onclick="toggleMute()" data-tip="Sound" id="muteBtn"><span style="font-size:10px" id="muteIcon">🔊</span></div>
+  <div class="sb-sep"></div>
+  <div class="sb-btn sb-play" onclick="openEditFamily()"><span class="sb-label">Edit Family</span></div>
+  <div class="sb-btn sb-play" onclick="openForParents()"><span class="sb-label">For Parents</span></div>
+</div>
+
+<!-- FOR PARENTS MODAL -->
+<div class="fp-overlay" id="fpOverlay" onclick="if(event.target===this)closeForParents()">
+  <div class="fp-modal">
+    <button class="fp-close" onclick="closeForParents()">&times;</button>
+    <div class="fp-emoji"><img src="/assets/ui-globe-md.png" alt="globe" style="width:64px;height:64px;vertical-align:middle"></div>
+    <div class="fp-title">For Parents & Guardians</div>
+    <div class="fp-body">
+      <div class="fp-section">
+        <div class="fp-heading">What is this?</div>
+        <div class="fp-text">This is an interactive world atlas designed for children. Kids explore 227 countries and territories through age-appropriate postcards with facts about food, language, culture, and geography. Every place is presented with warmth, curiosity, and respect.</div>
+      </div>
+      <div class="fp-section">
+        <div class="fp-heading">What data is stored?</div>
+        <div class="fp-text">All data is stored locally on this device only using your browser's localStorage. Nothing is sent to any server. Stored data includes: family countries of origin, explorer names, which countries each child has visited, and favorites. No personal information leaves this device.</div>
+      </div>
+      <div class="fp-section">
+        <div class="fp-heading">Content approach</div>
+        <div class="fp-text">Country descriptions are written for kids aged 5 and up. Political situations are described honestly but age-appropriately. We don't shy away from the fact that some countries face challenges, but framing is always educational, never graphic. Every country gets something positive highlighted.</div>
+      </div>
+      <div class="fp-section">
+        <div class="fp-heading">Family countries</div>
+        <div class="fp-text">During setup, you chose countries that are meaningful to your family. These appear with heart markers on the map and get special treatment in the experience. You can change these anytime using the Edit Family button (👨‍👩‍👦) in the left sidebar.</div>
+      </div>
+      <div class="fp-section">
+        <div class="fp-heading">Child's age</div>
+        <div class="fp-text" id="fpAgeDesc">Set the age to adjust content — conflict and tension stories are hidden for children under 5.</div>
+        <select class="fp-age-select" id="fpAgeSelect" onchange="setPlayerAgeFromModal(parseInt(this.value,10))">
+          <option value="2">2 years old</option>
+          <option value="3">3 years old</option>
+          <option value="4">4 years old</option>
+          <option value="5">5 years old</option>
+          <option value="6">6 years old</option>
+          <option value="7">7 years old</option>
+          <option value="8">8 years old</option>
+          <option value="9">9 years old</option>
+          <option value="10">10 years old</option>
+        </select>
+        <div class="fp-age-hint" id="fpAgeHint"></div>
+      </div>
+      <div class="fp-section">
+        <div class="fp-heading">Reset everything</div>
+        <div class="fp-text">To start completely fresh, clearing all explorer progress, family countries, and names:</div>
+        <button class="fp-reset-btn" id="fpResetBtn" onclick="confirmFullReset()">Reset All Data</button>
+        <div id="fpResetGate" style="display:none;margin-top:10px">
+          <div style="font-size:11px;color:rgba(255,255,255,0.45);margin-bottom:6px">Type <strong style="color:rgba(255,100,100,0.8)">RESET</strong> below to confirm. This cannot be undone.</div>
+          <input id="fpResetInput" type="text" autocomplete="off" autocorrect="off" autocapitalize="characters" placeholder="Type RESET here" oninput="checkResetInput(this.value)" style="width:100%;box-sizing:border-box;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:6px;padding:8px 10px;font-family:Inter,system-ui,sans-serif;font-size:13px;color:white;outline:none;letter-spacing:1px">
+          <button id="fpResetConfirmBtn" onclick="executeFullReset()" disabled style="margin-top:8px;width:100%;background:rgba(200,60,60,0.2);border:1px solid rgba(200,60,60,0.2);border-radius:6px;padding:8px;font-family:Inter,system-ui,sans-serif;font-size:12px;font-weight:700;color:rgba(255,100,100,0.4);cursor:not-allowed;transition:all 0.2s">Confirm Reset — Delete Everything</button>
+        </div>
+      </div>
+    </div>
+    <div class="fp-footer">Made with love for curious kids everywhere.</div>
+  </div>
+</div>
+
+<!-- ENVELOPE ARRIVAL -->
+<div class="env-ov" id="envOv">
+  <div class="env-scene" id="envScene">
+    <button class="env-x-btn" id="envXBtn" onclick="closeEnvelope()" aria-label="Skip">✕</button>
+    <div class="env-ring" id="envRing">
+      <div class="env-card" id="envCard">
+        <div class="env-flap"></div>
+        <div class="env-stamp" id="envStamp"></div>
+        <div class="env-body">
+          <div class="env-to" id="envTo">To: Explorer</div>
+          <div class="env-country" id="envCountry"></div>
+          <div class="env-lines">
+            <div class="env-line"></div>
+            <div class="env-line"></div>
+            <div class="env-line env-line--s"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SETS SCREEN -->
+<div class="sets-ov" id="setsOv">
+  <div class="sets-hdr">
+    <div class="sets-hdr-info">
+      <div class="sets-hdr-title" id="setsHeaderTitle">Sets</div>
+      <div class="sets-hdr-count" id="setsHeaderCount">0 of 0 completed</div>
+    </div>
+    <button class="sets-close-btn" onclick="closeSets()">✕</button>
+  </div>
+  <div class="sets-body" id="setsBody"></div>
+</div>
+
+<!-- COLLECTION SCREEN -->
+<div class="col-ov" id="collectionOv">
+  <div class="col-hdr">
+    <div class="col-hdr-info">
+      <div class="col-hdr-title" id="colHeaderTitle">My postcards</div>
+      <div class="col-hdr-count" id="colHeaderCount">0 / 0</div>
+    </div>
+    <button class="col-close-btn" onclick="closeCollection()">✕</button>
+  </div>
+  <div class="col-body" id="colBody"></div>
+</div>
+
+<div class="tip" id="tip"></div>
+<div class="pbox" id="pbox"></div>
+
+
+<script type="module">
+// ╔══════════════════════════════════════════════════════════════╗
+// ║              WORLD EXPLORER ATLAS — FILE MAP                ║
+// ╠══════════════════════════════════════════════════════════════╣
+// ║  CSS .............. lines 11–862                            ║
+// ║  HTML ............. lines 864–1164                          ║
+// ║                                                             ║
+// ║  DATA CONSTANTS:                                            ║
+// ║    FL (flag base64) .......... ~1166  (265KB)               ║
+// ║    CAPS (capitals) ........... ~1221                        ║
+// ║    XPORTS (exports) .......... ~1222                        ║
+// ║    L2 (learn more) ........... ~1223  (97KB)                ║
+// ║    SECRETS ................... ~1227                        ║
+// ║    CONT_MAP .................. ~1286                        ║
+// ║    TERRITORY_OF .............. ~1306                        ║
+// ║    POLITICAL_STATUS .......... ~1322                        ║
+// ║    OCEANS .................... ~1328                        ║
+// ║    CONT_COL .................. ~1356                        ║
+// ║    D (postcards) ............. ~1568  (113KB)               ║
+// ║    ISO (numeric mapping) ..... ~1883                        ║
+// ║    MILESTONES ................ ~1914                        ║
+// ║                                                             ║
+// ║  MAP RENDERING & INIT ....... ~1930–2560                    ║
+// ║  LEGENDARY / EASTER_EGGS .... ~2561                        ║
+// ║  showOceanCard() ............ ~2708                        ║
+// ║  showCard() ................. ~2829                        ║
+// ║  NAMES ...................... ~3135                        ║
+// ║  ENCOURAGEMENTS ............. ~3189                        ║
+// ║  CONNECTIONS ................ ~3389                        ║
+// ║  JOURNEYS ................... ~4095                        ║
+// ║  goBack() / cl() ............ ~4242                        ║
+// ║  updN() / progress .......... ~4294                        ║
+// ║  RECALL QUIZ ................ ~4811                        ║
+// ║  FAMILY SETUP FLOW (IIFE) ... ~5048                        ║
+// ╚══════════════════════════════════════════════════════════════╝
+import {
+  saveGame    as _saveGame,
+  loadGame, getLastPlayer,
+  loadFamilyData, saveFamilyData, loadFamilyNames,
+  hasContDone, setContDone,
+  hasSurpriseAch, setSurpriseAch,
+  clearAllData,
+  setRarityMap,
+  loadPlayerAge, savePlayerAge,
+} from '/src/js/state.js';
+import { ia, chm, milestoneSound, playSound, toggleMute } from '/src/js/ui/sounds.js';
+import { burst, fireConfetti }                             from '/src/js/ui/effects.js';
+import { sTip, mTip, hTip }                               from '/src/js/ui/tooltip.js';
+import { initSearch, toggleSearch, doSearch, selectSearch } from '/src/js/ui/search.js';
+import { initColdOpen, initProfiles, pickName, revealWorld } from '/src/js/ui/cold-open.js';
+import { initShake, shakeDiscover }                                           from '/src/js/features/shake.js';
+import { initStreaks, updateStreak, getStreakCount }                          from '/src/js/features/streaks.js';
+import { initSiblings, updateSiblingBar }                                     from '/src/js/features/siblings.js';
+import { initStoryPrompt, showStoryPrompt, openStoryPrompt }                  from '/src/js/features/story-prompt.js';
+import { initAchievements, checkMilestone, checkContinentComplete,
+         checkSurpriseAchievements, showSurpriseAch, checkRecallQuiz,
+         closeMilestone }                                                      from '/src/js/features/achievements.js';
+import { initChallenges, startChallenge, nextChallenge,
+         answerChallenge, checkChallengeAnswer, closeChallenge }              from '/src/js/features/challenges.js';
+import { initRecallQuiz, triggerRecallQuiz, generateQuizQuestions,
+         renderQuizQuestion, quizAnswer, quizNext, showQuizScore,
+         closeQuiz }                                                           from '/src/js/features/recall-quiz.js';
+import { initConnections, CONN_TYPES, getCountryConns,
+         pulseCountry, renderConnCard, connPage }                             from '/src/js/cards/connections.js';
+import { initSwipe, getAdjacentCountries,
+         swipeCard, updateSwipeArrows, goBack, cl }                          from '/src/js/cards/swipe.js';
+import { initPostcard, _showCard, switchTab,
+         tgLM, toggleMoreAbout, toggleFav }                                  from '/src/js/cards/postcard.js';
+import { initOceanCard, showOceanCard }                                      from '/src/js/cards/ocean-card.js';
+import { initComingSoon, showComingSoon }                                     from '/src/js/cards/coming-soon.js';
+import { initWhereNext, buildWhereNext }                                     from '/src/js/cards/where-next.js';
+import { initLenses, isActiveLens, toggleLens, clearLens, toggleLensPanel }   from '/src/js/map/lenses.js';
+import { initRender, placeMarkers, placeVisitedMarkers,
+         recolorFamilyCountries, restoreVisitedCountries,
+         applyOneAwayGlow, clearOneAwayGlow }                                from '/src/js/map/render.js';
+import { initInteractions, isUndiscoveredMode, toggleUndiscovered,
+         pulseNearby, onClick }                                               from '/src/js/map/interactions.js';
+import { initMapModule, initMap }                                             from '/src/js/map/init.js';
+import { isModuleMode, getConfig, registerCleanup, mount, unmount }          from '/src/js/config.js';
+import { initCollection, reinitCollection, collectPostcard,
+         getTotalCollected, getSetsProgress, getOneAwaySets,
+         getEffectiveSets }                                                   from '/src/js/features/collection.js';
+import { initCollectionScreen,
+         openCollection, closeCollection }                                    from '/src/js/ui/collection-screen.js';
+import { initSetsScreen,
+         openSets, closeSets }                                                from '/src/js/ui/sets-screen.js';
+import { initArrival,
+         showCardWithArrival, closeEnvelope }                                 from '/src/js/ui/arrival.js';
+import { initCelebration }                                                    from '/src/js/ui/celebration.js';
+
+// showCard: wrapper that hides story-prompt and routes through arrival animation.
+// NEW discovery (not yet in postcard collection) → envelope flow.
+// REVISIT (already collected) → direct open with CSS slide-up.
+function showCard(a) {
+  var sp = document.getElementById('storyPrompt');
+  if (sp) sp.classList.remove('show');
+  showCardWithArrival(a);
+}
+
+// openCardDirect: used by arrival.js ctx.openCard — bypasses arrival check.
+function openCardDirect(a) {
+  _showCard(a);
+  setTimeout(function() { buildWhereNext(a); }, 100);
+}
+
+let FL;
+// GREET → src/data/greetings.json (loaded in _boot)
+let GREET;
+
+let CAPS;
+let XPORTS;
+let L2;
+
+
+let SECRETS;
+
+let CONT_MAP;
+
+// Montessori continent colors
+// Territory/dependency status — shown as badge on postcards
+let TERRITORY_OF;
+// Political status for disputed/special entities
+let POLITICAL_STATUS;
+
+// Ocean data for tappable ocean cards
+let OCEANS;
+
+let CONT_COL;
+
+
+// ============================================================
+// PERSISTENCE: routed through src/js/state.js — no direct localStorage here
+// ============================================================
+
+// Thin wrapper: captures live game state, delegates storage to state.js
+function saveGame() {
+  _saveGame(playerName, {
+    visited:        [...visited],
+    favorites:      [...favorites],
+    firstDiscDone,
+    lastMilestone,
+    lastPlayed:     new Date().toISOString(),
+    lastQuizScore:  window._lastQuizScore || null,
+    streakCount,
+    lastStreakDate,
+    schemaVersion:   3,
+    postcards,
+    sets_progress,
+    total_collected: totalCollected,
+    sets_completed:  setsCompleted,
+  });
+}
+
+// Load all profiles for the name select screen
+function getProfileSummaries() {
+  const names = FAMILY_NAMES;
+  const summaries = {};
+  names.forEach(n => {
+    const data = loadGame(n);
+    if (data && data.visited) {
+      summaries[n] = data.visited.length + FAM.length;
+    } else {
+      summaries[n] = 0;
+    }
+  });
+  return summaries;
+}
+
+// restoreVisitedCountries → src/js/map/render.js
+
+// EXTRA_FC → src/data/extra-fc.json (loaded in _boot)
+let EXTRA_FC;
+// HERO_BG → src/data/hero-bg.json (loaded in _boot)
+let HERO_BG;
+
+
+// LENSES const → src/js/map/lenses.js
+
+
+// toggleLens → src/js/map/lenses.js
+
+// clearLens → src/js/map/lenses.js
+
+
+let D;
+// ISO → src/data/iso.json (loaded in _boot)
+let ISO;
+// SETS → src/data/sets.json (loaded in _boot)
+let SETS;
+// RARITY → src/data/rarity.json (loaded in _boot)
+let RARITY;
+
+// Family storage delegated to src/js/state.js (loadFamilyData, saveFamilyData, loadFamilyNames imported above)
+
+// Load family data or use defaults for backward compat
+let FAM=loadFamilyData()||['IRN','NGA','GBR','IRL','USA'];
+let FAMILY_NAMES=loadFamilyNames()||['Dean','Jack','Leo','Max'];
+let HAS; // initialised in _boot() after D loads
+let visited=new Set(),favorites=new Set(),curV=null,proj,playerName=FAMILY_NAMES[0]||'Explorer',lastClickX=50,lastClickY=50,firstDiscDone=false,cardHistory=[],cardHistoryNav=false;
+let playerAge=5; // loaded from state per-player; default 5
+let streakCount=0,lastStreakDate=null;
+// Postcard collection — v3 save schema
+let postcards={},sets_progress={},totalCollected=0,setsCompleted=0;
+
+const LAND='#D4C9B5',LAND_S='#BAB09C',NO='#52A652';
+// MILESTONES array → src/js/features/achievements.js
+let lastMilestone=0;
+
+// Audio: ia, chm, milestoneSound, playSound, toggleMute → src/js/ui/sounds.js
+// Particles: burst, fireConfetti               → src/js/ui/effects.js
+// Tooltip: sTip, mTip, hTip                   → src/js/ui/tooltip.js
+
+// Cold open: initProfiles, pickName, revealWorld → src/js/ui/cold-open.js
+
+// placeVisitedMarkers → src/js/map/render.js
+
+// placeMarkers → src/js/map/render.js
+
+// recolorFamilyCountries → src/js/map/render.js
+
+// Milestones, continent completion, closeMilestone → src/js/features/achievements.js
+
+// ===== MAP =====
+
+// getContFromCentroid → src/js/map/init.js
+
+// toggleLensPanel → src/js/map/lenses.js
+
+
+// initMap → src/js/map/init.js
+
+// onClick → src/js/map/interactions.js
+
+// updateStreak → src/js/features/streaks.js
+
+
+// Legendary countries — special golden treatment
+let LEGENDARY;
+function isLegendary(iso){return LEGENDARY.includes(iso)}
+
+
+// pulseNearby → src/js/map/interactions.js
+
+// Easter egg bonus facts — tap the signature emoji to reveal
+let EASTER_EGGS;
+
+
+// toggleUndiscovered → src/js/map/interactions.js
+
+// Confetti: fireConfetti → src/js/ui/effects.js
+
+
+// showOceanCard → src/js/cards/ocean-card.js
+
+// _showCard (core renderer) → src/js/cards/postcard.js
+// showCard (wrapper)        → defined near top of this script
+
+// tgLM → src/js/cards/postcard.js
+
+// showComingSoon → src/js/cards/coming-soon.js
+let NAMES;
+
+// Encouragement messages after exploring
+let ENCOURAGEMENTS;
+
+function showEncouragement(countryName){
+  const msg=ENCOURAGEMENTS[Math.floor(Math.random()*ENCOURAGEMENTS.length)].replace('{name}',playerName).replace('{country}',countryName);
+  const t=document.createElement('div');
+  t.style.cssText='position:fixed;top:60px;left:50%;transform:translateX(-50%);z-index:300;background:rgba(16,24,38,0.95);backdrop-filter:blur(20px);border:1px solid rgba(255,200,60,0.15);border-radius:var(--r-md);padding:12px 24px;font-family:DM Serif Display,Georgia,serif;color:white;font-size:15px;opacity:0;transition:opacity 0.5s;pointer-events:none;white-space:nowrap;letter-spacing:-0.2px;box-shadow:0 4px 20px rgba(0,0,0,0.4)';
+  t.textContent=msg;
+  document.body.appendChild(t);
+  setTimeout(()=>{t.style.opacity='1'},50);
+  setTimeout(()=>{t.style.opacity='0';setTimeout(()=>t.remove(),500)},4000);
+}
+
+
+let fontSize=0;
+function setFS(sz){
+  fontSize=sz;
+  document.querySelectorAll('.fs-btn').forEach(b=>b.classList.remove('active'));
+  const fsEl=document.getElementById('fs'+sz);if(fsEl)fsEl.classList.add('active');
+  const letter=document.getElementById('pcLetter');
+  if(!letter)return;
+  const facts=document.getElementById('pcFacts');
+  if(sz===1){letter.classList.add('fs-lg');facts.classList.add('fs-lg')}
+  else{letter.classList.remove('fs-lg');facts.classList.remove('fs-lg')}
+  // Also resize L2 text
+  document.querySelectorAll('.l2t').forEach(el=>{
+    if(sz===1) el.classList.add('fs-lg');
+    else el.classList.remove('fs-lg');
+  });
+}
+
+// toggleMoreAbout, toggleFav → src/js/cards/postcard.js
+
+
+// ============================================================
+// EXPLORER CHALLENGES (retrieval practice)
+// ============================================================
+let CHALLENGES;
+
+// CONN_TYPES, getCountryConns, pulseCountry, renderConnCard, connPage → src/js/cards/connections.js
+let CONNECTIONS;
+
+// startChallenge, nextChallenge, answerChallenge, checkChallengeAnswer, closeChallenge
+// → src/js/features/challenges.js
+
+// revealWorld → src/js/ui/cold-open.js
+// toggleSearch / doSearch / selectSearch → src/js/ui/search.js
+
+
+function zoomToContinent(name){
+  const regions={
+    'NORTH AMERICA':{x:-120,y:45,k:2.5},
+    'SOUTH AMERICA':{x:-60,y:-15,k:2.5},
+    'EUROPE':{x:15,y:50,k:4},
+    'AFRICA':{x:20,y:5,k:2.5},
+    'ASIA':{x:80,y:35,k:2.2},
+    'OCEANIA':{x:140,y:-25,k:3}
+  };
+  // For now just open the journey panel filtered by continent
+  // Full zoom requires viewBox calculation
+}
+
+
+// getDailyCountry → src/js/map/init.js
+
+
+// Sounds: playSound, toggleMute → src/js/ui/sounds.js
+
+
+function showLensCount(label, explored, total){
+  let el=document.getElementById('lensCount');
+  if(!el){
+    el=document.createElement('div');
+    el.id='lensCount';
+    el.style.cssText='position:fixed;top:90px;right:16px;z-index:25;background:rgba(12,20,35,0.9);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r-md);padding:8px 14px;font-family:Inter,system-ui,sans-serif;color:white;font-size:11px;font-weight:700;pointer-events:none;transition:opacity 0.3s';
+    document.body.appendChild(el);
+  }
+  el.innerHTML=label+': <span style="color:#f0a050">'+explored+'/'+total+'</span> explored';
+  el.style.opacity='1';
+  clearTimeout(el._t);
+  el._t=setTimeout(()=>{el.style.opacity='0'},4000);
+}
+
+
+// Geographic type → hero gradient mapping
+let GEO_GRAD;
+let GEO_TYPE;
+function getHeroGrad(iso){
+  const gt=GEO_TYPE[iso];
+  return gt&&GEO_GRAD[gt]?GEO_GRAD[gt]:null;
+}
+
+
+// Country connections - find similar countries
+function getConnections(iso){
+  const d=D[iso];if(!d)return[];
+  const cont=CONT_MAP[iso];
+  // Find countries in same continent (excluding self)
+  const sameCont=Object.keys(D).filter(k=>k!==iso&&CONT_MAP[k]===cont);
+  // Shuffle and take 3
+  for(let i=sameCont.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [sameCont[i],sameCont[j]]=[sameCont[j],sameCont[i]];
+  }
+  return sameCont.slice(0,3);
+}
+
+function resetZoom(){
+  if(window._svg && window._zoom){
+    window._svg.transition().duration(500).call(window._zoom.transform, d3.zoomIdentity);
+    // Reset viewBox
+    const w=window.innerWidth,h=window.innerHeight;
+    window._svg.transition().duration(500).attr('viewBox','0 0 '+w+' '+h);
+    document.getElementById('mapSvg').style.cursor = '';
+    // Restore continent labels
+    var cLblG=document.querySelector('.continent-labels');
+    if(cLblG){cLblG.style.opacity='1';cLblG.style.transition='opacity 0.4s';}
+  }
+}
+
+
+// ============================================================
+// JOURNEY MODE — themed paths through countries
+// ============================================================
+let JOURNEYS;
+
+let activeJourney = null;
+let journeyIdx = 0;
+
+function openJourneys(){
+  const list = document.getElementById('journeyList');
+  list.className = 'jgrid';
+  list.innerHTML = JOURNEYS.map((j,i) => {
+    const isFam = i === 0;
+    const delay = i * 40;
+    if(isFam){
+      return '<div class="jcard jcard-featured" onclick="startJourney('+i+')" style="animation-delay:'+delay+'ms">' +
+      '<div class="jcard-emoji">'+j.emoji+'</div>' +
+      '<div class="jcard-info">' +
+      '<div class="jcard-name">'+j.name+'</div>' +
+      '<div class="jcard-desc">'+j.desc+'</div>' +
+      '<div class="jcard-countries">'+j.countries.length+' countries</div>' +
+      '</div></div>';
+    }
+    return '<div class="jcard" onclick="startJourney('+i+')" style="animation-delay:'+delay+'ms">' +
+    '<div class="jcard-emoji">'+j.emoji+'</div>' +
+    '<div class="jcard-info">' +
+    '<div class="jcard-name">'+j.name+'</div>' +
+    '<div class="jcard-countries">'+j.countries.length+'</div>' +
+    '</div></div>';
+  }).join('');
+  document.getElementById('jOv').classList.add('on');
+}
+
+function closeJourneys(){
+  document.getElementById('jOv').classList.remove('on');
+  activeJourney = null;
+}
+
+function startJourney(idx){
+  var journey = JOURNEYS[idx];
+  journeyIdx = 0;
+  document.getElementById('jOv').classList.remove('on');
+  activeJourney = journey;
+  setTimeout(function(){
+    if(!activeJourney) return;
+    var iso = activeJourney.countries[journeyIdx];
+    if(iso && D[iso]) showCard(iso);
+    else nextInJourney();
+  }, 400);
+}
+
+function nextInJourney(){
+  if(!activeJourney) return;
+  journeyIdx++;
+  if(journeyIdx >= activeJourney.countries.length){
+    fireConfetti(3500);
+    activeJourney = null;
+    return;
+  }
+  const iso = activeJourney.countries[journeyIdx];
+  if(iso && D[iso]){
+    cl();
+    setTimeout(() => showCard(iso), 300);
+  } else {
+    nextInJourney(); // skip missing, try next
+  }
+}
+
+
+// getAdjacentCountries, swipeCard, updateSwipeArrows, goBack, cl → src/js/cards/swipe.js
+// switchTab → src/js/cards/postcard.js
+function updN(){
+  const total=visited.size+FAM.filter(k=>!visited.has(k)).length;
+  document.getElementById('dN').textContent=total;
+  document.getElementById('dTotal').textContent=Object.keys(D).length;
+  document.getElementById('progBar').style.width=(total/Object.keys(D).length*100)+'%';
+  // Show challenge button after 10 countries
+  if(total>=10) (document.getElementById('playBar')||document.createElement('div')).classList.add('show');
+}
+
+document.getElementById('goBtn').addEventListener('click',()=>{
+  ia();
+  document.getElementById('cold').classList.add('go');
+  document.getElementById('logoName').textContent=playerName+"'s";
+  
+  // Load existing save data for this player
+  const saved = loadGame(playerName);
+  playerAge = loadPlayerAge(playerName); // age gate for connections & sets
+  if (saved && saved.visited && saved.visited.length > 0) {
+    saved.visited.forEach(a => visited.add(a));
+    if(saved.favorites) saved.favorites.forEach(a => favorites.add(a));
+    if(saved.firstDiscDone) firstDiscDone=true;
+    if (saved.lastMilestone) lastMilestone = saved.lastMilestone;
+    window._lastQuizScore = saved.lastQuizScore || null;
+    if (saved.streakCount)    streakCount    = saved.streakCount;
+    if (saved.lastStreakDate) lastStreakDate = saved.lastStreakDate;
+    if (saved.postcards)      postcards      = saved.postcards;
+    if (saved.sets_progress)  sets_progress  = saved.sets_progress;
+    if (saved.total_collected !== undefined) totalCollected = saved.total_collected;
+    if (saved.sets_completed  !== undefined) setsCompleted  = saved.sets_completed;
+    setTimeout(() => { restoreVisitedCountries(); }, 300);
+    // Welcome back message
+    const ct = saved.visited.length + FAM.filter(k=>!saved.visited.includes(k)).length;
+    // Show welcome back as a floating toast, not a blocking overlay
+    const wbToast = document.createElement('div');
+    wbToast.style.cssText='position:fixed;top:60px;left:50%;transform:translateX(-50%);z-index:30;background:rgba(16,24,38,0.92);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.06);border-radius:var(--r-md);padding:12px 24px;font-family:DM Serif Display,Georgia,serif;color:white;font-size:16px;opacity:0;transition:opacity 0.5s;pointer-events:none;white-space:nowrap;letter-spacing:-0.2px';
+    wbToast.textContent='Welcome back, '+playerName+'. '+ct+' countries explored.';
+    document.body.appendChild(wbToast);
+    setTimeout(()=>{wbToast.style.opacity='1'},800);
+    setTimeout(()=>{wbToast.style.opacity='0';setTimeout(()=>wbToast.remove(),500)},4000);
+
+    // ── One-away engine ───────────────────────────────────────────────────────
+    // Runs after restoreVisitedCountries (300 ms) so SVG paths are in the DOM.
+    setTimeout(function() {
+      var oneAway = getOneAwaySets();
+      if (!oneAway || oneAway.length === 0) return;
+
+      // Persistent gold glow on every missing country
+      var missingIsos = oneAway.map(function(s) { return s.missing; }).filter(Boolean);
+      if (missingIsos.length > 0) applyOneAwayGlow(missingIsos);
+
+      // Toast: show for the first one-away set, after the welcome toast fades
+      var first = oneAway[0];
+      var D_local = D; // closure over D
+      var missingName = first.missing && D_local[first.missing] ? D_local[first.missing].n : first.missing;
+      var oaToast = document.createElement('div');
+      oaToast.style.cssText = 'position:fixed;top:60px;left:50%;transform:translateX(-50%);z-index:30;' +
+        'background:rgba(12,20,34,0.96);backdrop-filter:blur(20px);border:1px solid rgba(250,199,117,0.22);' +
+        'border-radius:var(--r-md);padding:11px 24px;font-family:Inter,system-ui,sans-serif;font-size:13px;' +
+        'font-weight:700;color:#FAC775;letter-spacing:-0.1px;opacity:0;transition:opacity 0.4s;' +
+        'pointer-events:none;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,0.45)';
+      oaToast.textContent = 'You\'re ONE postcard away from completing ' + first.setName + '!';
+      document.body.appendChild(oaToast);
+      setTimeout(function(){oaToast.style.opacity='1';},3800);   // after welcome toast
+      setTimeout(function(){oaToast.style.opacity='0';setTimeout(function(){oaToast.remove();},400);},7500);
+    }, 400);
+  }
+  
+  updN();
+  
+  // Cold open ONLY for first-time users
+  const isReturning = saved && saved.visited && saved.visited.length > 0;
+  if(!isReturning){
+    // Cinematic cold open: family countries appear one by one
+    document.querySelectorAll('.country').forEach(el=>{
+      const a=el.getAttribute('data-a');
+      if(!FAM.includes(a)){
+        el.classList.add('map-hidden');
+      } else {
+        el.style.opacity='0';
+        const famIdx=FAM.indexOf(a);
+        setTimeout(()=>{
+          el.style.transition='opacity 0.8s ease';
+          el.style.opacity='1';
+        }, 400 + famIdx * 600);
+      }
+    });
+    // Apply same visibility logic to synthetic marker dots (microstates / small islands)
+    document.querySelectorAll('.synth-dot[data-a], .synth-tap[data-a]').forEach(el=>{
+      const a=el.getAttribute('data-a');
+      if(!FAM.includes(a)){
+        el.classList.add('map-hidden');
+      } else {
+        el.style.opacity='0';
+        const famIdx=FAM.indexOf(a);
+        setTimeout(()=>{
+          el.style.transition='opacity 0.8s ease';
+          el.style.opacity='1';
+        }, 400 + famIdx * 600);
+      }
+    });
+    setTimeout(()=>{
+      document.getElementById('revealBtn').classList.add('show');
+    }, 400 + FAM.length * 600 + 400);
+  }
+});
+
+(async function _boot(){
+  const [geo,countries,details,flagData,oceans,connections,journeys,challenges,secrets,achievements,xports,greetings,extraFc,heroBg,isoMap,sets,rarityData] = await Promise.all([
+    fetch('/src/data/geo.json').then(r=>r.json()),
+    fetch('/src/data/countries.json').then(r=>r.json()),
+    fetch('/src/data/country-details.json').then(r=>r.json()),
+    fetch('/src/data/flags.json').then(r=>r.json()),
+    fetch('/src/data/oceans.json').then(r=>r.json()),
+    fetch('/src/data/connections.json').then(r=>r.json()),
+    fetch('/src/data/journeys.json').then(r=>r.json()),
+    fetch('/src/data/challenges.json').then(r=>r.json()),
+    fetch('/src/data/secrets.json').then(r=>r.json()),
+    fetch('/src/data/achievements.json').then(r=>r.json()),
+    fetch('/src/data/exports.json').then(r=>r.json()),
+    fetch('/src/data/greetings.json').then(r=>r.json()),
+    fetch('/src/data/extra-fc.json').then(r=>r.json()),
+    fetch('/src/data/hero-bg.json').then(r=>r.json()),
+    fetch('/src/data/iso.json').then(r=>r.json()),
+    fetch('/src/data/sets.json').then(r=>r.json()),
+    fetch('/src/data/rarity.json').then(r=>r.json()),
+  ]);
+  ({CONT_MAP,CONT_COL,GEO_TYPE,GEO_GRAD,CAPS,TERRITORY_OF,POLITICAL_STATUS,NAMES}=geo);
+  ({FL}=flagData);
+  ({LEGENDARY,EASTER_EGGS,ENCOURAGEMENTS}=achievements);
+  D=countries; L2=details; OCEANS=oceans; CONNECTIONS=connections;
+  JOURNEYS=journeys; CHALLENGES=challenges; SECRETS=secrets; XPORTS=xports;
+  GREET=greetings; EXTRA_FC=extraFc; HERO_BG=heroBg; ISO=isoMap; SETS=sets; RARITY=rarityData;
+  // Register rarity map in state.js so _migrateToV3() uses correct rarities
+  setRarityMap(RARITY);
+  HAS=new Set(Object.keys(D));
+
+  // Wire UI modules that need access to loaded data or app-state mutations
+  initSearch({ D, FL, showCard });
+  initLenses({
+    getFAM:       () => FAM,
+    getD:         () => D,
+    getFavorites: () => favorites,
+  });
+
+  // Wire feature modules
+  initStreaks({
+    loadStreakData: () => ({ streakCount, lastStreakDate }),
+    setStreakData:  (count, date) => { streakCount = count; lastStreakDate = date; },
+    saveGame,
+  });
+  initCollectionScreen({
+    getD:          () => D,
+    getRARITY:     () => RARITY,
+    getPlayerName: () => playerName,
+    showCard,
+  });
+  initSetsScreen({
+    getD:              () => D,
+    getEffectiveSets:  () => getEffectiveSets(),
+    getSetsProgress:   () => sets_progress,
+    getOneAwaySets:    () => getOneAwaySets(),
+    showCard,
+  });
+  initArrival({
+    getD:              () => D,
+    getFL:             () => FL,
+    getPlayerName:     () => playerName,
+    getSETS:           () => SETS,
+    getSetsProgress:   () => sets_progress,
+    openCard:          openCardDirect,
+    pulseNearby,
+    saveGame,
+    clearOneAwayGlow,
+  });
+  initCelebration({});
+  initCollection({
+    getPostcards:      () => postcards,
+    getSetsProgress:   () => sets_progress,
+    getSETS:           () => SETS,
+    getRARITY:         () => RARITY,
+    getFAM:            () => FAM,
+    getPlayerName:     () => playerName,
+    saveGame,
+    setPostcards:      map => { postcards     = map; },
+    setSetsProgress:   obj => { sets_progress = obj; },
+    setTotalCollected: n   => { totalCollected = n; },
+    setSetsCompleted:  n   => { setsCompleted  = n; },
+  });
+  initShake({
+    getD:       () => D,
+    getFAM:     () => FAM,
+    getVisited: () => visited,
+    getCurV:    () => curV,
+    ia, playSound, showCard,
+  });
+  initSiblings({
+    getFAMILY_NAMES: () => FAMILY_NAMES,
+    getPlayerName:   () => playerName,
+    getVisited:      () => visited,
+    getFAM:          () => FAM,
+  });
+  initStoryPrompt({
+    getCONNECTIONS: () => CONNECTIONS,
+    getD:           () => D,
+    getCurV:        () => curV,
+    ia, showCard, switchTab,
+  });
+  initAchievements({
+    getVisited:       () => visited,
+    getFAM:           () => FAM,
+    getPlayerName:    () => playerName,
+    getCONT_MAP:      () => CONT_MAP,
+    getD:             () => D,
+    getLastMilestone: () => lastMilestone,
+    setLastMilestone: v => { lastMilestone = v; },
+    saveGame,
+  });
+  initChallenges({
+    getCHALLENGES: () => CHALLENGES,
+    getD:          () => D,
+    getFL:         () => FL,
+    getVisited:    () => visited,
+    getFAM:        () => FAM,
+    getPlayerName: () => playerName,
+  });
+  initRecallQuiz({
+    getVisited:    () => visited,
+    getD:          () => D,
+    getL2:         () => L2,
+    getFL:         () => FL,
+    getPlayerName: () => playerName,
+    saveGame,
+  });
+  initConnections({
+    getCONNECTIONS: () => CONNECTIONS,
+  });
+  initPostcard({
+    getCurV:             () => curV,
+    setCurV:             v => { curV = v; },
+    getD:                () => D,
+    getFL:               () => FL,
+    getGREET:            () => GREET,
+    getCONT_COL:         () => CONT_COL,
+    getCONT_MAP:         () => CONT_MAP,
+    getL2:               () => L2,
+    getCAPS:             () => CAPS,
+    getXPORTS:           () => XPORTS,
+    getSECRETS:          () => SECRETS,
+    getEASTER_EGGS:      () => EASTER_EGGS,
+    getTERRITORY_OF:     () => TERRITORY_OF,
+    getPOLITICAL_STATUS: () => POLITICAL_STATUS,
+    getNAMES:            () => NAMES,
+    getVisited:          () => visited,
+    getFavorites:        () => favorites,
+    getFAM:              () => FAM,
+    getActiveJourney:    () => activeJourney,
+    setActiveJourney:    v => { activeJourney = v; },
+    getJourneyIdx:       () => journeyIdx,
+    isFirstDiscDone:     () => firstDiscDone,
+    setFirstDiscDone:    v => { firstDiscDone = v; },
+    getCardHistory:      () => cardHistory,
+    setCardHistory:      v => { cardHistory = v; },
+    getCardHistoryNav:   () => cardHistoryNav,
+    setCardHistoryNav:   v => { cardHistoryNav = v; },
+    isUndiscoveredMode,
+    isActiveLens,
+    toggleUndiscovered, clearLens, isLegendary,
+    placeMarkers, updN, saveGame, showEncouragement,
+    getConnections,
+    getPlayerAge:        () => playerAge,
+    cl: () => cl(),
+  });
+  initSwipe({
+    getCONT_MAP:        () => CONT_MAP,
+    getD:               () => D,
+    getCurV:            () => curV,
+    setCurV:            v => { curV = v; },
+    getCardHistory:     () => cardHistory,
+    setCardHistory:     v => { cardHistory = v; },
+    getCardHistoryNav:  () => cardHistoryNav,
+    setCardHistoryNav:  v => { cardHistoryNav = v; },
+    pulseNearby,
+    showCard,
+    switchTab,
+  });
+  initOceanCard({
+    getOCEANS: () => OCEANS,
+    setCurV:   v => { curV = v; },
+  });
+  initComingSoon({
+    getNAMES:            () => NAMES,
+    getD:                () => D,
+    getFL:               () => FL,
+    getEXTRA_FC:         () => EXTRA_FC,
+    getCONT_MAP:         () => CONT_MAP,
+    getTERRITORY_OF:     () => TERRITORY_OF,
+    getPOLITICAL_STATUS: () => POLITICAL_STATUS,
+  });
+  initWhereNext({
+    getD:        () => D,
+    getCONT_MAP: () => CONT_MAP,
+    getVisited:  () => visited,
+    getFAM:      () => FAM,
+    getXPORTS:   () => XPORTS,
+    getFL:       () => FL,
+    showCard,
+    switchTab,
+  });
+  initColdOpen({
+    getDataState:       () => ({ FAM, D, FL, FAMILY_NAMES }),
+    getProfileSummaries,
+    setPlayerName:      (name) => { playerName = name; },
+    onPickName(name) {
+      playerName = name;
+      playerAge  = loadPlayerAge(name); // refresh age for this player
+      const saved = loadGame(name);
+      if (saved) {
+        visited = new Set(saved.visited || []);
+        favorites = new Set(saved.favorites || []);
+        window._lastQuizScore = saved.lastQuizScore || null;
+        if (saved.firstDiscDone) firstDiscDone = true;
+        if (saved.lastMilestone) lastMilestone = saved.lastMilestone;
+        streakCount    = saved.streakCount    || 0;
+        lastStreakDate = saved.lastStreakDate  || null;
+        postcards     = saved.postcards      || {};
+        sets_progress = saved.sets_progress  || {};
+        totalCollected = saved.total_collected || 0;
+        setsCompleted  = saved.sets_completed  || 0;
+      } else {
+        visited = new Set(); favorites = new Set();
+        window._lastQuizScore = null; firstDiscDone = false;
+        streakCount = 0; lastStreakDate = null;
+        postcards = {}; sets_progress = {};
+        totalCollected = 0; setsCompleted = 0;
+      }
+      reinitCollection();
+      updN();
+      restoreVisitedCountries();
+      placeMarkers();
+    },
+    startJourney,
+  });
+  initRender({
+    getD:        () => D,
+    getFAM:      () => FAM,
+    getVisited:  () => visited,
+    getCONT_MAP: () => CONT_MAP,
+    getCONT_COL: () => CONT_COL,
+    getFL:       () => FL,
+    updN,
+  });
+  initInteractions({
+    getD:             () => D,
+    getNAMES:         () => NAMES,
+    getCONT_MAP:      () => CONT_MAP,
+    getISO:           () => ISO,
+    getVisited:       () => visited,
+    getFAM:           () => FAM,
+    isFirstDiscDone:  () => firstDiscDone,
+    setFirstDiscDone: v => { firstDiscDone = v; },
+    getPlayerName:    () => playerName,
+    saveGame,
+    updateStreak,
+    showComingSoon,
+    showCard,
+    showEncouragement,
+    updN,
+  });
+  initMapModule({
+    getD:          () => D,
+    getFL:         () => FL,
+    getFAM:        () => FAM,
+    getNAMES:      () => NAMES,
+    getCONT_MAP:   () => CONT_MAP,
+    getCONT_COL:   () => CONT_COL,
+    getLEGENDARY:  () => LEGENDARY,
+    getISO:        () => ISO,
+    getHAS:        () => HAS,
+    showCard,
+    showOceanCard,
+    swipeCard,
+    initProfiles,
+  });
+  initMap();
+
+  // ── Boot mode selection ────────────────────────────────────────────────────
+  // Module mode: host supplied config → apply data directly, skip setup UI.
+  // Standalone mode: run the normal family setup flow.
+  if (isModuleMode()) {
+    const _cfg = getConfig();
+    if (_cfg.familyCountries && _cfg.familyCountries.length) {
+      FAM = _cfg.familyCountries.slice();
+    }
+    if (_cfg.playerNames && _cfg.playerNames.length) {
+      FAMILY_NAMES = _cfg.playerNames.slice();
+      playerName   = _cfg.playerNames[0] || playerName;
+    }
+    // Persist to localStorage so initProfiles and other readers stay in sync.
+    saveFamilyData(FAM, FAMILY_NAMES);
+    // Honour an explicit container from config (mount() records it for cleanup).
+    if (_cfg.container) mount(_cfg.container);
+    // window._setupFlowCheck is never set → the check inside initMap is a no-op.
+  } else {
+    _setupFamily();
+  }
+})();
+const _onBeforeUnload = () => saveGame();
+window.addEventListener('beforeunload', _onBeforeUnload);
+registerCleanup(() => window.removeEventListener('beforeunload', _onBeforeUnload));
+
+// Counter pill toggle
+const _onCounterPill = e => { e.stopPropagation(); toggleUndiscovered(); };
+document.getElementById('counterPill').addEventListener('click', _onCounterPill);
+registerCleanup(() => document.getElementById('counterPill')?.removeEventListener('click', _onCounterPill));
+
+const _onResize = () => {
+  document.querySelectorAll('.mm,.mm-heart').forEach(m => m.remove());
+  if (window._zoom) window._zoom.translateExtent([[0,0],[window.innerWidth,window.innerHeight]]);
+  setTimeout(placeMarkers, 200);
+};
+window.addEventListener('resize', _onResize);
+registerCleanup(() => window.removeEventListener('resize', _onResize));
+
+// FEATURE 1: updateSiblingBar → src/js/features/siblings.js
+
+// FEATURE 2: initShake, shakeDiscover → src/js/features/shake.js
+// (listeners registered in _boot via initShake())
+
+// FEATURE 3: showStoryPrompt, openStoryPrompt → src/js/features/story-prompt.js
+
+// FEATURE 4: checkSurpriseAchievements, showSurpriseAch → src/js/features/achievements.js
+window._sessionDisc = -1; // incremented by the updN hook below; checked by surprise ach checks
+
+// buildWhereNext → src/js/cards/where-next.js
+// showCard wrapper replaces old monkey-patch; see function showCard() near top of this script
+
+// ============================================================
+// HOOK INTO EXISTING FLOW
+// ============================================================
+var _origUpdN=updN;
+updN=function(){
+  _origUpdN();
+  updateSiblingBar();
+  window._sessionDisc=(window._sessionDisc||0)+1;
+  checkSurpriseAchievements();
+};
+
+document.getElementById('goBtn').addEventListener('click',function(){
+  setTimeout(function(){
+    var saved=loadGame(playerName);
+    var isReturning=saved&&saved.visited&&saved.visited.length>0;
+    if(isReturning){
+      showStoryPrompt();
+    } else {
+      setTimeout(showStoryPrompt,15000);
+    }
+    updateSiblingBar();
+  },2000);
+});
+
+// ============================================================
+// FOR PARENTS & EDIT FAMILY
+// ============================================================
+function openForParents(){
+  // Populate age dropdown with current player's saved age
+  var sel  = document.getElementById('fpAgeSelect');
+  var hint = document.getElementById('fpAgeHint');
+  if (sel) sel.value = String(playerAge);
+  if (hint) hint.textContent = playerName && playerName !== 'Explorer'
+    ? 'Currently set for ' + playerName
+    : '';
+  document.getElementById('fpOverlay').classList.add('on');
+}
+function setPlayerAgeFromModal(age){
+  playerAge = age;
+  savePlayerAge(playerName, age);
+}
+function closeForParents(){
+  document.getElementById('fpOverlay').classList.remove('on');
+}
+function openEditFamily(){
+  // Close anything that might be on top
+  closeForParents();
+  var cold=document.getElementById('cold');
+  if(cold) cold.style.opacity='0';
+  if(cold) cold.style.pointerEvents='none';
+  // Trigger the setup flow pre-populated with current data
+  if(window._openEditFamily) window._openEditFamily();
+}
+function confirmFullReset(){
+  // Step 1: reveal the type-to-confirm gate
+  var gate = document.getElementById('fpResetGate');
+  var btn  = document.getElementById('fpResetBtn');
+  if (!gate) return;
+  gate.style.display = 'block';
+  if (btn) { btn.style.display = 'none'; }
+  var inp = document.getElementById('fpResetInput');
+  if (inp) { inp.value = ''; inp.focus(); }
+}
+
+function checkResetInput(val){
+  var confirmBtn = document.getElementById('fpResetConfirmBtn');
+  if (!confirmBtn) return;
+  var ready = val.trim().toUpperCase() === 'RESET';
+  confirmBtn.disabled = !ready;
+  confirmBtn.style.background = ready ? 'rgba(200,60,60,0.6)' : 'rgba(200,60,60,0.2)';
+  confirmBtn.style.color       = ready ? '#fff'                : 'rgba(255,100,100,0.4)';
+  confirmBtn.style.cursor      = ready ? 'pointer'             : 'not-allowed';
+  confirmBtn.style.borderColor = ready ? 'rgba(200,60,60,0.5)' : 'rgba(200,60,60,0.2)';
+}
+
+function executeFullReset(){
+  var confirmBtn = document.getElementById('fpResetConfirmBtn');
+  if (!confirmBtn || confirmBtn.disabled) return;
+  // Actually reset
+  clearAllData();
+  visited.clear(); favorites.clear(); curV=null; cardHistory=[];
+  FAM=['USA']; FAMILY_NAMES=['Explorer'];
+  saveFamilyData(FAM, FAMILY_NAMES);
+  // Hide gate, restore button for next time modal opens
+  var gate = document.getElementById('fpResetGate');
+  var btn  = document.getElementById('fpResetBtn');
+  if (gate) { gate.style.display = 'none'; }
+  if (btn)  { btn.style.display = ''; }
+  try { location.reload(); } catch(e) {
+    document.getElementById('cOv').classList.remove('on');
+    closeForParents();
+    updN(); recolorFamilyCountries(); placeMarkers(); initProfiles();
+    if (window._setupFlowCheck) window._setupFlowCheck();
+  }
+}
+
+// RECALL QUIZ: generateQuizQuestions, triggerRecallQuiz, renderQuizQuestion,
+//              quizAnswer, quizNext, showQuizScore, closeQuiz → src/js/features/recall-quiz.js
+// checkRecallQuiz → src/js/features/achievements.js
+
+// ============================================================
+// FAMILY SETUP FLOW
+// ============================================================
+function _setupFamily(){
+  var setupCountries=[];
+  var setupNames=[];
+
+  // Build searchable country list from D + NAMES
+  var allCountries=[];
+  var seen={};
+  Object.keys(D).forEach(function(iso){
+    if(!seen[iso]){seen[iso]=1;allCountries.push({iso:iso,name:D[iso].n,fc:D[iso].fc})}
+  });
+  Object.keys(NAMES).forEach(function(iso){
+    if(!seen[iso]){seen[iso]=1;allCountries.push({iso:iso,name:NAMES[iso],fc:null})}
+  });
+  allCountries.sort(function(a,b){return a.name.localeCompare(b.name)});
+
+  function getFlag(iso){
+    var dd=D[iso];
+    if(dd&&dd.fc&&FL[dd.fc])return '<img src="'+FL[dd.fc]+'" style="width:16px;height:auto;border-radius:2px;vertical-align:middle;margin-right:4px">';
+    return '';
+  }
+
+  // --- Country search ---
+  var inp=document.getElementById('setupCountryInput');
+  var res=document.getElementById('setupCountryResults');
+
+  inp.addEventListener('input',function(){
+    var q=this.value.trim().toLowerCase();
+    res.innerHTML='';
+    if(q.length<1){res.style.display='none';return}
+    var matches=allCountries.filter(function(c){
+      return c.name.toLowerCase().indexOf(q)!==-1 && setupCountries.indexOf(c.iso)===-1;
+    }).slice(0,8);
+    if(!matches.length){res.style.display='none';return}
+    matches.forEach(function(c){
+      var div=document.createElement('div');
+      div.className='setup-result';
+      div.innerHTML=getFlag(c.iso)+c.name;
+      div.onclick=function(){addCountry(c.iso);inp.value='';res.style.display='none';inp.focus()};
+      res.appendChild(div);
+    });
+    res.style.display='block';
+  });
+
+  // Touch support for search results
+  res.addEventListener('touchend',function(e){
+    var r=e.target.closest('.setup-result');
+    if(r){e.preventDefault();r.click()}
+  });
+
+  inp.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){
+      var first=res.querySelector('.setup-result');
+      if(first)first.click();
+    }
+  });
+
+  document.addEventListener('click',function(e){
+    if(!e.target.closest('#setupCountryInput')&&!e.target.closest('#setupCountryResults')){
+      res.style.display='none';
+    }
+  });
+
+  function addCountry(iso){
+    if(setupCountries.indexOf(iso)!==-1)return;
+    setupCountries.push(iso);
+    renderCountryChips();
+    updateNextBtn();
+  }
+
+  function removeCountry(iso){
+    setupCountries=setupCountries.filter(function(c){return c!==iso});
+    renderCountryChips();
+    updateNextBtn();
+  }
+
+  function renderCountryChips(){
+    var box=document.getElementById('setupCountryChips');
+    box.innerHTML='';
+    setupCountries.forEach(function(iso){
+      var name=D[iso]?D[iso].n:(NAMES[iso]||iso);
+      var chip=document.createElement('span');
+      chip.className='setup-chip';
+      chip.innerHTML=getFlag(iso)+name+'<span class="chip-x" data-iso="'+iso+'">&times;</span>';
+      box.appendChild(chip);
+    });
+  }
+
+  // Event delegation for country chip removal
+  var ccBox=document.getElementById('setupCountryChips');
+  ccBox.addEventListener('click',function(e){
+    var x=e.target.closest('.chip-x');
+    if(x&&x.dataset.iso){removeCountry(x.dataset.iso)}
+  });
+  ccBox.addEventListener('touchend',function(e){
+    var x=e.target.closest('.chip-x');
+    if(x&&x.dataset.iso){e.preventDefault();removeCountry(x.dataset.iso)}
+  });
+
+  function updateNextBtn(){
+    document.getElementById('setupNextBtn').disabled=setupCountries.length===0;
+  }
+
+  // --- Name entry ---
+  var nameInp=document.getElementById('setupNameInput');
+  var addBtn=document.querySelector('.setup-add-btn');
+
+  function addName(){
+    var n=nameInp.value.trim();
+    if(!n||setupNames.indexOf(n)!==-1)return;
+    if(setupNames.length>=8)return;
+    setupNames.push(n);
+    nameInp.value='';
+    renderNameChips();
+    updateGoBtn();
+    nameInp.focus();
+  }
+
+  if(addBtn){
+    addBtn.addEventListener('click',function(e){e.preventDefault();addName()});
+    addBtn.addEventListener('touchend',function(e){e.preventDefault();addName()});
+  }
+  nameInp.addEventListener('keydown',function(e){
+    if(e.key==='Enter')addName();
+  });
+
+  function removeName(n){
+    setupNames=setupNames.filter(function(x){return x!==n});
+    renderNameChips();
+    updateGoBtn();
+  }
+
+  function renderNameChips(){
+    var box=document.getElementById('setupNameChips');
+    box.innerHTML='';
+    setupNames.forEach(function(n){
+      var chip=document.createElement('span');
+      chip.className='setup-name-chip';
+      chip.innerHTML=n+'<span class="chip-x" data-name="'+n.replace(/"/g,'&quot;')+'">&times;</span>';
+      box.appendChild(chip);
+    });
+  }
+
+  // Event delegation for name chip removal
+  var ncBox=document.getElementById('setupNameChips');
+  ncBox.addEventListener('click',function(e){
+    var x=e.target.closest('.chip-x');
+    if(x&&x.dataset.name){removeName(x.dataset.name)}
+  });
+  ncBox.addEventListener('touchend',function(e){
+    var x=e.target.closest('.chip-x');
+    if(x&&x.dataset.name){e.preventDefault();removeName(x.dataset.name)}
+  });
+
+  function updateGoBtn(){
+    document.getElementById('setupGoBtn').disabled=setupNames.length===0;
+  }
+
+  // --- Step navigation ---
+  document.getElementById('setupNextBtn').onclick=function(){
+    document.getElementById('setupStep1').classList.remove('active');
+    document.getElementById('setupStep2').classList.add('active');
+    nameInp.focus();
+  };
+  document.getElementById('setupBackBtn').onclick=function(){
+    document.getElementById('setupStep2').classList.remove('active');
+    document.getElementById('setupStep1').classList.add('active');
+  };
+
+  // --- Finish setup ---
+  document.getElementById('setupGoBtn').onclick=function(){
+    // Save to localStorage
+    saveFamilyData(setupCountries,setupNames);
+    // Update runtime state
+    FAM=setupCountries.slice();
+    FAMILY_NAMES=setupNames.slice();
+    playerName=FAMILY_NAMES[0]||'Explorer';
+    // Update the title
+    document.getElementById('logoName').textContent=playerName+"'s";
+    // Load saved progress for this player
+    var saved=loadGame(playerName);
+    if(saved){visited=new Set(saved.visited||[]);favorites=new Set(saved.favorites||[]);window._lastQuizScore=saved.lastQuizScore||null}
+    else{visited=new Set();favorites=new Set();window._lastQuizScore=null}
+    // Rebuild dynamic elements (cold open pills, name buttons, loader flags)
+    initProfiles();
+    // Refresh map: recolor family borders + relocate heart markers
+    recolorFamilyCountries();
+    placeMarkers();
+    updN();
+    // Hide setup overlay — cold open is already visible behind it
+    document.getElementById('familySetup').style.display='none';
+  };
+
+  // --- First-visit detection ---
+  window._setupFlowCheck=function(){
+    var existing=loadFamilyData();
+    if(!existing){
+      // First visit: show setup, hide close button (must complete setup)
+      document.getElementById('setupCloseBtn').style.display='none';
+      document.getElementById('familySetup').style.display='flex';
+    }
+  };
+
+  // --- Edit family (re-open setup pre-populated) ---
+  window._openEditFamily=function(){
+    // Pre-populate with current data
+    setupCountries=FAM.slice();
+    setupNames=FAMILY_NAMES.slice();
+    renderCountryChips();
+    renderNameChips();
+    updateNextBtn();
+    updateGoBtn();
+    // Show step 1 with close button visible
+    document.getElementById('setupStep1').classList.add('active');
+    document.getElementById('setupStep2').classList.remove('active');
+    document.getElementById('setupCloseBtn').style.display='flex';
+    document.getElementById('familySetup').style.display='flex';
+    document.getElementById('setupCountryInput').value='';
+  };
+}
+// ── Expose functions called from HTML inline event handlers ──────────────────
+// Required because this script runs as type="module" (module scope ≠ global scope)
+Object.assign(window, {
+  answerChallenge, checkResetInput, cl, closeChallenge, closeCollection, closeEnvelope, closeForParents, closeJourneys,
+  closeMilestone, closeQuiz, closeSets, confirmFullReset, connPage, doSearch, executeFullReset, goBack,
+  nextChallenge, nextInJourney, openCollection, openEditFamily, openForParents, openJourneys, openSets,
+  openStoryPrompt, pulseCountry, quizNext, resetZoom, revealWorld, selectSearch,
+  showCard, startChallenge, startJourney, swipeCard, switchTab, toggleFav,
+  toggleLens, toggleLensPanel, toggleMoreAbout, toggleMute, toggleSearch,
+  mount, unmount,
+});
+
+</script>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,794 @@
+{
+  "_meta": {
+    "version": 2,
+    "description": "Complete Atlas set definitions. v1 had 5 starter sets. v2 has all 42 sets fully populated.",
+    "note": "Continent sets should be validated against the app's actual country data in countries.json. Some ISOs here may not exist in the app's data and should be skipped gracefully."
+  },
+
+  "my_family": {
+    "id": "my_family",
+    "name": "My family's countries",
+    "icon": "💛",
+    "tier": 0,
+    "min_age": 2,
+    "category": "personal",
+    "size_class": "starter",
+    "countries": [],
+    "key_cards": [],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Our family's story",
+      "bonus_content": "family_story"
+    },
+    "description": "These are the countries that made YOU."
+  },
+
+
+  "continent_africa": {
+    "id": "continent_africa",
+    "name": "Africa",
+    "icon": "🌍",
+    "tier": 1,
+    "min_age": 2,
+    "category": "continent",
+    "size_class": "continent",
+    "countries": ["DZA","AGO","BEN","BWA","BFA","BDI","CMR","CPV","CAF","TCD","COM","COG","COD","CIV","DJI","EGY","GNQ","ERI","SWZ","ETH","GAB","GMB","GHA","GIN","GNB","KEN","LSO","LBR","LBY","MDG","MWI","MLI","MRT","MUS","MAR","MOZ","NAM","NER","NGA","RWA","STP","SEN","SYC","SLE","SOM","ZAF","SSD","SDN","TZA","TGO","TUN","UGA","ZMB","ZWE"],
+    "sub_regions": {
+      "west_africa": {
+        "name": "West Africa",
+        "icon": "🥁",
+        "countries": ["NGA","GHA","SEN","CIV","MLI","BFA","NER","GIN","SLE","LBR","TGO","BEN","GMB","GNB","CPV","MRT"]
+      },
+      "east_africa": {
+        "name": "East Africa",
+        "icon": "🦒",
+        "countries": ["KEN","TZA","UGA","RWA","BDI","ETH","ERI","DJI","SOM","SSD","SDN","MDG","MUS","SYC","COM","MOZ","MWI","ZWE"]
+      },
+      "north_africa": {
+        "name": "North Africa",
+        "icon": "🏛️",
+        "countries": ["EGY","LBY","TUN","DZA","MAR","MRT"]
+      },
+      "southern_africa": {
+        "name": "Southern Africa",
+        "icon": "💎",
+        "countries": ["ZAF","BWA","NAM","LSO","SWZ"]
+      },
+      "central_africa": {
+        "name": "Central Africa",
+        "icon": "🌿",
+        "countries": ["COD","COG","CMR","CAF","GAB","GNQ","TCD","AGO","STP"]
+      }
+    },
+    "key_cards": ["STP","COM"],
+    "reward": {
+      "type": "continent_badge",
+      "title": "Africa explorer",
+      "bonus_content": "africa_continent_story"
+    },
+    "description": "The second-biggest continent, with 54 countries and more languages than anywhere else on Earth."
+  },
+
+  "continent_asia": {
+    "id": "continent_asia",
+    "name": "Asia",
+    "icon": "🏯",
+    "tier": 1,
+    "min_age": 2,
+    "category": "continent",
+    "size_class": "continent",
+    "countries": ["AFG","ARM","AZE","BHR","BGD","BTN","BRN","KHM","CHN","CYP","GEO","IND","IDN","IRN","IRQ","ISR","JPN","JOR","KAZ","KWT","KGZ","LAO","LBN","MYS","MDV","MNG","MMR","NPL","PRK","OMN","PAK","PSE","PHL","QAT","SAU","SGP","KOR","LKA","TJK","THA","TLS","TUR","TKM","ARE","UZB","VNM","YEM","TWN"],
+    "key_cards": ["BTN","BRN"],
+    "reward": {
+      "type": "continent_badge",
+      "title": "Asia explorer",
+      "bonus_content": "asia_continent_story"
+    },
+    "description": "The biggest continent on Earth. Home to more than half of all the people in the world!"
+  },
+
+  "continent_europe": {
+    "id": "continent_europe",
+    "name": "Europe",
+    "icon": "🏰",
+    "tier": 1,
+    "min_age": 2,
+    "category": "continent",
+    "size_class": "continent",
+    "countries": ["ALB","AND","AUT","BLR","BEL","BIH","BGR","HRV","CYP","CZE","DNK","EST","FIN","FRA","DEU","GRC","HUN","ISL","IRL","ITA","LVA","LIE","LTU","LUX","MLT","MDA","MCO","MNE","NLD","MKD","NOR","POL","PRT","ROU","RUS","SMR","SRB","SVK","SVN","ESP","SWE","CHE","UKR","GBR","VAT"],
+    "key_cards": ["VAT","MCO","SMR","LIE"],
+    "reward": {
+      "type": "continent_badge",
+      "title": "Europe explorer",
+      "bonus_content": "europe_continent_story"
+    },
+    "description": "Packed with castles, languages, and history. Lots of countries in a small space!"
+  },
+
+  "continent_north_america": {
+    "id": "continent_north_america",
+    "name": "North America",
+    "icon": "🗽",
+    "tier": 1,
+    "min_age": 2,
+    "category": "continent",
+    "size_class": "continent",
+    "countries": ["ATG","BHS","BRB","BLZ","CAN","CRI","CUB","DMA","DOM","SLV","GRD","GTM","HTI","HND","JAM","MEX","NIC","PAN","KNA","LCA","VCT","TTO","USA"],
+    "key_cards": ["KNA","DMA","GRD"],
+    "reward": {
+      "type": "continent_badge",
+      "title": "North America explorer",
+      "bonus_content": "north_america_continent_story"
+    },
+    "description": "From the frozen north of Canada to the tropical beaches of the Caribbean!"
+  },
+
+  "continent_south_america": {
+    "id": "continent_south_america",
+    "name": "South America",
+    "icon": "🦜",
+    "tier": 1,
+    "min_age": 2,
+    "category": "continent",
+    "size_class": "continent",
+    "countries": ["ARG","BOL","BRA","CHL","COL","ECU","GUY","PRY","PER","SUR","URY","VEN"],
+    "key_cards": ["SUR","GUY"],
+    "reward": {
+      "type": "continent_badge",
+      "title": "South America explorer",
+      "bonus_content": "south_america_continent_story"
+    },
+    "description": "The Amazon rainforest, the Andes mountains, and the widest river in the world!"
+  },
+
+  "continent_oceania": {
+    "id": "continent_oceania",
+    "name": "Oceania",
+    "icon": "🏝️",
+    "tier": 1,
+    "min_age": 2,
+    "category": "continent",
+    "size_class": "continent",
+    "countries": ["AUS","FJI","KIR","MHL","FSM","NRU","NZL","PLW","PNG","WSM","SLB","TON","TUV","VUT"],
+    "key_cards": ["TUV","NRU","PLW"],
+    "reward": {
+      "type": "continent_badge",
+      "title": "Oceania explorer",
+      "bonus_content": "oceania_continent_story"
+    },
+    "description": "Thousands of islands scattered across the biggest ocean on Earth."
+  },
+
+  "continent_antarctica_partners": {
+    "id": "continent_antarctica_partners",
+    "name": "Antarctica partners",
+    "icon": "🧊",
+    "tier": 1,
+    "min_age": 2,
+    "category": "continent",
+    "size_class": "starter",
+    "countries": ["ARG","AUS","CHL","FRA","NZL","NOR","GBR"],
+    "key_cards": [],
+    "reward": {
+      "type": "celebration",
+      "title": "Antarctica partner",
+      "bonus_content": null
+    },
+    "description": "These countries have research stations on the coldest continent. No one lives there forever, but scientists visit!"
+  },
+
+
+  "island_nations": {
+    "id": "island_nations",
+    "name": "Island nations",
+    "icon": "🏝️",
+    "tier": 1,
+    "min_age": 2,
+    "category": "geography",
+    "size_class": "epic",
+    "countries": ["JPN","IDN","PHL","LKA","MDV","SGP","CUB","JAM","TTO","FJI","ISL","MLT","CYP","MDG","MUS","NZL","PNG","BHS","BRB","GBR","IRL","SLB","KIR","TUV","PLW"],
+    "key_cards": ["TUV","KIR"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Ocean explorer",
+      "bonus_content": "island_facts_pack"
+    },
+    "description": "Countries that are completely surrounded by water!"
+  },
+
+  "tiny_countries": {
+    "id": "tiny_countries",
+    "name": "Tiny countries",
+    "icon": "🔍",
+    "tier": 1,
+    "min_age": 2,
+    "category": "geography",
+    "size_class": "starter",
+    "countries": ["VAT","MCO","SMR","LIE","MLT","AND","SGP","BHR"],
+    "key_cards": ["VAT","SMR"],
+    "reward": {
+      "type": "celebration",
+      "title": "Tiny country finder",
+      "bonus_content": null
+    },
+    "description": "The smallest countries in the world. Can you even find them on the map?"
+  },
+
+  "giant_countries": {
+    "id": "giant_countries",
+    "name": "Giant countries",
+    "icon": "🌍",
+    "tier": 1,
+    "min_age": 2,
+    "category": "geography",
+    "size_class": "starter",
+    "countries": ["RUS","CAN","USA","CHN","BRA","AUS","IND","ARG"],
+    "key_cards": [],
+    "reward": {
+      "type": "celebration",
+      "title": "Giant country spotter",
+      "bonus_content": null
+    },
+    "description": "The BIGGEST countries in the world. You can't miss them!"
+  },
+
+  "equator_countries": {
+    "id": "equator_countries",
+    "name": "Countries on the equator",
+    "icon": "🌐",
+    "tier": 1,
+    "min_age": 2,
+    "category": "geography",
+    "size_class": "core",
+    "countries": ["ECU","COL","BRA","STP","GAB","COG","COD","UGA","KEN","SOM","MDV","IDN","KIR"],
+    "key_cards": ["STP","KIR"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Equator explorer",
+      "bonus_content": null
+    },
+    "description": "These countries sit right on the middle line of the Earth!"
+  },
+
+  "landlocked_proud": {
+    "id": "landlocked_proud",
+    "name": "Landlocked and proud",
+    "icon": "⛰️",
+    "tier": 1,
+    "min_age": 2,
+    "category": "geography",
+    "size_class": "core",
+    "countries": ["MNG","NPL","BOL","CHE","RWA","UZB","PRY","BTN","ZMB","ETH","CZE","AUT"],
+    "key_cards": ["BTN","MNG"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Inland explorer",
+      "bonus_content": null
+    },
+    "description": "These countries are completely surrounded by other countries. Not a beach in sight!"
+  },
+
+  "african_safari": {
+    "id": "african_safari",
+    "name": "African safari animals",
+    "icon": "🦁",
+    "tier": 1,
+    "min_age": 2,
+    "category": "animal",
+    "size_class": "core",
+    "countries": ["KEN","TZA","ZAF","BWA","NAM","UGA","RWA","ZWE","ZMB","MOZ","CMR","GHA","SEN","COD","ETH"],
+    "key_cards": ["BWA","NAM"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Safari explorer",
+      "bonus_content": "safari_animal_facts"
+    },
+    "description": "Lions, elephants, giraffes, and zebras call these countries home."
+  },
+
+  "asian_jungle": {
+    "id": "asian_jungle",
+    "name": "Asian jungle animals",
+    "icon": "🐅",
+    "tier": 1,
+    "min_age": 2,
+    "category": "animal",
+    "size_class": "core",
+    "countries": ["IND","IDN","MYS","THA","VNM","MMR","NPL","CHN","LKA","BGD","KHM","LAO"],
+    "key_cards": ["LAO","MMR"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Jungle explorer",
+      "bonus_content": "jungle_animal_facts"
+    },
+    "description": "Tigers, orangutans, and pandas live in these amazing jungles and forests."
+  },
+
+  "ocean_coast_animals": {
+    "id": "ocean_coast_animals",
+    "name": "Ocean and coast animals",
+    "icon": "🐋",
+    "tier": 1,
+    "min_age": 2,
+    "category": "animal",
+    "size_class": "core",
+    "countries": ["AUS","NZL","ZAF","ARG","CHL","NOR","ISL","MEX","CRI","ECU","PHL","MDG","MOZ","JPN","BRA","CAN","USA","PNG"],
+    "key_cards": ["ECU","MOZ"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Ocean life explorer",
+      "bonus_content": "ocean_animal_facts"
+    },
+    "description": "Whales, dolphins, sea turtles, and penguins swim in the waters around these countries."
+  },
+
+  "arctic_animals": {
+    "id": "arctic_animals",
+    "name": "Arctic animals",
+    "icon": "🐻‍❄️",
+    "tier": 1,
+    "min_age": 2,
+    "category": "animal",
+    "size_class": "starter",
+    "countries": ["CAN","RUS","NOR","ISL","DNK","FIN","SWE","USA"],
+    "key_cards": [],
+    "reward": {
+      "type": "celebration",
+      "title": "Arctic explorer",
+      "bonus_content": null
+    },
+    "description": "Polar bears, arctic foxes, and reindeer brave the cold in these frosty countries."
+  },
+
+  "unique_animals": {
+    "id": "unique_animals",
+    "name": "Unique animal countries",
+    "icon": "🦘",
+    "tier": 1,
+    "min_age": 2,
+    "category": "animal",
+    "size_class": "core",
+    "countries": ["AUS","MDG","ECU","NZL","PNG","CRI","CHN","IND","IDN","RWA"],
+    "key_cards": ["MDG","PNG"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Rare species guardian",
+      "bonus_content": "endemic_conservation_facts"
+    },
+    "description": "These countries have animals that live NOWHERE ELSE on Earth!"
+  },
+
+
+  "volcano_countries": {
+    "id": "volcano_countries",
+    "name": "Volcano countries",
+    "icon": "🌋",
+    "tier": 2,
+    "min_age": 5,
+    "category": "geography",
+    "size_class": "core",
+    "countries": ["JPN","IDN","PHL","ISL","ITA","ECU","GTM","CRI","MEX","NZL","CHL","COL","COD","CMR","VUT"],
+    "key_cards": ["VUT","GTM"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Fire ring explorer",
+      "bonus_content": "volcano_facts"
+    },
+    "description": "These countries have volcanoes that rumble and sometimes even erupt!"
+  },
+
+  "desert_countries": {
+    "id": "desert_countries",
+    "name": "Desert countries",
+    "icon": "🏜️",
+    "tier": 2,
+    "min_age": 5,
+    "category": "geography",
+    "size_class": "core",
+    "countries": ["EGY","LBY","DZA","SAU","OMN","ARE","IRN","IRQ","JOR","NER","TCD","MRT","MLI","NAM","MNG"],
+    "key_cards": ["MRT","MNG"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Desert survivor",
+      "bonus_content": "desert_facts"
+    },
+    "description": "Sandy, hot, and full of surprises. Life finds a way in the desert!"
+  },
+
+  "rainforest_countries": {
+    "id": "rainforest_countries",
+    "name": "Rainforest countries",
+    "icon": "🌳",
+    "tier": 2,
+    "min_age": 5,
+    "category": "geography",
+    "size_class": "core",
+    "countries": ["BRA","COL","PER","ECU","VEN","GUY","SUR","COD","CMR","GAB","COG","IDN","MYS","PNG","MDG"],
+    "key_cards": ["SUR","GAB"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Rainforest guardian",
+      "bonus_content": "rainforest_facts"
+    },
+    "description": "The greenest, wettest, most alive places on Earth."
+  },
+
+  "arctic_antarctic_neighbors": {
+    "id": "arctic_antarctic_neighbors",
+    "name": "Arctic and Antarctic neighbors",
+    "icon": "❄️",
+    "tier": 2,
+    "min_age": 5,
+    "category": "geography",
+    "size_class": "core",
+    "countries": ["CAN","RUS","NOR","ISL","DNK","FIN","SWE","USA","ARG","CHL","AUS","NZL"],
+    "key_cards": [],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Polar explorer",
+      "bonus_content": "polar_facts"
+    },
+    "description": "The countries closest to the top and bottom of the world. Brrr!"
+  },
+
+  "ancient_trade_routes": {
+    "id": "ancient_trade_routes",
+    "name": "Ancient trade routes",
+    "icon": "🐪",
+    "tier": 2,
+    "min_age": 5,
+    "category": "culture",
+    "size_class": "core",
+    "countries": ["CHN","IND","IRN","TUR","ITA","UZB","TKM","AFG","PAK","IRQ","EGY","KEN","TZA","MOZ","LKA","IDN","OMN","YEM"],
+    "key_cards": ["TKM","UZB"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Ancient trader",
+      "bonus_content": "trade_route_story"
+    },
+    "description": "Thousands of years ago, traders walked, rode camels, and sailed ships between these countries carrying silk, spices, gold, and stories."
+  },
+
+  "spanish_speaking": {
+    "id": "spanish_speaking",
+    "name": "Hola! Spanish-speaking countries",
+    "icon": "🇪🇸",
+    "tier": 2,
+    "min_age": 5,
+    "category": "culture",
+    "size_class": "epic",
+    "countries": ["ESP","MEX","COL","ARG","PER","VEN","CHL","ECU","GTM","CUB","BOL","DOM","HND","PRY","SLV","NIC","CRI","PAN","URY","GNQ"],
+    "key_cards": ["GNQ","SLV"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Hola explorer",
+      "bonus_content": "spanish_language_facts"
+    },
+    "description": "More than 500 million people speak Spanish around the world. These are their countries!"
+  },
+
+  "french_speaking": {
+    "id": "french_speaking",
+    "name": "Bonjour! French-speaking countries",
+    "icon": "🇫🇷",
+    "tier": 2,
+    "min_age": 5,
+    "category": "culture",
+    "size_class": "epic",
+    "countries": ["FRA","BEL","CHE","LUX","MCO","CAN","HTI","SEN","CIV","MLI","BFA","NER","GIN","BEN","TGO","CMR","TCD","CAF","COG","COD","GAB","DJI","COM","MDG","RWA","BDI","MUS","SYC","VUT"],
+    "key_cards": ["DJI","VUT"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Bonjour explorer",
+      "bonus_content": "french_language_facts"
+    },
+    "description": "French is spoken on every continent! These countries all share this beautiful language."
+  },
+
+  "arabic_speaking": {
+    "id": "arabic_speaking",
+    "name": "Marhaba! Arabic-speaking countries",
+    "icon": "🕌",
+    "tier": 2,
+    "min_age": 5,
+    "category": "culture",
+    "size_class": "epic",
+    "countries": ["EGY","SAU","IRQ","YEM","JOR","LBN","PSE","ARE","QAT","BHR","KWT","OMN","LBY","TUN","DZA","MAR","MRT","SDN","SOM","DJI","COM","TCD","ERI","SSD"],
+    "key_cards": ["COM","DJI"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Marhaba explorer",
+      "bonus_content": "arabic_language_facts"
+    },
+    "description": "One of the oldest languages in the world, spoken across two continents."
+  },
+
+  "olympic_hosts": {
+    "id": "olympic_hosts",
+    "name": "Olympic host countries",
+    "icon": "🏅",
+    "tier": 2,
+    "min_age": 5,
+    "category": "culture",
+    "size_class": "core",
+    "countries": ["GRC","FRA","USA","GBR","SWE","BEL","NLD","DEU","FIN","AUS","ITA","JPN","MEX","CAN","RUS","KOR","ESP","CHN","BRA"],
+    "key_cards": [],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Olympic collector",
+      "bonus_content": "olympic_history"
+    },
+    "description": "These countries hosted the biggest sports event in the world!"
+  },
+
+  "ancient_writing": {
+    "id": "ancient_writing",
+    "name": "Countries with ancient writing",
+    "icon": "📜",
+    "tier": 2,
+    "min_age": 5,
+    "category": "culture",
+    "size_class": "core",
+    "countries": ["EGY","CHN","IND","IRQ","GRC","JPN","KOR","ETH","MEX","MNG","ITA","IRN"],
+    "key_cards": ["ETH","MNG"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Script collector",
+      "bonus_content": "writing_samples"
+    },
+    "description": "These countries invented their own way to write! Every squiggle and symbol tells a story."
+  },
+
+  "unique_instruments": {
+    "id": "unique_instruments",
+    "name": "Countries with unique instruments",
+    "icon": "🎵",
+    "tier": 2,
+    "min_age": 5,
+    "category": "culture",
+    "size_class": "core",
+    "countries": ["IND","AUS","JPN","GBR","TTO","ZAF","IRN","IDN","BRA","CUB","GIN","PER"],
+    "key_cards": ["TTO","GIN"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "World musician",
+      "bonus_content": "instrument_guide"
+    },
+    "description": "Every country has its own special music. These countries have instruments you won't find anywhere else!"
+  },
+
+  "famous_festivals": {
+    "id": "famous_festivals",
+    "name": "Countries with famous festivals",
+    "icon": "🎉",
+    "tier": 2,
+    "min_age": 5,
+    "category": "culture",
+    "size_class": "core",
+    "countries": ["IND","BRA","MEX","JPN","ESP","THA","CHN","TTO","ETH","DEU","USA","GBR","CIV","PER","KOR"],
+    "key_cards": ["CIV","ETH"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Festival collector",
+      "bonus_content": "festival_guide"
+    },
+    "description": "These countries throw the most amazing parties on Earth!"
+  },
+
+  "soccer_famous": {
+    "id": "soccer_famous",
+    "name": "Countries famous for soccer",
+    "icon": "⚽",
+    "tier": 2,
+    "min_age": 5,
+    "category": "culture",
+    "size_class": "core",
+    "countries": ["BRA","ARG","DEU","ESP","ITA","FRA","GBR","NLD","PRT","URY","MEX","COL","JPN","KOR","NGA"],
+    "key_cards": ["URY","NGA"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Soccer globe-trotter",
+      "bonus_content": "soccer_history"
+    },
+    "description": "The beautiful game! These countries live and breathe soccer."
+  },
+
+  "chocolate_famous": {
+    "id": "chocolate_famous",
+    "name": "Countries famous for chocolate",
+    "icon": "🍫",
+    "tier": 2,
+    "min_age": 5,
+    "category": "culture",
+    "size_class": "core",
+    "countries": ["CHE","BEL","CIV","GHA","ECU","COL","DOM","PER","MDG","MEX"],
+    "key_cards": ["MDG","CIV"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Chocolate explorer",
+      "bonus_content": "chocolate_facts"
+    },
+    "description": "From the cacao farms where it grows to the shops where it's made into candy. Follow the chocolate!"
+  },
+
+  "countries_with_castles": {
+    "id": "countries_with_castles",
+    "name": "Countries with castles",
+    "icon": "🏰",
+    "tier": 2,
+    "min_age": 5,
+    "category": "culture",
+    "size_class": "core",
+    "countries": ["GBR","FRA","DEU","ESP","ITA","PRT","CZE","ROU","JPN","IND","IRL","AUT"],
+    "key_cards": ["ROU","CZE"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Castle keeper",
+      "bonus_content": "castle_facts"
+    },
+    "description": "Kings, queens, knights, and samurai all lived in castles. These countries still have them!"
+  },
+
+
+  "kings_queens_europe": {
+    "id": "kings_queens_europe",
+    "name": "Kings and queens of Europe",
+    "icon": "👑",
+    "tier": 3,
+    "min_age": 8,
+    "category": "challenge",
+    "size_class": "core",
+    "countries": ["GBR","ESP","NLD","BEL","SWE","NOR","DNK","LUX","MCO","LIE"],
+    "key_cards": ["MCO","LIE"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Royal collector",
+      "bonus_content": "monarchy_facts"
+    },
+    "description": "These European countries still have a king or queen!"
+  },
+
+  "brand_new_countries": {
+    "id": "brand_new_countries",
+    "name": "Brand new countries",
+    "icon": "🌱",
+    "tier": 3,
+    "min_age": 8,
+    "category": "challenge",
+    "size_class": "core",
+    "countries": ["CZE","SVK","ERI","PLW","TLS","MNE","SRB","SSD","XKX","MHL","FSM","MDA","ARM","GEO","AZE"],
+    "key_cards": ["PLW","TLS"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "New world discoverer",
+      "bonus_content": "new_countries_story"
+    },
+    "description": "These countries are some of the newest in the world! They chose to become their own country."
+  },
+
+  "chose_new_name": {
+    "id": "chose_new_name",
+    "name": "Countries that chose a new name",
+    "icon": "✍️",
+    "tier": 3,
+    "min_age": 8,
+    "category": "challenge",
+    "size_class": "starter",
+    "countries": ["SWZ","MMR","ZWE","LKA","THA","IRN","ETH","TUR"],
+    "key_cards": ["SWZ"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Name keeper",
+      "bonus_content": "name_stories"
+    },
+    "description": "These countries decided to pick their own name. Because names are important."
+  },
+
+  "never_heard_of": {
+    "id": "never_heard_of",
+    "name": "Countries you've never heard of",
+    "icon": "🔮",
+    "tier": 3,
+    "min_age": 8,
+    "category": "discovery",
+    "size_class": "core",
+    "countries": ["COM","KIR","LSO","BRN","SUR","SWZ","TLS","STP","PLW","DJI","TON","VUT"],
+    "key_cards": ["KIR","STP","PLW"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Hidden world discoverer",
+      "bonus_content": "hidden_country_facts"
+    },
+    "description": "Can you find these hidden countries? Most grown-ups can't!"
+  },
+
+  "shaped_like_something": {
+    "id": "shaped_like_something",
+    "name": "Countries shaped like something",
+    "icon": "👀",
+    "tier": 2,
+    "min_age": 5,
+    "category": "discovery",
+    "size_class": "starter",
+    "countries": ["ITA","CHL","JPN","HRV","VNM","IND","SOM","SWE"],
+    "key_cards": ["HRV","SOM"],
+    "reward": {
+      "type": "celebration",
+      "title": "Shape spotter",
+      "bonus_content": "shape_hints"
+    },
+    "description": "Look closely at these countries on the map. They look like something!"
+  },
+
+  "ancient_civilizations": {
+    "id": "ancient_civilizations",
+    "name": "Countries with ancient civilizations",
+    "icon": "🏛️",
+    "tier": 3,
+    "min_age": 8,
+    "category": "challenge",
+    "size_class": "core",
+    "countries": ["EGY","IRQ","IND","CHN","PER","MEX","ETH","GRC","ITA","IRN","TUR","KHM"],
+    "key_cards": ["KHM","ETH"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Ancient world explorer",
+      "bonus_content": "ancient_civilization_stories"
+    },
+    "description": "Thousands of years ago, these countries built pyramids, temples, and entire cities!"
+  },
+
+  "countries_on_nile": {
+    "id": "countries_on_nile",
+    "name": "Countries on the Nile",
+    "icon": "🏞️",
+    "tier": 3,
+    "min_age": 8,
+    "category": "geography",
+    "size_class": "core",
+    "countries": ["EGY","SDN","SSD","UGA","ETH","RWA","BDI","TZA","KEN","COD"],
+    "key_cards": ["BDI","SSD"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Nile navigator",
+      "bonus_content": "nile_river_story"
+    },
+    "description": "The longest river in Africa flows through or touches all of these countries!"
+  },
+
+  "mediterranean": {
+    "id": "mediterranean",
+    "name": "Countries on the Mediterranean",
+    "icon": "🌊",
+    "tier": 3,
+    "min_age": 8,
+    "category": "geography",
+    "size_class": "epic",
+    "countries": ["ESP","FRA","ITA","MCO","SVN","HRV","BIH","MNE","ALB","GRC","TUR","LBN","ISR","PSE","EGY","LBY","TUN","DZA","MAR","MLT","CYP"],
+    "key_cards": ["MCO","MNE"],
+    "reward": {
+      "type": "journey_unlock",
+      "title": "Mediterranean voyager",
+      "bonus_content": "mediterranean_journey"
+    },
+    "description": "These countries all share one beautiful, warm sea."
+  },
+
+  "space_programs": {
+    "id": "space_programs",
+    "name": "Countries with space programs",
+    "icon": "🚀",
+    "tier": 3,
+    "min_age": 8,
+    "category": "challenge",
+    "size_class": "core",
+    "countries": ["USA","RUS","CHN","IND","JPN","FRA","GBR","DEU","KOR","NGA","KEN","BRA"],
+    "key_cards": ["NGA","KEN"],
+    "reward": {
+      "type": "golden_postcard",
+      "title": "Star reacher",
+      "bonus_content": "space_program_facts"
+    },
+    "description": "These countries are reaching for the stars!"
+  }
+}

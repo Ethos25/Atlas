@@ -1,0 +1,252 @@
+/* ===== SETS SCREEN ===== */
+
+/* Full-screen overlay — same show/hide pattern as .col-ov */
+.sets-ov {
+  position: fixed;
+  inset: 0;
+  z-index: 280;
+  background: rgba(8, 14, 24, 0.98);
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.sets-ov.on {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ── Sticky header ─────────────────────────────────────────── */
+.sets-hdr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px 12px;
+  border-bottom: 1px solid var(--glass-2);
+  flex-shrink: 0;
+  gap: 12px;
+}
+.sets-hdr-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+.sets-hdr-title {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: -0.3px;
+}
+.sets-hdr-count {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.2px;
+}
+.sets-close-btn {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--r-full);
+  background: var(--glass-2);
+  border: 1px solid var(--glass-2);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  font-family: Inter, system-ui, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--ease-fast), color var(--ease-fast);
+}
+.sets-close-btn:hover {
+  background: var(--glass-4);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ── Scrollable body ───────────────────────────────────────── */
+.sets-body {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 14px 14px 80px;
+  scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sets-body::-webkit-scrollbar { display: none; }
+
+/* ── Set card ──────────────────────────────────────────────── */
+.sets-card {
+  background: var(--glass-1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--r-md);
+  padding: 12px 12px 10px;
+}
+/* Completed: green tint + border */
+.sets-card--done {
+  border-color: rgba(78, 205, 160, 0.3);
+  background: rgba(10, 42, 28, 0.55);
+}
+
+/* ── Top row ───────────────────────────────────────────────── */
+.sets-card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.sets-card-icon {
+  font-size: 18px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.sets-card-name {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.88);
+  flex: 1;
+  min-width: 0;
+}
+.sets-card-frac {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.28);
+  flex-shrink: 0;
+}
+.sets-card-check {
+  font-size: 10px;
+  font-weight: 800;
+  color: #4ECDA0;
+  flex-shrink: 0;
+  background: rgba(78, 205, 160, 0.18);
+  border-radius: var(--r-full);
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Progress bar ──────────────────────────────────────────── */
+.sets-prog-wrap {
+  height: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.sets-prog-bar {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.5s ease;
+  min-width: 0;
+}
+
+/* ── Description ───────────────────────────────────────────── */
+.sets-card-desc {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.3);
+  line-height: 1.45;
+  margin-bottom: 9px;
+  font-style: italic;
+}
+
+/* ── Country flags ─────────────────────────────────────────── */
+.sets-flags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-bottom: 2px;
+}
+.sets-flag-chip {
+  font-size: 17px;
+  line-height: 1;
+  cursor: default;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform var(--ease-fast);
+}
+.sets-flag-chip--on {
+  opacity: 1;
+  cursor: pointer;
+}
+.sets-flag-chip--on:hover  { transform: scale(1.18); }
+.sets-flag-chip--on:active { transform: scale(0.90); }
+.sets-flag-chip--off {
+  opacity: 0.25;
+}
+
+/* ── Reward row ────────────────────────────────────────────── */
+.sets-reward {
+  margin-top: 9px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.2px;
+}
+.sets-reward-bonus {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.28);
+  margin-top: 2px;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* ── One-away set card ─────────────────────────────────────── */
+.sets-card--one-away {
+  border-color: rgba(250, 199, 117, 0.3);
+  box-shadow: 0 0 14px rgba(250, 199, 117, 0.09), inset 0 0 0 1px rgba(250, 199, 117, 0.07);
+}
+
+/* Pulsing gold dot badge — sits in the top row after the fraction */
+.sets-one-away-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #FAC775;
+  flex-shrink: 0;
+  box-shadow: 0 0 5px rgba(250, 199, 117, 0.7);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .sets-one-away-dot {
+    animation: oneAwayDotPulse 1.8s ease-in-out infinite;
+  }
+}
+@keyframes oneAwayDotPulse {
+  0%, 100% { box-shadow: 0 0 4px rgba(250,199,117,0.55); opacity: 0.75; }
+  50%       { box-shadow: 0 0 10px rgba(250,199,117,0.95); opacity: 1; }
+}
+
+/* ── Empty state ───────────────────────────────────────────── */
+.sets-empty {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.28);
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-height: 500px) {
+  .sets-hdr  { padding: 10px 14px 8px; }
+  .sets-hdr-title { font-size: 13px; }
+  .sets-body { padding: 10px 12px 60px; gap: 8px; }
+  .sets-card { padding: 10px 10px 8px; }
+}
+@media (min-width: 768px) {
+  .sets-hdr  { padding: 18px 28px 14px; }
+  .sets-body { padding: 18px 24px 80px; gap: 12px; }
+  .sets-card { padding: 14px 16px 12px; }
+}

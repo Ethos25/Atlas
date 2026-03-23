@@ -1,0 +1,102 @@
+{
+  "LEGENDARY": [
+    "BTN",
+    "VAT",
+    "MNG",
+    "ISL",
+    "MDV",
+    "PLW",
+    "BRN",
+    "TUV",
+    "NRU",
+    "KIR",
+    "LIE",
+    "MCO",
+    "SMR",
+    "TON",
+    "WSM",
+    "SYC"
+  ],
+  "EASTER_EGGS": {
+    "JPN": "Japanese kids learn to clean their own schools. No janitors!",
+    "MNG": "Mongolian kids learn to ride horses before they learn to walk. FOR REAL.",
+    "AUS": "Wombat poop is CUBE-SHAPED. Scientists still can't figure out why.",
+    "ISL": "There are NO mosquitoes in Iceland. Not a single one.",
+    "BRA": "Brazil has a river that flows UNDERWATER beneath the Amazon.",
+    "EGY": "Ancient Egyptians used moldy bread as medicine. Penicillin before penicillin!",
+    "IND": "India has a temple covered in 20,000 kilograms of real GOLD.",
+    "MEX": "Mexico City is sinking 10 inches per year because it was built on a lake.",
+    "KEN": "Kenyans hold 90% of marathon world records. Their secret? Running to school as kids.",
+    "FIN": "Finns have a word for drinking alone in your underwear: kalsarikännit.",
+    "GRC": "Greece has more archaeological museums than any country. They keep FINDING stuff.",
+    "NOR": "Norway once knighted a PENGUIN. Sir Nils Olav III.",
+    "KOR": "South Korea has an entire theme park dedicated to TOILETS.",
+    "CHL": "Chile is so long and narrow that it has deserts, glaciers, AND tropical islands.",
+    "NPL": "Nepal's flag is the only national flag that isn't a rectangle. It's two triangles!"
+  },
+  "SURPRISE_ACHS": [
+    {
+      "id": "island3",
+      "emoji": "🏝️",
+      "title": "Island Hopper!",
+      "sub": "Discovered 3 island nations"
+    },
+    {
+      "id": "africa1",
+      "emoji": "🌍",
+      "title": "Welcome to Africa!",
+      "sub": "Your first African discovery"
+    },
+    {
+      "id": "asia1",
+      "emoji": "🌏",
+      "title": "Konnichiwa, Asia!",
+      "sub": "Your first Asian discovery"
+    },
+    {
+      "id": "sa1",
+      "emoji": "🌎",
+      "title": "¡Hola, South America!",
+      "sub": "Your first South American discovery"
+    },
+    {
+      "id": "eu1",
+      "emoji": "🏰",
+      "title": "Bonjour, Europe!",
+      "sub": "Your first European discovery"
+    },
+    {
+      "id": "streak5",
+      "emoji": "⚡",
+      "title": "Speed Explorer!",
+      "sub": "5 countries in one session"
+    },
+    {
+      "id": "streak10",
+      "emoji": "🔥",
+      "title": "Unstoppable!",
+      "sub": "10 countries in one session"
+    },
+    {
+      "id": "neighbors3",
+      "emoji": "🏘️",
+      "title": "Neighborhood Watch!",
+      "sub": "3 countries on the same continent in a row"
+    },
+    {
+      "id": "both_sides",
+      "emoji": "🌉",
+      "title": "Bridge Builder!",
+      "sub": "Discovered countries on 3+ continents"
+    }
+  ],
+  "ENCOURAGEMENTS": [
+    "{name} just discovered {country}!",
+    "{name} found {country}!",
+    "{country}! Great pick, {name}!",
+    "{name} is exploring {country}!",
+    "{name} unlocked {country}!",
+    "Wow, {name} found {country}!",
+    "{country}! {name} is on a ROLL!"
+  ]
+}

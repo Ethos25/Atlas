@@ -1,0 +1,1816 @@
+{
+  "ATA": {
+    "led": "No single country owns Antarctica. It is governed by the Antarctic Treaty, signed by 54 countries, which says it can only be used for peace and science.",
+    "langs": "Whatever the scientists speak! English and Russian are most common at the research stations.",
+    "bfast": "Whatever the research station chef makes. Hearty food like porridge, eggs, and toast to fuel a day in extreme cold.",
+    "big": "Bigger than Europe. About 5.5 million square miles, but 98% is covered in ice."
+  },
+  "IRN": {
+    "led": "A group of religious leaders is in charge, led by a Supreme Leader.",
+    "makes": "Oil and gas. Iran has SO much oil underground that the whole world pays attention.",
+    "langs": "Almost everyone speaks Farsi (also called Persian). One language, beautiful poetry.",
+    "gave": "Algebra! The math you'll learn in school was invented by a Persian scientist.",
+    "bfast": "Bread with feta cheese, walnuts, and sweet tea. Every single morning.",
+    "big": "About the same size as Alaska. Really, really big."
+  },
+  "NGA": {
+    "led": "The people vote for a president. Nigeria has had both elected leaders and military rulers.",
+    "makes": "Oil. Nigeria makes more oil than almost any country in Africa.",
+    "langs": "Over 500 languages! Most people speak English, Hausa, Yoruba, or Igbo.",
+    "gave": "Afrobeats music. The whole world dances to it now.",
+    "bfast": "Akara (fried bean cakes) and ogi (warm corn porridge). Crunchy and soft!",
+    "big": "About twice the size of California."
+  },
+  "GBR": {
+    "led": "There's a King, BUT the people also vote for a Prime Minister who runs things.",
+    "makes": "Machines, medicine, and whisky. Scotland's whisky is famous everywhere.",
+    "langs": "English, plus Scottish Gaelic and Welsh. Some words sound like magic spells.",
+    "gave": "The telephone! Alexander Graham Bell was Scottish.",
+    "bfast": "A 'full Scottish breakfast': eggs, bacon, sausage, beans, toast, and black pudding. Don't ask what's in the black pudding.",
+    "big": "Scotland is about the size of South Carolina."
+  },
+  "IRL": {
+    "led": "The people vote for a President and a Taoiseach (say TEE-shock), which is like a Prime Minister.",
+    "makes": "Pharmaceuticals, technology, and dairy. Ireland exports more medicine per person than almost anywhere. Kerrygold butter goes worldwide.",
+    "langs": "English and Irish (Gaelic). Irish is taught in every school but most people speak English day to day. Road signs are in both languages.",
+    "gave": "Halloween! The ancient Celtic festival of Samhain became what you celebrate every October. Also Guinness, U2, and some of the greatest writers ever.",
+    "bfast": "A full Irish breakfast: rashers (bacon), sausages, black and white pudding, eggs, toast, beans, and a strong cup of tea. Not coffee. TEA.",
+    "big": "About the size of Indiana. A small island with an outsized impact on the world."
+  },
+  "USA": {
+    "led": "The people vote for a President every four years.",
+    "makes": "Technology, airplanes, and movies. Hollywood makes films the whole world watches.",
+    "langs": "No official language, but almost everyone speaks English. Over 350 languages spoken!",
+    "gave": "The internet. And airplanes. And jazz music. And basketball.",
+    "bfast": "Cereal, pancakes, or eggs and bacon. YOU know this one!",
+    "big": "Third biggest country in the world. It takes 5 days to drive across it."
+  },
+  "JPN": {
+    "led": "There's an Emperor, but the people vote for a Prime Minister who runs things.",
+    "makes": "Cars, electronics, and robots. Toyota, Sony, and Nintendo are all Japanese.",
+    "langs": "Almost everyone speaks Japanese. Just one language for 125 million people!",
+    "gave": "Pokémon, Nintendo, emoji, and instant ramen noodles.",
+    "bfast": "Rice, miso soup, grilled fish, and pickles. Yes, for BREAKFAST.",
+    "big": "About the size of California."
+  },
+  "EGY": {
+    "led": "The people vote for a president, but the same leader has won for a long time.",
+    "makes": "Cotton. Egyptian cotton is the softest, fanciest cotton in the world.",
+    "langs": "Arabic. The writing goes from right to left, the opposite of English!",
+    "gave": "Paper (papyrus), toothpaste, and the 365-day calendar we still use.",
+    "bfast": "Ful medames: mashed beans with oil and lemon. Been eating it for thousands of years.",
+    "big": "About the same size as Texas and New Mexico put together."
+  },
+  "BRA": {
+    "led": "The people vote for a president. Brazil's government is only about 35 years old!",
+    "makes": "Coffee! Brazil grows more coffee than any country on Earth. Also soybeans and sugar.",
+    "langs": "Portuguese. NOT Spanish! Brazilians get annoyed if you mix them up.",
+    "gave": "Bossa nova music, capoeira (a dance that's also a martial art), and the airplane. Yes, a Brazilian invented the airplane!",
+    "bfast": "Pão de queijo (cheesy bread balls) and fresh tropical fruit juice.",
+    "big": "Bigger than the entire United States without Alaska. HUGE."
+  },
+  "MEX": {
+    "led": "The people vote for a president, but the president can only serve ONE term. Ever.",
+    "makes": "Cars, electronics, and avocados. Almost every avocado you eat comes from Mexico.",
+    "langs": "Spanish, plus 68 native languages that were here before Spanish arrived.",
+    "gave": "Chocolate, chili peppers, corn, and tomatoes. Imagine pizza without tomatoes!",
+    "bfast": "Chilaquiles: crispy tortilla chips covered in salsa and cheese. For BREAKFAST.",
+    "big": "About three times the size of Texas."
+  },
+  "AUS": {
+    "led": "The people vote for a Prime Minister. There's also a King (same one as England!).",
+    "makes": "Iron ore and coal. Australia digs up rocks that get turned into buildings and bridges.",
+    "langs": "English, plus over 250 Aboriginal languages that are thousands of years old.",
+    "gave": "Wi-Fi! The technology that connects your iPad was invented in Australia.",
+    "bfast": "Vegemite on toast. It's a dark, salty spread and Australians are OBSESSED.",
+    "big": "Almost as big as the entire United States. It's a whole continent!"
+  },
+  "ITA": {
+    "led": "The people vote for a Prime Minister. Italy has had over 70 governments since World War II!",
+    "makes": "Luxury goods: Ferrari cars, Gucci fashion, and the best olive oil on Earth.",
+    "langs": "Italian. It sounds like someone singing even when they're just ordering lunch.",
+    "gave": "Pizza, pasta, the piano, eyeglasses, and the battery that powers your toys.",
+    "bfast": "A cornetto (like a croissant) and a cappuccino. That's it. Italians keep breakfast simple.",
+    "big": "About the size of Arizona."
+  },
+  "KEN": {
+    "led": "The people vote for a president. Kenya only became independent from Britain in 1963.",
+    "makes": "Tea and coffee. Kenya is one of the biggest tea producers in the world.",
+    "langs": "Swahili and English. 'Hakuna Matata' is REAL Swahili! It means 'no worries.'",
+    "gave": "M-Pesa, a way to send money with your phone. Kenya invented mobile banking!",
+    "bfast": "Ugali (thick corn porridge) with eggs and chai tea with milk.",
+    "big": "About the size of Texas."
+  },
+  "FRA": {
+    "led": "The people vote for a president AND a prime minister. France has had FIVE different republics!",
+    "makes": "Airplanes (Airbus), wine, cheese, and fancy perfume.",
+    "langs": "French. It's spoken in 29 countries across the world, not just France!",
+    "gave": "The hot air balloon, movies, braille (reading with your fingers), and the metric system.",
+    "bfast": "Pain au chocolat and a bowl of hot chocolate. French kids dip their bread in it.",
+    "big": "About the size of Texas."
+  },
+  "IND": {
+    "led": "The people vote for a Prime Minister. Biggest democracy on Earth!",
+    "makes": "Technology services, medicine, and spices. Indian IT workers help run companies worldwide.",
+    "langs": "22 official languages! Hindi and English are the most common. Hundreds more exist.",
+    "gave": "The number zero, chess, yoga, and shampoo. The word 'shampoo' comes from Hindi!",
+    "bfast": "Dosa (crispy rice pancake) with chutney, or paratha bread with yogurt.",
+    "big": "About one-third the size of the United States, but with 4 TIMES as many people."
+  },
+  "ISL": {
+    "led": "The people vote for a President and a Prime Minister. Iceland's parliament is 1,000 years old!",
+    "makes": "Fish and geothermal energy. Iceland heats its buildings with HOT WATER from underground.",
+    "langs": "Icelandic. It's barely changed in 1,000 years. Vikings would still understand it!",
+    "gave": "The world's oldest parliament (Althing, year 930) and DNA research that helps cure diseases.",
+    "bfast": "Skyr (thick, creamy yogurt) with berries and dark rye bread with butter.",
+    "big": "About the size of Kentucky."
+  },
+  "CHN": {
+    "led": "One political party is in charge. The people do not vote for the top leader.",
+    "makes": "Almost EVERYTHING. Phones, clothes, toys, electronics. Check your toys, many say 'Made in China.'",
+    "langs": "Mandarin Chinese. More people speak it than any other language on Earth!",
+    "gave": "Paper, gunpowder, the compass, printing, noodles, and fireworks.",
+    "bfast": "Congee (warm rice porridge), steamed buns, and soy milk. Warm and cozy.",
+    "big": "Almost the same size as the United States. Fourth biggest country in the world."
+  },
+  "RUS": {
+    "led": "One president has been in charge for a very long time.",
+    "makes": "Oil, gas, and wheat. Russia sends fuel and food to countries all over the world.",
+    "langs": "Russian. The alphabet looks completely different — it's called Cyrillic!",
+    "gave": "Tetris! The video game was invented by a Russian scientist.",
+    "bfast": "Kasha (warm buckwheat porridge) with butter and jam.",
+    "big": "Almost TWICE the size of the United States. The biggest country on Earth."
+  },
+  "CAN": {
+    "led": "The people vote for a Prime Minister. There's also a King (same one as England).",
+    "makes": "Oil, wood, and maple syrup. Canada's forests are bigger than most countries.",
+    "langs": "English and French. In Quebec, everyone speaks French!",
+    "gave": "Basketball! A Canadian teacher invented it in 1891.",
+    "bfast": "Pancakes with real maple syrup. The REAL stuff, not the fake kind.",
+    "big": "Second biggest country in the world, right above the United States."
+  },
+  "DEU": {
+    "led": "The people vote for a Chancellor (that's like a prime minister).",
+    "makes": "Cars! BMW, Mercedes, Volkswagen, Audi, and Porsche are ALL German.",
+    "langs": "German. It has really long words. 'Donaudampfschifffahrt' is one word!",
+    "gave": "The printing press, gummy bears, kindergarten, and Christmas trees.",
+    "bfast": "Fresh bread rolls with butter, cheese, cold cuts, and a soft-boiled egg.",
+    "big": "About the size of Montana."
+  },
+  "ESP": {
+    "led": "The people vote for a Prime Minister. There's also a King.",
+    "makes": "Olive oil, wine, and oranges. Spain is the world's biggest olive oil producer.",
+    "langs": "Spanish! It's spoken in over 20 countries. Also Catalan and Basque.",
+    "gave": "The guitar, hot chocolate (thick like pudding), and the first global explorers.",
+    "bfast": "Pan con tomate: toasted bread rubbed with tomato and olive oil. Simple and perfect.",
+    "big": "About the size of Texas."
+  },
+  "KOR": {
+    "led": "The people vote for a president. South Korea went from one of the poorest countries to one of the richest in just 50 years.",
+    "makes": "Electronics! Samsung phones, LG TVs, and Hyundai cars are all Korean.",
+    "langs": "Korean. The alphabet (Hangul) was invented by a king to make reading easier!",
+    "gave": "K-pop, Korean BBQ, and the fastest internet in the world.",
+    "bfast": "Rice, soup, kimchi, and several small side dishes. Every meal is a feast.",
+    "big": "About the size of Indiana. Small country, huge impact."
+  },
+  "THA": {
+    "led": "There's a King, and the people also vote for a Prime Minister.",
+    "makes": "Rice! Thailand is one of the biggest rice exporters in the world. Also rubber.",
+    "langs": "Thai. The alphabet has 44 consonants and 15 vowels. Good luck!",
+    "gave": "Thai boxing (Muay Thai), pad thai, and the tuk-tuk (a tiny 3-wheeled taxi).",
+    "bfast": "Jok (warm rice porridge) with pork and a soft egg on top.",
+    "big": "About the size of California and Nevada combined."
+  },
+  "TUR": {
+    "led": "The people vote for a president. Türkiye has shifted between military and civilian rule, and the current president has been in charge since 2014.",
+    "makes": "Cars, clothes, and hazelnuts. Most of the world's hazelnuts come from Türkiye!",
+    "langs": "Turkish. Plus Kurdish and several other languages.",
+    "gave": "Tulips (the Dutch got them from Türkiye!), yogurt, and Turkish baths.",
+    "bfast": "The BIGGEST breakfast you've ever seen: cheese, olives, tomatoes, cucumbers, honey, eggs, bread, jam, and tea. It takes up the whole table.",
+    "big": "About the size of Texas."
+  },
+  "ZAF": {
+    "led": "The people vote for a President. Nelson Mandela was the first Black president.",
+    "makes": "Gold and diamonds. South Africa has some of the deepest mines on Earth.",
+    "langs": "ELEVEN official languages: Zulu, Xhosa, Afrikaans, English, and 7 more!",
+    "gave": "The CAT scan (hospital machine), the first heart transplant, and Rooibos tea.",
+    "bfast": "Pap (corn porridge) with milk, or rusks (hard biscuits) dipped in tea.",
+    "big": "About twice the size of Texas."
+  },
+  "ARG": {
+    "led": "The people vote for a president. Argentina has had dramatic political swings, including a recent president who ran as a political outsider.",
+    "makes": "Beef, soybeans, and wine. Argentinian steak is considered the best in the world.",
+    "langs": "Spanish. Argentinians have a unique accent that sounds almost Italian!",
+    "gave": "Tango dancing, dulce de leche (caramel spread), and some of the best soccer players ever.",
+    "bfast": "Medialunas (sweet croissants) with café con leche (coffee with milk).",
+    "big": "About the same size as India, but with way fewer people."
+  },
+  "PER": {
+    "led": "The people vote for a president. Peru has had 6 presidents in just 5 years! Politics here move fast.",
+    "makes": "Copper, gold, and coffee. Peru's mines produce metals used in phones and computers.",
+    "langs": "Spanish, Quechua, and Aymara. Quechua was the language of the Inca Empire!",
+    "gave": "Potatoes! The world got potatoes from Peru. Also quinoa and ceviche.",
+    "bfast": "Pan con chicharrón (bread with crispy pork) and a sweet purple corn drink.",
+    "big": "About twice the size of Texas."
+  },
+  "NOR": {
+    "led": "The people vote for a Prime Minister. There's also a King.",
+    "makes": "Oil, gas, and fish. Norway's oil fund has saved over $1 TRILLION for the future.",
+    "langs": "Norwegian. There are actually two written forms and nobody can agree which one to use!",
+    "gave": "Skiing, the paper clip, and Viking exploration.",
+    "bfast": "Bread with brunost (brown cheese) that tastes sweet and caramelly.",
+    "big": "About the size of New Mexico, but really long and skinny."
+  },
+  "GRC": {
+    "led": "The people vote for a Prime Minister and a President.",
+    "makes": "Olive oil, feta cheese, and tourism. Millions visit the islands every year.",
+    "langs": "Greek. The alphabet is different — Alpha, Beta, Gamma. That's where 'alphabet' comes from!",
+    "gave": "Democracy, the Olympics, philosophy, geometry, and the alphabet concept.",
+    "bfast": "Greek yogurt with honey and walnuts. Thick, creamy, and famous worldwide.",
+    "big": "About the size of Alabama."
+  },
+  "NZL": {
+    "led": "The people vote for a Prime Minister. There's also a King (same one as England).",
+    "makes": "Dairy products, lamb, and wine. New Zealand butter and milk go all over the world.",
+    "langs": "English, Māori, and New Zealand Sign Language. All three are official!",
+    "gave": "Bungee jumping, the Haka dance, and special effects for Hollywood movies.",
+    "bfast": "Marmite on toast (like Australia's Vegemite but different — don't mix them up!).",
+    "big": "About the size of Colorado."
+  },
+  "IDN": {
+    "led": "The people vote for a president. With 270 million people, Indonesia is the world's 3rd biggest democracy.",
+    "makes": "Palm oil, rubber, and coffee. Indonesia is in SO many things you use every day.",
+    "langs": "Indonesian (Bahasa), plus over 700 local languages!",
+    "gave": "Batik fabric (wax-dyed patterns), shadow puppets, and instant noodles (Indomie!).",
+    "bfast": "Nasi goreng: fried rice with egg and sweet soy sauce. For BREAKFAST!",
+    "big": "Spread across the ocean, wider than the United States from coast to coast."
+  },
+  "COL": {
+    "led": "The people vote for a President.",
+    "makes": "Coffee, flowers, and emeralds. Colombia sends more flowers to the US than any other country.",
+    "langs": "Spanish. Plus 65 indigenous languages still spoken in the Amazon region.",
+    "gave": "Shakira, salsa dancing, and the world's best emeralds.",
+    "bfast": "Arepa: a warm corn cake stuffed with cheese. Simple and delicious.",
+    "big": "About the size of Texas and California combined."
+  },
+  "ARM": {
+    "led": "The people vote for a prime minister.",
+    "makes": "Cognac (Armenian brandy is world-famous), copper, and diamonds.",
+    "langs": "Armenian. It has its own completely unique alphabet created in 405 AD.",
+    "gave": "The apricot (the Latin name literally means 'Armenian fruit'), one of the oldest alphabets still in use, and Armenian cognac.",
+    "bfast": "Lahmajun (thin meat flatbread) with herbs and yogurt.",
+    "big": "About the size of Maryland."
+  },
+  "AZE": {
+    "led": "The same family has held the presidency since 1993.",
+    "makes": "Oil and natural gas. Azerbaijan was one of the world's first oil-producing regions.",
+    "langs": "Azerbaijani (very similar to Turkish).",
+    "gave": "One of the world's first oil wells, the Flame Towers of Baku, and more mud volcanoes than anywhere on Earth.",
+    "bfast": "Qutab (stuffed flatbread) with herbs, or bread with cheese, butter, and tea.",
+    "big": "About the size of Maine."
+  },
+  "BLR": {
+    "led": "The same president has been in charge since 1994. Belarus is often called 'Europe's last dictatorship.'",
+    "makes": "Potash (fertilizer), machinery, and dairy products.",
+    "langs": "Belarusian and Russian. Most people speak Russian day to day.",
+    "gave": "Białowieża Forest (Europe's last primeval forest) and the rescue of the European bison from extinction.",
+    "bfast": "Draniki (crispy potato pancakes) with sour cream.",
+    "big": "About the size of Kansas."
+  },
+  "BIH": {
+    "led": "Bosnia has a unique three-person presidency rotating between Bosniak, Croat, and Serb leaders.",
+    "makes": "Metals, furniture, and automotive parts.",
+    "langs": "Bosnian, Croatian, and Serbian. Essentially the same language with three names.",
+    "gave": "Stari Most bridge, the 1984 Winter Olympics (in Sarajevo), and one of the most complex political systems on Earth.",
+    "bfast": "Burek (flaky meat pastry) with yogurt. The national breakfast obsession.",
+    "big": "About the size of West Virginia."
+  },
+  "BDI": {
+    "led": "The people vote for a president. Burundi has faced ethnic conflicts.",
+    "makes": "Coffee and tea. Burundian coffee is gaining recognition.",
+    "langs": "Kirundi and French. Swahili is also used.",
+    "gave": "The Royal Drummers of Burundi (UNESCO cultural heritage) and some of the world's headwaters of the Nile.",
+    "bfast": "Bread with tea, or beans with plantains.",
+    "big": "About the size of Maryland. One of Africa's smallest."
+  },
+  "LVA": {
+    "led": "The people vote for a president and parliament.",
+    "makes": "Wood products, food, and machinery.",
+    "langs": "Latvian. One of the oldest living Indo-European languages, related to Lithuanian.",
+    "gave": "The Latvian Song and Dance Festival (UNESCO heritage) and Riga's stunning Art Nouveau architecture.",
+    "bfast": "Rye bread with cottage cheese, or porridge with berries.",
+    "big": "About the size of West Virginia."
+  },
+  "MDA": {
+    "led": "The people vote for a president. Moldova is one of Europe's poorest countries but is reforming.",
+    "makes": "Wine, sunflower oil, and textiles.",
+    "langs": "Romanian (Moldovan). Russian is also widely spoken.",
+    "gave": "The world's largest wine collection (Mileștii Mici, 200km of tunnels, 2 million bottles) and National Wine Day.",
+    "bfast": "Plăcinte (stuffed pastries with cheese or fruit) and coffee.",
+    "big": "About the size of Maryland."
+  },
+  "MKD": {
+    "led": "The people vote for a president and prime minister. Changed its name from 'Macedonia' in 2019 after a dispute with Greece.",
+    "makes": "Textiles, food products, and iron.",
+    "langs": "Macedonian. Albanian is also official in some areas.",
+    "gave": "Mother Teresa (born in Skopje), Lake Ohrid (UNESCO heritage), and one of the most creative city rebranding projects ever.",
+    "bfast": "Burek with yogurt or bread with ajvar (roasted pepper spread).",
+    "big": "About the size of Vermont."
+  },
+  "MNE": {
+    "led": "The people vote for a president and prime minister. One of Europe's newest independent states.",
+    "makes": "Tourism, aluminum, and agriculture. The coastline is Montenegro's biggest economic asset.",
+    "langs": "Montenegrin (very similar to Serbian, Bosnian, and Croatian).",
+    "gave": "Bay of Kotor (one of the most spectacular bays in the world) and Tara River Canyon (Europe's deepest).",
+    "bfast": "Burek with yogurt or priganice (fried dough) with cheese and honey.",
+    "big": "About the size of Connecticut."
+  },
+  "AND": {
+    "led": "TWO heads of state: the President of France AND a Spanish bishop.",
+    "makes": "Tourism and banking. Tax-free shopping.",
+    "langs": "Catalan. Spanish and French also used.",
+    "gave": "The only country with two foreign heads of state.",
+    "bfast": "Pa amb tomàquet (bread with tomato) and mountain cheese.",
+    "big": "About 2.5 times the size of Washington DC."
+  },
+  "VAT": {
+    "led": "The Pope is the absolute ruler. A theocracy.",
+    "makes": "Postage stamps, souvenirs, and publications.",
+    "langs": "Italian. Latin for official documents.",
+    "gave": "Sistine Chapel, St. Peter's Basilica, Vatican Museums.",
+    "bfast": "Italian-style: espresso with a cornetto.",
+    "big": "0.17 square miles. Walk across it in 10 minutes."
+  },
+  "MCO": {
+    "led": "A prince rules. The Grimaldi family has ruled for over 700 years.",
+    "makes": "Tourism, finance, and gambling. No income tax.",
+    "langs": "French. Monégasque is also spoken.",
+    "gave": "Monte Carlo Casino and Monaco Grand Prix.",
+    "bfast": "French-style: croissant, tartine with jam, espresso.",
+    "big": "About the size of Central Park in New York."
+  },
+  "SMR": {
+    "led": "Two 'Captains Regent' serve as joint heads of state for just 6 months at a time.",
+    "makes": "Tourism, ceramics, and postage stamps (collector items).",
+    "langs": "Italian.",
+    "gave": "The world's oldest surviving republic and a unique two-person rotating leadership.",
+    "bfast": "Italian-style: espresso with pastries.",
+    "big": "About 24 square miles. You can drive across it in 15 minutes."
+  },
+  "LIE": {
+    "led": "A prince rules with real political power.",
+    "makes": "Precision instruments, dental products, and finance.",
+    "langs": "German (Alemannic dialect).",
+    "gave": "The ability to rent an entire country for an event.",
+    "bfast": "German/Swiss style: bread, cheese, cold cuts, coffee.",
+    "big": "About 62 square miles."
+  },
+  "MLT": {
+    "led": "The people vote for a president and prime minister. Malta joined the EU in 2004.",
+    "makes": "Tourism, online gaming, and financial services. Malta is a tech and gaming hub.",
+    "langs": "Maltese and English. Maltese is the only Semitic language written in Latin script.",
+    "gave": "Temples older than Stonehenge and the Pyramids, the Knights Hospitaller, and a unique language found nowhere else.",
+    "bfast": "Pastizzi (flaky pastries with ricotta or peas) and tea or coffee.",
+    "big": "About the size of Philadelphia. Tiny but packed with history."
+  },
+  "BHS": {
+    "led": "The people vote for a prime minister. There's also a king (same one as England).",
+    "makes": "Tourism, banking, and salt. Tourism is by far the biggest industry.",
+    "langs": "English. Bahamian Creole is spoken informally.",
+    "gave": "Swimming pigs, some of the clearest water on the planet, and Junkanoo (a vibrant street parade).",
+    "bfast": "Boil fish with grits and johnny cake (slightly sweet bread).",
+    "big": "About the size of Connecticut but spread across 700 islands."
+  },
+  "BRB": {
+    "led": "Barbados became a republic in 2021, replacing the British monarch with a Barbadian president.",
+    "makes": "Rum, sugar, and tourism.",
+    "langs": "English and Bajan Creole.",
+    "gave": "Rihanna, Mount Gay Rum (the world's oldest rum brand), and a model for peacefully becoming a republic.",
+    "bfast": "Bakes and saltfish, or breadfruit with fried fish.",
+    "big": "About the size of San Antonio, Texas. One small island."
+  },
+  "BLZ": {
+    "led": "The people vote for a prime minister. There's also a king (same one as England).",
+    "makes": "Sugar, bananas, and citrus. Tourism is growing fast thanks to the reef.",
+    "langs": "English! The only English-speaking country in Central America. Plus Spanish and Kriol.",
+    "gave": "The Great Blue Hole (one of the world's top dive sites), incredible Maya ruins, and a barrier reef second only to Australia's.",
+    "bfast": "Fry jacks (fried dough) with beans, eggs, and cheese.",
+    "big": "About the size of New Hampshire."
+  },
+  "FJI": {
+    "led": "The people vote for a prime minister.",
+    "makes": "Tourism, sugar, water (Fiji Water is from here!), and fish.",
+    "langs": "English, Fijian, and Hindi. Fiji has a large Indian-heritage population.",
+    "gave": "Fiji Water (from a aquifer on the island of Viti Levu), world-class rugby, and the word 'Bula' (hello/welcome).",
+    "bfast": "Roti with curry or cassava with coconut milk.",
+    "big": "About the size of New Jersey but spread across 330 islands in the South Pacific."
+  },
+  "MDV": {
+    "led": "The people vote for a president. Climate change could sink the whole country.",
+    "makes": "Tourism and fish. Almost entirely dependent on tourism.",
+    "langs": "Dhivehi. English is widely spoken in tourism.",
+    "gave": "Some of the most spectacular overwater bungalows, bioluminescent beaches, and a stark warning about climate change and rising seas.",
+    "bfast": "Mas huni (tuna, coconut, and onion) with roshi flatbread and tea.",
+    "big": "About 115 square miles of land spread across 1,200 islands. 99% is ocean."
+  },
+  "BRN": {
+    "led": "A sultan has absolute power. The same family has ruled for over 600 years.",
+    "makes": "Oil and natural gas. That's almost the entire economy.",
+    "langs": "Malay. English and Chinese are also spoken.",
+    "gave": "Istana Nurul Iman (the world's largest residential palace) and a model of an oil-wealthy micro-state.",
+    "bfast": "Nasi katok (rice with fried chicken and sambal). Simple and beloved.",
+    "big": "About the size of Delaware."
+  },
+  "BTN": {
+    "led": "A king rules, but the people also vote for parliament. The king voluntarily gave up absolute power.",
+    "makes": "Hydroelectric power (sold to India), tourism, and rice.",
+    "langs": "Dzongkha. English is used in education.",
+    "gave": "Gross National Happiness (the idea that a country should measure wellbeing, not just wealth), and a carbon-negative economy.",
+    "bfast": "Red rice with ema datshi (chili and cheese stew). Spicy from the very first meal.",
+    "big": "About the size of Switzerland. Hidden in the Himalayas."
+  },
+  "KGZ": {
+    "led": "The people vote for a president. Kyrgyzstan has had several revolutions.",
+    "makes": "Gold, cotton, and hydroelectric power.",
+    "langs": "Kyrgyz and Russian.",
+    "gave": "The World Nomad Games (Olympics for nomadic sports), eagle hunting traditions, and Issyk-Kul Lake.",
+    "bfast": "Bread with kaymak (clotted cream) and honey, plus tea with milk.",
+    "big": "About the size of South Dakota."
+  },
+  "TLS": {
+    "led": "The people vote for a president and prime minister. One of the youngest nations on Earth.",
+    "makes": "Coffee and oil. Timor-Leste's economy is heavily dependent on oil revenues.",
+    "langs": "Tetum and Portuguese are official. Over 30 indigenous languages.",
+    "gave": "Some of the most pristine and unexplored coral reefs left on Earth.",
+    "bfast": "Batar daan (corn and mung bean porridge) or bread with coffee.",
+    "big": "About the size of Connecticut."
+  },
+  "SYC": {
+    "led": "The people vote for a president.",
+    "makes": "Tourism and fishing. One of Africa's richest countries per person.",
+    "langs": "Seychellois Creole, English, and French. All three are official.",
+    "gave": "Some of the most photographed beaches on Earth and the Aldabra giant tortoise.",
+    "bfast": "Breadfruit chips with fish curry or bread with jam and tea.",
+    "big": "115 islands with a total land area about the size of Washington DC."
+  },
+  "MUS": {
+    "led": "The people vote for a prime minister and president.",
+    "makes": "Sugar, textiles, and tourism. Mauritius is one of Africa's most developed economies.",
+    "langs": "English is official. French and Mauritian Creole are most widely spoken. Hindi and others too.",
+    "gave": "The dodo bird (now sadly extinct, but a powerful symbol of conservation), and the concept of 'underwater waterfall.'",
+    "bfast": "Dholl puri (flatbread with ground lentils) with curry and chutney.",
+    "big": "About the size of Jacksonville, Florida. One small island in the Indian Ocean."
+  },
+  "COM": {
+    "led": "The presidency rotates between the three main islands.",
+    "makes": "Vanilla, cloves, and ylang-ylang (for perfume).",
+    "langs": "Comorian, Arabic, and French are all official.",
+    "gave": "Ylang-ylang essence (used in Chanel No. 5 and other luxury perfumes) and the coelacanth (a 'living fossil' fish thought to be extinct for 65 million years).",
+    "bfast": "Breadfruit with coconut milk or rice with fish.",
+    "big": "About the size of Luxemburg. Four tiny islands."
+  },
+  "STP": {
+    "led": "The people vote for a president.",
+    "makes": "Cocoa and coffee. São Toméan chocolate is gaining premium recognition.",
+    "langs": "Portuguese. Plus Forro and other Creoles.",
+    "gave": "Some of the world's finest single-origin chocolate and pristine tropical forests.",
+    "bfast": "Bread with butter and local coffee, or calulu (fish stew with vegetables).",
+    "big": "About the size of New York City. Two tiny islands."
+  },
+  "CPV": {
+    "led": "The people vote for a president and prime minister. Cabo Verde is one of Africa's most stable democracies.",
+    "makes": "Fish, tourism, and remittances from Cabo Verdeans living abroad.",
+    "langs": "Portuguese and Cabo Verdean Creole.",
+    "gave": "Morna music (UNESCO heritage), Cesária Évora, and a model for democracy in Africa.",
+    "bfast": "Cachupa (slow-cooked stew of corn, beans, and fish). The national dish, eaten morning and night.",
+    "big": "10 volcanic islands with a total area about the size of Rhode Island."
+  },
+  "KNA": {
+    "led": "The people vote for a prime minister. There's also a king (UK monarch).",
+    "makes": "Tourism and citizenship-by-investment (you can buy citizenship).",
+    "langs": "English.",
+    "gave": "The first Caribbean island colonized by Europeans and one of the smallest sovereign nations.",
+    "bfast": "Saltfish and dumplings with breadfruit.",
+    "big": "About 100 square miles total. Two tiny islands."
+  },
+  "LCA": {
+    "led": "The people vote for a prime minister.",
+    "makes": "Tourism, bananas, and cocoa.",
+    "langs": "English and Saint Lucian Creole (Kwéyòl).",
+    "gave": "Two Nobel Prize winners from a population of only 180,000, the Pitons, and a drive-in volcano.",
+    "bfast": "Bakes with saltfish and cocoa tea.",
+    "big": "About 238 square miles. One small Caribbean island."
+  },
+  "VCT": {
+    "led": "The people vote for a prime minister.",
+    "makes": "Tourism, bananas, and arrowroot starch.",
+    "langs": "English and Vincentian Creole.",
+    "gave": "The filming location for Pirates of the Caribbean, spectacular sailing, and La Soufrière volcano.",
+    "bfast": "Roasted breadfruit with saltfish and fried plantains.",
+    "big": "32 islands with about 150 square miles total."
+  },
+  "DMA": {
+    "led": "The people vote for a president and prime minister.",
+    "makes": "Agriculture and ecotourism. Bananas and coconut.",
+    "langs": "English and Dominican Creole French.",
+    "gave": "The Boiling Lake and pristine Caribbean rainforest.",
+    "bfast": "Bakes with saltfish or plantains with cocoa tea.",
+    "big": "About 290 square miles."
+  },
+  "GRD": {
+    "led": "The people vote for a prime minister.",
+    "makes": "Nutmeg (world's 2nd largest), cocoa, and tourism.",
+    "langs": "English and Grenadian Creole.",
+    "gave": "Underwater Sculpture Park and world-class nutmeg.",
+    "bfast": "Oil down (breadfruit and coconut milk stew).",
+    "big": "About 133 square miles."
+  },
+  "ATG": {
+    "led": "The people vote for a prime minister. There's also a king (UK monarch).",
+    "makes": "Tourism and financial services.",
+    "langs": "English and Antiguan Creole.",
+    "gave": "365 beaches (one for each day), Nelson's Dockyard, and the Antigua Sailing Week.",
+    "bfast": "Saltfish and chop-up (vegetables) with bread or fungie (cornmeal).",
+    "big": "About 170 square miles. Two main islands."
+  },
+  "WSM": {
+    "led": "A mix of traditional chief system and parliamentary democracy.",
+    "makes": "Fish, coconut products, and taro.",
+    "langs": "Samoan and English.",
+    "gave": "The fire knife dance, the concept of fa'a Samoa (one of the world's last intact traditional cultures), and incredible rugby talent.",
+    "bfast": "Koko Samoa (Samoan cocoa drink) with bread or taro.",
+    "big": "About the size of Rhode Island."
+  },
+  "SLB": {
+    "led": "The people vote for a prime minister.",
+    "makes": "Timber, fish, and palm oil.",
+    "langs": "English is official. Solomon Islands Pijin is common. 70+ indigenous languages.",
+    "gave": "Guadalcanal WWII battle site and extraordinary marine biodiversity.",
+    "bfast": "Cassava or sweet potato with coconut cream.",
+    "big": "Nearly 1,000 islands in the South Pacific."
+  },
+  "VUT": {
+    "led": "The people vote for prime minister and president.",
+    "makes": "Copra, kava, and beef.",
+    "langs": "Bislama, English, and French. Plus 100+ indigenous languages.",
+    "gave": "Land diving (original bungee jumping) and kava culture.",
+    "bfast": "Laplap (grated root vegetable baked with coconut cream).",
+    "big": "83 islands in the South Pacific."
+  },
+  "TON": {
+    "led": "A king is in charge with parliament. Only Pacific monarchy.",
+    "makes": "Squash, fish, and vanilla.",
+    "langs": "Tongan and English.",
+    "gave": "The only Pacific kingdom never colonized.",
+    "bfast": "Lu (taro leaves with coconut cream baked underground).",
+    "big": "170 islands, about 290 square miles total."
+  },
+  "PLW": {
+    "led": "The people vote for a president.",
+    "makes": "Tourism and fishing.",
+    "langs": "Palauan and English.",
+    "gave": "Jellyfish Lake, world's first shark sanctuary.",
+    "bfast": "Fish with taro or rice and coconut.",
+    "big": "180 square miles across 340 islands."
+  },
+  "MHL": {
+    "led": "The people vote for a president. Free association with the US.",
+    "makes": "Copra, fish, and US aid.",
+    "langs": "Marshallese and English.",
+    "gave": "Extraordinary traditional navigation skills.",
+    "bfast": "Rice with fish and coconut.",
+    "big": "70 square miles across 750,000 square miles of ocean."
+  },
+  "FSM": {
+    "led": "The people vote for a president. Free association with the US.",
+    "makes": "Fish and copra. Dependent on fishing licenses and US support.",
+    "langs": "English plus Chuukese, Pohnpeian, Yapese, and Kosraean.",
+    "gave": "Nan Madol (Venice of the Pacific) and Yap's giant stone money.",
+    "bfast": "Breadfruit, fish, and coconut.",
+    "big": "607 islands, only 271 square miles of land."
+  },
+  "NRU": {
+    "led": "Parliament selects a president.",
+    "makes": "Very little now. Phosphate is largely depleted.",
+    "langs": "Nauruan and English.",
+    "gave": "A cautionary tale about using up all natural resources.",
+    "bfast": "Rice with fish and coconut.",
+    "big": "About 8 square miles. One tiny oval island."
+  },
+  "KIR": {
+    "led": "The people vote for a president.",
+    "makes": "Fish and copra. Fishing licenses are the main income.",
+    "langs": "Gilbertese and English.",
+    "gave": "First place on Earth to see each new day.",
+    "bfast": "Rice with fish, or pandanus fruit and coconut.",
+    "big": "33 atolls across 1.3 million square miles of ocean."
+  },
+  "TUV": {
+    "led": "Parliament elected. King (UK monarch) is head of state.",
+    "makes": "Almost nothing. Income from .tv domain and fishing licenses.",
+    "langs": "Tuvaluan and English.",
+    "gave": "The .tv internet domain and a warning about sea level rise.",
+    "bfast": "Pulaka (swamp taro) or breadfruit with fish.",
+    "big": "About 10 square miles. 9 tiny coral atolls."
+  },
+  "XKX": {
+    "led": "The people vote for a president and prime minister. Not all countries recognize Kosovo's independence.",
+    "makes": "Mining, textiles, and agriculture. The economy is young and growing.",
+    "langs": "Albanian and Serbian are both official.",
+    "gave": "Bear Sanctuary Pristina (rescuing bears from captivity) and one of Europe's youngest, most dynamic populations.",
+    "bfast": "Flija (layered crepe-like pastry) or burek with yogurt.",
+    "big": "About the size of Connecticut."
+  },
+  "DZA": {
+    "led": "The people vote for a president. The same leader often stays for decades.",
+    "makes": "Oil and natural gas. Algeria is one of the biggest gas exporters in the world.",
+    "langs": "Arabic and Berber (Amazigh). French is also widely spoken.",
+    "gave": "Couscous, Saharan rock art that's 8,000 years old, and one of the oldest universities in the world.",
+    "bfast": "Khobz (crusty bread) with olive oil, jam, and strong coffee.",
+    "big": "Biggest in Africa, 10th biggest in the world. 80% is Sahara Desert."
+  },
+  "AGO": {
+    "led": "The people vote for a president. The same party has been in charge since 1975.",
+    "makes": "Oil and diamonds. Angola is one of Africa's biggest oil producers.",
+    "langs": "Portuguese (from colonial history) plus Umbundu, Kimbundu, and Kikongo.",
+    "gave": "Kuduro music and dance, which spread across the Portuguese-speaking world.",
+    "bfast": "Bread with butter and coffee, or funge (cassava porridge) with fish.",
+    "big": "About twice the size of Texas."
+  },
+  "CMR": {
+    "led": "The same president has been in charge since 1982. One of the longest-ruling leaders in the world.",
+    "makes": "Oil, cocoa, and coffee. Cameroon is a major cocoa producer.",
+    "langs": "French AND English are both official. One of few countries with both!",
+    "gave": "Roger Milla's iconic corner-flag dance at the 1990 World Cup.",
+    "bfast": "Beignets (fried dough) with beans and pap (corn porridge).",
+    "big": "About the size of California."
+  },
+  "COD": {
+    "led": "The people vote for a president. DR Congo has faced many conflicts.",
+    "makes": "Cobalt, copper, and coltan. The minerals in your PHONE probably came from here.",
+    "langs": "French plus over 200 local languages! Lingala, Swahili, Tshiluba, and Kikongo are the biggest.",
+    "gave": "Lingala music (soukous/rumba) that influenced music across all of Africa.",
+    "bfast": "Fufu (pounded cassava) with fish stew or bread with tea.",
+    "big": "About the size of Western Europe combined. Third biggest country in Africa."
+  },
+  "GHA": {
+    "led": "The people vote for a president. Ghana is one of Africa's strongest democracies.",
+    "makes": "Cocoa (for chocolate), gold, and oil. Ghana is called the 'Gold Coast.'",
+    "langs": "English plus over 80 local languages. Akan and Twi are the most common.",
+    "gave": "Kente cloth (colorful woven fabric worn by royalty), highlife music, and fantasy coffins shaped like anything you can imagine.",
+    "bfast": "Waakye (rice and beans) with fried plantains and spicy shito sauce.",
+    "big": "About the size of Oregon."
+  },
+  "SDN": {
+    "led": "Military leaders have often been in charge. Sudan has faced internal conflicts.",
+    "makes": "Gold, oil, and gum arabic (used in candy and soda). Sudan produces most of the world's gum arabic.",
+    "langs": "Arabic and English are official. Plus over 100 other languages.",
+    "gave": "Ancient Nubian civilization, which rivaled Egypt. And the pyramids of Meroë.",
+    "bfast": "Ful medames (mashed fava beans) with bread, cheese, and sweet tea.",
+    "big": "Third biggest country in Africa. About one-quarter the size of the US."
+  },
+  "SEN": {
+    "led": "The people vote for a president. Senegal is one of Africa's most stable democracies.",
+    "makes": "Fish, peanuts, and phosphates. Senegal exports fish all over West Africa.",
+    "langs": "French is official, but Wolof is what everyone actually speaks day to day.",
+    "gave": "Teranga (the Senegalese concept of extreme hospitality), Youssou N'Dour's music, and thiéboudienne (the national dish).",
+    "bfast": "Bread with chocolate spread and café Touba (spiced coffee). French bakery influence is strong.",
+    "big": "About the size of South Dakota."
+  },
+  "SOM": {
+    "led": "Somalia has struggled with conflict and different groups controlling different areas.",
+    "makes": "Livestock (camels, goats, sheep) and bananas. Somali camels are exported across the Middle East.",
+    "langs": "Somali and Arabic. Somali wasn't written down until 1972!",
+    "gave": "Frankincense and myrrh (the gifts from the Christmas story came from this region), and an incredible oral poetry tradition.",
+    "bfast": "Canjeero (spongy pancake like Ethiopian injera) with tea and sugar.",
+    "big": "About the size of Texas."
+  },
+  "MOZ": {
+    "led": "The people vote for a president. A democracy since 1994.",
+    "makes": "Aluminum, coal, and shrimp. Mozambique's prawns are famous across southern Africa.",
+    "langs": "Portuguese, plus Makhuwa, Changana, and dozens more.",
+    "gave": "Marrabenta music (Mozambique's signature sound) and some of the best seafood in Africa.",
+    "bfast": "Bread with butter and tea, or xima (corn porridge) with a stew.",
+    "big": "About twice the size of California."
+  },
+  "MDG": {
+    "led": "The people vote for a president. Madagascar has had political instability and coups.",
+    "makes": "Vanilla! Madagascar produces most of the world's vanilla. Also cloves, coffee, and gems.",
+    "langs": "Malagasy and French. Malagasy is related to languages from Indonesia, not Africa!",
+    "gave": "Over 100 species of lemur (found nowhere else), vanilla flavoring, and unique baobab forests.",
+    "bfast": "Mofo gasy (sweet rice cakes) with coffee. Street vendors sell them fresh every morning.",
+    "big": "4th largest island in the world. About the size of Texas."
+  },
+  "UGA": {
+    "led": "The same president has been in charge since 1986.",
+    "makes": "Coffee, tea, and fish. Ugandan coffee is gaining a reputation worldwide.",
+    "langs": "English and Swahili are official. Luganda is the most spoken local language.",
+    "gave": "Winston Churchill called it 'the Pearl of Africa.' Also home to half the world's mountain gorillas.",
+    "bfast": "Rolex! (Not the watch. It's a chapati rolled around an omelet. Seriously.)",
+    "big": "About the size of Oregon. Landlocked, but has enormous lakes."
+  },
+  "ZMB": {
+    "led": "The people vote for a president. Zambia has had peaceful transfers of power.",
+    "makes": "Copper. Zambia is one of the biggest copper producers in the world.",
+    "langs": "English is official. Plus over 70 local languages including Bemba, Nyanja, and Tonga.",
+    "gave": "Victoria Falls (shared with Zimbabwe), some of the world's best walking safaris, and the emerald trade.",
+    "bfast": "Nshima (thick corn porridge) with relish, or bread with tea.",
+    "big": "About the size of Texas."
+  },
+  "ZWE": {
+    "led": "The people vote for a president. Zimbabwe has had political challenges.",
+    "makes": "Platinum, gold, and tobacco. Zimbabwe has some of Africa's richest mineral deposits.",
+    "langs": "16 official languages! English, Shona, and Ndebele are the most common.",
+    "gave": "Great Zimbabwe (one of Africa's most impressive ancient cities), and the stone bird that's a national symbol.",
+    "bfast": "Sadza (thick porridge) with peanut butter, or bread with tea.",
+    "big": "About the size of Montana."
+  },
+  "NER": {
+    "led": "Niger has experienced several military coups, most recently in 2023.",
+    "makes": "Uranium (used for nuclear power), gold, and livestock.",
+    "langs": "French is official. Hausa and Zarma are the most spoken.",
+    "gave": "Ancient Saharan rock art, and the Cure Salée (Festival of the Nomads) where thousands gather in the desert.",
+    "bfast": "Fura (millet porridge balls) soaked in milk. Simple desert food.",
+    "big": "About twice the size of Texas. Mostly desert."
+  },
+  "MLI": {
+    "led": "Military leaders have taken power multiple times, most recently in 2020.",
+    "makes": "Gold, cotton, and livestock. Mali is one of Africa's biggest gold producers.",
+    "langs": "French is official. Bambara is the most widely spoken.",
+    "gave": "The blues! The musical roots of American blues can be traced to Malian musicians. Also Timbuktu's manuscripts.",
+    "bfast": "Dégué (millet porridge with yogurt) or bread with butter and Nescafé.",
+    "big": "About twice the size of Texas. Much of it is Sahara."
+  },
+  "TCD": {
+    "led": "The same family has been in charge for decades. Chad has faced many conflicts.",
+    "makes": "Oil, cotton, and livestock. Oil was discovered in the 2000s.",
+    "langs": "French and Arabic are official. Plus over 120 local languages!",
+    "gave": "Some of the oldest rock art in Africa, and Zakouma National Park's incredible elephant conservation success.",
+    "bfast": "Kisra (fermented sorghum flatbread) with a stew or sauce.",
+    "big": "About twice the size of Texas. A huge, landlocked country."
+  },
+  "IRQ": {
+    "led": "The people vote for a president and prime minister. Iraq has faced wars and is rebuilding.",
+    "makes": "Oil. Iraq has some of the largest oil reserves in the world.",
+    "langs": "Arabic and Kurdish are official.",
+    "gave": "Writing, the wheel, mathematics, the concept of time (60 minutes in an hour), and the earliest known laws.",
+    "bfast": "Khubz (flatbread) with eggs, cheese, cream, and sweet tea.",
+    "big": "About the size of California."
+  },
+  "ISR": {
+    "led": "The people vote for a prime minister. Israel's politics are complex and constantly debated worldwide.",
+    "makes": "Technology, diamonds (cutting and polishing), and agricultural innovation.",
+    "langs": "Hebrew and Arabic. Hebrew was actually revived from an ancient language!",
+    "gave": "Cherry tomatoes, the USB flash drive, drip irrigation, and Waze navigation app.",
+    "bfast": "Israeli breakfast is legendary: hummus, salad, eggs, bread, cheese, and olives.",
+    "big": "About the size of New Jersey. Very small but very significant."
+  },
+  "JOR": {
+    "led": "A king is in charge. Jordan's royal family is respected for maintaining stability.",
+    "makes": "Potash and phosphates (used in fertilizer), and a growing tech sector.",
+    "langs": "Arabic. Most educated Jordanians also speak English.",
+    "gave": "Petra (one of the New Seven Wonders of the World) and mansaf (a lamb dish considered the national treasure).",
+    "bfast": "Hummus, falafel, bread, and sweet tea. Sometimes with labneh (thick yogurt).",
+    "big": "About the size of Indiana."
+  },
+  "SYR": {
+    "led": "Syria has been in a devastating civil war since 2011 that has displaced millions.",
+    "makes": "Historically: oil, textiles, and agriculture. The war has disrupted the economy severely.",
+    "langs": "Arabic. Kurdish, Armenian, and other languages are also spoken.",
+    "gave": "The alphabet (it evolved from ancient Syrian scripts), soap (Aleppo soap is 4,000 years old), and Damascus steel.",
+    "bfast": "Fatayer (stuffed pastries), labneh with olive oil, and mint tea.",
+    "big": "About the size of North Dakota."
+  },
+  "YEM": {
+    "led": "Yemen has been in a civil war since 2014.",
+    "makes": "Historically: coffee, oil, and fish. The conflict has devastated the economy.",
+    "langs": "Arabic.",
+    "gave": "The global coffee trade (the word 'mocha' comes from the Yemeni port of Mocha), and frankincense.",
+    "bfast": "Fattah (bread soaked in broth with eggs and honey) and bint al-sahn (honey cake).",
+    "big": "About the size of California and Nevada combined."
+  },
+  "OMN": {
+    "led": "A sultan is in charge. Oman has been led by sultans for centuries.",
+    "makes": "Oil, natural gas, and fish. Oman is diversifying into tourism.",
+    "langs": "Arabic. English is widely used in business.",
+    "gave": "Frankincense (one of the ancient world's most valuable substances), and some of the earliest maritime trade routes.",
+    "bfast": "Shuwa (slow-cooked meat) with bread and kahwa (Omani coffee with cardamom).",
+    "big": "About the size of Kansas."
+  },
+  "ARE": {
+    "led": "Each of the 7 emirates has its own ruler. Together they're led by a president.",
+    "makes": "Oil, tourism, trade, and finance. Dubai is a global hub for business.",
+    "langs": "Arabic. English is so widely used that some areas feel more English than Arabic.",
+    "gave": "Burj Khalifa, the world's busiest international airport, and a model for rapid development.",
+    "bfast": "Balaleet (sweet vermicelli with eggs) and karak chai (strong spiced tea).",
+    "big": "About the size of Maine. 7 emirates including Dubai and Abu Dhabi."
+  },
+  "QAT": {
+    "led": "An emir (like a king) is in charge. The Al Thani family has ruled for over 150 years.",
+    "makes": "Natural gas and oil. Qatar has some of the world's largest natural gas reserves.",
+    "langs": "Arabic. English is widely spoken.",
+    "gave": "Al Jazeera news network and some of the most ambitious architecture projects in the world.",
+    "bfast": "Balaleet (sweet noodles) with eggs and strong karak tea.",
+    "big": "About the size of Connecticut. One of the smallest countries in the world."
+  },
+  "KWT": {
+    "led": "An emir is in charge, with an elected parliament.",
+    "makes": "Oil and petrochemicals. Kuwait's economy runs almost entirely on oil.",
+    "langs": "Arabic. English is widely taught and used.",
+    "gave": "One of the first modern welfare states in the Middle East, and the world's largest recorded fireworks display.",
+    "bfast": "Chebab (saffron pancakes) with date syrup, cheese, and tea.",
+    "big": "About the size of Hawaii. Tiny but wealthy."
+  },
+  "LBN": {
+    "led": "The people vote for a president and prime minister. Lebanon's political system divides power among religious groups.",
+    "makes": "Banking, tourism, and agriculture. Lebanon was once called the 'Switzerland of the Middle East.'",
+    "langs": "Arabic. French and English are also widely spoken. Most Lebanese speak 3 languages.",
+    "gave": "The Phoenician alphabet (which became the basis for Greek, Latin, and YOUR alphabet), hummus, and tabbouleh.",
+    "bfast": "Manoushe: flatbread with za'atar (herb mix) and olive oil. The national breakfast.",
+    "big": "About the size of Connecticut. One of the smallest countries in the Middle East."
+  },
+  "AFG": {
+    "led": "The Taliban took control in 2021 after US forces withdrew.",
+    "makes": "Dried fruits, nuts, and carpets. Afghan carpets are prized worldwide.",
+    "langs": "Dari (Persian) and Pashto are both official.",
+    "gave": "Beautiful handwoven carpets, lapis lazuli gemstones (used in ancient Egyptian jewelry), and buzkashi (a sport played on horseback with a goat).",
+    "bfast": "Bread with tea, cream, and sometimes eggs. Bread is sacred in Afghan culture.",
+    "big": "About the size of Texas."
+  },
+  "MMR": {
+    "led": "The military took control in a 2021 coup. There is ongoing resistance.",
+    "makes": "Natural gas, jade, and rubies. Myanmar's jade is the finest in the world.",
+    "langs": "Burmese. Plus over 100 ethnic languages.",
+    "gave": "Some of the world's finest rubies and jade, Bagan's temple complex, and Burmese cats.",
+    "bfast": "Mohinga: rice noodles in rich fish broth. THE national dish, eaten for breakfast everywhere.",
+    "big": "About the size of Texas."
+  },
+  "NPL": {
+    "led": "Nepal became a republic in 2008 after being a monarchy for 240 years.",
+    "makes": "Tourism, carpets, and tea. Everest climbers spend millions here.",
+    "langs": "Nepali is official. Plus over 120 other languages spoken in the mountains and valleys.",
+    "gave": "Mount Everest, the birthplace of Buddha (Lumbini), and the Gurkha soldiers known as the bravest warriors.",
+    "bfast": "Dal bhat (lentils and rice). Eaten twice a day, every day. There's a saying: 'Dal bhat power, 24 hour.'",
+    "big": "About the size of Arkansas. But vertically, from lowlands to the highest point on Earth."
+  },
+  "LKA": {
+    "led": "The people vote for a president. Sri Lanka faced a major economic crisis in 2022.",
+    "makes": "Tea (Ceylon tea is world-famous), rubber, and cinnamon. Sri Lanka was the world's largest cinnamon producer.",
+    "langs": "Sinhala and Tamil are both official. English is widely used.",
+    "gave": "Ceylon tea, cinnamon (the original source), and ancient irrigation systems that were engineering marvels.",
+    "bfast": "String hoppers (steamed rice noodle nests) with coconut sambol and curry. Light and delicious.",
+    "big": "About the size of West Virginia. A small island with huge diversity."
+  },
+  "MYS": {
+    "led": "There's a unique rotating monarchy. Nine sultans take turns being king every 5 years!",
+    "makes": "Electronics, palm oil, and rubber. Malaysia is one of the world's biggest palm oil producers.",
+    "langs": "Malay (Bahasa Malaysia), plus Chinese, Tamil, and English.",
+    "gave": "Petronas Towers, the rotating monarchy system, and some of the world's best street food.",
+    "bfast": "Nasi lemak: coconut rice with sambal, peanuts, egg, and anchovies. The national dish.",
+    "big": "About the size of New Mexico. Split into two parts separated by the South China Sea."
+  },
+  "MNG": {
+    "led": "The people vote for a president. Mongolia is a democracy squeezed between Russia and China.",
+    "makes": "Coal, copper, and cashmere. Mongolian cashmere comes from their enormous goat herds.",
+    "langs": "Mongolian. Written in Cyrillic script (like Russian).",
+    "gave": "The largest contiguous empire in history (under Genghis Khan), and the tradition of eagle hunting.",
+    "bfast": "Suutei tsai (salty milk tea) with boortsog (fried dough) and dried curds.",
+    "big": "About the size of Alaska. The most sparsely populated country on Earth."
+  },
+  "KHM": {
+    "led": "There's a king, but the prime minister runs the government. The same party has been in charge since the 1990s.",
+    "makes": "Textiles (clothing), rice, and tourism. Angkor Wat brings millions of visitors.",
+    "langs": "Khmer. The Khmer alphabet has the most letters of any alphabet in the world (74)!",
+    "gave": "Angkor Wat (the largest religious monument ever built) and the Khmer Empire's incredible engineering.",
+    "bfast": "Bai sach chrouk: pork and rice with pickled vegetables. Simple and perfect.",
+    "big": "About the size of Oklahoma."
+  },
+  "LAO": {
+    "led": "One party has been in charge since 1975.",
+    "makes": "Hydroelectric power (from the Mekong River), copper, and gold.",
+    "langs": "Lao. Very similar to Thai. Speakers of both can mostly understand each other.",
+    "gave": "Luang Prabang (one of Southeast Asia's most beautiful towns), and the tradition of morning alms-giving.",
+    "bfast": "Khao piak sen (chicken noodle soup). Comforting and warm.",
+    "big": "About the size of Utah. Landlocked, surrounded by 5 countries."
+  },
+  "UZB": {
+    "led": "The people vote for a president. Uzbekistan has been opening up to the world after decades of isolation.",
+    "makes": "Cotton, gold, and natural gas. Uzbekistan is one of the world's biggest cotton producers.",
+    "langs": "Uzbek. Russian is also widely spoken.",
+    "gave": "Samarkand's stunning architecture, the Silk Road trading tradition, and plov (pilaf) culture.",
+    "bfast": "Non (flatbread) with tea, cream, and sometimes plov leftovers from dinner.",
+    "big": "About the size of California."
+  },
+  "TJK": {
+    "led": "The same president has been in charge since 1994.",
+    "makes": "Aluminum, cotton, and hydroelectric power from all those mountain rivers.",
+    "langs": "Tajik (very similar to Persian/Farsi). Russian is also widely used.",
+    "gave": "Some of the most dramatic mountain scenery on Earth and the Pamir Highway.",
+    "bfast": "Non (flatbread) with butter, honey, and tea. Simple mountain food.",
+    "big": "About the size of Wisconsin. Almost entirely mountains."
+  },
+  "TKM": {
+    "led": "One party controls everything. Turkmenistan is one of the most isolated countries on Earth.",
+    "makes": "Natural gas. Turkmenistan has some of the world's largest gas reserves.",
+    "langs": "Turkmen. Russian is also spoken.",
+    "gave": "Akhal-Teke horses (possibly the most beautiful horse breed on Earth) and the Darvaza gas crater.",
+    "bfast": "Chorek (flatbread) with tea and kaymak (thick cream).",
+    "big": "About the size of California. Mostly Karakum Desert."
+  },
+  "SGP": {
+    "led": "The people vote for a parliament, but one party has won every election since independence.",
+    "makes": "Electronics, finance, and shipping. Singapore's port is one of the busiest in the world.",
+    "langs": "English, Mandarin, Malay, and Tamil. FOUR official languages! 'Singlish' mixes them all.",
+    "gave": "Gardens by the Bay, Changi Airport (voted world's best repeatedly), and a model for clean, efficient city-living.",
+    "bfast": "Kaya toast: bread with coconut jam and butter, plus a soft-boiled egg and strong coffee.",
+    "big": "About the size of San Antonio, Texas. You can drive across the whole country in an hour."
+  },
+  "TWN": {
+    "led": "The people vote for a president. Taiwan considers itself independent, but China claims it.",
+    "makes": "Semiconductor chips, electronics, and machinery. TSMC chips power most of the world's devices.",
+    "langs": "Mandarin Chinese, Taiwanese Hokkien, and indigenous languages.",
+    "gave": "Bubble tea (boba), the world's most advanced computer chips, and some of the best street food in Asia.",
+    "bfast": "Dan bing (egg crepe) with soy milk. Found at every street corner.",
+    "big": "About the size of Maryland. Small island, massive economic impact."
+  },
+  "PRK": {
+    "led": "The Kim family has ruled since 1948. Citizens cannot freely leave the country.",
+    "makes": "Coal, minerals, and military equipment. The economy is heavily controlled by the government.",
+    "langs": "Korean. Same language as South Korea, but some words have diverged.",
+    "gave": "Very little reaches the outside world due to extreme isolation.",
+    "bfast": "Rice porridge or noodles with kimchi, though food can be scarce.",
+    "big": "About the size of Pennsylvania."
+  },
+  "PRT": {
+    "led": "The people vote for a president and prime minister.",
+    "makes": "Cork (Portugal produces half the world's cork!), wine, and textiles.",
+    "langs": "Portuguese. Spoken in 9 countries because of Portugal's exploration history.",
+    "gave": "The Age of Exploration, tempura (brought to Japan!), custard tarts, and half the world's cork.",
+    "bfast": "Pastéis de nata with a galão (milky coffee). Bakeries open early everywhere.",
+    "big": "About the size of Indiana. The westernmost country in mainland Europe."
+  },
+  "AUT": {
+    "led": "The people vote for a president and chancellor.",
+    "makes": "Machinery, cars, and tourism. The Alps bring millions of skiers.",
+    "langs": "German (with a distinctive Austrian accent).",
+    "gave": "Mozart, Strauss waltzes, the waltz dance itself, psychoanalysis (Freud), and Red Bull.",
+    "bfast": "Semmel (bread roll) with butter and jam, a soft-boiled egg, and Viennese coffee.",
+    "big": "About the size of Maine."
+  },
+  "CHE": {
+    "led": "The people have MORE power than anywhere. They vote on almost everything through referendums.",
+    "makes": "Watches, chocolate, cheese, pharmaceuticals, and banking.",
+    "langs": "FOUR official languages: German, French, Italian, and Romansh. Depends which part you're in.",
+    "gave": "The Red Cross, Swiss Army knives, LSD (discovered by accident), and the World Wide Web (CERN is here).",
+    "bfast": "Birchermüesli (the original overnight oats, invented here) with bread, cheese, and coffee.",
+    "big": "About twice the size of New Jersey."
+  },
+  "BEL": {
+    "led": "The people vote for a prime minister. There's also a king.",
+    "makes": "Chocolate, beer, diamonds (Antwerp is the diamond capital), and pharmaceuticals.",
+    "langs": "Dutch (in the north), French (in the south), and German. The country is literally split in half by language!",
+    "gave": "Belgian waffles, French fries (actually Belgian!), the saxophone, and some of the world's finest beer.",
+    "bfast": "Bread with chocolate spread, cheese, and cold cuts. Or a fresh waffle from a street vendor.",
+    "big": "About the size of Maryland. Tiny but mighty."
+  },
+  "DNK": {
+    "led": "The people vote for a prime minister. There's also a queen (now a king as of 2024).",
+    "makes": "Wind turbines, pharmaceuticals, and shipping (Maersk is the world's biggest shipping company).",
+    "langs": "Danish. Almost everyone speaks perfect English too.",
+    "gave": "LEGO, Hans Christian Andersen's fairy tales (The Little Mermaid, The Ugly Duckling), and the concept of hygge.",
+    "bfast": "Rugbrød (dark rye bread) with butter and toppings like cheese, herring, or liver pâté.",
+    "big": "About the size of Massachusetts and New Hampshire combined."
+  },
+  "FIN": {
+    "led": "The people vote for a president and prime minister.",
+    "makes": "Electronics (Nokia), paper, and machinery. Finland has one of the most educated workforces in the world.",
+    "langs": "Finnish and Swedish. Finnish is one of the hardest languages to learn, unrelated to almost every other European language.",
+    "gave": "Nokia phones, Linux (the operating system), Santa Claus's official home, and one of the world's best education systems.",
+    "bfast": "Porridge with berries, rye bread with butter and cheese, and strong coffee. Finns drink MORE coffee per person than anyone.",
+    "big": "About the size of New Mexico. Lots of lakes (188,000 of them!)."
+  },
+  "CZE": {
+    "led": "The people vote for a president and prime minister.",
+    "makes": "Cars (Škoda), beer, glass, and machinery.",
+    "langs": "Czech. A Slavic language with lots of consonant clusters (try saying 'zmrzlina' — that means ice cream).",
+    "gave": "The word 'robot' (from a 1920 play), contact lenses, sugar cubes, and Pilsner beer.",
+    "bfast": "Rohlik (bread rolls) with butter, cheese, and ham. Plus strong coffee.",
+    "big": "About the size of South Carolina."
+  },
+  "HUN": {
+    "led": "The people vote for a prime minister and president.",
+    "makes": "Cars, electronics, and pharmaceuticals. Many European car brands have factories here.",
+    "langs": "Hungarian (Magyar). Unrelated to any neighboring language. One of Europe's hardest languages.",
+    "gave": "The Rubik's Cube, ballpoint pen, vitamin C discovery, and goulash.",
+    "bfast": "Bread with butter and paprika-spiced lard, plus strong coffee.",
+    "big": "About the size of Indiana."
+  },
+  "ROU": {
+    "led": "The people vote for a president and prime minister.",
+    "makes": "Cars (Dacia), IT services, and agriculture. Romania has a booming tech sector.",
+    "langs": "Romanian. It's a Romance language, closer to Italian and French than to neighboring Slavic languages.",
+    "gave": "Dracula (Bram Stoker was inspired by Romanian prince Vlad the Impaler), insulin discovery, and the jet engine.",
+    "bfast": "Bread with butter, cheese, and tomatoes. Or covrigi (Romanian pretzels) from a street vendor.",
+    "big": "About the size of Oregon."
+  },
+  "SRB": {
+    "led": "The people vote for a president and prime minister.",
+    "makes": "Cars, agriculture, and IT services. Serbia's tech scene is growing fast.",
+    "langs": "Serbian. Written in BOTH Cyrillic AND Latin alphabets. One of few countries that uses both!",
+    "gave": "Nikola Tesla (AC electricity), Novak Djokovic (tennis champion), and rakija (fruit brandy).",
+    "bfast": "Burek (flaky pastry with cheese or meat) and yogurt. The classic Balkan breakfast.",
+    "big": "About the size of South Carolina."
+  },
+  "HRV": {
+    "led": "The people vote for a president and prime minister.",
+    "makes": "Tourism, shipbuilding, and pharmaceuticals.",
+    "langs": "Croatian. Very similar to Serbian and Bosnian.",
+    "gave": "The necktie (cravat comes from 'Croat'), the torpedo, and Dubrovnik.",
+    "bfast": "Bread with prosciutto, cheese, and olive oil. Mediterranean simplicity.",
+    "big": "About the size of West Virginia."
+  },
+  "BGR": {
+    "led": "The people vote for a president and prime minister.",
+    "makes": "Rose oil, machinery, and agriculture. Bulgarian rose oil is in many luxury perfumes.",
+    "langs": "Bulgarian. Uses the Cyrillic alphabet, which was actually created here!",
+    "gave": "The Cyrillic alphabet (originally developed in Bulgaria), rose oil, and Bulgarian yogurt (with unique bacteria).",
+    "bfast": "Banitsa (filo pastry with cheese) and boza (a fermented wheat drink). Traditional and filling.",
+    "big": "About the size of Tennessee."
+  },
+  "SVK": {
+    "led": "The people vote for a president and prime minister.",
+    "makes": "Cars! Slovakia produces more cars per capita than any country on Earth (Volkswagen, Kia, Peugeot).",
+    "langs": "Slovak. Very similar to Czech. Speakers can mostly understand each other.",
+    "gave": "Andy Warhol's parents were Slovak, and the country has over 180 castles and castle ruins.",
+    "bfast": "Bread with butter and local cheese, or bryndzové halušky (potato dumplings with sheep cheese).",
+    "big": "About the size of New Hampshire and Vermont combined."
+  },
+  "SVN": {
+    "led": "The people vote for a president and prime minister.",
+    "makes": "Pharmaceuticals, machinery, and tourism. Slovenia is one of the most developed former Yugoslav countries.",
+    "langs": "Slovenian. Despite being tiny, it has 46 distinct dialects!",
+    "gave": "Lake Bled (one of the most photographed places in Europe), and Melania Trump (though she became a US citizen).",
+    "bfast": "Bread with honey and butter, or potica (nut roll pastry) with coffee.",
+    "big": "About the size of New Jersey."
+  },
+  "EST": {
+    "led": "The people vote for a president and prime minister.",
+    "makes": "Technology, electronics, and IT services. Estonia's e-government is a model for the world.",
+    "langs": "Estonian. Related to Finnish, not to neighboring Russian or Latvian.",
+    "gave": "Skype (video calling was invented here), e-residency (digital citizenship), and one of the world's first fully digital governments.",
+    "bfast": "Dark rye bread with butter and cheese, plus a soft-boiled egg and coffee.",
+    "big": "About the size of New Hampshire and Vermont combined."
+  },
+  "LTU": {
+    "led": "The people vote for a president and parliament.",
+    "makes": "Lasers! Lithuania makes some of the world's most advanced laser technology.",
+    "langs": "Lithuanian. One of the oldest Indo-European languages still spoken, barely changed for centuries.",
+    "gave": "Some of the world's best laser technology, and Vilnius (a beautiful baroque capital).",
+    "bfast": "Šaltibarščiai (cold pink beet soup) in summer, or bread with cheese and coffee.",
+    "big": "About the size of West Virginia."
+  },
+  "LUX": {
+    "led": "A grand duke is in charge (the only grand duchy left in the world). There's also an elected parliament.",
+    "makes": "Steel, finance, and satellite communications. Home to many EU institutions.",
+    "langs": "Luxembourgish, French, AND German. All three are official. Most people speak all three plus English!",
+    "gave": "The European Union (many EU institutions are headquartered here) and Skype (co-founded by a Luxembourger).",
+    "bfast": "Bread with butter, cheese, and cold cuts. German and French breakfast traditions merged.",
+    "big": "About the size of Rhode Island. One of the smallest countries in the world."
+  },
+  "CYP": {
+    "led": "The people vote for a president. The island is divided between Greek and Turkish sides since 1974.",
+    "makes": "Tourism, shipping, and financial services.",
+    "langs": "Greek and Turkish (the island is divided). English is very widely spoken.",
+    "gave": "Halloumi cheese, the legend of Aphrodite (goddess of love), and commandaria wine (possibly the world's oldest named wine).",
+    "bfast": "Halloumi with eggs, tomatoes, and bread. Or a village breakfast with olives and fresh cheese.",
+    "big": "About the size of Connecticut. Third largest island in the Mediterranean."
+  },
+  "ALB": {
+    "led": "The people vote for a prime minister and president.",
+    "makes": "Textiles, footwear, and chrome. Albania's economy is growing fast.",
+    "langs": "Albanian. An ancient language that's its own branch of Indo-European, not closely related to any neighbor.",
+    "gave": "Mother Teresa (born to an Albanian family), bunkers everywhere (700,000 were built during isolation), and stunning coastline.",
+    "bfast": "Byrek (filo pastry with cheese or spinach) and Turkish-style coffee.",
+    "big": "About the size of Maryland."
+  },
+  "GEO": {
+    "led": "The people vote for a prime minister and president.",
+    "makes": "Wine, manganese, and agriculture. Georgian wine made in clay pots (qvevri) is UNESCO-recognized.",
+    "langs": "Georgian. One of the oldest alphabets in the world, used since the 5th century.",
+    "gave": "Wine (the earliest evidence of winemaking, 8,000 years ago), khachapuri (cheese bread), and one of the world's oldest and most unique alphabets.",
+    "bfast": "Khachapuri: boat-shaped bread filled with melted cheese, butter, and a raw egg stirred in. Unreal.",
+    "big": "About the size of West Virginia."
+  },
+  "VEN": {
+    "led": "A president is in charge but the country has faced political crisis and economic collapse.",
+    "makes": "Oil. Venezuela has the largest proven oil reserves in the world, but the economy has collapsed.",
+    "langs": "Spanish. Plus indigenous languages in the south.",
+    "gave": "Angel Falls, more Miss Universe winners than any other country, and the birthplace of Simón Bolívar who liberated much of South America.",
+    "bfast": "Arepa: a corn cake split open and stuffed with cheese, beans, or meat. The national food.",
+    "big": "About the size of Texas and Oklahoma combined."
+  },
+  "ECU": {
+    "led": "The people vote for a president. Ecuador has had 20+ presidents since 1996!",
+    "makes": "Oil, bananas, and shrimp. Ecuador is the world's biggest banana exporter.",
+    "langs": "Spanish. Plus Quechua and other indigenous languages.",
+    "gave": "The Galápagos Islands (which inspired Darwin's theory of evolution), panama hats (actually made in Ecuador!), and cacao.",
+    "bfast": "Bolón de verde: a ball of mashed plantain stuffed with cheese or pork. Hearty and filling.",
+    "big": "About the size of Colorado."
+  },
+  "BOL": {
+    "led": "The people vote for a president. Bolivia has its first indigenous president in history.",
+    "makes": "Natural gas, zinc, and tin. Also quinoa, which has become popular worldwide.",
+    "langs": "Spanish plus 36 official indigenous languages! Quechua and Aymara are the most spoken.",
+    "gave": "Quinoa (the superfood), Salar de Uyuni (the world's most incredible natural mirror), and some of the oldest civilizations in the Americas.",
+    "bfast": "Salteña: a juicy baked empanada with meat, potatoes, and spicy sauce inside.",
+    "big": "About the size of Texas and California combined."
+  },
+  "PRY": {
+    "led": "The people vote for a president. Had a dictator for 35 years straight.",
+    "makes": "Soybeans, hydroelectric power, and beef. The Itaipú Dam was once the world's largest.",
+    "langs": "Spanish AND Guaraní are both official. Paraguay is one of the most bilingual countries on Earth.",
+    "gave": "Guaraní language preservation (one of the few indigenous languages spoken by the majority of a country), and yerba mate tea.",
+    "bfast": "Chipa (cheesy bread balls) with cocido (burnt mate tea with milk).",
+    "big": "About the size of California. Landlocked in the heart of South America."
+  },
+  "URY": {
+    "led": "The people vote for a president. Uruguay is one of the strongest democracies in the Americas.",
+    "makes": "Beef, soybeans, and wool. Uruguayan beef is some of the best in the world.",
+    "langs": "Spanish. With a distinctive accent that sounds a bit like Italian.",
+    "gave": "The first FIFA World Cup, tango (shared with Argentina), and one of the first countries to legalize many progressive policies.",
+    "bfast": "Mate tea (shared from one cup with a metal straw) with bizcochos (pastries).",
+    "big": "About the size of Washington state."
+  },
+  "GUY": {
+    "led": "The people vote for a president. A huge oil discovery is changing everything.",
+    "makes": "Oil (recently discovered), gold, and sugar. A massive oil discovery is transforming Guyana's economy.",
+    "langs": "English! The only English-speaking country in South America. Plus Creole and indigenous languages.",
+    "gave": "Kaieteur Falls (one of the world's most powerful waterfalls) and one of the most pristine rainforests left.",
+    "bfast": "Roti with curry, or bake and saltfish. Caribbean and Indian food traditions mix.",
+    "big": "About the size of Idaho."
+  },
+  "SUR": {
+    "led": "The people vote for a president. One of the most diverse countries on Earth.",
+    "makes": "Gold, oil, and bauxite (used to make aluminum).",
+    "langs": "Dutch! The only Dutch-speaking country in South America. Plus Sranan Tongo (Creole) and many others.",
+    "gave": "One of the most ethnically diverse countries in the world, where Diwali, Eid, and Christmas are all national holidays.",
+    "bfast": "Broodje bakkeljauw (bread with salted cod) or roti with curry.",
+    "big": "About the size of Georgia (the US state). Smallest in South America."
+  },
+  "GTM": {
+    "led": "The people vote for a president. Heart of the ancient Maya civilization.",
+    "makes": "Coffee, sugar, and bananas. Guatemalan coffee is considered among the world's finest.",
+    "langs": "Spanish. Plus 21 Mayan languages still spoken!",
+    "gave": "Chocolate (the Maya invented drinking chocolate), the marimba instrument, and Tikal.",
+    "bfast": "Desayuno chapín: eggs, beans, plantains, tortillas, and cheese. A full spread.",
+    "big": "About the size of Tennessee."
+  },
+  "HND": {
+    "led": "The people vote for a president. Elected its first female president in 2022.",
+    "makes": "Coffee, bananas, and palm oil. Honduras is Central America's biggest coffee exporter.",
+    "langs": "Spanish. Plus Garifuna and indigenous languages on the coast.",
+    "gave": "Copán (one of the most important Maya archaeological sites) and the Garifuna culture.",
+    "bfast": "Baleada: a flour tortilla with beans, cheese, and cream. The national street food.",
+    "big": "About the size of Tennessee."
+  },
+  "NIC": {
+    "led": "The same president has been in charge for many years, with increasing control.",
+    "makes": "Coffee, beef, and gold. Nicaraguan coffee is excellent.",
+    "langs": "Spanish. Plus Miskito and English Creole on the Caribbean coast.",
+    "gave": "Rubén Darío (considered the father of modern Spanish poetry) and volcano boarding.",
+    "bfast": "Gallo pinto: rice and beans fried together with onions. The national dish.",
+    "big": "About the size of New York state. Biggest in Central America."
+  },
+  "SLV": {
+    "led": "The people vote for a president. The current president made Bitcoin legal tender in 2021.",
+    "makes": "Textiles, coffee, and sugar.",
+    "langs": "Spanish.",
+    "gave": "Pupusas (thick corn tortillas stuffed with cheese, beans, or pork) and the Bitcoin adoption experiment.",
+    "bfast": "Pupusas with curtido (pickled cabbage slaw) and coffee. Yes, pupusas for breakfast.",
+    "big": "About the size of Massachusetts. Smallest in Central America."
+  },
+  "CRI": {
+    "led": "The people vote for a president. Costa Rica is one of the most stable democracies in Latin America.",
+    "makes": "Computer chips, bananas, and coffee. Also a LOT of renewable energy.",
+    "langs": "Spanish.",
+    "gave": "A model for environmental conservation, 'Pura Vida' philosophy, and proof that a country doesn't need a military.",
+    "bfast": "Gallo pinto (rice and beans) with eggs, plantains, and sour cream.",
+    "big": "About the size of West Virginia."
+  },
+  "PAN": {
+    "led": "The people vote for a president. The Canal earns billions in fees.",
+    "makes": "Canal fees, banking, and shipping. The Canal earns billions in fees.",
+    "langs": "Spanish.",
+    "gave": "The Panama Canal (one of the greatest engineering achievements ever), and the crossroads between North and South America.",
+    "bfast": "Hojaldras (fried dough) with eggs and cheese.",
+    "big": "About the size of South Carolina."
+  },
+  "JAM": {
+    "led": "The people vote for a prime minister. There's also a king (same one as England).",
+    "makes": "Bauxite (for aluminum), coffee, and tourism. Blue Mountain coffee is legendary.",
+    "langs": "English, plus Jamaican Patois (Creole) which is what everyone actually speaks.",
+    "gave": "Reggae music, Bob Marley, Usain Bolt, dancehall music, and jerk seasoning.",
+    "bfast": "Ackee and saltfish: a fruit that looks like scrambled eggs, cooked with salted cod. The national dish.",
+    "big": "About the size of Connecticut. Small island, massive cultural impact."
+  },
+  "DOM": {
+    "led": "The people vote for a president. Baseball is more popular than politics.",
+    "makes": "Gold, cigars, and tourism. Resorts bring millions of visitors.",
+    "langs": "Spanish.",
+    "gave": "More MLB players than any non-US country, merengue and bachata music, and Santo Domingo (the first permanent European settlement in the Americas).",
+    "bfast": "Mangú: mashed plantains with fried eggs, salami, and fried cheese. Filling!",
+    "big": "About the size of Vermont and New Hampshire combined. Shares the island of Hispaniola with Haiti."
+  },
+  "HTI": {
+    "led": "The people vote for a president, but Haiti has faced extreme political instability and gang violence.",
+    "makes": "Textiles, mangoes, and cocoa. Haiti's economy faces severe challenges.",
+    "langs": "Haitian Creole and French. Almost everyone speaks Creole; French is used in schools and government.",
+    "gave": "The first successful slave revolution in history, vibrant art and music traditions, and the concept that ALL people deserve freedom.",
+    "bfast": "Spaghetti with hot dogs and ketchup (yes, really!) or bread with peanut butter and coffee.",
+    "big": "About the size of Maryland. Shares the island of Hispaniola with the Dominican Republic."
+  },
+  "TTO": {
+    "led": "The people vote for a prime minister and president.",
+    "makes": "Oil, natural gas, and petrochemicals. Also asphalt from a natural tar lake.",
+    "langs": "English, plus Trinidad Creole and Tobagonian Creole.",
+    "gave": "The steel pan (steel drum), calypso and soca music, limbo dancing, and Carnival.",
+    "bfast": "Doubles: fried bread with curried chickpeas and hot pepper sauce. The ultimate street food.",
+    "big": "About the size of Delaware. Two islands."
+  },
+  "PNG": {
+    "led": "The people vote for a prime minister. Papua New Guinea gained independence from Australia in 1975.",
+    "makes": "Gold, copper, oil, and coffee. Mining is the biggest industry.",
+    "langs": "OVER 800 LANGUAGES. Most linguistically diverse country on Earth! Tok Pisin and English are official.",
+    "gave": "The most linguistic diversity on Earth, incredible tribal art and masks, and some of the most biodiverse forests remaining.",
+    "bfast": "Mumu (earth oven-cooked food) or sweet potato and greens.",
+    "big": "About the size of California. Eastern half of a large island, plus hundreds of smaller islands."
+  },
+  "DJI": {
+    "led": "The same president has been in charge since 1999.",
+    "makes": "Services and port operations. Djibouti's port is a major shipping hub for the region.",
+    "langs": "French and Arabic are official. Somali and Afar are widely spoken.",
+    "gave": "A strategic location at the mouth of the Red Sea that's been important for trade for thousands of years.",
+    "bfast": "Canjeero (flatbread) with butter and tea. Simple and filling.",
+    "big": "About the size of New Hampshire."
+  },
+  "ERI": {
+    "led": "One party has been in charge since independence in 1993. No elections have been held.",
+    "makes": "Mining (gold and copper) and agriculture.",
+    "langs": "No official language, but Tigrinya, Arabic, and English are widely used.",
+    "gave": "Asmara's stunning Modernist architecture (UNESCO World Heritage), and incredible resilience.",
+    "bfast": "Injera with a spicy lentil stew and tea.",
+    "big": "About the size of Pennsylvania."
+  },
+  "GAB": {
+    "led": "The military took control in 2023 after the same family ruled for over 50 years.",
+    "makes": "Oil, manganese, and timber.",
+    "langs": "French. Plus Fang and other Bantu languages.",
+    "gave": "One of Africa's best-protected rainforests and Lopé National Park (UNESCO World Heritage).",
+    "bfast": "Baguette with butter and coffee (French influence) or plantains with sauce.",
+    "big": "About the size of Colorado."
+  },
+  "COG": {
+    "led": "The same president has been in charge since 1997.",
+    "makes": "Oil, timber, and potash.",
+    "langs": "French. Plus Lingala and Kituba.",
+    "gave": "Some of the best-preserved lowland gorilla habitat on Earth.",
+    "bfast": "Baguette with butter and coffee, or saka-saka (cassava leaf stew) leftovers.",
+    "big": "About the size of Montana."
+  },
+  "CAF": {
+    "led": "The country has faced conflict and instability. UN peacekeepers are present.",
+    "makes": "Diamonds, timber, and cotton. Rich in resources but development is limited.",
+    "langs": "French and Sango are official.",
+    "gave": "Dzanga-Sangha: one of the last places to see forest elephants and western lowland gorillas in the wild.",
+    "bfast": "Cassava porridge with greens or bread with tea.",
+    "big": "About the size of Texas. Right in the middle of the continent."
+  },
+  "SSD": {
+    "led": "South Sudan has faced civil war since shortly after independence.",
+    "makes": "Oil is the main export. The economy is heavily dependent on it.",
+    "langs": "English is official. Plus Arabic, Dinka, Nuer, and many others.",
+    "gave": "The joy of a new nation being born, and the world's second-largest wildlife migration (after the Serengeti).",
+    "bfast": "Kisra (fermented sorghum bread) with stew, or porridge.",
+    "big": "About the size of Texas."
+  },
+  "RWA": {
+    "led": "The same president has led since 2000. Rwanda has the highest percentage of women in parliament worldwide.",
+    "makes": "Coffee, tea, and tin. Rwanda's economy is growing rapidly.",
+    "langs": "Kinyarwanda, English, and French are all official.",
+    "gave": "A model for post-conflict recovery, gorilla conservation, and the highest percentage of women in parliament in the world (over 60%).",
+    "bfast": "Igisafuriya (one-pot stew) with bread, or porridge with fruit.",
+    "big": "About the size of Maryland. One of the smallest countries in Africa."
+  },
+  "MWI": {
+    "led": "The people vote for a president. Had its first female president in 2012.",
+    "makes": "Tobacco, tea, and sugar. Agriculture is the backbone of the economy.",
+    "langs": "English and Chichewa.",
+    "gave": "Lake Malawi (a UNESCO World Heritage site with over 1,000 fish species) and incredible warmth and hospitality.",
+    "bfast": "Nsima (thick porridge) with chambo (fish) or vegetables.",
+    "big": "About the size of Pennsylvania."
+  },
+  "SLE": {
+    "led": "The people vote for a president. Rebuilding after civil war and Ebola.",
+    "makes": "Diamonds, iron ore, and cocoa.",
+    "langs": "English is official. Krio (Creole English) is the most spoken.",
+    "gave": "Some of the world's largest diamonds, and incredible resilience through civil war and Ebola.",
+    "bfast": "Rice and groundnut soup, or bread with fried fish and tea.",
+    "big": "About the size of South Carolina."
+  },
+  "LBR": {
+    "led": "The people vote for a president. Liberia elected Africa's first female head of state (Ellen Johnson Sirleaf) in 2006.",
+    "makes": "Rubber, iron ore, and timber. Also has one of the world's largest ship registries.",
+    "langs": "English (the only African country founded by Americans where English is the main language). Plus 20+ local languages.",
+    "gave": "Africa's first female president, a unique connection to American history, and a symbol of freedom.",
+    "bfast": "Farina (cassava porridge) or bread with fried plantains and coffee.",
+    "big": "About the size of Tennessee."
+  },
+  "GIN": {
+    "led": "Military took control in 2021.",
+    "makes": "Bauxite (for aluminum), gold, and diamonds. Guinea has the world's largest bauxite reserves.",
+    "langs": "French is official. Plus Fula, Malinke, Susu, and others.",
+    "gave": "The djembe drum, which is now used in music around the entire world.",
+    "bfast": "Rice porridge or bread with butter and Nescafé.",
+    "big": "About the size of Oregon."
+  },
+  "TGO": {
+    "led": "The same family has been in power since 1967.",
+    "makes": "Phosphates, coffee, and cocoa.",
+    "langs": "French. Plus Ewe and Kabiyè.",
+    "gave": "Koutammakou (UNESCO World Heritage mud tower houses) and a window into West African voodoo traditions.",
+    "bfast": "Bread with butter and coffee, or akume (corn paste) with sauce.",
+    "big": "About the size of West Virginia. Long and narrow."
+  },
+  "BEN": {
+    "led": "The people vote for a president, though opposition has been restricted.",
+    "makes": "Cotton, cashew nuts, and shea butter.",
+    "langs": "French. Plus Fon, Yoruba, and others.",
+    "gave": "Voodoo religion (which spread to Haiti and the Americas), the Dahomey Amazons (female warriors), and Ganvié (the 'Venice of Africa' on stilts).",
+    "bfast": "Aklui (corn porridge with milk) or bread with omelets.",
+    "big": "About the size of Pennsylvania."
+  },
+  "GNQ": {
+    "led": "The same president has been in charge since 1979, making him one of the longest-ruling leaders in the world.",
+    "makes": "Oil and natural gas. Almost entirely dependent on oil revenue.",
+    "langs": "Spanish! The only country in Africa where Spanish is official. Also French and Portuguese.",
+    "gave": "A unique cultural bridge between Africa, Spain, and Latin America.",
+    "bfast": "Baguette with butter and coffee (Spanish and French colonial influence).",
+    "big": "About the size of Maryland. Mainland plus several islands."
+  },
+  "NAM": {
+    "led": "The people vote for a president. Namibia gained independence from South Africa in 1990.",
+    "makes": "Diamonds, uranium, and fish. Namibia is the world's 4th largest uranium producer.",
+    "langs": "English is official. Plus Afrikaans, Oshiwambo, and German (from colonial history).",
+    "gave": "Some of the most dramatic landscapes on Earth, desert-adapted elephants, and Sossusvlei's iconic red dunes.",
+    "bfast": "Bread with butter and jam, or porridge. German-style baked goods are also popular (from colonial influence).",
+    "big": "About the size of Texas and Louisiana combined."
+  },
+  "BWA": {
+    "led": "The people vote for a president. Botswana is one of Africa's most stable and successful democracies.",
+    "makes": "Diamonds! Botswana is the world's largest diamond producer by value.",
+    "langs": "English and Setswana.",
+    "gave": "A model for how a poor country can develop responsibly, the Okavango Delta (one of the world's greatest wildlife destinations), and diamond prosperity.",
+    "bfast": "Ting (sorghum porridge) with milk and sugar, or bread with tea.",
+    "big": "About the size of Texas."
+  },
+  "SWZ": {
+    "led": "A king has absolute power. This is Africa's last absolute monarchy.",
+    "makes": "Sugar, soft drink concentrates, and textiles.",
+    "langs": "siSwati and English.",
+    "gave": "The Reed Dance ceremony (one of Africa's largest cultural events) and the name change from Swaziland to Eswatini in 2018.",
+    "bfast": "Porridge with sour milk or bread with tea.",
+    "big": "About the size of New Jersey. One of Africa's smallest countries."
+  },
+  "LSO": {
+    "led": "There's a king, but the prime minister runs the government.",
+    "makes": "Water (sold to South Africa), diamonds, and textiles.",
+    "langs": "Sesotho and English.",
+    "gave": "The Basotho blanket tradition and proof that Africa has mountains, snow, and even a ski resort.",
+    "bfast": "Papa (thick maize porridge) with milk or bread and tea.",
+    "big": "About the size of Maryland. Completely surrounded by South Africa."
+  },
+  "MRT": {
+    "led": "Military coups have been common. Currently has an elected president.",
+    "makes": "Iron ore, fish, and gold.",
+    "langs": "Arabic. French and local languages are also spoken.",
+    "gave": "The Eye of the Sahara (a geological mystery) and ancient cities buried in the sand.",
+    "bfast": "Bread with butter and tea (Mauritanian tea ceremony involves 3 rounds of progressively sweeter tea).",
+    "big": "About the size of Texas and New Mexico combined. Mostly desert."
+  },
+  "GMB": {
+    "led": "The people vote for a president. A long-ruling dictator was voted out in 2017.",
+    "makes": "Peanuts, fish, and tourism. Peanuts are the main cash crop.",
+    "langs": "English. Plus Mandinka, Wolof, Fula, and others.",
+    "gave": "A unique position as a sliver of a country inside Senegal, and some of West Africa's best beach tourism.",
+    "bfast": "Bread with butter and attaya (green tea ceremony).",
+    "big": "About the size of a thin strip. 300 miles long but only 20 miles wide in most places."
+  },
+  "GNB": {
+    "led": "Political instability and coups have been common.",
+    "makes": "Cashew nuts. Guinea-Bissau is one of the world's biggest cashew exporters.",
+    "langs": "Portuguese. Plus Kriol (Creole) which everyone speaks.",
+    "gave": "The Bijagós Islands (a UNESCO Biosphere Reserve with unique saltwater hippos).",
+    "bfast": "Bread with butter and coffee, or rice with fish sauce.",
+    "big": "About the size of Maryland."
+  },
+  "TUN": {
+    "led": "The people vote for a president. Tunisia sparked the Arab Spring democracy movement in 2011.",
+    "makes": "Olive oil, phosphates, and textiles. Tunisia is a major olive oil producer.",
+    "langs": "Arabic. French is widely used in business and education.",
+    "gave": "Ancient Carthage (rival to Rome), the spark that started the Arab Spring, and Tatooine from Star Wars (named after the town Tataouine).",
+    "bfast": "Lablabi (chickpea soup with bread) or baguette with harissa (chili paste).",
+    "big": "About the size of Georgia (US state)."
+  },
+  "LBY": {
+    "led": "Libya has been in conflict since 2011 when Gaddafi was overthrown. Multiple groups control different areas.",
+    "makes": "Oil and natural gas. Almost entirely dependent on oil.",
+    "langs": "Arabic. Berber languages are also spoken.",
+    "gave": "Leptis Magna (one of the best-preserved Roman cities on Earth) and some of the Sahara's most dramatic landscapes.",
+    "bfast": "Bazeen (barley bread) with lamb sauce, or bread with olive oil.",
+    "big": "About the size of Alaska. 4th biggest country in Africa."
+  },
+  "NCL": {
+    "led": "A French territory with increasing self-governance. Independence referendums were held recently.",
+    "makes": "Nickel. New Caledonia has about 25% of the world's known nickel reserves.",
+    "langs": "French. Plus 28 Kanak languages.",
+    "gave": "One of the world's most spectacular lagoon and reef systems (UNESCO World Heritage).",
+    "bfast": "Baguette and coffee (French influence) or bougna (traditional wrapped food).",
+    "big": "About the size of New Jersey."
+  },
+  "PRI": {
+    "led": "A US territory. Puerto Ricans are US citizens but can't vote for president.",
+    "makes": "Pharmaceuticals, medical devices, and rum. Bacardí rum is from here.",
+    "langs": "Spanish and English are both official.",
+    "gave": "Reggaetón, Bad Bunny, piña coladas, and bioluminescent bays that glow in the dark.",
+    "bfast": "Mallorca (sweet bread sandwich) with ham and cheese, and café con leche.",
+    "big": "About the size of Connecticut. An island in the Caribbean."
+  },
+  "BFA": {
+    "led": "Military took control in two coups in 2022.",
+    "makes": "Gold, cotton, and shea butter (used in cosmetics worldwide).",
+    "langs": "French is official. Plus Moore, Dioula, and many others.",
+    "gave": "FESPACO (Africa's biggest film festival), Thomas Sankara (the revolutionary leader called 'Africa's Che Guevara'), and shea butter.",
+    "bfast": "Tô (millet or corn porridge) with sauce or bread with coffee.",
+    "big": "About the size of Colorado."
+  },
+  "CIV": {
+    "led": "The people vote for a president.",
+    "makes": "Cocoa (the world's biggest producer), coffee, and rubber.",
+    "langs": "French. Plus over 60 local languages including Baoulé and Dioula.",
+    "gave": "Nearly half the world's cocoa supply, Didier Drogba (soccer legend), and coupé-décalé music.",
+    "bfast": "Aloco (fried plantains) with chili sauce and fish, or bread with café au lait.",
+    "big": "About the size of New Mexico."
+  },
+  "SWE": {
+    "led": "The people vote for a Prime Minister. There's also a King and Queen, but they're mostly ceremonial.",
+    "makes": "Cars (Volvo), furniture (IKEA), music, and technology. Sweden punches way above its weight.",
+    "langs": "Swedish. Almost everyone also speaks perfect English.",
+    "gave": "Minecraft, Spotify, IKEA, the Nobel Prize, and dynamite (yes, the same guy invented both).",
+    "bfast": "Open-face sandwiches with cheese, cucumber, and caviar from a tube. Yes, a TUBE.",
+    "big": "About the size of California. Long and skinny, stretching way up toward the Arctic."
+  },
+  "NLD": {
+    "led": "The people vote for a Prime Minister. There's also a King.",
+    "makes": "Flowers (they export BILLIONS of tulips), cheese, and high-tech machinery.",
+    "langs": "Dutch. It sounds like a mix of English and German. Most Dutch people speak 3-4 languages.",
+    "gave": "The microscope, the stock market, orange carrots (they were bred orange on purpose!), and WiFi routers.",
+    "bfast": "Hagelslag: chocolate sprinkles on buttered bread. For BREAKFAST. It's completely normal here.",
+    "big": "About twice the size of New Jersey. Tiny but mighty."
+  },
+  "PHL": {
+    "led": "The people vote for a President.",
+    "makes": "Electronics, coconut products, and bananas. The Philippines is one of the world's biggest banana exporters.",
+    "langs": "Filipino (Tagalog) and English. Most people switch between both in the same sentence!",
+    "gave": "Karaoke machines, the yo-yo, and jeepneys (the most colorfully decorated buses you've ever seen).",
+    "bfast": "Tapsilog: sweet beef jerky, garlic fried rice, and a fried egg. Breakfast of champions.",
+    "big": "About the size of Arizona, but spread across 7,600 islands."
+  },
+  "BGD": {
+    "led": "The people vote for a Prime Minister.",
+    "makes": "Clothing! Look at the labels in your closet. There's a good chance something says 'Made in Bangladesh.'",
+    "langs": "Bengali (Bangla). People fought a war to protect their language. February 21 is International Mother Language Day because of Bangladesh.",
+    "gave": "Muslin fabric (the finest cloth in ancient history), microcredit banking, and the Grameen Bank that helps poor people start businesses.",
+    "bfast": "Paratha with dal (lentil curry) and a fried egg. Filling and spicy.",
+    "big": "About the size of Iowa, but with 170 MILLION people squeezed in."
+  },
+  "TZA": {
+    "led": "The people vote for a president. Tanzania was formed when two countries (Tanganyika and Zanzibar) merged in 1964.",
+    "makes": "Gold, coffee, and spices. Zanzibar produces most of the world's cloves.",
+    "langs": "Swahili and English. Swahili was the first African language to be used as an internet domain (.sw).",
+    "gave": "Olduvai Gorge, where some of the oldest human fossils on Earth were discovered. We might ALL come from Tanzania.",
+    "bfast": "Chapati (flatbread) with beans and chai tea. Simple and filling.",
+    "big": "About twice the size of California. Kilimanjaro is 19,341 feet tall."
+  },
+  "KAZ": {
+    "led": "The same president was in charge for almost 30 years. A new one took over in 2019.",
+    "makes": "Oil, metals, and uranium. Kazakhstan has more uranium than almost anywhere on Earth.",
+    "langs": "Kazakh and Russian. Most people speak both.",
+    "gave": "Apples! The first apples in history grew in Kazakhstan. The old capital is even called Almaty, which means 'full of apples.'",
+    "bfast": "Baursak (puffy fried bread) with butter and jam, plus chai tea with milk.",
+    "big": "9th biggest country in the world. Bigger than all of Western Europe combined."
+  },
+  "SAU": {
+    "led": "A king is in charge. Saudi Arabia is named after the royal family, the House of Saud.",
+    "makes": "Oil. Saudi Arabia has so much oil underground that it changed the entire world's economy.",
+    "langs": "Arabic. It's written from right to left and has beautiful calligraphy.",
+    "gave": "Arabic numerals (1, 2, 3...), the numbers YOU use every day, came through the Arab world.",
+    "bfast": "Ful (mashed beans), flatbread, dates, and Arabic coffee with cardamom.",
+    "big": "About one-quarter the size of the United States. Mostly sand."
+  },
+  "ETH": {
+    "led": "The people vote for a prime minister. Ethiopia is one of the only African countries never colonized by Europe.",
+    "makes": "Coffee, flowers, and sesame seeds. Ethiopian coffee ceremonies can take 3 hours.",
+    "langs": "Amharic (with its own beautiful alphabet), plus over 80 other languages!",
+    "gave": "Coffee! The entire world's coffee obsession started with Ethiopian goats.",
+    "bfast": "Injera (spongy sourdough flatbread) with scrambled eggs and spicy sauce.",
+    "big": "About twice the size of Texas. Over 120 million people live here."
+  },
+  "MAR": {
+    "led": "A king is in charge. Morocco's royal family has ruled for over 350 years.",
+    "makes": "Phosphates (used in fertilizer), citrus fruits, and argan oil for fancy shampoo.",
+    "langs": "Arabic and Berber (Amazigh). French is also widely spoken.",
+    "gave": "Leather goods, couscous, and the fez hat that you've definitely seen in old movies.",
+    "bfast": "Msemen (flaky flatbread) with honey and butter, plus sweet mint tea.",
+    "big": "About the size of California. Right across from Spain, separated by just 9 miles of water."
+  },
+  "VNM": {
+    "led": "One political party is in charge, similar to China.",
+    "makes": "Electronics, clothing, and rice. Vietnam is the world's 2nd biggest coffee exporter!",
+    "langs": "Vietnamese. It uses the same alphabet as English but with lots of accent marks.",
+    "gave": "Pho soup, spring rolls, and ao dai (a beautiful traditional dress).",
+    "bfast": "Pho! Hot noodle soup with herbs and chili. Yes, soup for breakfast. It's perfect.",
+    "big": "About the size of New Mexico. Long and skinny, like a stretched S."
+  },
+  "POL": {
+    "led": "The people vote for a president AND a prime minister.",
+    "makes": "Furniture, car parts, and electronics. Poland's economy is one of the fastest-growing in Europe.",
+    "langs": "Polish. It has sounds that English speakers can't even pronounce. Try 'szczęście' (happiness).",
+    "gave": "Marie Curie (discovered radioactivity), Copernicus (proved Earth orbits the Sun), and pierogi.",
+    "bfast": "Bread with butter and ham, a soft-boiled egg, and tea. Simple and filling.",
+    "big": "About the size of New Mexico. Right in the middle of Europe."
+  },
+  "UKR": {
+    "led": "The people vote for a president. Ukraine has been defending itself in a war since 2022.",
+    "makes": "Wheat, sunflower oil, and steel. Ukraine's farms help feed millions of people worldwide.",
+    "langs": "Ukrainian. It uses the Cyrillic alphabet, like Russian, but it's a completely different language.",
+    "gave": "Borscht (beet soup that's bright PINK), pysanky eggs, and some of the world's best farmland.",
+    "bfast": "Syrniki (sweet cheese pancakes) with sour cream and jam.",
+    "big": "The biggest country entirely in Europe. About the size of Texas."
+  },
+  "CUB": {
+    "led": "One party has been in charge since 1959. The Castro family led for over 60 years.",
+    "makes": "Sugar, tobacco (for cigars), and nickel. Cuba's cigars are the most famous in the world.",
+    "langs": "Spanish. Cuban Spanish is fast and musical, with its own slang.",
+    "gave": "The mojito cocktail, rumba dancing, and some of the world's best baseball players.",
+    "bfast": "Tostada (toasted bread) with butter and café con leche (coffee with milk).",
+    "big": "The biggest island in the Caribbean. About the size of Tennessee."
+  },
+  "CHL": {
+    "led": "The people vote for a president. Chile is one of the most stable democracies in South America.",
+    "makes": "Copper! Chile produces more copper than any country on Earth. Also wine and salmon.",
+    "langs": "Spanish. Chilean Spanish is so fast and full of slang that other Spanish speakers struggle to understand it.",
+    "gave": "Easter Island (with the giant stone head statues), Pablo Neruda's poetry, and the world's best telescopes.",
+    "bfast": "Bread with avocado (called 'palta') and a cup of tea. Avocado toast before it was cool.",
+    "big": "2,700 miles long but only 110 miles wide. Like a ribbon down the side of the continent."
+  },
+  "PAK": {
+    "led": "The people vote for a prime minister, but the military has also been in charge at times.",
+    "makes": "Textiles (clothes and fabric), rice, and leather. Pakistan makes a lot of the world's sports equipment.",
+    "langs": "Urdu and English are official. Plus Punjabi, Pashto, Sindhi, and many more.",
+    "gave": "The number system we use today passed through Pakistani scholars, and polo was played here first.",
+    "bfast": "Paratha (flaky flatbread) with fried eggs and sweet chai tea with cardamom.",
+    "big": "About twice the size of California. Over 230 million people."
+  },
+  "BHR": {
+    "led": "A king is in charge. The Al Khalifa family has ruled since the 1780s.",
+    "makes": "Oil refining, aluminum, and banking. Bahrain was the first Gulf country to discover oil.",
+    "langs": "Arabic. English is widely used in business.",
+    "gave": "The first oil discovery on the Arabian side of the Gulf, the Tree of Life, and Formula 1 racing in the desert.",
+    "bfast": "Balaleet (sweet vermicelli) with eggs, or bread with cheese and date syrup.",
+    "big": "About 300 square miles. 33 islands in the Persian Gulf."
+  },
+  "GRL": {
+    "led": "Greenland governs itself but Denmark handles defense and foreign affairs. An elected parliament runs local matters.",
+    "makes": "Fish and shrimp. Fishing is the backbone of the economy. Mining is growing.",
+    "langs": "Greenlandic (Kalaallisut) and Danish. Greenlandic is an Inuit language.",
+    "gave": "The world's largest island, the Global Seed Vault's neighbor, and a frontline view of climate change.",
+    "bfast": "Bread with butter and coffee, or dried fish and tea. Food has to be imported or hunted.",
+    "big": "The world's largest island. About 836,000 square miles but only 56,000 people."
+  },
+  "HKG": {
+    "led": "A Chief Executive is selected, but China's government has significant influence since the 2020 security law.",
+    "makes": "Finance, trade, and shipping. Hong Kong is one of the world's biggest financial centers.",
+    "langs": "Cantonese and English. Both are official. Mandarin is increasingly used.",
+    "gave": "Dim sum culture, martial arts films (Bruce Lee, Jackie Chan), and one of the world's most spectacular skylines.",
+    "bfast": "Congee with century egg, or a Hong Kong-style breakfast with toast, eggs, and milk tea.",
+    "big": "About 426 square miles. 7.4 million people in a tiny space."
+  },
+  "PSE": {
+    "led": "The Palestinian Authority governs parts of the West Bank. Hamas controls Gaza. The situation is complex and contested.",
+    "makes": "Olive oil, stone, and textiles. The economy is heavily affected by the conflict.",
+    "langs": "Arabic. English is taught in schools.",
+    "gave": "Some of the oldest continuously inhabited cities, tatreez embroidery, and a cuisine (hummus, musakhan, knafeh) that has influenced the entire region.",
+    "bfast": "Hummus with olive oil and bread, or ful medames with eggs and za'atar.",
+    "big": "About 2,400 square miles total (West Bank and Gaza combined). About the size of Delaware."
+  },
+  "ESH": {
+    "led": "Morocco controls most of the territory. The Sahrawi Arab Democratic Republic claims sovereignty. The UN considers it a non-self-governing territory.",
+    "makes": "Phosphate mining and fishing. Morocco extracts resources from the territory.",
+    "langs": "Arabic (Hassaniya dialect) and Spanish. French is also used.",
+    "gave": "Sahrawi tea culture, desert survival knowledge, and one of the world's longest-running territorial disputes.",
+    "bfast": "Bread with olive oil and tea, or couscous with milk. Desert-adapted food.",
+    "big": "About 103,000 square miles. Mostly desert. Very few people."
+  },
+  "GUF": {
+    "led": "Governed by France. French Guiana sends representatives to the French parliament.",
+    "makes": "The European Space Agency's launch site is the main economic driver. Also gold mining and fishing.",
+    "langs": "French. Creole and indigenous languages are also spoken.",
+    "gave": "Europe's spaceport, incredible Amazonian biodiversity, and Devil's Island (the infamous prison colony).",
+    "bfast": "Baguette with butter and coffee (French style), or bouillon with bread.",
+    "big": "About 32,000 square miles. Over 90% is rainforest."
+  },
+  "MYT": {
+    "led": "Governed by France as an overseas department since 2011. Sends representatives to the French parliament.",
+    "makes": "Tourism, fishing, and agriculture. Ylang-ylang flowers for perfume.",
+    "langs": "French and Shimaore (a Comorian language). Kibushi is also spoken.",
+    "gave": "One of the world's largest enclosed lagoons and incredible marine biodiversity.",
+    "bfast": "Mataba (cassava leaf stew) or bread with butter and coffee.",
+    "big": "About 144 square miles. Two main islands."
+  },
+  "GLP": {
+    "led": "Governed by France as an overseas department. Sends representatives to the French parliament.",
+    "makes": "Tourism, agriculture (bananas, sugar), and rum.",
+    "langs": "French and Guadeloupean Creole.",
+    "gave": "An active volcano (La Soufrière), butterfly-shaped islands, and Creole fusion cuisine.",
+    "bfast": "Accras (salt cod fritters) with bread, or baguette with butter and coffee.",
+    "big": "About 629 square miles. Two main islands shaped like a butterfly."
+  },
+  "MTQ": {
+    "led": "Governed by France as an overseas department.",
+    "makes": "Tourism, rum (rhum agricole), and bananas.",
+    "langs": "French and Martinican Creole.",
+    "gave": "Some of the world's finest rum, the deadly 1902 eruption of Mount Pelée, and poet Aimé Césaire.",
+    "bfast": "Pain au beurre (buttered bread) with hot chocolate, or accras with bread.",
+    "big": "About 436 square miles. One volcanic island."
+  },
+  "REU": {
+    "led": "Governed by France as an overseas department.",
+    "makes": "Sugar, vanilla, and rum. Tourism is growing fast.",
+    "langs": "French and Réunionnais Creole.",
+    "gave": "One of the most active volcanoes on Earth (Piton de la Fournaise), premium vanilla, and incredible biodiversity.",
+    "bfast": "Baguette with butter and jam, or rougail saucisse (sausage in tomato sauce) leftovers.",
+    "big": "About 970 square miles. One volcanic island in the Indian Ocean."
+  },
+  "PYF": {
+    "led": "A French overseas collectivity with significant local autonomy. An elected president runs local affairs.",
+    "makes": "Tourism, black pearl farming, and fishing.",
+    "langs": "French and Tahitian. Polynesian languages across the islands.",
+    "gave": "Tahitian black pearls, Polynesian navigation and tattoo culture, and some of the most iconic tropical scenery on Earth.",
+    "bfast": "Poisson cru (raw fish in coconut milk) or bread with butter and coffee.",
+    "big": "118 islands spread across an area the size of Western Europe, but only 1,500 square miles of land."
+  },
+  "GUM": {
+    "led": "A US territory. An elected governor runs local affairs. Guamanians are US citizens but cannot vote for president.",
+    "makes": "US military spending, tourism, and fishing.",
+    "langs": "English and Chamorro. Both are official.",
+    "gave": "4,000 years of Chamorro culture, a strategic military position, and where America's day begins.",
+    "bfast": "Red rice with eggs and longaniza (sausage), or pancit (noodles).",
+    "big": "About 210 square miles. One island in the western Pacific."
+  },
+  "ASM": {
+    "led": "A US territory. An elected governor runs local affairs. People born here are US nationals, NOT citizens.",
+    "makes": "Tuna canning (StarKist), US military presence, and fishing.",
+    "langs": "Samoan and English. Both are official.",
+    "gave": "More NFL players per capita than anywhere on Earth, fa'a Samoa culture, and tuna for the entire US market.",
+    "bfast": "Koko alaisa (cocoa rice) or bread with butter and tea.",
+    "big": "About 77 square miles. Five main islands and two atolls."
+  },
+  "MNP": {
+    "led": "A US commonwealth. An elected governor runs local affairs. Residents are US citizens.",
+    "makes": "Tourism (mainly from Asia), garment manufacturing, and fishing.",
+    "langs": "English, Chamorro, and Carolinian. All three are official.",
+    "gave": "Major WWII battle sites, the deepest ocean nearby (Mariana Trench), and Chamorro and Carolinian cultures.",
+    "bfast": "Rice with eggs and spam, or empanada.",
+    "big": "About 179 square miles. 14 islands, only 3 are populated."
+  },
+  "CUW": {
+    "led": "An autonomous country within the Kingdom of the Netherlands. An elected prime minister runs local affairs.",
+    "makes": "Oil refining (one of the Caribbean's largest refineries), tourism, and banking.",
+    "langs": "Papiamentu, Dutch, and English. Papiamentu is a Creole mixing Portuguese, Spanish, Dutch, and African languages.",
+    "gave": "UNESCO-listed Willemstad waterfront, blue Curaçao liqueur, and Papiamentu (a unique language).",
+    "bfast": "Funchi (cornmeal porridge) with cheese, or bread with peanut butter and cheese.",
+    "big": "About 171 square miles. One island."
+  },
+  "SXM": {
+    "led": "An autonomous country within the Kingdom of the Netherlands. An elected prime minister runs local affairs.",
+    "makes": "Tourism and port services. Cruise ships are a major revenue source.",
+    "langs": "English, Dutch, and Spanish. English is most common.",
+    "gave": "The famous Maho Beach where planes fly over sunbathers, and the smallest island shared by two nations.",
+    "bfast": "Johnny cake with saltfish, or bread with cheese and ham.",
+    "big": "About 13 square miles. The Dutch side of a shared island."
+  },
+  "BES": {
+    "led": "A special municipality of the Netherlands. Governed directly by the Dutch government.",
+    "makes": "Diving tourism, salt, and small-scale fishing.",
+    "langs": "Dutch and Papiamentu. English is widely spoken.",
+    "gave": "One of the world's best shore-diving destinations, protected reefs, and flamingo sanctuaries.",
+    "bfast": "Funchi with cheese, or bread with ham and Gouda.",
+    "big": "About 113 square miles. Three islands (Bonaire, Sint Eustatius, Saba)."
+  },
+  "AIA": {
+    "led": "A British Overseas Territory. A governor represents the King, and an elected Chief Minister runs local affairs.",
+    "makes": "Tourism and offshore banking. Luxury tourism is the main industry.",
+    "langs": "English.",
+    "gave": "Some of the Caribbean's most beautiful beaches (Shoal Bay), luxury resorts, and a quiet island lifestyle.",
+    "bfast": "Johnny cake with saltfish, or eggs with bread and tea.",
+    "big": "About 35 square miles. One small flat island."
+  },
+  "MSR": {
+    "led": "A British Overseas Territory. A governor represents the King.",
+    "makes": "Very little since the volcano destroyed the economy. Aid and small-scale agriculture.",
+    "langs": "English and Montserratian Creole.",
+    "gave": "A modern-day Pompeii (the buried capital of Plymouth), Irish Caribbean heritage, and incredible resilience.",
+    "bfast": "Bread with cheese and tea, or green banana porridge.",
+    "big": "About 40 square miles. Half is an exclusion zone around the volcano."
+  },
+  "BLM": {
+    "led": "A French overseas collectivity. A president of the territorial council handles local affairs.",
+    "makes": "Luxury tourism and duty-free shopping. One of the most exclusive destinations in the Caribbean.",
+    "langs": "French. English is widely spoken in tourism.",
+    "gave": "An exclusive celebrity vacation spot, French Caribbean cuisine, and the distinction of once being Swedish.",
+    "bfast": "Croissant with butter and jam, or fresh tropical fruit with yogurt.",
+    "big": "About 8 square miles. One tiny island."
+  },
+  "MAF": {
+    "led": "A French overseas collectivity. An elected president of the territorial council runs local affairs.",
+    "makes": "Tourism and restaurants. Known as the restaurant capital of the Caribbean.",
+    "langs": "French, English, and Creole.",
+    "gave": "More restaurants per square mile than almost anywhere, a shared island with no border fence, and French Caribbean culture.",
+    "bfast": "Croissant or baguette with coffee, or accras with bread.",
+    "big": "About 21 square miles. The French side of a shared island."
+  },
+  "SPM": {
+    "led": "A French overseas collectivity. Sends a senator and a deputy to the French parliament.",
+    "makes": "Fishing and tourism. The economy is small and heavily subsidized by France.",
+    "langs": "French.",
+    "gave": "The last piece of France in North America, a unique Basque and Breton fishing culture, and persistent fog.",
+    "bfast": "Baguette with butter and jam, and strong coffee. Fully French.",
+    "big": "About 93 square miles. Two main islands off the coast of Canada."
+  },
+  "ATF": {
+    "led": "Administered by France. No permanent residents, only rotating scientists and military personnel.",
+    "makes": "Scientific research and fishing licenses. No commercial economy.",
+    "langs": "French.",
+    "gave": "Critical research on climate change, incredible wildlife (penguins, seals, albatrosses), and some of the most remote islands on Earth.",
+    "bfast": "Whatever the research station serves. Typically French-influenced institutional meals.",
+    "big": "About 3,000 square miles of scattered islands in the southern Indian Ocean."
+  },
+  "SJM": {
+    "led": "Part of Norway. A governor represents the Norwegian government. Unique treaty allows citizens of many countries to live here.",
+    "makes": "Research, tourism, and coal mining (declining). The seed vault is here.",
+    "langs": "Norwegian. Many languages spoken due to the international community.",
+    "gave": "The Global Seed Vault, polar bear encounters, and one of the most unique legal arrangements on Earth (open to citizens of 46 countries).",
+    "bfast": "Bread with brunost (brown cheese) or kaviar, and strong coffee. Norwegian-style.",
+    "big": "About 24,000 square miles. Mostly glaciers and mountains."
+  },
+  "COK": {
+    "led": "Self-governing in free association with New Zealand. An elected prime minister runs the country. Cook Islanders are New Zealand citizens.",
+    "makes": "Tourism, fishing licenses, and black pearl farming.",
+    "langs": "English and Cook Islands Maori. Both are official.",
+    "gave": "Aitutaki lagoon (one of the most beautiful in the world), Polynesian dance culture, and a creative model of self-governance.",
+    "bfast": "Coconut bread with butter, or fried fish with rice.",
+    "big": "About 93 square miles of land spread across 15 islands in the South Pacific."
+  },
+  "NIU": {
+    "led": "Self-governing in free association with New Zealand. An elected premier runs the country. Niueans are New Zealand citizens.",
+    "makes": "Tourism, agriculture (taro, coconut), and government services.",
+    "langs": "Niuean and English. Both are official.",
+    "gave": "The first country with free nationwide WiFi, whale-watching from shore, and the nickname 'The Rock of Polynesia.'",
+    "bfast": "Taro with coconut cream, or bread with butter and tea.",
+    "big": "About 100 square miles. One raised coral island."
+  },
+  "PCN": {
+    "led": "A British Overseas Territory. A governor (based in New Zealand) oversees affairs. An elected island mayor handles daily life.",
+    "makes": "Honey (highly prized and pesticide-free), stamps, and handicrafts sold to passing ships.",
+    "langs": "English and Pitkern (a Creole mixing 18th-century English with Tahitian).",
+    "gave": "The Bounty mutiny story, the world's most remote inhabited community, and Pitkern language.",
+    "bfast": "Pilhi (a baked banana dish) or bread with local honey.",
+    "big": "About 18 square miles. One inhabited island. Population around 50."
+  },
+  "WLF": {
+    "led": "A French overseas collectivity. A French administrator oversees the territory, but three traditional kings retain real authority.",
+    "makes": "Agriculture (coconut, taro), fishing, and French government transfers.",
+    "langs": "French, Wallisian, and Futunan.",
+    "gave": "One of the last places where Polynesian monarchy and European governance coexist, and traditional kava ceremony culture.",
+    "bfast": "Breadfruit with coconut cream, or baguette with butter and coffee.",
+    "big": "About 54 square miles. Two main island groups."
+  },
+  "CYN": {
+    "led": "A president and prime minister are elected. But only Turkey recognizes Northern Cyprus as a country. The rest of the world considers it part of Cyprus.",
+    "makes": "Tourism, agriculture (citrus, olives), and university education (draws international students).",
+    "langs": "Turkish.",
+    "gave": "Ancient Salamis ruins, Bellapais Abbey, uncrowded beaches, and the last divided capital city in the world (Nicosia).",
+    "bfast": "Turkish-style: olives, tomatoes, cucumber, white cheese, bread, eggs, and tea.",
+    "big": "About 1,300 square miles. The northern third of Cyprus island."
+  }
+}

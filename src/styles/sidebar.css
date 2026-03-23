@@ -1,0 +1,31 @@
+/* ===== UNIFIED SIDEBAR ===== */
+.sidebar{position:fixed;left:8px;top:46px;z-index:22;display:flex;flex-direction:column;gap:2px;pointer-events:all}
+.sb-btn{display:flex;align-items:center;justify-content:center;gap:5px;background:var(--glass-1);backdrop-filter:blur(12px);border:1px solid var(--glass-1);border-radius:var(--r-sm);padding:5px;cursor:pointer;transition:all var(--ease) ease;font-family:Inter,system-ui,sans-serif;font-size:10px;font-weight:600;color:rgba(255,255,255,0.3);letter-spacing:0.2px;pointer-events:all;min-width:28px;min-height:28px}
+.sb-btn:hover{background:var(--glass-3);color:rgba(255,255,255,0.6);border-color:rgba(255,255,255,0.08)}
+.sb-btn.active{background:rgba(212,136,74,0.12);border-color:rgba(212,136,74,0.15);color:rgba(212,136,74,0.8)}
+.sb-play{padding:5px 10px;justify-content:center}
+.sb-icon{font-size:10px;line-height:1}
+.sb-label{font-size:9px;font-weight:600;letter-spacing:0.4px;text-transform:uppercase}
+.sb-lens-group{display:flex;flex-direction:column;gap:2px}
+.sb-sep{height:1px;background:var(--glass-1);margin:2px 0}
+.sb-lens svg{display:block}
+
+
+/* ===== SECRET CARD (Top of Secrets tab) ===== */
+.secret-card{background:rgba(212,136,74,0.06);border:1px solid rgba(212,136,74,0.12);
+  border-radius:var(--r-md);padding:10px 14px;margin:8px 14px 4px;display:flex;align-items:flex-start;gap:8px}
+.secret-emoji{font-size:18px;flex-shrink:0;line-height:1.3}
+.secret-text{font-family:Inter,system-ui,sans-serif;font-size:12px;font-weight:600;
+  color:rgba(255,255,255,0.65);line-height:1.5}
+.more-toggle{display:flex;align-items:center;gap:4px;padding:6px 14px;cursor:pointer;
+  font-family:Inter,system-ui,sans-serif;font-size:9px;font-weight:700;
+  color:rgba(255,255,255,0.2);letter-spacing:1px;text-transform:uppercase;transition:color 0.2s}
+.more-toggle:hover{color:rgba(255,255,255,0.4)}
+.more-toggle-arrow{transition:transform 0.2s;font-size:8px}
+.more-toggle.open .more-toggle-arrow{transform:rotate(90deg)}
+
+@media(max-height:500px){
+  .secret-card{padding:6px 10px;margin:4px 10px 2px}
+  .secret-text{font-size:11px}
+  .secret-emoji{font-size:14px}
+}

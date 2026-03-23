@@ -1,0 +1,14 @@
+/* ===== PORTRAIT ORIENTATION PROMPT ===== */
+.orient-prompt{position:fixed;inset:0;z-index:9999;
+  background:linear-gradient(170deg,#0f1f30 0%,#081420 50%,#060e18 100%);
+  display:none;flex-direction:column;align-items:center;justify-content:center;
+  color:white;text-align:center;padding:40px}
+.orient-globe{font-size:72px;animation:orientTilt 2s ease-in-out infinite}
+@keyframes orientTilt{0%,100%{transform:rotate(0deg)}50%{transform:rotate(90deg)}}
+.orient-text{font-family:'DM Serif Display',Georgia,serif;font-size:24px;
+  color:rgba(255,255,255,0.85);margin-top:24px;line-height:1.4;letter-spacing:-0.3px}
+.orient-sub{font-family:Inter,system-ui,sans-serif;font-size:13px;font-weight:600;
+  color:rgba(255,255,255,0.25);margin-top:12px}
+@media(max-width:600px) and (orientation:portrait){
+  .orient-prompt{display:flex !important}
+}
