@@ -1,0 +1,454 @@
+/* =============================================================================
+   LEGENDARY VAULT — Feature 3 CSS
+   Design tokens: saffron #E8AF38, card surface #1A2440, modal/focus #202C4A
+   Fonts: DM Serif Display (titles), Inter (body), Space Mono (counters/eyebrows)
+   GPU-composited animations only (transform + opacity).
+   ============================================================================= */
+
+/* ── Vault Overlay ─────────────────────────────────────────────────────────── */
+
+.vault-ov {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 12, 22, 0.82);
+  backdrop-filter: blur(14px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  padding: 16px;
+}
+
+.vault-ov.on {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ── Vault Panel ────────────────────────────────────────────────────────────── */
+
+.vault-panel {
+  background: #1A2440;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.6);
+  animation: vaultIn 0.4s cubic-bezier(.22,.68,0,1.04);
+}
+
+@keyframes vaultIn {
+  from { transform: scale(0.93) translateY(10px); opacity: 0; }
+  to   { transform: scale(1)    translateY(0);    opacity: 1; }
+}
+
+/* ── Vault Header ───────────────────────────────────────────────────────────── */
+
+.vault-header {
+  padding: 20px 20px 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  flex-shrink: 0;
+  position: relative;
+}
+
+.vault-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #F0F2F8;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.vault-subtitle {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #C8CDDA;
+  line-height: 1.7;
+  letter-spacing: 0.005em;
+}
+
+.vault-close-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.4);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: Inter, system-ui, sans-serif;
+  font-weight: 700;
+  transition: background 0.2s, color 0.2s;
+}
+
+.vault-close-btn:hover { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); }
+
+/* ── Vault Body ─────────────────────────────────────────────────────────────── */
+
+.vault-body {
+  flex: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 12px 16px;
+}
+
+/* ── Section Eyebrows ───────────────────────────────────────────────────────── */
+
+.vault-eyebrow {
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #E8AF38;
+  margin: 8px 0 10px;
+  text-transform: uppercase;
+}
+
+.vault-eyebrow--mystery {
+  color: #50556E;
+  margin-top: 16px;
+}
+
+/* ── Found Legendary Card ───────────────────────────────────────────────────── */
+
+.vault-card {
+  width: 100%;
+  border-radius: var(--r-md, 10px);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.vault-card--found {
+  background: #202C4A;
+  border: 1.5px solid #E8AF38;
+  box-shadow: 0 0 20px rgba(232,175,56,0.12);
+  cursor: pointer;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.vault-card--found:hover {
+  box-shadow: 0 0 28px rgba(232,175,56,0.22);
+  border-color: rgba(232,175,56,0.85);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .vault-card--found {
+    animation: vaultCardGlow 4s ease-in-out infinite;
+  }
+}
+
+@keyframes vaultCardGlow {
+  0%, 100% { box-shadow: 0 0 14px rgba(232,175,56,0.10); }
+  50%       { box-shadow: 0 0 26px rgba(232,175,56,0.25); }
+}
+
+.vault-card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.vault-flag {
+  flex-shrink: 0;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vault-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.vault-country-name {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #F0F2F8;
+  line-height: 1.2;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vault-continent {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.005em;
+}
+
+.vault-teaser {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  font-style: italic;
+  color: #C8CDDA;
+  line-height: 1.7;
+  letter-spacing: 0.005em;
+  margin-bottom: 6px;
+}
+
+.vault-discovered {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: #8C91A5;
+}
+
+/* ── Unknown Legendary Card ─────────────────────────────────────────────────── */
+
+.vault-card--unknown {
+  background: #101830;
+  border: 1px dashed rgba(232,175,56,0.2);
+  text-align: center;
+  cursor: default;
+}
+
+.vault-unknown-q {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #50556E;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.vault-unknown-hint {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.7;
+  letter-spacing: 0.005em;
+}
+
+/* ── Vault Footer ───────────────────────────────────────────────────────────── */
+
+.vault-footer {
+  padding: 12px 16px 14px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.vault-footer-count {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: #8C91A5;
+}
+
+.vault-legend-title {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #E8AF38;
+  margin-bottom: 4px;
+}
+
+/* ── Vault Button in Collection Header ──────────────────────────────────────── */
+
+.vault-btn {
+  background: transparent;
+  border: 1px solid rgba(232,175,56,0.3);
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-family: 'Space Mono', monospace;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #E8AF38;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.vault-btn:hover {
+  background: rgba(232,175,56,0.1);
+  border-color: rgba(232,175,56,0.6);
+}
+
+/* ── Journey Breadcrumb Marker ──────────────────────────────────────────────── */
+
+.journey-breadcrumb {
+  position: fixed;
+  z-index: 18;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(212,136,74,0.8);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #F0F2F8;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s cubic-bezier(.34,1.56,.64,1), opacity 0.3s;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(212,136,74,0.45);
+  line-height: 1;
+}
+
+.journey-breadcrumb--visible {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .journey-breadcrumb--visible {
+    animation: breadcrumbPulse 2.5s ease-in-out infinite;
+  }
+}
+
+@keyframes breadcrumbPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1);    box-shadow: 0 2px 8px rgba(212,136,74,0.45); }
+  50%       { transform: translate(-50%, -50%) scale(1.08); box-shadow: 0 2px 14px rgba(212,136,74,0.7); }
+}
+
+/* ── Milestone Peek (progress anticipation) ─────────────────────────────────── */
+
+.milestone-peek {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  color: #C8CDDA;
+  line-height: 1.4;
+  letter-spacing: 0.005em;
+  margin-top: 3px;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.milestone-peek.show {
+  opacity: 1;
+}
+
+.milestone-peek .peek-num {
+  color: #D4884A;
+  font-weight: 700;
+}
+
+/* ── Continent Nudge Badges ─────────────────────────────────────────────────── */
+
+.cont-nudge {
+  position: fixed;
+  z-index: 12;
+  background: #1A2440;
+  border-radius: 20px;
+  padding: 3px 8px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  color: #C8CDDA;
+  pointer-events: all;
+  cursor: pointer;
+  transform: translate(-50%, 0) scale(0.9);
+  opacity: 0;
+  transition: opacity 0.4s, transform 0.4s cubic-bezier(.22,.68,0,1.04);
+  white-space: nowrap;
+  line-height: 1.4;
+  user-select: none;
+}
+
+.cont-nudge.show {
+  transform: translate(-50%, 0) scale(1);
+  opacity: 1;
+}
+
+.cont-nudge .nudge-num {
+  font-weight: 700;
+}
+
+/* ── New Continent Toast ─────────────────────────────────────────────────────── */
+
+.new-cont-toast {
+  position: fixed;
+  bottom: -80px;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  background: #1A2440;
+  border-left: 3px solid #D4884A; /* continent color applied inline */
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.4);
+  transition: bottom 0.4s cubic-bezier(.22,.68,0,1.04);
+  pointer-events: none;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #F0F2F8;
+  line-height: 1.4;
+  letter-spacing: 0.005em;
+}
+
+.new-cont-toast--show {
+  bottom: 0;
+}
+
+/* ── Legendary Discovery Banner ─────────────────────────────────────────────── */
+
+.legendary-banner {
+  position: fixed;
+  inset: 0;
+  z-index: 140;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.legendary-banner.show {
+  opacity: 1;
+}
+
+.legendary-banner-text {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #E8AF38;
+  text-shadow: 0 0 30px rgba(232,175,56,0.5);
+  text-align: center;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+/* ── Responsive ─────────────────────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+  .vault-panel { max-height: 92vh; }
+  .vault-title { font-size: 18px; }
+}

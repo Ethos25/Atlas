@@ -73,6 +73,18 @@ const LENSES = {
   // NOTE: 'family' and 'favorites' are dynamic lenses — built at toggle time from live state.
 };
 
+/**
+ * Return a plain ISO-array map for each static lens, for use by missions.js.
+ * { biggest: [...], islands: [...], ... }
+ */
+export function getLensesMap() {
+  const out = {};
+  Object.keys(LENSES).forEach(function (k) {
+    out[k] = LENSES[k].countries || [];
+  });
+  return out;
+}
+
 let _ctx = null;
 let activeLens = null;
 var lensExpanded = false;

@@ -49,9 +49,9 @@
  *   cl()                 → void   (card-close from swipe.js, passed via ctx)
  */
 
-import { playSound } from '../ui/sounds.js';
+import { playSound, milestoneSound } from '../ui/sounds.js';
 import { fireConfetti } from '../ui/effects.js';
-import { checkMilestone, checkRecallQuiz } from '../features/achievements.js';
+import { checkMilestone } from '../features/achievements.js';
 import { CONN_TYPES, getCountryConns, filterConnsByAge, renderConnCard } from './connections.js';
 import { updateSwipeArrows } from './swipe.js';
 
@@ -164,20 +164,41 @@ export function _showCard(a) {
   const stripe = document.getElementById('pcStripe');
   if (stripe) stripe.style.background = c.stripe || '#aaa';
 
-  // Legendary country treatment
+  // Postcard entrance stagger — add .pc-enter, then .pc-enter-active on next frame
   const pc = document.querySelector('.postcard');
+  if (pc) {
+    pc.classList.remove('pc-enter', 'pc-enter-active');
+    pc.classList.add('pc-enter');
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        pc.classList.add('pc-enter-active');
+        // Remove stagger classes after animations complete so they don't interfere with tab switching
+        setTimeout(function() { pc.classList.remove('pc-enter', 'pc-enter-active'); }, 700);
+      });
+    });
+  }
+
+  // Legendary country treatment
   if (pc) {
     if (_ctx.isLegendary(a)) {
       pc.style.border     = '1px solid rgba(212,176,68,0.25)';
       pc.style.boxShadow  = '0 8px 40px rgba(0,0,0,0.4), 0 0 20px rgba(212,176,68,0.08)';
       if (!_ctx.getVisited().has(a)) {
-        setTimeout(() => {
-          const badge = document.createElement('div');
-          badge.style.cssText = 'position:fixed;top:40%;left:50%;transform:translate(-50%,-50%);z-index:50;background:rgba(16,24,38,0.95);backdrop-filter:blur(24px);border:1px solid rgba(212,176,68,0.3);border-radius:var(--r-md);padding:20px 28px;text-align:center;opacity:0;transition:opacity 0.5s;pointer-events:none';
-          badge.innerHTML = '<div style="font-size:32px;margin-bottom:6px">✦</div><div style="font-family:DM Serif Display,Georgia,serif;font-size:18px;color:white">Legendary Discovery!</div><div style="font-family:Inter,system-ui,sans-serif;font-size:11px;color:rgba(212,176,68,0.7);margin-top:4px">Only 16 legendary countries exist</div>';
-          document.body.appendChild(badge);
-          setTimeout(() => { badge.style.opacity = '1'; }, 50);
-          setTimeout(() => { badge.style.opacity = '0'; setTimeout(() => badge.remove(), 500); }, 3000);
+        // Full-width legendary discovery banner (800ms: 200ms fade-in + 400ms hold + 200ms fade-out)
+        setTimeout(function () {
+          const banner = document.createElement('div');
+          banner.className = 'legendary-banner';
+          banner.innerHTML = '<div class="legendary-banner-text">✦ Legendary Discovery! ✦</div>';
+          document.body.appendChild(banner);
+          milestoneSound();
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () { banner.classList.add('show'); });
+          });
+          fireConfetti(2000);
+          setTimeout(function () {
+            banner.classList.remove('show');
+            setTimeout(function () { if (banner.parentNode) banner.remove(); }, 200);
+          }, 600);
         }, 400);
       }
     } else {
@@ -191,15 +212,13 @@ export function _showCard(a) {
   const GREET = _ctx.getGREET();
   const flagWrap = document.getElementById('pcFlag');
   if (flagWrap) {
-    if (c.fc && FL[c.fc]) flagWrap.innerHTML = '<img src="' + FL[c.fc] + '" style="width:48px;height:auto;max-height:34px;border-radius:var(--r-sm);box-shadow:var(--shadow-md)" alt="">';
+    if (c.fc && FL[c.fc]) flagWrap.innerHTML = '<img src="' + FL[c.fc] + '" alt="" style="height:26px;width:auto;max-width:40px;border-radius:2px;border:none;box-shadow:0 2px 8px rgba(0,0,0,0.2);display:block">';
     else flagWrap.innerHTML = '';
   }
 
+  // Greeting shown on envelope — suppress in header to save vertical space
   const greetEl = document.getElementById('pcGreetTxt');
-  if (greetEl) {
-    if (c.fc && GREET[c.fc]) { greetEl.textContent = GREET[c.fc].d; greetEl.style.display = 'block'; }
-    else greetEl.style.display = 'none';
-  }
+  if (greetEl) greetEl.style.display = 'none';
 
   const nameEl = document.getElementById('pcName');
   if (nameEl) nameEl.textContent = c.n;
@@ -207,7 +226,12 @@ export function _showCard(a) {
   const CONT_MAP  = _ctx.getCONT_MAP();
   const CONT_COL  = _ctx.getCONT_COL();
   const contEl    = document.getElementById('pcCont');
-  if (contEl) contEl.textContent = c.c;
+  if (contEl) {
+    contEl.textContent = c.c;
+    const contCode = CONT_MAP[a];
+    const contCC   = contCode && CONT_COL[contCode];
+    contEl.style.color = (contCC && contCC.base) ? contCC.base : '';
+  }
 
   // Territory / political status badge
   const TERRITORY_OF     = _ctx.getTERRITORY_OF();
@@ -221,6 +245,21 @@ export function _showCard(a) {
     else if (POLITICAL_STATUS[a]) { statusEl.textContent = POLITICAL_STATUS[a]; statusEl.className = 'pc-status political'; statusEl.style.display = 'inline-block'; }
   }
 
+  // Sibling "was here first" badge
+  var sibBadge = document.getElementById('pcSibBadge');
+  if (sibBadge && _ctx.getFirstSiblingFor) {
+    var firstSib = _ctx.getFirstSiblingFor(a);
+    if (firstSib && _ctx.getAnimalFor) {
+      var sibAnimal = _ctx.getAnimalFor(firstSib);
+      sibBadge.innerHTML = '<span style="font-size:11px">' + sibAnimal + '</span>' +
+        '<span class="pc-sib-badge-text">' + firstSib + ' was here first!</span>';
+      sibBadge.style.display = 'inline-flex';
+    } else {
+      sibBadge.style.display = 'none';
+      sibBadge.innerHTML = '';
+    }
+  }
+
   // Family bar
   const fbar = document.getElementById('fBar');
   if (fbar) fbar.className = 'fam-bar' + (c.fam ? ' show' : '');
@@ -229,7 +268,20 @@ export function _showCard(a) {
   const EASTER_EGGS = _ctx.getEASTER_EGGS();
   const sigEmoji    = document.getElementById('pcSigEmoji');
   if (sigEmoji && c.hero && c.hero.length) {
-    sigEmoji.innerHTML  = c.hero[0];
+    // HiDPI fix: inject srcset into the HTML string BEFORE setting innerHTML so
+    // the browser never fetches the 32px source on 2x/3x screens.
+    // HiDPI: use width descriptors + sizes so browser picks the right source
+    // regardless of DPR. sm=32w, md=64w, lg=120w; rendered at ~44px CSS.
+    // At DPR=1: ~44px needed → md(64w) ✓  At DPR=2: ~88px needed → lg(120w) ✓
+    const heroHtml = c.hero[0].replace(
+      /(<img\s[^>]*src=['"])([^'"]*)-sm\.png(['"'])/,
+      function(_, pre, base, q) {
+        return pre + base + '-sm.png' + q +
+          ' srcset="' + base + '-sm.png 32w,' + base + '-md.png 64w,' + base + '-lg.png 120w"' +
+          ' sizes="44px"';
+      }
+    );
+    sigEmoji.innerHTML  = heroHtml;
     sigEmoji.style.display = 'block';
     sigEmoji.style.cursor  = EASTER_EGGS[a] ? 'pointer' : 'default';
     sigEmoji.onclick = EASTER_EGGS[a] ? function() {
@@ -295,16 +347,15 @@ export function _showCard(a) {
   // Mark as visited
   const visited = _ctx.getVisited();
   if (!visited.has(a)) {
-    window._tellSomeoneCountry = c.n;
     visited.add(a);
     playSound('discover');
     if (!_ctx.isFirstDiscDone()) { _ctx.setFirstDiscDone(true); }
-    checkMilestone();
+    // Defer milestone check — fire AFTER child closes postcard (see cl() in swipe.js)
+    window._pendingMilestoneCheck = true;
     _ctx.placeMarkers();
     _ctx.updN();
     _ctx.saveGame();
-    if (visited.size % 3 === 0) _ctx.showEncouragement(c.n);
-    checkRecallQuiz();
+    // showEncouragement removed — toast competed with envelope on card open
   }
 
   // Journey next button
@@ -329,7 +380,13 @@ export function _showCard(a) {
       } else {
         jnb.style.display = 'flex';
         jnb.textContent   = 'Finish ✨';
-        jnb.onclick = function() { _ctx.setActiveJourney(null); _ctx.cl(); fireConfetti(3500); };
+        (function (journeyName, journeyEmoji) {
+          jnb.onclick = function () {
+            window._pendingJourneyComplete = { journeyName: journeyName, emoji: journeyEmoji };
+            _ctx.setActiveJourney(null);
+            _ctx.cl();
+          };
+        })(activeJourney.name, activeJourney.emoji || '🗺️');
       }
     } else {
       jnb.style.display  = 'none';

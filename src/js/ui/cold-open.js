@@ -20,6 +20,19 @@ import { loadGame, getLastPlayer } from '../state.js';
 
 let _ctx;
 
+// Compute union of all countries discovered across all family members + FAM
+function _getFamilyCompletion(FAMILY_NAMES, FAM, D) {
+  const union = new Set(FAM);
+  FAMILY_NAMES.forEach(function(name) {
+    const d = loadGame(name);
+    if (d && d.visited) d.visited.forEach(function(iso) { union.add(iso); });
+  });
+  const count   = union.size;
+  const total   = Object.keys(D).length;
+  const percent = total > 0 ? Math.round(count / total * 100) : 0;
+  return { count, total, percent };
+}
+
 export function initColdOpen(ctx) {
   _ctx = ctx;
 }
@@ -114,6 +127,20 @@ export function initProfiles() {
       _applyReturningUserUI(activePlayer, saved, FAM, D);
     }
   }
+
+  // ── Family completion progress indicator ───────────────────────────────────
+  _renderFamilyProgress(FAMILY_NAMES, FAM, D);
+}
+
+function _renderFamilyProgress(FAMILY_NAMES, FAM, D) {
+  const el = document.getElementById('coFamilyProgress');
+  if (!el) return;
+  const { percent } = _getFamilyCompletion(FAMILY_NAMES, FAM, D);
+  const familyLabel = FAMILY_NAMES.length > 0 ? FAMILY_NAMES[0] + "'s family" : 'Your family';
+  el.style.display = 'flex';
+  el.innerHTML =
+    '<div class="co-fp-text">The ' + familyLabel + ' has explored <b>' + percent + '%</b> of the world</div>' +
+    '<div class="co-fp-bar-track"><div class="co-fp-bar-fill" style="width:' + percent + '%"></div></div>';
 }
 
 /**

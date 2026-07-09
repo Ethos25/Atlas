@@ -14,6 +14,9 @@
  * ctx shape:
  *   getD()           → { [iso]: countryData }
  *   getFL()          → { [fc]: flagUrl }
+ *   getGREET()       → { [iso]: greetingString }
+ *   getCONT_MAP()    → { [iso]: continentCode }
+ *   getCONT_COL()    → { [code]: { base, bright, stroke } }
  *   getPlayerName()  → string
  *   getSETS()        → sets definition map
  *   getSetsProgress()→ { [setId]: { collected, completed_at } }
@@ -28,12 +31,45 @@ import { triggerSetCelebration }        from './celebration.js';
 
 let _ctx = null;
 
+function hexToRgba(hex, alpha) {
+  var r = parseInt(hex.slice(1, 3), 16);
+  var g = parseInt(hex.slice(3, 5), 16);
+  var b = parseInt(hex.slice(5, 7), 16);
+  return 'rgba(' + r + ',' + g + ',' + b + ',' + alpha + ')';
+}
+
+// ── Teaser & subline content pools ────────────────────────────────────────────
+var FALLBACK_TEASERS = [
+  "I have a secret to tell you...",
+  "Something amazing is waiting inside...",
+  "You won't believe what I'm famous for...",
+  "I've been waiting to meet you!",
+];
+
+var ADDRESS_SUBLINES = [
+  "I picked you!",
+  "I've been waiting for you!",
+  "Open me!",
+  "This one's just for you.",
+  "Ready for an adventure?",
+  "You're going to love this.",
+];
+
+// ── Rarity disclosure data ────────────────────────────────────────────────────
+var RARITY_INFO = {
+  uncommon:  { label: 'Uncommon',  color: '#B4BECD', desc: 'Not every explorer finds this one!' },
+  rare:      { label: 'Rare',      color: '#E8AF38', desc: 'This is a very special find!' },
+  legendary: { label: 'Legendary', color: '#E8AF38', desc: 'Almost nobody has this one!' }
+};
+
 // ── Per-sequence state ────────────────────────────────────────────────────────
 let _iso          = null;
 let _rarity       = 'common';
 let _newSets      = [];
-let _autoTimer    = null;
+let _autoTimer    = null;  // unused — auto-advance removed; kept for _cancelAuto compatibility
 let _envTapFn     = null;  // current card-tap handler (removed on advance)
+let _tapped       = false; // true once the child has tapped the envelope
+let _hintTimer    = null;  // delayed "Tap to open" hint timer
 
 // ── Init ─────────────────────────────────────────────────────────────────────
 
@@ -92,9 +128,19 @@ export function showCardWithArrival(iso) {
 
 /** Dismiss the envelope without opening the card (X button). */
 export function closeEnvelope() {
+  _tapped = true; // prevent any pending timeouts from acting
   _cancelAuto();
+  _cancelHint();
   _cancelEnvTap();
   _cleanupDots();
+
+  // Remove pulse class if it was added
+  var card = document.getElementById('envCard');
+  if (card) card.classList.remove('env-card--pulse');
+
+  // Hide rarity tooltip
+  var tipEl = document.getElementById('envSealTip');
+  if (tipEl) tipEl.classList.remove('show');
 
   const ov = document.getElementById('envOv');
   if (!ov) return;
@@ -114,26 +160,170 @@ export function closeEnvelope() {
 // ── Build DOM ─────────────────────────────────────────────────────────────────
 
 function _buildEnvelope(iso, pc) {
-  const D    = _ctx.getD();
-  const FL   = _ctx.getFL ? _ctx.getFL() : {};
-  const dd   = D[iso] || {};
-  const name = _ctx.getPlayerName();
+  const D        = _ctx.getD();
+  const FL       = _ctx.getFL ? _ctx.getFL() : {};
+  const GREET    = _ctx.getGREET ? _ctx.getGREET() : {};
+  const CONT_MAP = _ctx.getCONT_MAP ? _ctx.getCONT_MAP() : {};
+  const dd       = D[iso] || {};
+  const name     = _ctx.getPlayerName();
+  // Capitalize first letter of player name
+  const nameDisp = name ? name.charAt(0).toUpperCase() + name.slice(1) : 'Explorer';
+  const countryName = dd.n || iso;
+  const cont     = CONT_MAP[iso] || '';
 
-  // Flag stamp
-  const stampEl = document.getElementById('envStamp');
-  if (stampEl) {
+  // Clean rectangular flag (no stamp frame)
+  var flagEl = document.getElementById('envFlag');
+  if (flagEl) {
     if (dd.fc && FL && FL[dd.fc]) {
-      stampEl.innerHTML = '<img src="' + FL[dd.fc] + '" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:2px;display:block">';
+      flagEl.innerHTML = '<img src="' + FL[dd.fc] + '" alt="" style="display:block;width:48px;height:auto;max-height:36px;border-radius:2px;border:1px solid rgba(60,50,30,0.18);box-shadow:0 2px 8px rgba(0,0,0,0.2)">';
     } else {
-      stampEl.textContent = dd.f || '\uD83C\uDFF3';
+      flagEl.innerHTML = '';
     }
   }
 
-  // Address text
-  var toEl      = document.getElementById('envTo');
-  var countryEl = document.getElementById('envCountry');
-  if (toEl)      toEl.textContent      = 'To: ' + name;
-  if (countryEl) countryEl.textContent = dd.n || iso;
+  // Postmark: continent + date
+  var CONT_FULL = {
+    'AF': 'AFRICA', 'SA': 'SOUTH AMERICA', 'NA': 'NORTH AMERICA',
+    'EU': 'EUROPE', 'AS': 'ASIA', 'OC': 'OCEANIA', 'AN': 'ANTARCTICA'
+  };
+  var pmCont = document.getElementById('envPmCont');
+  var pmDate = document.getElementById('envPmDate');
+  if (pmCont) pmCont.textContent = CONT_FULL[cont] || cont;
+  if (pmDate) {
+    var now = new Date();
+    pmDate.textContent = (now.getMonth() + 1) + '/' + now.getDate() + '/' + now.getFullYear();
+  }
+
+  // Apply continent color to postmark circle and continent name
+  var CONT_COL    = _ctx.getCONT_COL ? _ctx.getCONT_COL() : {};
+  var contCC      = CONT_COL[cont];
+  var postmarkEl  = document.getElementById('envPostmark');
+  if (postmarkEl && contCC && contCC.base) {
+    postmarkEl.style.borderColor = contCC.base;
+    postmarkEl.style.background  = hexToRgba(contCC.base, 0.12);
+  } else if (postmarkEl) {
+    postmarkEl.style.borderColor = '';
+    postmarkEl.style.background  = '';
+  }
+  if (pmCont && contCC && contCC.base) {
+    pmCont.style.color = contCC.base;
+  } else if (pmCont) {
+    pmCont.style.color = '';
+  }
+
+  // From line
+  var fromEl = document.getElementById('envFrom');
+  if (fromEl) fromEl.textContent = 'From: ' + countryName;
+
+  // To + subtitle
+  var toEl = document.getElementById('envTo');
+  var subEl = document.getElementById('envSubtitle');
+  if (toEl)  toEl.textContent  = 'To: ' + nameDisp;
+  if (subEl) subEl.textContent = 'A letter from ' + countryName;
+
+  // Greeting — GREET is keyed by flag code (fc), not ISO
+  var greetEl = document.getElementById('envGreet');
+  if (greetEl) greetEl.textContent = (dd.fc && GREET[dd.fc] ? GREET[dd.fc].d : '');
+
+  // Teaser line — from envelope-teasers.json, with fallback pool
+  var TEASERS = _ctx.getTEASERS ? _ctx.getTEASERS() : {};
+  var teaserEl = document.getElementById('envTeaser');
+  if (teaserEl) {
+    var teaserText = TEASERS[iso] || FALLBACK_TEASERS[Math.floor(Math.random() * FALLBACK_TEASERS.length)];
+    teaserEl.textContent = teaserText;
+    teaserEl.classList.remove('vis');
+  }
+
+  // Rarity seal
+  var sealEl = document.getElementById('envSeal');
+  if (sealEl) {
+    sealEl.className = 'env-seal';
+    sealEl.classList.remove('vis');
+    if (_rarity === 'uncommon') {
+      sealEl.classList.add('env-seal--uncommon');
+      sealEl.textContent = '\u2736';
+    } else if (_rarity === 'rare') {
+      sealEl.classList.add('env-seal--rare');
+      sealEl.textContent = '\u2736';
+    } else if (_rarity === 'legendary') {
+      sealEl.classList.add('env-seal--legendary');
+      sealEl.textContent = '\u2605';
+    } else {
+      sealEl.textContent = '';
+    }
+  }
+
+  // ── Rarity seal tap-to-reveal disclosure ─────────────────────────────
+  // Reset tooltip first (stale from previous envelope)
+  var tipEl = document.getElementById('envSealTip');
+  if (tipEl) tipEl.classList.remove('show');
+
+  if (sealEl && _rarity !== 'common') {
+    // Enable tap on this seal
+    sealEl.style.pointerEvents = 'auto';
+    sealEl.style.cursor        = 'pointer';
+
+    sealEl.onclick = function (e) {
+      e.stopPropagation(); // do NOT trigger envelope open
+
+      var info = RARITY_INFO[_rarity];
+      if (!info || !tipEl) return;
+
+      // Position tooltip just above the seal using live coords
+      var sealRect  = sealEl.getBoundingClientRect();
+      var sceneEl   = document.getElementById('envScene');
+      var sceneRect = sceneEl ? sceneEl.getBoundingClientRect() : { left: 0, bottom: window.innerHeight };
+
+      var leftPx   = sealRect.left - sceneRect.left + sealRect.width / 2;
+      var bottomPx = sceneRect.bottom - sealRect.top + 8;
+      tipEl.style.left   = leftPx + 'px';
+      tipEl.style.bottom = bottomPx + 'px';
+
+      document.getElementById('envSealTipTier').textContent = info.label;
+      document.getElementById('envSealTipTier').style.color = info.color;
+      document.getElementById('envSealTipDesc').textContent = info.desc;
+      tipEl.classList.add('show');
+
+      // Dismiss on the very next tap anywhere (10ms guard avoids self-dismiss)
+      setTimeout(function () {
+        document.addEventListener('click', function dismissTip() {
+          tipEl.classList.remove('show');
+          document.removeEventListener('click', dismissTip);
+        }, { once: true });
+      }, 10);
+    };
+  } else if (sealEl) {
+    // Common — no seal, no tap
+    sealEl.style.pointerEvents = 'none';
+    sealEl.style.cursor        = '';
+    sealEl.onclick             = null;
+  }
+
+  // Address subline — random from pool
+  var sublineEl = document.getElementById('envSubline');
+  if (sublineEl) {
+    sublineEl.textContent = ADDRESS_SUBLINES[Math.floor(Math.random() * ADDRESS_SUBLINES.length)];
+  }
+
+  // Reset stagger classes
+  var bodyEl = document.querySelector('.env-body');
+  [document.querySelector('.env-tr'), fromEl, bodyEl, greetEl].forEach(function(el) {
+    if (el) el.classList.remove('vis');
+  });
+
+  // Reset tap hint
+  var hintEl = document.getElementById('envTapHint');
+  if (hintEl) hintEl.style.opacity = '0';
+
+  // Reset flap to visible/down state — without this, the lifted class from the
+  // previous envelope sticks and subsequent envelopes show no flap triangle.
+  var flapEl = document.querySelector('.env-flap');
+  if (flapEl) {
+    flapEl.style.transition = 'none';
+    flapEl.classList.remove('env-flap--lift');
+    void flapEl.offsetWidth; // force reflow so transition: none takes effect
+    flapEl.style.transition = '';
+  }
 
   // Reset card position & rarity class
   var card = document.getElementById('envCard');
@@ -141,7 +331,7 @@ function _buildEnvelope(iso, pc) {
     card.style.transition = 'none';
     card.style.transform  = 'translateY(140%) scale(0.85)';
     card.style.opacity    = '0';
-    card.className        = 'env-card env-card--' + _rarity;
+    card.className        = 'env-card';
   }
 
   // Reset ring
@@ -165,8 +355,25 @@ function _showOv() {
 // ── Phase 1: Slide in (400ms spring) ─────────────────────────────────────────
 
 function _phaseSlideIn() {
+  _tapped = false;
+
   var card = document.getElementById('envCard');
+  var ring = document.getElementById('envRing');
   if (!card) return;
+
+  // Ring must always be visible — it's the card's parent.
+  // For common rarity it has no visual styling; non-common gets a glow class later.
+  if (ring) {
+    ring.style.transition = 'opacity 200ms ease';
+    ring.style.opacity    = '1';
+  }
+
+  // Install tap listener immediately — handles impatient taps during slide-in.
+  // Uses a wrapper so _envTapFn reference is stable for _cancelEnvTap.
+  card.style.cursor = 'pointer';
+  _envTapFn = function () { _onEnvTap(); };
+  card.addEventListener('click', _envTapFn, { once: true });
+
   card.style.transition = 'transform 400ms cubic-bezier(0.34,1.56,0.64,1), opacity 250ms ease';
   card.style.transform  = 'translateY(0) scale(1)';
   card.style.opacity    = '1';
@@ -177,6 +384,9 @@ function _phaseSlideIn() {
 // ── Phase 2: Landed ───────────────────────────────────────────────────────────
 
 function _phaseLanded() {
+  // If the child tapped during slide-in, _onEnvTap already fired — bail out.
+  if (_tapped) return;
+
   // Reveal X button
   var xBtn = document.getElementById('envXBtn');
   if (xBtn) {
@@ -185,22 +395,99 @@ function _phaseLanded() {
     xBtn.style.pointerEvents = 'auto';
   }
 
-  // Allow tap to advance early
-  var card = document.getElementById('envCard');
-  if (card) {
-    card.style.cursor = 'pointer';
-    _envTapFn = function () { _cancelAuto(); _phaseSwap(); };
-    card.addEventListener('click', _envTapFn, { once: true });
-  }
+  // Tap listener is already on the card from _phaseSlideIn — no need to re-add.
+
+  // Staggered content fade-ins after settle
+  // 200ms: From line + body (To/subtitle)
+  setTimeout(function () {
+    if (_tapped) return;
+    var fromEl = document.getElementById('envFrom');
+    var bodyEl = document.querySelector('.env-body');
+    if (fromEl) fromEl.classList.add('vis');
+    if (bodyEl) bodyEl.classList.add('vis');
+  }, 200);
+  // 350ms: flag + postmark
+  setTimeout(function () {
+    if (_tapped) return;
+    var trEl = document.querySelector('.env-tr');
+    if (trEl) trEl.classList.add('vis');
+  }, 350);
+  // 500ms: greeting, teaser, seal
+  setTimeout(function () {
+    if (_tapped) return;
+    var greetEl  = document.getElementById('envGreet');
+    var teaserEl = document.getElementById('envTeaser');
+    var sealEl   = document.getElementById('envSeal');
+    if (greetEl)  greetEl.classList.add('vis');
+    if (teaserEl) teaserEl.classList.add('vis');
+    if (sealEl && _rarity !== 'common') sealEl.classList.add('vis');
+  }, 500);
 
   // Rarity ring pops after 500ms pause
-  setTimeout(_phaseRarityPop, 500);
+  setTimeout(function() { if (!_tapped) _phaseRarityPop(); }, 500);
 
-  // Auto-advance at 2500ms from landing
-  _autoTimer = setTimeout(function () {
-    _cancelEnvTap();
-    _phaseSwap();
-  }, 2500);
+  // After stagger completes, add gentle idle pulse — visual affordance to tap
+  setTimeout(function () {
+    if (_tapped) return;
+    var card = document.getElementById('envCard');
+    if (card) card.classList.add('env-card--pulse');
+  }, 600);
+
+  // ── Delayed tap hint — if child hasn't tapped after 4s, fade in hint ─────
+  _hintTimer = setTimeout(function () {
+    if (_tapped) return;
+    var hint = document.getElementById('envTapHint');
+    if (hint) hint.style.opacity = '1';
+  }, 4000);
+
+  // ── No auto-advance timer — child decides when to open (child-paced) ──────
+}
+
+// ── Envelope tap handler (early or late) ─────────────────────────────────────
+
+function _onEnvTap() {
+  if (_tapped) return; // guard against double-fire
+  _tapped = true;
+  _envTapFn = null;
+  _cancelAuto();
+  _cancelHint();
+
+  // Fast-forward all stagger elements to their final visible state
+  _fastForward();
+
+  // Stop the idle pulse
+  var card = document.getElementById('envCard');
+  if (card) card.classList.remove('env-card--pulse');
+
+  // Animate flap lifting before the card fades
+  _liftFlap();
+
+  // Swap to postcard after flap animation (300ms) + small buffer
+  setTimeout(_phaseSwap, 350);
+}
+
+// Immediately reveal all stagger elements (for impatient-tap fast-forward)
+function _fastForward() {
+  var fromEl   = document.getElementById('envFrom');
+  var bodyEl   = document.querySelector('.env-body');
+  var trEl     = document.querySelector('.env-tr');
+  var greetEl  = document.getElementById('envGreet');
+  var teaserEl = document.getElementById('envTeaser');
+  var sealEl   = document.getElementById('envSeal');
+  if (fromEl)   fromEl.classList.add('vis');
+  if (bodyEl)   bodyEl.classList.add('vis');
+  if (trEl)     trEl.classList.add('vis');
+  if (greetEl)  greetEl.classList.add('vis');
+  if (teaserEl) teaserEl.classList.add('vis');
+  if (sealEl && _rarity !== 'common') sealEl.classList.add('vis');
+  // Pop rarity ring immediately
+  _phaseRarityPop();
+}
+
+// Lift the envelope flap (clip-path collapses to flat line)
+function _liftFlap() {
+  var flap = document.querySelector('.env-flap');
+  if (flap) flap.classList.add('env-flap--lift');
 }
 
 // ── Phase 3: Rarity pop (200ms after 500ms pause) ────────────────────────────
@@ -369,19 +656,42 @@ function _attachSwipeDown() {
   obs.observe(cOv, { attributes: true, attributeFilter: ['class'] });
 }
 
-// ── Country stamp after card close ───────────────────────────────────────────
+// ── Country stamp + collection toast after card close (first-visit only) ─────
 
 function _watchForCardClose(iso) {
   var cOv = document.getElementById('cOv');
   if (!cOv || !iso) return;
 
+  var D = _ctx.getD ? _ctx.getD() : {};
+  var countryName = (D[iso] && D[iso].n) ? D[iso].n : iso;
+
   var obs = new MutationObserver(function () {
     if (!cOv.classList.contains('on')) {
       obs.disconnect();
       _stampCountry(iso);
+      _showCollectionToast(countryName);
     }
   });
   obs.observe(cOv, { attributes: true, attributeFilter: ['class'] });
+}
+
+function _showCollectionToast(countryName) {
+  var toast = document.createElement('div');
+  toast.className   = 'env-collection-toast';
+  toast.textContent = countryName + ' added to your collection!';
+  document.body.appendChild(toast);
+
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+      toast.classList.add('env-collection-toast--in');
+    });
+  });
+
+  // Visible for 2500ms, then fade out
+  setTimeout(function () {
+    toast.classList.remove('env-collection-toast--in');
+    setTimeout(function () { toast.remove(); }, 300);
+  }, 2500);
 }
 
 function _stampCountry(iso) {
@@ -414,6 +724,12 @@ function _stampCountry(iso) {
 
 function _cancelAuto() {
   if (_autoTimer) { clearTimeout(_autoTimer); _autoTimer = null; }
+}
+
+function _cancelHint() {
+  if (_hintTimer) { clearTimeout(_hintTimer); _hintTimer = null; }
+  var hint = document.getElementById('envTapHint');
+  if (hint) hint.style.opacity = '0';
 }
 
 function _cancelEnvTap() {

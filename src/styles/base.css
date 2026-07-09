@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+/* Font imports handled in index.html <head> for preconnect performance */
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 :root{
   /* Radius scale */
@@ -13,12 +13,13 @@
   --glass-1:rgba(255,255,255,0.04); --glass-2:rgba(255,255,255,0.06);
   --glass-3:rgba(255,255,255,0.08); --glass-4:rgba(255,255,255,0.12);
   /* Accent */
-  --gold:#D4884A; --gold-glow:rgba(212,136,74,0.3);
+  --gold:#E8AF38; --gold-glow:rgba(232,175,56,0.3);
   /* Type scale */
   --text-xs:8px; --text-sm:10px; --text-base:12px; --text-md:14px;
   --text-lg:18px; --text-xl:22px; --text-2xl:28px; --text-3xl:36px;
 }
-html,body{width:100%;height:100%;overflow:hidden;font-family:Inter,system-ui,sans-serif;background:#0c1a2a;touch-action:manipulation}
+html,body{width:100%;height:100%;overflow:hidden;font-family:Inter,system-ui,sans-serif;background:#101830;background:radial-gradient(ellipse at 50% 45%,#182848 0%,#101830 70%);touch-action:manipulation}
+:focus-visible{outline:2px solid #E8AF38;outline-offset:2px}
 .icon-lg{width:120px;height:120px;vertical-align:middle}
 .icon-md{width:64px;height:64px;vertical-align:middle}
 .icon-sm{width:32px;height:32px;vertical-align:middle}

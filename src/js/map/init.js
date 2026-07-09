@@ -85,11 +85,11 @@ export async function initMap() {
   const svg = d3.select('#mapSvg').attr('viewBox', `0 0 ${w} ${h}`).attr('preserveAspectRatio', 'xMidYMid slice');
   const defs = svg.append('defs');
 
-  // Ocean gradient
+  // Ocean gradient — Blueprint: #7898D0 watery ultramarine
   const og = defs.append('radialGradient').attr('id', 'oG').attr('cx', '42%').attr('cy', '38%').attr('r', '65%');
-  og.append('stop').attr('offset', '0%').attr('stop-color', '#5DB8E0');
-  og.append('stop').attr('offset', '40%').attr('stop-color', '#4199C2');
-  og.append('stop').attr('offset', '100%').attr('stop-color', '#1E5A80');
+  og.append('stop').attr('offset', '0%').attr('stop-color', '#8AAAD8');
+  og.append('stop').attr('offset', '40%').attr('stop-color', '#7898D0');
+  og.append('stop').attr('offset', '100%').attr('stop-color', '#5070A8');
   svg.append('rect').attr('width', w).attr('height', h).attr('fill', 'url(#oG)');
 
   // Waves
@@ -339,8 +339,11 @@ export async function initMap() {
         .attr('stroke-width', 0.5)
         .attr('class', 'synth-dot').attr('data-a', iso);
 
+      // Kosovo (XKX) sits inside a dense cluster of countries — use a small tap
+      // radius so the circle doesn't steal hover/click from Serbia, Macedonia, etc.
+      var tapR = (iso === 'XKX') ? 7 : 16;
       var tapCircle = synthG.append('circle')
-        .attr('cx', pt.x).attr('cy', pt.y).attr('r', 16)
+        .attr('cx', pt.x).attr('cy', pt.y).attr('r', tapR)
         .attr('fill', 'transparent').attr('class', 'synth-tap')
         .attr('data-a', iso).style('cursor', 'pointer');
 
@@ -441,21 +444,21 @@ export async function initMap() {
     })();
 
     // Continent labels — positioned from geographic coordinates via projection
-    const contLabelG      = svg.append('g').attr('class', 'continent-labels');
-    const CONT_LABEL_SIZE = 11;
+    // Fill = darkened Montessori continent color (~35% darker), reads as part of the land
+    const contLabelG = svg.append('g').attr('class', 'continent-labels');
     const CLBL = {
-      'NORTH AMERICA': 'rgba(90,48,15,0.55)',
-      'SOUTH AMERICA': 'rgba(80,24,40,0.55)',
-      'EUROPE':        'rgba(70,20,20,0.55)',
-      'AFRICA':        'rgba(18,55,22,0.55)',
-      'ASIA':          'rgba(85,70,15,0.55)',
-      'OCEANIA':       'rgba(15,60,60,0.55)',
-      'ANTARCTICA':    'rgba(50,80,110,0.7)',
+      'NORTH AMERICA': '#8A5520',
+      'SOUTH AMERICA': '#7A2838',
+      'EUROPE':        '#6A1818',
+      'AFRICA':        '#1A5A1A',
+      'ASIA':          '#8A7A1A',
+      'OCEANIA':       '#5A3A18',
+      'ANTARCTICA':    '#8C91A5',
     };
     [
       { n: 'NORTH AMERICA', lon: -100, lat: 45  },
       { n: 'SOUTH AMERICA', lon: -58,  lat: -15 },
-      { n: 'EUROPE',        lon: 15,   lat: 52  },
+      { n: 'EUROPE',        lon: 15,   lat: 47  },
       { n: 'AFRICA',        lon: 20,   lat: 5   },
       { n: 'ASIA',          lon: 80,   lat: 45  },
       { n: 'OCEANIA',       lon: 150,  lat: -22 },
@@ -464,38 +467,39 @@ export async function initMap() {
       var p = proj([c.lon, c.lat]);
       if (!p) return;
       contLabelG.append('text').attr('x', p[0]).attr('y', p[1])
-        .attr('font-family', 'Inter,system-ui,sans-serif')
-        .attr('font-size', CONT_LABEL_SIZE).attr('font-weight', '700')
-        .attr('fill', CLBL[c.n] || 'rgba(255,255,255,0.22)')
-        .attr('letter-spacing', '2.5px')
+        .attr('font-family', "'Space Mono','Courier New',monospace")
+        .attr('font-size', 18).attr('font-weight', '700')
+        .attr('fill', CLBL[c.n] || '#8C91A5')
+        .attr('letter-spacing', '0.2em')
         .attr('text-anchor', 'middle')
         .text(c.n);
     });
 
     // Ocean labels — all 5 oceans, tappable
+    // Fill = soft blue-gray that blends with ocean #7898D0, barely visible
     [
-      { n: 'ATLANTIC', n2: 'OCEAN', lon: -40,  lat: 20,  op: 0.18, id: 'atlantic' },
-      { n: 'PACIFIC',  n2: 'OCEAN', lon: -130, lat: -30, op: 0.18, id: 'pacific'  },
-      { n: 'INDIAN',   n2: 'OCEAN', lon: 75,   lat: -25, op: 0.15, id: 'indian'   },
-      { n: 'SOUTHERN', n2: 'OCEAN', lon: 0,    lat: -58, op: 0.15, id: 'southern' },
-      { n: 'ARCTIC',   n2: 'OCEAN', lon: 0,    lat: 72,  op: 0.15, id: 'arctic'   },
+      { n: 'ATLANTIC', n2: 'OCEAN', lon: -40,  lat: 20,  id: 'atlantic' },
+      { n: 'PACIFIC',  n2: 'OCEAN', lon: -130, lat: -30, id: 'pacific'  },
+      { n: 'INDIAN',   n2: 'OCEAN', lon: 75,   lat: -25, id: 'indian'   },
+      { n: 'SOUTHERN', n2: 'OCEAN', lon: 0,    lat: -58, id: 'southern' },
+      { n: 'ARCTIC',   n2: 'OCEAN', lon: 0,    lat: 72,  id: 'arctic'   },
     ].forEach(function(c) {
       var p = proj([c.lon, c.lat]);
       if (!p) return;
-      var g = svg.append('g').attr('class', 'ocean-label').style('cursor', 'pointer')
+      var g = svg.insert('g', '.country').attr('class', 'ocean-label').style('cursor', 'pointer')
         .on('click', function() { _ctx.showOceanCard(c.id); });
       g.append('text').attr('x', p[0]).attr('y', p[1])
-        .attr('font-family', 'Inter,system-ui,sans-serif')
-        .attr('font-size', 9).attr('font-weight', '500').attr('font-style', 'italic')
-        .attr('fill', 'rgba(255,255,255,' + c.op + ')')
-        .attr('letter-spacing', '2px').attr('text-anchor', 'middle')
+        .attr('font-family', "'Space Mono','Courier New',monospace")
+        .attr('font-size', 11).attr('font-weight', '700')
+        .attr('fill', 'rgba(255,255,255,0.25)')
+        .attr('letter-spacing', '0.2em').attr('text-anchor', 'middle')
         .attr('pointer-events', 'none')
         .text(c.n);
-      g.append('text').attr('x', p[0]).attr('y', p[1] + 12)
-        .attr('font-family', 'Inter,system-ui,sans-serif')
-        .attr('font-size', 9).attr('font-weight', '500').attr('font-style', 'italic')
-        .attr('fill', 'rgba(255,255,255,' + c.op + ')')
-        .attr('letter-spacing', '2px').attr('text-anchor', 'middle')
+      g.append('text').attr('x', p[0]).attr('y', p[1] + 14)
+        .attr('font-family', "'Space Mono','Courier New',monospace")
+        .attr('font-size', 11).attr('font-weight', '700')
+        .attr('fill', 'rgba(255,255,255,0.25)')
+        .attr('letter-spacing', '0.2em').attr('text-anchor', 'middle')
         .attr('pointer-events', 'none')
         .text(c.n2);
       g.append('rect')

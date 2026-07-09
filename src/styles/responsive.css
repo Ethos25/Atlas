@@ -2,7 +2,7 @@
 @media(max-width:500px){
   .logo{font-size:15px}
   .pill{font-size:10px;padding:4px 10px}.pill .n{font-size:12px}
-  .pc-name{font-size:20px}.pc-letter{font-family:'Inter',system-ui,sans-serif;font-size:12px;font-weight:500;color:rgba(255,255,255,0.7);line-height:1.55;padding:0 16px 8px}
+  .pc-name{font-size:20px}.pc-letter{font-family:'Inter',system-ui,sans-serif;font-size:12px;font-weight:500;color:#C8CDDA;line-height:1.7;letter-spacing:0.005em;padding:0 16px 8px}
   .co-t{font-size:24px}
   .pc-hero-flag{width:65px}.pc-hero-item{font-size:26px}.pc-hero-item:nth-child(2){font-size:32px}
   /* stamp removed *//* stamp removed */

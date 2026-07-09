@@ -27,7 +27,7 @@
 import { playSound, ia, chm }                                      from '../ui/sounds.js';
 import { hTip }                                                     from '../ui/tooltip.js';
 import { burst }                                                    from '../ui/effects.js';
-import { checkMilestone, checkContinentComplete, checkRecallQuiz }  from '../features/achievements.js';
+import { checkMilestone, checkContinentComplete }  from '../features/achievements.js';
 import { checkChallengeAnswer, isChalActive }                      from '../features/challenges.js';
 import { placeMarkers }                                            from './render.js';
 
@@ -77,7 +77,6 @@ export function onClick(ev, d, el) {
 
   if (!visited.has(a)) {
     isNewDiscovery = true;
-    window._tellSomeoneCountry = dd.n;
     visited.add(a);
     // Matte glow on first discovery
     el.classList.add('country-glow');
@@ -108,9 +107,14 @@ export function onClick(ev, d, el) {
       dd.fam ? ['#FFB347','#FFD700','#FFF3D4','#FF8C42'] : ['#4ECDC4','#FFE66D','#95E1D3','#FF6B6B']);
     _ctx.updN();
     placeMarkers();
-    checkMilestone();
-    checkContinentComplete();
-    checkRecallQuiz();
+    // Defer milestone checks — fire AFTER the child closes the postcard (see cl() in swipe.js)
+    window._pendingMilestoneCheck = true;
+    // Feature 1: check if this discovery completes today's mission
+    if (_ctx.checkMissionMatch) _ctx.checkMissionMatch(a);
+    // Feature 4: check if this discovery solves this week's mystery
+    if (_ctx.checkMysteryMatch) _ctx.checkMysteryMatch(a);
+    // Feature 2C: check if this is the first discovery in a new continent
+    if (_ctx.checkNewContinent) _ctx.checkNewContinent(a);
     if (_ctx.updateStreak) _ctx.updateStreak();
   }
 
@@ -120,7 +124,6 @@ export function onClick(ev, d, el) {
   }
 
   dd.fam ? chm(true) : chm(false);
-  if (visited.size % 3 === 0 && visited.size > 0) _ctx.showEncouragement(dd.n);
 
   if (showingFirstDiscBanner) {
     // Banner fires at 500 ms and clears at 3 500 ms — open postcard after it clears

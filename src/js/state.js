@@ -263,6 +263,94 @@ export function setSurpriseAch(playerName, id) {
   } catch (e) {}
 }
 
+// ── Daily Missions persistence ────────────────────────────────────────────────
+
+/**
+ * Load the daily mission state for a player.
+ * @param {string} playerName
+ * @returns {{ completed: string[], stamps: number }}
+ */
+export function loadMissionsData(playerName) {
+  try {
+    const uuid = getOrCreatePlayerUUID(playerName);
+    const raw  = localStorage.getItem(SAVE_KEY + uuid + '_missions');
+    if (raw) return JSON.parse(raw);
+  } catch (e) {}
+  return { completed: [], stamps: 0 };
+}
+
+/**
+ * Persist the daily mission state for a player.
+ * @param {string} playerName
+ * @param {{ completed: string[], stamps: number }} data
+ */
+export function saveMissionsData(playerName, data) {
+  try {
+    const uuid = getOrCreatePlayerUUID(playerName);
+    localStorage.setItem(SAVE_KEY + uuid + '_missions', JSON.stringify(data));
+  } catch (e) {}
+}
+
+// ── Weekly Mystery persistence ────────────────────────────────────────────────
+
+/**
+ * Load the mystery country state for a player.
+ * @param {string} playerName
+ * @returns {{ solved: string[], badges: string[] }}
+ */
+export function loadMysteryData(playerName) {
+  try {
+    const uuid = getOrCreatePlayerUUID(playerName);
+    const raw  = localStorage.getItem(SAVE_KEY + uuid + '_mystery');
+    if (raw) return JSON.parse(raw);
+  } catch (e) {}
+  return { solved: [], badges: [] };
+}
+
+/**
+ * Persist the mystery country state for a player.
+ * @param {string} playerName
+ * @param {{ solved: string[], badges: string[] }} data
+ */
+export function saveMysteryData(playerName, data) {
+  try {
+    const uuid = getOrCreatePlayerUUID(playerName);
+    localStorage.setItem(SAVE_KEY + uuid + '_mystery', JSON.stringify(data));
+  } catch (e) {}
+}
+
+// ── Journey state persistence ─────────────────────────────────────────────────
+
+/**
+ * Load the active journey state for a player.
+ * @param {string} playerName
+ * @returns {{ journeyId: string, currentIndex: number, startedAt: string } | null}
+ */
+export function loadJourneyState(playerName) {
+  try {
+    const uuid = getOrCreatePlayerUUID(playerName);
+    const raw  = localStorage.getItem(SAVE_KEY + uuid + '_journey');
+    return raw ? JSON.parse(raw) : null;
+  } catch (e) { return null; }
+}
+
+/**
+ * Persist the active journey state. Pass null to clear.
+ * @param {string} playerName
+ * @param {{ journeyId: string, currentIndex: number, startedAt: string } | null} state
+ */
+export function saveJourneyState(playerName, state) {
+  try {
+    const uuid = getOrCreatePlayerUUID(playerName);
+    const key  = SAVE_KEY + uuid + '_journey';
+    if (state === null) {
+      localStorage.removeItem(key);
+    } else {
+      localStorage.setItem(key, JSON.stringify(state));
+    }
+  } catch (e) {}
+}
+
 // ── Full reset ────────────────────────────────────────────────────────────────
 
 /** Remove every Atlas key from localStorage (saves, UUIDs, family data). */

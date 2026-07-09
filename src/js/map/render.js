@@ -18,9 +18,40 @@
 
 let _ctx;
 let _oneAwayIsos = new Set();
+let _getOneAwaySets = null; // injected by initRender if provided
 
 export function initRender(ctx) {
   _ctx = ctx;
+  if (ctx.getOneAwaySets) _getOneAwaySets = ctx.getOneAwaySets;
+}
+
+/**
+ * Update the one-away notification dot on #setsBtn.
+ * Shows a saffron dot when at least one set is one-away.
+ */
+export function updateOneAwayDot() {
+  const dot = document.getElementById('setsNotifDot');
+  if (!dot) return;
+  const sets = _getOneAwaySets ? _getOneAwaySets() : [];
+  if (sets && sets.length > 0) {
+    dot.classList.add('show');
+  } else {
+    dot.classList.remove('show');
+  }
+}
+
+/**
+ * Returns the "Last one for X!" tip text for a given ISO,
+ * or null if not a one-away country.
+ * @param {string} iso
+ * @returns {string|null}
+ */
+export function getOneAwayTip(iso) {
+  if (!_getOneAwaySets) return null;
+  const sets = _getOneAwaySets();
+  if (!sets || !sets.length) return null;
+  const match = sets.find(function (s) { return s.missing === iso; });
+  return match ? 'Last one for \u201c' + match.setName + '\u201d!' : null;
 }
 
 /**
@@ -128,6 +159,96 @@ export function recolorFamilyCountries() {
       sel.attr('stroke', 'rgba(255,255,255,0.15)').attr('stroke-width', 0.5);
     }
   });
+}
+
+/**
+ * Place or reposition continent nudge badge pills near SVG continent labels.
+ * Shows "X more to finish [Continent]!" for continents between 50–99% complete.
+ * At most 2 badges visible at once (closest to 100%).
+ * Removes existing badges before re-placing.
+ */
+export function updateContinentNudges() {
+  // Remove existing nudge badges
+  document.querySelectorAll('.cont-nudge').forEach(function (n) { n.remove(); });
+
+  if (!_ctx) return;
+  const D        = _ctx.getD();
+  const visited  = _ctx.getVisited();
+  const CONT_MAP = _ctx.getCONT_MAP();
+  const CONT_COL = _ctx.getCONT_COL();
+  if (!D || !visited || !CONT_MAP || !CONT_COL) return;
+
+  // Count total and visited per continent
+  const totals  = {};
+  const counts  = {};
+  Object.keys(D).forEach(function (iso) {
+    const code = CONT_MAP[iso];
+    if (!code) return;
+    totals[code] = (totals[code] || 0) + 1;
+    if (visited.has(iso)) counts[code] = (counts[code] || 0) + 1;
+  });
+
+  // Continent label text → code map
+  const labelToCode = {
+    'AFRICA': 'AF', 'ASIA': 'AS', 'EUROPE': 'EU',
+    'NORTH AMERICA': 'NA', 'SOUTH AMERICA': 'SA', 'OCEANIA': 'OC',
+  };
+
+  // Find eligible continents (>50% and <100% done), sorted by closeness to completion
+  const eligible = [];
+  Object.keys(totals).forEach(function (code) {
+    const total   = totals[code] || 0;
+    const found   = counts[code] || 0;
+    if (total === 0) return;
+    const ratio = found / total;
+    if (ratio > 0.5 && ratio < 1.0) {
+      eligible.push({ code: code, remaining: total - found, ratio: ratio });
+    }
+  });
+  eligible.sort(function (a, b) { return b.ratio - a.ratio; });
+  const top2 = eligible.slice(0, 2);
+  if (top2.length === 0) return;
+
+  // Find continent label SVG text elements and position badges beneath them
+  const labelEls = document.querySelectorAll('.continent-labels text');
+  labelEls.forEach(function (textEl) {
+    const content = (textEl.textContent || '').trim().toUpperCase();
+    const code    = labelToCode[content];
+    if (!code) return;
+    const entry = top2.find(function (e) { return e.code === code; });
+    if (!entry) return;
+
+    const cc    = CONT_COL[code];
+    const color = cc ? cc.base : '#C8CDDA';
+    const rect  = textEl.getBoundingClientRect();
+    if (rect.width < 1) return; // not visible (zoomed away)
+
+    const badge = document.createElement('div');
+    badge.className = 'cont-nudge';
+    badge.style.left  = (rect.left + rect.width / 2) + 'px';
+    badge.style.top   = (rect.bottom + 6) + 'px';
+    badge.style.color = color;
+    badge.style.borderColor = color + '40';
+    badge.innerHTML =
+      '<span class="nudge-num" style="color:' + color + '">' + entry.remaining + '</span>' +
+      ' more to finish ' + _contDisplayName(code) + '!';
+    badge.setAttribute('title', entry.remaining + ' more countries to complete ' + _contDisplayName(code));
+
+    document.body.appendChild(badge);
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { badge.classList.add('show'); });
+    });
+  });
+}
+
+/** Reposition existing continent nudge badges (on resize/pan). */
+export function repositionContinentNudges() {
+  updateContinentNudges();
+}
+
+function _contDisplayName(code) {
+  const names = { AF: 'Africa', AS: 'Asia', EU: 'Europe', NA: 'N. America', SA: 'S. America', OC: 'Oceania' };
+  return names[code] || code;
 }
 
 export function restoreVisitedCountries() {

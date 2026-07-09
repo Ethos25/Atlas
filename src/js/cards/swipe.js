@@ -16,7 +16,13 @@
  *   pulseNearby(iso)   → void
  *   showCard(iso)      → void   (the wrapper in index.html)
  *   switchTab(tab, silent) → void
+ *   checkRecallQuiz()  → void   (fires quiz if due, after card is dismissed)
  */
+
+import { checkMilestone, checkContinentComplete } from '../features/achievements.js';
+import { flushMissionToast }                      from '../features/missions.js';
+import { flushMysteryBadge }                      from '../features/mystery.js';
+import { flushJourneyComplete }                   from '../features/journey-breadcrumb.js';
 
 let _ctx;
 
@@ -87,24 +93,6 @@ export function cl() {
   document.getElementById('cOv').classList.remove('on');
   _ctx.setCurV(null);
 
-  // "Tell someone" toast on first discoveries
-  if (window._tellSomeoneCountry) {
-    var countryName = window._tellSomeoneCountry;
-    window._tellSomeoneCountry = null;
-    var prompts = [
-      'Tell someone what you learned about ' + countryName + '! 🗣️',
-      'Go tell someone about ' + countryName + '! 🗣️',
-      'Share what you learned about ' + countryName + '! 🗣️',
-      'Tell a grownup about ' + countryName + '! 🗣️',
-    ];
-    var toast = document.createElement('div');
-    toast.style.cssText = 'position:fixed;bottom:80px;left:50%;transform:translateX(-50%);z-index:300;background:rgba(16,24,38,0.95);backdrop-filter:blur(20px);border:1px solid rgba(255,200,60,0.15);border-radius:20px;padding:12px 24px;font-family:Inter,system-ui,sans-serif;color:rgba(255,255,255,0.9);font-size:15px;font-weight:600;opacity:0;transition:opacity 0.5s;pointer-events:none;white-space:nowrap;letter-spacing:-0.2px;max-width:90vw;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.4)';
-    toast.textContent = prompts[Math.floor(Math.random() * prompts.length)];
-    document.body.appendChild(toast);
-    setTimeout(function() { toast.style.opacity = '1'; }, 100);
-    setTimeout(function() { toast.style.opacity = '0'; setTimeout(function() { toast.remove(); }, 500); }, 3500);
-  }
-
   _ctx.setCardHistory([]);
   var bb = document.getElementById('cardBackBtn');
   if (bb) bb.style.display = 'none';
@@ -142,4 +130,71 @@ export function cl() {
   // Restore fav button (hidden for ocean cards)
   var favBtn = document.getElementById('favBtn');
   if (favBtn) favBtn.style.display = '';
+
+  // Fire recall quiz if due — after the card is dismissed so it never
+  // interrupts the postcard or envelope animation.
+  if (_ctx.checkRecallQuiz) _ctx.checkRecallQuiz();
+
+  // Fire deferred milestone/continent checks — set during new-discovery flow
+  // so they never interrupt the envelope or postcard animation.
+  if (window._pendingMilestoneCheck) {
+    window._pendingMilestoneCheck = false;
+    setTimeout(function () {
+      checkMilestone();
+      checkContinentComplete();
+    }, 400);
+  }
+
+  // Fire deferred mission toast (Feature 1) — after postcard closes.
+  if (window._pendingMissionToast) {
+    setTimeout(flushMissionToast, 500);
+  }
+
+  // Fire deferred mystery badge (Feature 4) — after postcard closes.
+  if (window._pendingMysteryBadge) {
+    setTimeout(flushMysteryBadge, 700);
+  }
+
+  // Fire deferred journey-complete celebration — after postcard closes.
+  if (window._pendingJourneyComplete) {
+    setTimeout(flushJourneyComplete, 500);
+  }
+
+  // Fire deferred new-continent toast — after postcard closes.
+  if (window._pendingNewContinent) {
+    const data = window._pendingNewContinent;
+    window._pendingNewContinent = null;
+    setTimeout(function () { _showNewContinentToast(data); }, 600);
+  }
+}
+
+function _showNewContinentToast(data) {
+  const existing = document.getElementById('newContToast');
+  if (existing) existing.remove();
+
+  const toast = document.createElement('div');
+  toast.id = 'newContToast';
+  toast.className = 'new-cont-toast';
+  toast.style.borderLeftColor = data.color || '#D4884A';
+  toast.innerHTML =
+    '<span style="font-size:20px">' + (data.emoji || '🌍') + '</span>' +
+    '<div style="flex:1;min-width:0">' +
+      '<div style="font-family:\'DM Serif Display\',Georgia,serif;font-size:14px;' +
+        'color:#F0F2F8;line-height:1.2;margin-bottom:2px">New continent unlocked!</div>' +
+      '<div style="font-family:Inter,system-ui,sans-serif;font-size:11px;' +
+        'color:#C8CDDA;line-height:1.4">' + (data.name || '') + '</div>' +
+    '</div>';
+
+  document.body.appendChild(toast);
+
+  requestAnimationFrame(function () {
+    requestAnimationFrame(function () {
+      toast.classList.add('new-cont-toast--show');
+    });
+  });
+
+  setTimeout(function () {
+    toast.classList.remove('new-cont-toast--show');
+    setTimeout(function () { if (toast.parentNode) toast.remove(); }, 500);
+  }, 3000);
 }
