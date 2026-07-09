@@ -9,6 +9,18 @@ npm run dev    ← development server (use this)
 npm run build  ← production build — run after every extraction; module count must grow by exactly the number of files added
 ```
 
+## Visual Verification (Playwright)
+
+Playwright (Chromium) is installed as a dev dependency. Use `screenshot.mjs` to visually verify changes:
+
+```
+# Start the dev server first (npm run dev), then in a second terminal:
+node screenshot.mjs                          ← saves screenshot.png of localhost:5173
+node screenshot.mjs http://localhost:5173 out.png  ← custom url/filename
+```
+
+The script waits for `networkidle` + 2 s of render time before capturing. Use it to sanity-check UI changes without opening a browser.
+
 ## Architecture
 
 ```
