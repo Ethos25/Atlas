@@ -235,29 +235,29 @@
       "stroke": "#D4884A"
     },
     "SA": {
-      "base": "#C85E82",
-      "bright": "#C85E82",
-      "stroke": "#C85E82"
+      "base": "#D06878",
+      "bright": "#D06878",
+      "stroke": "#D06878"
     },
     "EU": {
-      "base": "#B84040",
-      "bright": "#B84040",
-      "stroke": "#B84040"
+      "base": "#C05050",
+      "bright": "#C05050",
+      "stroke": "#C05050"
     },
     "AF": {
-      "base": "#4A9A52",
-      "bright": "#4A9A52",
-      "stroke": "#4A9A52"
+      "base": "#4A8A4A",
+      "bright": "#4A8A4A",
+      "stroke": "#4A8A4A"
     },
     "AS": {
-      "base": "#D4B444",
-      "bright": "#D4B444",
-      "stroke": "#D4B444"
+      "base": "#E0C84A",
+      "bright": "#E0C84A",
+      "stroke": "#E0C84A"
     },
     "OC": {
-      "base": "#3A9E9E",
-      "bright": "#3A9E9E",
-      "stroke": "#3A9E9E"
+      "base": "#A07850",
+      "bright": "#A07850",
+      "stroke": "#A07850"
     },
     "AN": {
       "base": "#A0BCD0",

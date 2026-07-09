@@ -246,9 +246,9 @@
     "f": "🇧🇷",
     "c": "South America",
     "hero": [
+      "<img src='/assets/ui-soccer-sm.png' alt='soccer' style='width:32px;height:32px;vertical-align:middle'>",
       "<img src='/assets/ui-tree-sm.png' alt='tree' style='width:32px;height:32px;vertical-align:middle'>",
-      "🦜",
-      "⚽"
+      "🦜"
     ],
     "color": "#7DC4A0",
     "stripe": "#1E6B3A",

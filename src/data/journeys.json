@@ -181,5 +181,20 @@
       "LBN"
     ],
     "intro": "Eat your way around the planet."
+  },
+  {
+    "emoji": "🌉",
+    "name": "Two Continents at Once",
+    "desc": "Countries that bridge Europe, Asia & Africa",
+    "countries": [
+      "TUR",
+      "RUS",
+      "EGY",
+      "KAZ",
+      "AZE",
+      "GEO",
+      "ARM"
+    ],
+    "intro": "Some countries are so big they touch two continents at the same time. Can you find them all on the map?"
   }
 ]
