@@ -18,13 +18,13 @@ const output = process.argv[3] || 'postcard-screenshot.png';
   await page.goto(url, { waitUntil: 'networkidle' });
   await page.waitForTimeout(1500);
 
-  // Bypass cold-open: use existing Dean profile (or inject fake state)
+  // Bypass cold-open: use existing Mia profile (or inject fake state)
   await page.evaluate(() => {
     const key = 'worldExplorer_lastPlayer';
     const player = localStorage.getItem(key);
     if (!player) {
       // Inject a minimal profile so _boot() skips setup
-      localStorage.setItem('worldExplorer_lastPlayer', 'Dean');
+      localStorage.setItem('worldExplorer_lastPlayer', 'Mia');
     }
   });
 

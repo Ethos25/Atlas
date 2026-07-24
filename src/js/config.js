@@ -12,7 +12,7 @@
  *
  *   window.ATLAS_CONFIG = {
  *     familyCountries: ['IRN', 'NGA', 'GBR', 'IRL', 'USA'], // ISO-3 codes
- *     playerNames:     ['Emma', 'Jack', 'Leo'],              // explorer names
+ *     playerNames:     ['Emma', 'Noah', 'Ava'],              // explorer names
  *     theme:           { '--c-accent': '#e07b30' },          // CSS custom props
  *     container:       document.getElementById('atlas-root'),// DOM element
  *   };
